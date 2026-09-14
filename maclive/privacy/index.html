@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mac Live — Politique de confidentialité</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A0D16;color:#C9D2E0;line-height:1.7;padding:32px 18px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,Helvetica,sans-serif;max-width:780px;margin:0 auto;
+     font-size:16px}
+h1{font-size:26px;color:#38D5F0;margin-bottom:6px;font-weight:600}
+.sub{font-size:14px;color:#7D8594;margin-bottom:28px}
+h2{font-size:18px;color:#E8EDF5;margin:34px 0 10px;font-weight:600}
+p{margin-bottom:14px;color:#B8C1D1}
+b,strong{color:#E8EDF5}
+ul{margin:0 0 16px 22px}
+li{margin-bottom:9px;color:#B8C1D1}
+a{color:#38D5F0}
+.box{background:#111726;border:1px solid #1e2537;border-left:3px solid #5CD6A8;
+     border-radius:10px;padding:16px 18px;margin:20px 0}
+.box.warn{border-left-color:#38D5F0}
+.box p:last-child{margin-bottom:0}
+.lang{display:flex;gap:10px;margin-bottom:26px}
+.lang button{background:#141B2C;border:1px solid #2c3752;color:#8A93A6;padding:7px 16px;
+     border-radius:20px;cursor:pointer;font-size:13px;font-family:inherit}
+.lang button.on{background:#38D5F0;border-color:#38D5F0;color:#0A0D16;font-weight:600}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid #1c2336;font-size:13px;color:#5f6b85}
+[lang-block]{display:none}
+[lang-block].on{display:block}
+</style>
+</head>
+<body>
+
+<div class="lang">
+  <button id="bfr" class="on" onclick="setLang('fr')">Français</button>
+  <button id="ben" onclick="setLang('en')">English</button>
+</div>
+
+<!-- ═══════════════════════════ FRANÇAIS ═══════════════════════════ -->
+<div lang-block="fr" class="on">
+
+<h1>Politique de confidentialité — Mac Live</h1>
+<div class="sub">Dernière mise à jour : 14 septembre 2026</div>
+
+<p>Mac Live est une application mobile qui affiche en temps réel l'état de votre Mac (température,
+processeur, mémoire, disque, batterie, sauvegardes Time Machine) et vous alerte en cas de problème.
+Elle se connecte à un serveur que vous installez vous-même sur votre Mac.</p>
+
+<div class="box">
+  <p><strong>L'essentiel :</strong> Cette application ne crée aucun compte, n'affiche aucune publicité, ne
+  contient aucun outil de mesure d'audience, et <strong>ne transmet vos données à aucun serveur
+  appartenant à l'éditeur</strong>. Les mesures vont de votre Mac à votre téléphone.</p>
+</div>
+
+<h2>Qui est responsable du traitement</h2>
+<p>Mac Live est éditée par <strong>Atria.Eponym</strong>, développeur individuel établi en France.
+Contact : <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+
+<h2>Les données auxquelles l'application accède</h2>
+<p>L'application ne lit aucun capteur de votre téléphone. Elle reçoit de <strong>votre Mac</strong>,
+uniquement quand elle est connectée :</p>
+<ul>
+  <li><strong>L'état du matériel</strong> : températures, activité du processeur, mémoire, disque,
+      batterie et alimentation, durée depuis le démarrage.</li>
+  <li><strong>Les processus les plus actifs</strong> : leur nom et leur part d'utilisation du
+      processeur.</li>
+  <li><strong>Les sauvegardes Time Machine</strong> : date de la dernière sauvegarde et sauvegarde
+      en cours.</li>
+  <li><strong>L'état de deux réglages</strong> : l'anti-veille et la relance automatique.</li>
+</ul>
+
+<h2>Ce qui reste sur votre téléphone</h2>
+<ul>
+  <li>l'<strong>adresse de connexion</strong> à votre Mac, qui contient une clé secrète ;</li>
+  <li>vos <strong>réglages d'alertes</strong> et de surveillance en arrière-plan ;</li>
+  <li>si vous activez la récupération automatique, votre <strong>clé d'accès GitHub</strong>.</li>
+</ul>
+<p>L'historique affiché (les 5 dernières minutes) reste en mémoire et disparaît à la fermeture de
+l'application. Désinstaller l'application efface tout le reste.</p>
+
+<h2>Ce qui sort de votre téléphone</h2>
+
+<div class="box warn">
+  <p><strong>1. La liaison avec votre Mac.</strong> L'application se connecte à votre Mac par un
+  tunnel <strong>Cloudflare</strong>. Les mesures transitent de façon chiffrée (HTTPS) par
+  l'infrastructure de Cloudflare, qui les relaie entre votre Mac et votre téléphone. Ce transport
+  relève de la politique de confidentialité de Cloudflare.</p>
+  <p><strong>2. La récupération automatique de l'adresse, si vous l'activez.</strong> Quand l'adresse
+  de votre Mac change, l'application interroge <strong>GitHub</strong> avec votre clé d'accès, pour
+  lire la nouvelle adresse que votre Mac a publiée dans votre propre dépôt. Cette requête relève de
+  la politique de confidentialité de GitHub.</p>
+</div>
+
+<p>En dehors de ces deux cas, <strong>rien ne quitte votre téléphone</strong>.</p>
+
+<h2>Ce que l'application ne fait pas</h2>
+<ul>
+  <li>Aucun compte, aucune inscription, aucune identification.</li>
+  <li>Aucune publicité, aucun traceur publicitaire.</li>
+  <li>Aucun outil de mesure d'audience ni de statistiques d'usage.</li>
+  <li>Aucune transmission de vos mesures à l'éditeur.</li>
+  <li>Aucune revente ni partage de données à des tiers.</li>
+</ul>
+
+<h2>Les autorisations demandées, et pourquoi</h2>
+<ul>
+  <li><strong>Accès à Internet</strong> — pour se connecter à votre Mac.</li>
+  <li><strong>Notifications</strong> — pour les alertes (température, disque, batterie, Time Machine,
+      coupure) et la notification de surveillance en cours.</li>
+  <li><strong>Service de premier plan</strong> — seulement si vous activez la surveillance
+      permanente, pour recevoir les alertes application fermée. Une notification visible le
+      signale.</li>
+  <li><strong>Démarrage automatique</strong> — pour relancer la surveillance après un redémarrage du
+      téléphone, si elle est activée.</li>
+  <li><strong>Exclusion de l'optimisation de la batterie</strong> — seulement si vous la demandez,
+      pour qu'Android n'interrompe pas la surveillance la nuit.</li>
+</ul>
+<p>Vous pouvez retirer ces autorisations à tout moment dans les réglages d'Android.</p>
+
+<h2>Vos droits</h2>
+<p>Le règlement général sur la protection des données vous donne un droit d'accès, de
+rectification, d'effacement et d'opposition sur vos données personnelles. Dans le cas de cette
+application, ces droits s'exercent <strong>directement sur vos appareils</strong> : l'éditeur ne
+détient aucune donnée vous concernant. Pour tout supprimer, désinstallez l'application et le
+serveur installé sur votre Mac.</p>
+<p>Pour toute question, écrivez à <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
+
+<h2>Enfants</h2>
+<p>Cette application ne s'adresse pas spécifiquement aux enfants et ne collecte sciemment aucune
+donnée les concernant.</p>
+
+<h2>Modifications</h2>
+<p>Cette politique peut évoluer si l'application change. La date de dernière mise à jour figure
+en haut de cette page. Toute modification substantielle sera signalée dans les notes de version.</p>
+
+<footer>Mac Live — Atria.Eponym · France<br>Politique de confidentialité, version du 14 septembre 2026</footer>
+</div>
+
+<!-- ═══════════════════════════ ENGLISH ═══════════════════════════ -->
+<div lang-block="en">
+
+<h1>Privacy Policy — Mac Live</h1>
+<div class="sub">Last updated: 14 September 2026</div>
+
+<p>Mac Live is a mobile application that shows the live state of your Mac (temperature, processor,
+memory, disk, battery, Time Machine backups) and alerts you when something goes wrong. It connects
+to a server you install yourself on your Mac.</p>
+
+<div class="box">
+  <p><strong>In short:</strong> This app creates no account, shows no advertising, contains no
+  analytics, and <strong>sends your data to no server belonging to the developer</strong>. The
+  readings go from your Mac to your phone.</p>
+</div>
+
+<h2>Who is responsible</h2>
+<p>Mac Live is published by <strong>Atria.Eponym</strong>, an individual developer based in France.
+Contact: <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+
+<h2>Data the app accesses</h2>
+<p>The app reads no sensor on your phone. It receives from <strong>your Mac</strong>, only while it
+is connected:</p>
+<ul>
+  <li><strong>Hardware status</strong>: temperatures, processor activity, memory, disk, battery and
+      power, time since startup.</li>
+  <li><strong>The most active processes</strong>: their name and share of processor use.</li>
+  <li><strong>Time Machine backups</strong>: date of the last backup and whether one is running.</li>
+  <li><strong>The state of two settings</strong>: sleep prevention and automatic relaunch.</li>
+</ul>
+
+<h2>What stays on your phone</h2>
+<ul>
+  <li>the <strong>connection address</strong> of your Mac, which contains a secret key;</li>
+  <li>your <strong>alert settings</strong> and background monitoring settings;</li>
+  <li>if you turn on automatic recovery, your <strong>GitHub access token</strong>.</li>
+</ul>
+<p>The displayed history (the last 5 minutes) is kept in memory and disappears when the app is
+closed. Uninstalling the app erases everything else.</p>
+
+<h2>What leaves your phone</h2>
+
+<div class="box warn">
+  <p><strong>1. The link with your Mac.</strong> The app connects to your Mac through a
+  <strong>Cloudflare</strong> tunnel. Readings travel encrypted (HTTPS) through Cloudflare's
+  infrastructure, which relays them between your Mac and your phone. That transport is governed by
+  Cloudflare's privacy policy.</p>
+  <p><strong>2. Automatic address recovery, if you turn it on.</strong> When your Mac's address
+  changes, the app queries <strong>GitHub</strong> with your access token to read the new address
+  your Mac published in your own repository. That request is governed by GitHub's privacy
+  policy.</p>
+</div>
+
+<p>Apart from these two cases, <strong>nothing leaves your phone</strong>.</p>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>No account, no sign-up, no identification.</li>
+  <li>No advertising, no advertising trackers.</li>
+  <li>No analytics or usage statistics.</li>
+  <li>No transmission of your readings to the developer.</li>
+  <li>No sale or sharing of data with third parties.</li>
+</ul>
+
+<h2>Permissions requested, and why</h2>
+<ul>
+  <li><strong>Internet access</strong> — to connect to your Mac.</li>
+  <li><strong>Notifications</strong> — for alerts (temperature, disk, battery, Time Machine, lost
+      link) and the ongoing monitoring notification.</li>
+  <li><strong>Foreground service</strong> — only if you turn on permanent monitoring, to receive
+      alerts while the app is closed. A visible notification shows it.</li>
+  <li><strong>Start at boot</strong> — to resume monitoring after the phone restarts, if it is
+      turned on.</li>
+  <li><strong>Battery optimisation exemption</strong> — only if you ask for it, so that Android does
+      not stop monitoring overnight.</li>
+</ul>
+<p>You can withdraw these permissions at any time in Android settings.</p>
+
+<h2>Your rights</h2>
+<p>The General Data Protection Regulation grants you rights of access, rectification, erasure and
+objection over your personal data. With this app these are exercised <strong>directly on your
+devices</strong>: the developer holds no data about you. To remove everything, uninstall the app
+and the server installed on your Mac.</p>
+<p>For any question, write to <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
+
+<h2>Children</h2>
+<p>This app is not directed at children and does not knowingly collect data concerning them.</p>
+
+<h2>Changes</h2>
+<p>This policy may change if the app changes. The last update date appears at the top of this
+page. Any substantial change will be noted in the release notes.</p>
+
+<footer>Mac Live — Atria.Eponym · France<br>Privacy policy, version of 14 September 2026</footer>
+</div>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('[lang-block]').forEach(function(b){
+    b.classList.toggle('on', b.getAttribute('lang-block') === l);
+  });
+  document.getElementById('bfr').classList.toggle('on', l === 'fr');
+  document.getElementById('ben').classList.toggle('on', l === 'en');
+  document.documentElement.lang = l;
+}
+</script>
+</body>
+</html>
