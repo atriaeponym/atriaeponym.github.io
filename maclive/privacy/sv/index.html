@@ -128,10 +128,13 @@ Kontakt: <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
   <li><strong>Macens identitet</strong>: namn, modell, chip, antal kärnor, minne, macOS-version och
       en bild av modellen, så att du känner igen din Mac.</li>
 </ul>
-<p>När appen är stängd skickar din Mac inga mätvärden. Den fortsätter bara att bevaka några
-tröskelvärden och skickar en <strong>varning</strong> när ett överskrids (hög temperatur, nästan
-full disk, byte till batteri, lågt batteri, ingen Time Machine-kopia på 30 dagar): typ, uppmätt
-värde, tröskel och tidpunkt.</p>
+<p>När appen är stängd skickar din Mac inga mätvärden. Den sparar i sitt minne, i 24 timmar, en
+punkt per minut för tre mätvärden — processoranvändning, processortemperatur och strömförbrukning —
+och skickar denna <strong>historik</strong>, end-to-end-krypterad som allt annat, till telefonen när
+du öppnar appen; den raderas när din Mac startas om och skrivs aldrig till disk. Din Mac fortsätter
+också att bevaka några tröskelvärden och skickar en <strong>varning</strong> när ett överskrids (hög
+temperatur, nästan full disk, byte till batteri, lågt batteri, ingen Time Machine-kopia på 30
+dagar): typ, uppmätt värde, tröskel och tidpunkt.</p>
 
 <h2>Parkoppling och nycklar</h2>
 <p>QR-koden som din Mac visar innehåller ett slumpmässigt id och en hemlig nyckel. Din Mac sparar dem
@@ -148,7 +151,7 @@ telefoner” på Macen, som skapar en ny nyckel.</p>
   <li><strong>aviseringstoken</strong> som Google tilldelar appen;</li>
   <li><strong>språket</strong> du valt i appen.</li>
 </ul>
-<p>Historiken som visas (de senaste minuterna) ligger i minnet och försvinner när appen stängs. Att
+<p>Historiken som visas (upp till de senaste 24 timmarna) ligger i minnet och försvinner när appen stängs. Att
 avinstallera appen raderar allt annat.</p>
 
 <h2>Tjänsterna som förmedlar data</h2>

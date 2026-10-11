@@ -129,10 +129,14 @@ ontwikkelaar gevestigd in Frankrijk. Contact:
   <li><strong>De identiteit van de Mac</strong>: naam, model, chip, aantal kernen, geheugen,
       macOS-versie en een afbeelding van het model, zodat je je Mac herkent.</li>
 </ul>
-<p>Als de app gesloten is, stuurt je Mac geen metingen. Hij blijft alleen een paar drempels bewaken
-en stuurt een <strong>waarschuwing</strong> als er een wordt overschreden (hoge temperatuur, schijf
-bijna vol, overschakelen op batterij, batterij bijna leeg, al 30 dagen geen Time Machine-kopie):
-het soort, de gemeten waarde, de drempel en het tijdstip.</p>
+<p>Als de app gesloten is, stuurt je Mac geen metingen. Hij bewaart 24 uur lang in zijn geheugen één
+punt per minuut van drie metingen — processorgebruik, processortemperatuur en stroomverbruik — en
+stuurt deze <strong>geschiedenis</strong>, net als al het andere end-to-end versleuteld, naar je
+telefoon wanneer je de app opent; ze wordt gewist als de Mac opnieuw opstart en wordt nooit naar de
+schijf geschreven. Je Mac blijft ook een paar drempels bewaken en stuurt een
+<strong>waarschuwing</strong> als er een wordt overschreden (hoge temperatuur, schijf bijna vol,
+overschakelen op batterij, batterij bijna leeg, al 30 dagen geen Time Machine-kopie): het soort, de
+gemeten waarde, de drempel en het tijdstip.</p>
 
 <h2>Koppeling en sleutels</h2>
 <p>De QR-code die je Mac toont, bevat een willekeurige ID en een geheime sleutel. Je Mac bewaart ze
@@ -149,7 +153,7 @@ ontkoppelen” op de Mac, wat een nieuwe sleutel aanmaakt.</p>
   <li>het <strong>meldingstoken</strong> dat Google aan de app toekent;</li>
   <li>de <strong>taal</strong> die je in de app hebt gekozen.</li>
 </ul>
-<p>De getoonde geschiedenis (de laatste minuten) blijft in het geheugen en verdwijnt als de app
+<p>De getoonde geschiedenis (tot de laatste 24 uur) blijft in het geheugen en verdwijnt als de app
 sluit. De app verwijderen wist al het overige.</p>
 
 <h2>De diensten die de gegevens vervoeren</h2>

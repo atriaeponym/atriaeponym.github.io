@@ -129,10 +129,14 @@ itsenäinen kehittäjä. Yhteystiedot:
   <li><strong>Macin tunnistetiedot</strong>: nimi, malli, siru, ytimien määrä, muisti,
       macOS-versio ja kuva mallista, jotta tunnistat Macisi.</li>
 </ul>
-<p>Kun sovellus on suljettu, Mac ei lähetä mittauksia. Se valvoo vain muutamia raja-arvoja ja
-lähettää <strong>hälytyksen</strong>, kun jokin ylittyy (korkea lämpötila, levy lähes täynnä,
-siirtyminen akkuvirralle, akku vähissä, ei Time Machine -varmuuskopiota 30 päivään): tyyppi,
-mitattu arvo, raja-arvo ja kellonaika.</p>
+<p>Kun sovellus on suljettu, Mac ei lähetä mittauksia. Se säilyttää muistissaan 24 tunnin ajan yhden
+pisteen minuutissa kolmesta mittauksesta — suorittimen käyttöaste, suorittimen lämpötila ja
+virrankulutus — ja lähettää tämän <strong>historian</strong> puhelimeesi, kun avaat sovelluksen,
+päästä päähän salattuna kuten kaikki muukin; historia poistuu, kun Mac käynnistetään uudelleen, eikä
+sitä koskaan kirjoiteta levylle. Mac valvoo lisäksi muutamia raja-arvoja ja lähettää
+<strong>hälytyksen</strong>, kun jokin ylittyy (korkea lämpötila, levy lähes täynnä, siirtyminen
+akkuvirralle, akku vähissä, ei Time Machine -varmuuskopiota 30 päivään): tyyppi, mitattu arvo,
+raja-arvo ja kellonaika.</p>
 
 <h2>Yhdistäminen ja avaimet</h2>
 <p>Macin näyttämä QR-koodi sisältää satunnaisen tunnisteen ja salaisen avaimen. Mac säilyttää ne
@@ -149,7 +153,7 @@ puhelimet” Macissa, mikä luo uuden avaimen.</p>
   <li>Googlen sovellukselle antama <strong>ilmoitustunnus</strong>;</li>
   <li>sovelluksessa valitsemasi <strong>kieli</strong>.</li>
 </ul>
-<p>Näytetty historia (viimeiset minuutit) on muistissa ja katoaa, kun sovellus suljetaan.
+<p>Näytetty historia (enintään viimeiset 24 tuntia) on muistissa ja katoaa, kun sovellus suljetaan.
 Sovelluksen poistaminen poistaa kaiken muun.</p>
 
 <h2>Tietoja välittävät palvelut</h2>

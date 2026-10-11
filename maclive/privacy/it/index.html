@@ -129,10 +129,13 @@ sede in Francia. Contatto: <a href="mailto:atria.eponym@gmail.com">atria.eponym@
   <li><strong>L'identità del Mac</strong>: nome, modello, chip, numero di core, memoria, versione di
       macOS e l'immagine del suo modello, per riconoscere il tuo Mac.</li>
 </ul>
-<p>Quando l'app è chiusa, il Mac non invia alcuna misura. Continua solo a sorvegliare alcune soglie
-e invia un <strong>avviso</strong> quando una viene superata (temperatura elevata, disco quasi
-pieno, passaggio a batteria, batteria scarica, nessun backup di Time Machine da 30 giorni): il tipo,
-il valore misurato, la soglia e l'ora.</p>
+<p>Quando l'app è chiusa, il Mac non invia alcuna misura. Conserva nella sua memoria, per 24 ore, un
+punto al minuto di tre misure — utilizzo del processore, temperatura del processore e consumo
+elettrico — e invia questa <strong>cronologia</strong>, cifrata end-to-end come tutto il resto, al
+telefono quando apri l'app; viene cancellata al riavvio del Mac e non viene mai scritta su disco. Il
+Mac continua inoltre a sorvegliare alcune soglie e invia un <strong>avviso</strong> quando una viene
+superata (temperatura elevata, disco quasi pieno, passaggio a batteria, batteria scarica, nessun
+backup di Time Machine da 30 giorni): il tipo, il valore misurato, la soglia e l'ora.</p>
 
 <h2>L'abbinamento e le chiavi</h2>
 <p>Il codice QR mostrato dal Mac contiene un identificativo casuale e una chiave segreta. Il Mac li
@@ -149,7 +152,7 @@ oppure «Disconnetti tutti i telefoni» sul Mac, che crea una nuova chiave.</p>
   <li>il <strong>token di notifica</strong> assegnato da Google all'app;</li>
   <li>la <strong>lingua</strong> scelta nell'app.</li>
 </ul>
-<p>La cronologia mostrata (gli ultimi minuti) resta in memoria e scompare alla chiusura dell'app.
+<p>La cronologia mostrata (fino alle ultime 24 ore) resta in memoria e scompare alla chiusura dell'app.
 Disinstallare l'app cancella tutto il resto.</p>
 
 <h2>I servizi che trasportano i dati</h2>

@@ -154,10 +154,14 @@ deux secondes environ :</p>
       mémoire, sa version de macOS et l'image de son modèle, pour que vous reconnaissiez votre
       Mac.</li>
 </ul>
-<p>Quand l'application est fermée, votre Mac n'envoie aucune mesure. Il continue seulement de
-surveiller quelques seuils et envoie une <strong>alerte</strong> quand l'un d'eux est franchi
-(température élevée, disque presque plein, passage sur batterie, batterie faible, Time Machine
-sans sauvegarde depuis 30 jours) : sa nature, la valeur mesurée, le seuil et l'heure.</p>
+<p>Quand l'application est fermée, votre Mac n'envoie aucune mesure. Il garde en mémoire, pendant 24
+heures, un point par minute de trois mesures — utilisation du processeur, température du processeur
+et consommation électrique — et envoie cet <strong>historique</strong>, chiffré de bout en bout
+comme tout le reste, à votre téléphone quand vous ouvrez l'application ; il est effacé au
+redémarrage du Mac et n'est jamais écrit sur le disque. Votre Mac continue aussi de surveiller
+quelques seuils et envoie une <strong>alerte</strong> quand l'un d'eux est franchi (température
+élevée, disque presque plein, passage sur batterie, batterie faible, Time Machine sans sauvegarde
+depuis 30 jours) : sa nature, la valeur mesurée, le seuil et l'heure.</p>
 
 <h2>L'appairage et les clés</h2>
 <p>Le QR code affiché par votre Mac contient un identifiant aléatoire et une clé secrète. Votre
@@ -174,7 +178,7 @@ ne permet pas de déchiffrer vos mesures.</p>
   <li>le <strong>jeton de notification</strong> attribué par Google à l'application ;</li>
   <li>la <strong>langue</strong> que vous avez choisie dans l'application.</li>
 </ul>
-<p>L'historique affiché (les dernières minutes) reste en mémoire et disparaît à la fermeture de
+<p>L'historique affiché (jusqu'aux 24 dernières heures) reste en mémoire et disparaît à la fermeture de
 l'application. Désinstaller l'application efface tout le reste.</p>
 
 <h2>Les services qui transportent les données</h2>
