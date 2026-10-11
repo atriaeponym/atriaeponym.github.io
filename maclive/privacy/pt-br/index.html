@@ -130,10 +130,13 @@ aproximadamente:</p>
   <li><strong>A identidade do Mac</strong>: nome, modelo, chip, número de núcleos, memória, versão do
       macOS e a imagem do modelo, para você reconhecer o seu Mac.</li>
 </ul>
-<p>Com o app fechado, o Mac não envia nenhuma medição. Ele só continua vigiando alguns limites e
-envia um <strong>alerta</strong> quando um deles é ultrapassado (temperatura alta, disco quase
-cheio, passagem para a bateria, bateria fraca, Time Machine sem backup há 30 dias): o tipo, o valor
-medido, o limite e o horário.</p>
+<p>Com o app fechado, o Mac não envia nenhuma medição. Ele guarda na memória, por 24 horas, um ponto
+por minuto de três medições — uso do processador, temperatura do processador e consumo de energia —
+e envia esse <strong>histórico</strong>, criptografado de ponta a ponta como todo o resto, para o
+celular quando você abre o app; ele é apagado quando o Mac reinicia e nunca é gravado no disco. O
+Mac também continua vigiando alguns limites e envia um <strong>alerta</strong> quando um deles é
+ultrapassado (temperatura alta, disco quase cheio, passagem para a bateria, bateria fraca, Time
+Machine sem backup há 30 dias): o tipo, o valor medido, o limite e o horário.</p>
 
 <h2>O pareamento e as chaves</h2>
 <p>O QR code exibido pelo Mac contém um identificador aleatório e uma chave secreta. O Mac os guarda
@@ -150,7 +153,7 @@ todos os celulares» no Mac, que cria uma chave nova.</p>
   <li>o <strong>token de notificação</strong> que o Google atribui ao app;</li>
   <li>o <strong>idioma</strong> escolhido no app.</li>
 </ul>
-<p>O histórico exibido (os últimos minutos) fica na memória e desaparece quando o app é fechado.
+<p>O histórico exibido (até as últimas 24 horas) fica na memória e desaparece quando o app é fechado.
 Desinstalar o app apaga todo o resto.</p>
 
 <h2>Os serviços que transportam os dados</h2>

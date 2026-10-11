@@ -134,8 +134,12 @@ Sekunden:</p>
       Arbeitsspeicher, macOS-Version und ein Bild seines Modells, damit du deinen Mac
       erkennst.</li>
 </ul>
-<p>Ist die App geschlossen, sendet dein Mac keine Messwerte. Er überwacht nur einige Schwellen
-weiter und sendet eine <strong>Warnung</strong>, wenn eine überschritten wird (hohe Temperatur,
+<p>Ist die App geschlossen, sendet dein Mac keine Messwerte. Er behält 24 Stunden lang in seinem
+Arbeitsspeicher einen Punkt pro Minute für drei Messwerte — Prozessorauslastung, Prozessortemperatur
+und Stromverbrauch — und sendet diesen <strong>Verlauf</strong>, wie alles andere
+Ende-zu-Ende-verschlüsselt, an dein Telefon, wenn du die App öffnest; er wird beim Neustart des Mac
+gelöscht und nie auf das Laufwerk geschrieben. Außerdem überwacht dein Mac weiterhin einige
+Schwellen und sendet eine <strong>Warnung</strong>, wenn eine überschritten wird (hohe Temperatur,
 Laufwerk fast voll, Wechsel auf Akku, Akku schwach, seit 30 Tagen kein Time-Machine-Backup): ihre
 Art, den gemessenen Wert, die Schwelle und die Uhrzeit.</p>
 
@@ -154,7 +158,7 @@ Telefone trennen“ auf dem Mac, wodurch ein neuer Schlüssel erzeugt wird.</p>
   <li>das <strong>Benachrichtigungstoken</strong>, das Google der App zuweist;</li>
   <li>die <strong>Sprache</strong>, die du in der App gewählt hast.</li>
 </ul>
-<p>Der angezeigte Verlauf (die letzten Minuten) bleibt im Arbeitsspeicher und verschwindet beim
+<p>Der angezeigte Verlauf (bis zu den letzten 24 Stunden) bleibt im Arbeitsspeicher und verschwindet beim
 Schließen der App. Das Deinstallieren der App löscht alles Übrige.</p>
 
 <h2>Die Dienste, die die Daten transportieren</h2>

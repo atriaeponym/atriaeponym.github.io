@@ -127,10 +127,13 @@ based in France. Contact: <a href="mailto:atria.eponym@gmail.com">atria.eponym@g
   <li><strong>The Mac's identity</strong>: its name, model, chip, number of cores, memory, macOS
       version and a picture of its model, so you recognise your Mac.</li>
 </ul>
-<p>When the app is closed, your Mac sends no readings. It only keeps watching a few thresholds
-and sends an <strong>alert</strong> when one is crossed (high temperature, disk nearly full,
-switch to battery, low battery, no Time Machine backup for 30 days): its kind, the measured
-value, the threshold and the time.</p>
+<p>When the app is closed, your Mac sends no readings. It keeps in its memory, for 24 hours, one
+point per minute of three readings — processor usage, processor temperature and power draw — and
+sends this <strong>history</strong>, end-to-end encrypted like everything else, to your phone when
+you open the app; it is erased when the Mac restarts and is never written to disk. Your Mac also
+keeps watching a few thresholds and sends an <strong>alert</strong> when one is crossed (high
+temperature, disk nearly full, switch to battery, low battery, no Time Machine backup for 30 days):
+its kind, the measured value, the threshold and the time.</p>
 
 <h2>Pairing and keys</h2>
 <p>The QR code shown by your Mac holds a random identifier and a secret key. Your Mac keeps them
@@ -146,7 +149,7 @@ phones » on the Mac, which creates a new key.</p>
   <li>the <strong>notification token</strong> Google assigns to the app;</li>
   <li>the <strong>language</strong> you chose in the app.</li>
 </ul>
-<p>The history on screen (the last few minutes) stays in memory and disappears when the app
+<p>The history on screen (up to the last 24 hours) stays in memory and disappears when the app
 closes. Uninstalling the app erases everything else.</p>
 
 <h2>The services that carry the data</h2>

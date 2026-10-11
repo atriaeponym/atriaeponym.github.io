@@ -128,10 +128,13 @@ Francji. Kontakt: <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com
   <li><strong>Tożsamość Maca</strong>: nazwa, model, czip, liczba rdzeni, pamięć, wersja macOS i
       obraz modelu, abyś rozpoznał swojego Maca.</li>
 </ul>
-<p>Gdy aplikacja jest zamknięta, Mac nie wysyła żadnych pomiarów. Pilnuje tylko kilku progów i
-wysyła <strong>alert</strong>, gdy któryś zostanie przekroczony (wysoka temperatura, prawie pełny
-dysk, przejście na baterię, niski poziom baterii, brak kopii Time Machine od 30 dni): rodzaj,
-zmierzoną wartość, próg i godzinę.</p>
+<p>Gdy aplikacja jest zamknięta, Mac nie wysyła żadnych pomiarów. Przechowuje w swojej pamięci przez
+24 godziny jeden punkt na minutę dla trzech pomiarów — obciążenia procesora, temperatury procesora i
+poboru mocy — i wysyła tę <strong>historię</strong>, zaszyfrowaną end-to-end jak wszystko inne, na
+telefon, gdy otwierasz aplikację; jest ona usuwana przy ponownym uruchomieniu Maca i nigdy nie jest
+zapisywana na dysku. Mac pilnuje też kilku progów i wysyła <strong>alert</strong>, gdy któryś
+zostanie przekroczony (wysoka temperatura, prawie pełny dysk, przejście na baterię, niski poziom
+baterii, brak kopii Time Machine od 30 dni): rodzaj, zmierzoną wartość, próg i godzinę.</p>
 
 <h2>Parowanie i klucze</h2>
 <p>Kod QR wyświetlany przez Maca zawiera losowy identyfikator i tajny klucz. Mac przechowuje je w
@@ -148,7 +151,7 @@ wszystkie telefony” na Macu, co tworzy nowy klucz.</p>
   <li><strong>token powiadomień</strong> nadany aplikacji przez Google;</li>
   <li><strong>język</strong> wybrany w aplikacji.</li>
 </ul>
-<p>Wyświetlana historia (ostatnie minuty) pozostaje w pamięci i znika po zamknięciu aplikacji.
+<p>Wyświetlana historia (do ostatnich 24 godzin) pozostaje w pamięci i znika po zamknięciu aplikacji.
 Odinstalowanie aplikacji usuwa wszystko inne.</p>
 
 <h2>Usługi, które przenoszą dane</h2>
