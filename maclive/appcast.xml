@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mac Live</title>
+        <item>
+            <title>1.0.0</title>
+            <pubDate>Mon, 12 Oct 2026 15:16:25 +0200</pubDate>
+            <sparkle:version>1.0.0</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://atriaeponym.github.io/maclive/MacLive-1.0.0.dmg" length="2157712" type="application/octet-stream" sparkle:edSignature="p9gWnZ39vYHZdoNVfBfKu8GjmqxqgqqWBU39L1K1LW8n84sr/SHnmA3NHrgDthsbTTPyVO73AUw7cN1TI7tfCQ=="/>
+        </item>
+    </channel>
+</rss>
