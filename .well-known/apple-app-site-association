@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["U3W9377B5Y.com.atriaeponym.maclive"],
+        "components": [
+          { "/": "/maclive/p", "comment": "Pairing link from the Mac's QR code; the secret stays in the fragment" }
+        ]
+      }
+    ]
+  }
+}
