@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>מדיניות פרטיות — <bdi>Mac Live</bdi></h1>
-<div class="sub">עדכון אחרון: 11 באוקטובר 2026</div>
+<div class="sub">עדכון אחרון: 12 באוקטובר 2026</div>
 
-<p><bdi>Mac Live</bdi> מציגה בזמן אמת, בטלפון ה־Android שלכם, את מצב ה־Mac שלכם (טמפרטורות, מעבד,
+<p><bdi>Mac Live</bdi> מציגה בזמן אמת, בטלפון ה־Android שלכם או ב־iPhone, את מצב ה־Mac שלכם (טמפרטורות, מעבד,
 זיכרון, דיסקים, סוללה, גיבויי <bdi>Time Machine</bdi>…) ומתריעה כשמשהו לא תקין. היא פועלת יחד
 עם האפליקציה <bdi>Mac Live</bdi> המותקנת ב־Mac, שאותה מקשרים לטלפון בסריקת קוד QR.</p>
 
@@ -134,8 +134,10 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 
 <h2>הקישור והמפתחות</h2>
 <p>קוד ה־QR שה־Mac מציג מכיל מזהה אקראי ומפתח סודי. ה־Mac שומר אותם ב<strong>מחזיק המפתחות</strong>
-שלו; הטלפון שומר אותם באחסון המוגן על ידי <strong><bdi>Android Keystore</bdi></strong> ומוחרג מגיבויי
-הטלפון. המפתח הסודי אף פעם לא נשלח לאיש: הממסר מקבל רק הוכחה הנגזרת ממנו, שאינה מאפשרת לפענח את
+שלו. ב־Android, הטלפון שומר אותם באחסון המוגן על ידי <strong><bdi>Android Keystore</bdi></strong>
+ומוחרג מגיבויי הטלפון. ב־iPhone, הם נשמרים ב<strong>מחזיק המפתחות</strong> של iOS, קריאים אחרי
+פתיחת הנעילה הראשונה ובמכשיר הזה בלבד: הם לא עוברים למחזיק המפתחות של iCloud ולא ניתן לשחזר אותם
+במכשיר אחר; רק תוסף ההתראות של האפליקציה עצמה יכול גם לקרוא אותם, כדי לפענח התראות. המפתח הסודי אף פעם לא נשלח לאיש: הממסר מקבל רק הוכחה הנגזרת ממנו, שאינה מאפשרת לפענח את
 המדידות שלכם.</p>
 <p>אפשר לנתק את הקישור בכל רגע: „שכח את ה־Mac הזה” בטלפון, או „ניתוק כל הטלפונים” ב־Mac, שיוצר מפתח
 חדש.</p>
@@ -143,35 +145,48 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 <h2>מה נשאר בטלפון</h2>
 <ul>
   <li>ה<strong>קישור</strong>: שם ה־Mac, המזהה והמפתח הסודי;</li>
-  <li><strong>אסימון ההתראות</strong> ש־Google מקצה לאפליקציה;</li>
+  <li><strong>אסימון ההתראות</strong> שמקצה לאפליקציה <bdi>Google</bdi> ב־Android, ו־<bdi>Apple</bdi>
+      ב־iPhone;</li>
   <li>ה<strong>שפה</strong> שבחרתם באפליקציה.</li>
 </ul>
 <p>ההיסטוריה המוצגת (עד 24 השעות האחרונות) נשמרת בזיכרון ונעלמת כשהאפליקציה נסגרת. הסרת האפליקציה מוחקת את
 כל השאר.</p>
 
 <h2>השירותים שמעבירים את הנתונים</h2>
-<p>למפרסם אין שרת משלו. ארבעה שירותים של צד שלישי מעורבים, וזה בדיוק מה שכל אחד מהם רואה.</p>
+<p>למפרסם אין שרת משלו. ארבעה שירותים של צד שלישי מעורבים ב־Android, ושניים ב־iPhone, וזה בדיוק מה שכל אחד
+מהם רואה.</p>
 
 <div class="box warn">
   <p><strong>1. הממסר, ב־<bdi>Cloudflare</bdi>.</strong> ה־Mac והטלפון לא מתחברים ישירות זה לזה: הם עוברים
   דרך ממסר קטן שהמפרסם מפעיל בתשתית של <strong><bdi>Cloudflare</bdi></strong>. הממסר מעביר הודעות
   מוצפנות שאינו יכול לקרוא, ו<strong>אינו שומר שום מדידה</strong>. לכל Mac הוא שומר רק: את המזהה
-  האקראי, טביעת אצבע (SHA-256) של הוכחת הגישה, עד 8 אסימוני התראות עם תאריך הרישום שלהם, ואת שעות
+  האקראי, טביעת אצבע (SHA-256) של הוכחת הגישה, עד 8 אסימוני התראות (<bdi>Google</bdi> או <bdi>Apple</bdi>) עם תאריך הרישום שלהם, ואת שעות
   ההתחברות וההתנתקות של ה־Mac. הכול נמחק אוטומטית כשה־Mac לא התחבר במשך 90 יום. כמו כל שירות מקוון,
   <bdi>Cloudflare</bdi> מעבדת נתונים טכניים של החיבורים (כתובות IP) לפי מדיניות הפרטיות שלה. יומני
   השגיאות של הממסר עשויים להכיל את 8 התווים הראשונים של אסימון התראות, אף פעם לא מדידה.</p>
-  <p><strong>2. ההתראות, דרך <bdi>Firebase Cloud Messaging</bdi> (<bdi>Google</bdi>).</strong> כדי להתריע
+  <p><strong>2. ההתראות, דרך <bdi>Firebase Cloud Messaging</bdi> (<bdi>Google</bdi>) ב־Android.</strong> כדי להתריע
   כשהאפליקציה סגורה, הממסר משתמש בשירות ההתראות של <strong><bdi>Google</bdi></strong>, שמקבל את
   האסימון של הטלפון ואת המזהה האקראי של ה־Mac. התראה עוברת שם <strong>מוצפנת</strong>:
   <bdi>Google</bdi> לא יכולה לקרוא אותה; הטלפון שלכם מפענח ומציג אותה. שתי ההודעות „לא זמין” ו„שוב
   מחובר” מכילות רק את המזהה האקראי ושעה, ללא הצפנה. השירות כפוף למדיניות הפרטיות של
   <bdi>Google</bdi>.</p>
-  <p><strong>3. סורק קודי ה־QR של <bdi>Google</bdi>.</strong> הסריקה מתבצעת על ידי <strong><bdi>Google
+  <p><strong>ב־iPhone, דרך <bdi>Apple Push Notification service</bdi> (<bdi>Apple</bdi>).</strong> אותו
+  ממסר משתמש בשירות ההתראות של <strong><bdi>Apple</bdi></strong>, שמקבל את האסימון של ה־iPhone ואת
+  המזהה האקראי של ה־Mac. הממסר שומר את האסימון הזה בדיוק כמו אלה של <bdi>Google</bdi>: עד 8 לכל Mac,
+  נמחקים אחרי 90 יום שבהם ה־Mac לא התחבר. התראה עוברת שם <strong>בהצפנה מקצה לקצה</strong>: תוסף
+  קטן של האפליקציה מפענח אותה ב־iPhone וכותב את הטקסט שלה, כך ש־<bdi>Apple</bdi> לא רואה שום נתון
+  מה־Mac, רק את הטקסט הנייטרלי „<bdi>Mac Live alert</bdi>” שמוצג אם הפענוח נכשל. גם כאן ההודעות „לא
+  זמין” ו„שוב מחובר” מכילות רק את המזהה האקראי ושעה. השירות כפוף למדיניות הפרטיות של
+  <bdi>Apple</bdi>.</p>
+  <p><strong>3. סורק קודי ה־QR של <bdi>Google</bdi>, ב־Android.</strong> הסריקה מתבצעת על ידי <strong><bdi>Google
   Play Services</bdi></strong> בטלפון, שמנהלים את המצלמה בעצמם. האפליקציה מקבלת רק את הטקסט של הקוד
-  הסרוק ואינה מבקשת גישה למצלמה. השירות כפוף למדיניות הפרטיות של <bdi>Google</bdi>.</p>
-  <p><strong>4. תמיכה בפיתוח, אם תרצו.</strong> תרומה מתבצעת דרך התשלום של <strong><bdi>Google
+  הסרוק ואינה מבקשת גישה למצלמה. השירות כפוף למדיניות הפרטיות של <bdi>Google</bdi>. ב־iPhone אף שירות
+  של צד שלישי אינו מעורב: האפליקציה קוראת את קוד ה־QR בעצמה במצלמה, בטלפון, ואינה שומרת או שולחת
+  שום תמונה.</p>
+  <p><strong>4. תמיכה בפיתוח ב־Android, אם תרצו.</strong> תרומה מתבצעת דרך התשלום של <strong><bdi>Google
   Play</bdi></strong>. התשלום מטופל כולו על ידי <bdi>Google</bdi>: האפליקציה אף פעם לא רואה את אמצעי
-  התשלום שלכם ואינה שולחת שום נתון באותה הזדמנות. זה רשות ואינו פותח דבר באפליקציה.</p>
+  התשלום שלכם ואינה שולחת שום נתון באותה הזדמנות. זה רשות ואינו פותח דבר באפליקציה. גרסת ה־iPhone
+  אינה מציעה תרומה.</p>
 </div>
 
 <h2>מה האפליקציה לא עושה</h2>
@@ -179,7 +194,8 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
   <li>אין חשבון, אין הרשמה, אין זיהוי.</li>
   <li>אין פרסומות, אין רכיבי מעקב פרסומיים.</li>
   <li>אין כלי ניתוח או סטטיסטיקות שימוש.</li>
-  <li>אין גישה למיקום, לאנשי הקשר, לקבצים או למצלמה שלכם.</li>
+  <li>אין גישה למיקום, לאנשי הקשר או לקבצים שלכם. אין גישה למצלמה ב־Android; ב־iPhone המצלמה משמשת
+      רק לסריקת קוד ה־QR, ושום תמונה אינה נשמרת או נשלחת.</li>
   <li>אין מכירה או שיתוף של נתונים עם צדדים שלישיים.</li>
 </ul>
 
@@ -189,10 +205,13 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
       רק בטלפון.</li>
   <li><strong>במעבר</strong> — כל החיבורים משתמשים ב־TLS (HTTPS / WSS).</li>
   <li><strong>במכשירים שלכם</strong> — המפתחות שמורים במחזיק המפתחות של ה־Mac ומוגנים על ידי
-      <bdi>Android Keystore</bdi> בטלפון; הם אף פעם לא מגובים לענן.</li>
+      <bdi>Android Keystore</bdi> בטלפון Android; הם אף פעם לא מגובים לענן. ב־iPhone הם נשמרים
+      במחזיק המפתחות, קשורים למכשיר הזה: הם לא עוברים למחזיק המפתחות של iCloud ולא ניתן לשחזר אותם
+      במכשיר אחר.</li>
 </ul>
 
 <h2>ההרשאות המבוקשות, ולמה</h2>
+<p><strong>ב־Android:</strong></p>
 <ul>
   <li><strong>אינטרנט ומצב הרשת</strong> — כדי להגיע לממסר ולדעת מתי הטלפון לא מחובר.</li>
   <li><strong>התראות</strong> — כדי להציג את ההתראות של ה־Mac. ‏Android שואל פעם אחת, מיד אחרי
@@ -201,6 +220,14 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
       כדי לקבל התראות כשהאפליקציה סגורה.</li>
 </ul>
 <p>אפשר לבטל את ההרשאות האלה בכל עת בהגדרות של Android.</p>
+<p><strong>ב־iPhone:</strong></p>
+<ul>
+  <li><strong>מצלמה</strong> — כדי לסרוק את קוד ה־QR שה־Mac מציג. ‏iOS שואל בסריקה הראשונה; התמונה
+      נשארת בטלפון.</li>
+  <li><strong>התראות</strong> — כדי להציג את ההתראות של ה־Mac. ‏iOS שואל פעם אחת, מיד אחרי הקישור;
+      אפשר לסרב.</li>
+</ul>
+<p>אפשר לבטל אותן בכל עת ב„הגדרות › <bdi>Mac Live</bdi>” ב־iPhone.</p>
 
 <h2>הזכויות שלכם</h2>
 <p>התקנה הכללית להגנה על מידע (GDPR) מעניקה לכם זכות עיון, תיקון, מחיקה והתנגדות. למפרסם אין שום
@@ -215,7 +242,7 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 <p>המדיניות עשויה להשתנות אם האפליקציה תשתנה. תאריך העדכון האחרון מופיע בראש הדף. כל שינוי מהותי יצוין
 בהערות הגרסה.</p>
 
-<footer><bdi>Mac Live</bdi> — <bdi>Atria.Eponym</bdi> · צרפת<br>מדיניות פרטיות, גרסה מ־11 באוקטובר 2026</footer>
+<footer><bdi>Mac Live</bdi> — <bdi>Atria.Eponym</bdi> · צרפת<br>מדיניות פרטיות, גרסה מ־12 באוקטובר 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

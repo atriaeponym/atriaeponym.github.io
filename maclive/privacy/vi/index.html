@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Chính sách quyền riêng tư — <bdi>Mac Live</bdi></h1>
-<div class="sub">Cập nhật lần cuối: 11 tháng 10 năm 2026</div>
+<div class="sub">Cập nhật lần cuối: 12 tháng 10 năm 2026</div>
 
-<p><bdi>Mac Live</bdi> hiển thị trực tiếp trên điện thoại Android của bạn tình trạng của máy Mac (nhiệt độ, bộ xử lý,
+<p><bdi>Mac Live</bdi> hiển thị trực tiếp trên điện thoại Android hoặc iPhone của bạn tình trạng của máy Mac (nhiệt độ, bộ xử lý,
 bộ nhớ, ổ đĩa, pin, bản sao lưu Time Machine…) và cảnh báo khi có sự cố. Ứng dụng hoạt động cùng ứng dụng
 <bdi>Mac Live</bdi> cài trên máy Mac, mà bạn liên kết với điện thoại bằng cách quét mã QR.</p>
 
@@ -134,8 +134,10 @@ giá trị đo được, ngưỡng và thời điểm.</p>
 
 <h2>Ghép nối và khóa</h2>
 <p>Mã QR hiển thị trên máy Mac chứa một mã định danh ngẫu nhiên và một khóa bí mật. Máy Mac lưu chúng trong
-<strong>Chuỗi khóa</strong>; điện thoại lưu chúng trong vùng lưu trữ được <strong>Android Keystore</strong> bảo vệ và được
-loại khỏi các bản sao lưu của điện thoại. Khóa bí mật không bao giờ được gửi cho ai: bộ chuyển tiếp chỉ nhận một bằng chứng
+<strong>Chuỗi khóa</strong>. Trên Android, điện thoại lưu chúng trong vùng lưu trữ được <strong>Android Keystore</strong> bảo vệ
+và được loại khỏi các bản sao lưu của điện thoại. Trên iPhone, chúng được lưu trong <strong>Chuỗi khóa</strong> của iOS, đọc được
+sau lần mở khóa đầu tiên và chỉ trên thiết bị này: chúng không đi vào Chuỗi khóa iCloud và không thể khôi phục sang thiết bị
+khác; chỉ phần mở rộng thông báo của chính ứng dụng cũng đọc được chúng, để giải mã cảnh báo. Khóa bí mật không bao giờ được gửi cho ai: bộ chuyển tiếp chỉ nhận một bằng chứng
 suy ra từ khóa, không thể dùng để giải mã số liệu của bạn.</p>
 <p>Bạn có thể cắt liên kết bất cứ lúc nào: “Quên máy Mac này” trên điện thoại, hoặc “Ngắt kết nối tất cả điện thoại” trên
 máy Mac, thao tác này tạo một khóa mới.</p>
@@ -143,34 +145,42 @@ máy Mac, thao tác này tạo một khóa mới.</p>
 <h2>Những gì lưu lại trên điện thoại</h2>
 <ul>
   <li><strong>thông tin ghép nối</strong>: tên máy Mac, mã định danh và khóa bí mật;</li>
-  <li><strong>mã thông báo</strong> mà Google cấp cho ứng dụng;</li>
+  <li><strong>mã thông báo</strong> được cấp cho ứng dụng, bởi Google trên Android và bởi Apple trên iPhone;</li>
   <li><strong>ngôn ngữ</strong> bạn đã chọn trong ứng dụng.</li>
 </ul>
 <p>Lịch sử hiển thị (tối đa 24 giờ gần nhất) chỉ nằm trong bộ nhớ và biến mất khi đóng ứng dụng. Gỡ cài đặt ứng dụng sẽ xóa mọi
 thứ còn lại.</p>
 
 <h2>Các dịch vụ truyền tải dữ liệu</h2>
-<p>Nhà phát hành không có máy chủ riêng. Có bốn dịch vụ bên thứ ba tham gia, và đây chính xác là những gì mỗi dịch vụ thấy.</p>
+<p>Nhà phát hành không có máy chủ riêng. Có bốn dịch vụ bên thứ ba tham gia trên Android, hai trên iPhone, và đây chính xác là những gì mỗi dịch vụ thấy.</p>
 
 <div class="box warn">
   <p><strong>1. Bộ chuyển tiếp trên Cloudflare.</strong> Máy Mac và điện thoại không kết nối trực tiếp với nhau: chúng đi qua
   một bộ chuyển tiếp nhỏ do nhà phát hành vận hành trên hạ tầng của <strong>Cloudflare</strong>. Bộ chuyển tiếp chuyển các
   tin nhắn đã mã hóa mà nó không đọc được và <strong>không lưu bất kỳ số liệu nào</strong>. Với mỗi máy Mac, nó chỉ giữ: mã
-  định danh ngẫu nhiên, dấu vân tay (SHA-256) của bằng chứng truy cập, tối đa 8 mã thông báo kèm ngày đăng ký, và thời điểm
+  định danh ngẫu nhiên, dấu vân tay (SHA-256) của bằng chứng truy cập, tối đa 8 mã thông báo (Google hoặc Apple) kèm ngày đăng ký, và thời điểm
   máy Mac kết nối và ngắt kết nối. Mọi thứ tự động bị xóa khi máy Mac không kết nối trong 90 ngày. Như mọi dịch vụ trực tuyến,
   Cloudflare xử lý dữ liệu kỹ thuật của kết nối (địa chỉ IP) theo chính sách quyền riêng tư của mình. Nhật ký lỗi của bộ
   chuyển tiếp có thể chứa 8 ký tự đầu của một mã thông báo, không bao giờ chứa số liệu.</p>
-  <p><strong>2. Thông báo qua Firebase Cloud Messaging (Google).</strong> Để cảnh báo bạn khi ứng dụng đóng, bộ chuyển tiếp
+  <p><strong>2. Thông báo qua Firebase Cloud Messaging (Google) trên Android.</strong> Để cảnh báo bạn khi ứng dụng đóng, bộ chuyển tiếp
   dùng dịch vụ thông báo của <strong>Google</strong>, dịch vụ này nhận mã thông báo của điện thoại và mã định danh ngẫu nhiên
   của máy Mac. Cảnh báo được truyền <strong>ở dạng mã hóa</strong>: Google không đọc được; chính điện thoại giải mã và hiển
   thị. Hai tin “không kết nối được” và “đã trực tuyến trở lại” chỉ chứa mã định danh ngẫu nhiên và một thời điểm, không mã
   hóa. Dịch vụ này tuân theo chính sách quyền riêng tư của Google.</p>
-  <p><strong>3. Trình quét mã QR của Google.</strong> Việc quét do <strong>Dịch vụ Google Play</strong> trên điện thoại thực
+  <p><strong>Trên iPhone, qua <bdi>Apple Push Notification service</bdi> (Apple).</strong> Cùng bộ chuyển tiếp đó dùng dịch
+  vụ thông báo của <strong>Apple</strong>, dịch vụ này nhận mã thông báo của iPhone và mã định danh ngẫu nhiên của máy Mac. Bộ
+  chuyển tiếp giữ mã này y hệt như mã của Google: tối đa 8 mã cho mỗi máy Mac, bị xóa khi máy Mac không kết nối trong 90 ngày.
+  Cảnh báo được truyền <strong>ở dạng mã hóa đầu cuối</strong>: một phần mở rộng nhỏ của ứng dụng giải mã nó trên iPhone và viết
+  nội dung, nên Apple không thấy dữ liệu nào của máy Mac, chỉ thấy dòng chữ trung tính “<bdi>Mac Live alert</bdi>” hiển thị khi
+  giải mã thất bại. Ở đây cũng vậy, các tin “không kết nối được” và “đã trực tuyến trở lại” chỉ chứa mã định danh ngẫu nhiên và
+  một thời điểm. Dịch vụ này tuân theo chính sách quyền riêng tư của Apple.</p>
+  <p><strong>3. Trình quét mã QR của Google, trên Android.</strong> Việc quét do <strong>Dịch vụ Google Play</strong> trên điện thoại thực
   hiện, tự điều khiển camera. Ứng dụng chỉ nhận văn bản của mã đã quét và không xin quyền truy cập camera. Dịch vụ này tuân
-  theo chính sách quyền riêng tư của Google.</p>
-  <p><strong>4. Ủng hộ phát triển, nếu bạn muốn.</strong> Khoản ủng hộ được thanh toán qua <strong>Google Play</strong>. Google
+  theo chính sách quyền riêng tư của Google. Trên iPhone, không có dịch vụ bên thứ ba nào tham gia: ứng dụng tự đọc mã QR bằng
+  camera, ngay trên điện thoại, và không lưu cũng không gửi hình ảnh nào.</p>
+  <p><strong>4. Ủng hộ phát triển, trên Android, nếu bạn muốn.</strong> Khoản ủng hộ được thanh toán qua <strong>Google Play</strong>. Google
   xử lý toàn bộ việc thanh toán: ứng dụng không bao giờ thấy phương thức thanh toán của bạn và không gửi dữ liệu nào vào lúc
-  đó. Việc này là tùy chọn và không mở khóa gì trong ứng dụng.</p>
+  đó. Việc này là tùy chọn và không mở khóa gì trong ứng dụng. Phiên bản iPhone không có tính năng ủng hộ.</p>
 </div>
 
 <h2>Những gì ứng dụng không làm</h2>
@@ -178,7 +188,8 @@ thứ còn lại.</p>
   <li>Không tài khoản, không đăng ký, không định danh.</li>
   <li>Không quảng cáo, không trình theo dõi quảng cáo.</li>
   <li>Không công cụ phân tích hay thống kê sử dụng.</li>
-  <li>Không truy cập vị trí, danh bạ, tệp hay camera của bạn.</li>
+  <li>Không truy cập vị trí, danh bạ hay tệp của bạn. Không truy cập camera trên Android; trên iPhone, camera chỉ dùng để quét
+      mã QR, và không hình ảnh nào được lưu hay gửi đi.</li>
   <li>Không bán hay chia sẻ dữ liệu với bên thứ ba.</li>
 </ul>
 
@@ -188,10 +199,12 @@ thứ còn lại.</p>
       trên điện thoại.</li>
   <li><strong>Khi truyền</strong> — mọi kết nối đều dùng TLS (HTTPS / WSS).</li>
   <li><strong>Trên thiết bị của bạn</strong> — khóa được giữ trong Chuỗi khóa của máy Mac và được Android Keystore bảo vệ trên
-      điện thoại; chúng không bao giờ được sao lưu lên đám mây.</li>
+      điện thoại Android; chúng không bao giờ được sao lưu lên đám mây. Trên iPhone, khóa được giữ trong Chuỗi khóa, gắn với
+      thiết bị đó: không đi vào Chuỗi khóa iCloud và không thể khôi phục sang thiết bị khác.</li>
 </ul>
 
 <h2>Các quyền được yêu cầu và lý do</h2>
+<p><strong>Trên Android:</strong></p>
 <ul>
   <li><strong>Internet và trạng thái mạng</strong> — để kết nối tới bộ chuyển tiếp và biết khi điện thoại ngoại tuyến.</li>
   <li><strong>Thông báo</strong> — để hiển thị cảnh báo của máy Mac. Android hỏi một lần, ngay sau khi ghép nối; bạn có thể từ
@@ -199,6 +212,14 @@ thứ còn lại.</p>
   <li><strong>Nhận tin nhắn Firebase</strong> — do thư viện của Google thêm vào, để nhận cảnh báo khi ứng dụng đóng.</li>
 </ul>
 <p>Bạn có thể thu hồi các quyền này bất cứ lúc nào trong phần cài đặt Android.</p>
+<p><strong>Trên iPhone:</strong></p>
+<ul>
+  <li><strong>Camera</strong> — để quét mã QR hiển thị trên máy Mac. iOS hỏi ở lần quét đầu tiên; hình ảnh vẫn ở trên điện
+      thoại.</li>
+  <li><strong>Thông báo</strong> — để hiển thị cảnh báo của máy Mac. iOS hỏi một lần, ngay sau khi ghép nối; bạn có thể từ
+      chối.</li>
+</ul>
+<p>Bạn có thể thu hồi các quyền này bất cứ lúc nào trong <bdi>Cài đặt › Mac Live</bdi> trên iPhone.</p>
 
 <h2>Quyền của bạn</h2>
 <p>Quy định chung về bảo vệ dữ liệu (GDPR) trao cho bạn quyền truy cập, chỉnh sửa, xóa và phản đối. Nhà phát hành không giữ dữ
@@ -213,7 +234,7 @@ cũng có thể viết tới <a href="mailto:atria.eponym@gmail.com">atria.epony
 <p>Chính sách này có thể thay đổi nếu ứng dụng thay đổi. Ngày cập nhật gần nhất được ghi ở đầu trang. Mọi thay đổi quan trọng
 sẽ được nêu trong ghi chú phát hành.</p>
 
-<footer>Mac Live — Atria.Eponym · Pháp<br>Chính sách quyền riêng tư, phiên bản ngày 11 tháng 10 năm 2026</footer>
+<footer>Mac Live — Atria.Eponym · Pháp<br>Chính sách quyền riêng tư, phiên bản ngày 12 tháng 10 năm 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

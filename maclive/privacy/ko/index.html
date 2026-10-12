@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>개인정보처리방침 — <bdi>Mac Live</bdi></h1>
-<div class="sub">최종 업데이트: 2026년 10월 11일</div>
+<div class="sub">최종 업데이트: 2026년 10월 12일</div>
 
-<p><bdi>Mac Live</bdi>는 Android 휴대폰에서 Mac의 상태(온도, 프로세서, 메모리, 디스크, 배터리, Time Machine 백업 등)를
+<p><bdi>Mac Live</bdi>는 Android 휴대폰이나 iPhone에서 Mac의 상태(온도, 프로세서, 메모리, 디스크, 배터리, Time Machine 백업 등)를
 실시간으로 보여 주고, 문제가 생기면 알려 줍니다. Mac에 설치한 <bdi>Mac Live</bdi> 앱과 함께 작동하며, QR 코드를 스캔해
 Mac과 휴대폰을 연결합니다.</p>
 
@@ -128,8 +128,10 @@ Mac과 휴대폰을 연결합니다.</p>
 배터리 전원으로 전환, 배터리 부족, 30일 동안 Time Machine 백업 없음). 내용은 종류, 측정값, 임계값, 시각입니다.</p>
 
 <h2>페어링과 키</h2>
-<p>Mac에 표시되는 QR 코드에는 무작위 식별자와 비밀 키가 들어 있습니다. Mac은 이를 <strong>키체인</strong>에, 휴대폰은
-<strong>Android Keystore</strong>로 보호되고 휴대폰 백업에서 제외된 저장소에 보관합니다. 비밀 키는 누구에게도 전송되지
+<p>Mac에 표시되는 QR 코드에는 무작위 식별자와 비밀 키가 들어 있습니다. Mac은 이를 <strong>키체인</strong>에 보관합니다.
+Android에서는 휴대폰이 <strong>Android Keystore</strong>로 보호되고 휴대폰 백업에서 제외된 저장소에 보관합니다. iPhone에서는
+iOS의 <strong>키체인</strong>에 보관되며, 처음 잠금 해제한 이후에 읽을 수 있고 이 기기에서만 사용됩니다. 따라서 iCloud 키체인에
+들어가지 않으며 다른 기기로 복원할 수도 없습니다. 이를 함께 읽을 수 있는 것은 알림을 복호화하기 위한 앱 자체의 알림 확장 프로그램뿐입니다. 비밀 키는 누구에게도 전송되지
 않습니다. 릴레이가 받는 것은 비밀 키에서 파생된 증명뿐이며, 이것으로는 측정값을 복호화할 수 없습니다.</p>
 <p>언제든지 연결을 끊을 수 있습니다. 휴대폰에서 「이 Mac 등록 해제」를 선택하거나, Mac에서 「모든 휴대폰 연결 해제」를
 선택하면 새 키가 만들어집니다.</p>
@@ -137,32 +139,40 @@ Mac과 휴대폰을 연결합니다.</p>
 <h2>휴대폰에 남는 정보</h2>
 <ul>
   <li><strong>페어링 정보</strong>: Mac 이름, 식별자, 비밀 키</li>
-  <li>Google이 앱에 할당하는 <strong>알림 토큰</strong></li>
+  <li>앱에 할당되는 <strong>알림 토큰</strong>(Android에서는 Google, iPhone에서는 Apple이 할당)</li>
   <li>앱에서 선택한 <strong>언어</strong></li>
 </ul>
 <p>표시되는 기록(최근 최대 24시간)은 메모리에만 있으며 앱을 닫으면 사라집니다. 앱을 삭제하면 나머지도 모두 지워집니다.</p>
 
 <h2>데이터를 전달하는 서비스</h2>
-<p>게시자는 자체 서버가 없습니다. 네 가지 외부 서비스가 관여하며, 각 서비스가 정확히 무엇을 보는지는 다음과 같습니다.</p>
+<p>게시자는 자체 서버가 없습니다. Android에서는 네 가지, iPhone에서는 두 가지 외부 서비스가 관여하며, 각 서비스가 정확히 무엇을 보는지는 다음과 같습니다.</p>
 
 <div class="box warn">
   <p><strong>1. Cloudflare의 릴레이.</strong> Mac과 휴대폰은 서로 직접 연결되지 않고, 게시자가 <strong>Cloudflare</strong>
   인프라에서 운영하는 작은 릴레이를 거칩니다. 릴레이는 읽을 수 없는 암호화된 메시지를 전달할 뿐이며 <strong>측정값을 전혀
-  저장하지 않습니다</strong>. Mac마다 무작위 식별자, 접근 증명의 지문(SHA-256), 등록 날짜와 함께 최대 8개의 알림 토큰,
+  저장하지 않습니다</strong>. Mac마다 무작위 식별자, 접근 증명의 지문(SHA-256), 등록 날짜와 함께 최대 8개의 알림 토큰(Google 또는 Apple),
   Mac의 연결·해제 시각만 보관합니다. Mac이 90일 동안 연결되지 않으면 모두 자동으로 삭제됩니다. 다른 온라인 서비스와
   마찬가지로 Cloudflare는 연결의 기술 데이터(IP 주소)를 자체 개인정보처리방침에 따라 처리합니다. 릴레이의 오류 로그에는 알림
   토큰의 앞 8자가 포함될 수 있으나 측정값은 절대 포함되지 않습니다.</p>
-  <p><strong>2. Firebase Cloud Messaging(Google)을 통한 알림.</strong> 앱이 닫혀 있을 때 알려 드리기 위해 릴레이는
+  <p><strong>2. Android에서는 Firebase Cloud Messaging(Google)을 통한 알림.</strong> 앱이 닫혀 있을 때 알려 드리기 위해 릴레이는
   <strong>Google</strong>의 알림 서비스를 사용하며, 이 서비스는 휴대폰의 토큰과 Mac의 무작위 식별자를 받습니다. 알림은
   <strong>암호화</strong>된 상태로 전달되어 Google은 읽을 수 없고, 휴대폰이 복호화해 표시합니다. 「연결할 수 없음」과
   「다시 온라인」 두 메시지에는 무작위 식별자와 시각만 암호화되지 않은 채 담깁니다. 이 서비스에는 Google의
   개인정보처리방침이 적용됩니다.</p>
-  <p><strong>3. Google QR 코드 스캐너.</strong> QR 코드 스캔은 휴대폰의 <strong>Google Play 서비스</strong>가 수행하며
-  카메라도 직접 제어합니다. 앱은 스캔한 코드의 텍스트만 받으며 카메라 권한을 요청하지 않습니다. 이 서비스에는 Google의
+  <p><strong>iPhone에서는 <bdi>Apple Push Notification service</bdi>(Apple)를 통한 알림.</strong> 같은 릴레이가
+  <strong>Apple</strong>의 알림 서비스를 사용하며, 이 서비스는 iPhone의 토큰과 Mac의 무작위 식별자를 받습니다. 릴레이는 이 토큰을
+  Google 토큰과 똑같이 다룹니다. Mac마다 최대 8개이며, Mac이 90일 동안 연결되지 않으면 삭제됩니다. 알림은 <strong>종단 간
+  암호화</strong>된 상태로 전달되며, 앱의 작은 확장 프로그램이 iPhone에서 이를 복호화하고 문구를 작성하므로 Apple은 Mac의 데이터를
+  전혀 볼 수 없습니다. Apple이 보는 것은 복호화에 실패했을 때 표시되는 중립적인 문구 「<bdi>Mac Live alert</bdi>」뿐입니다.
+  「연결할 수 없음」과 「다시 온라인」 메시지에도 여기서 역시 무작위 식별자와 시각만 담깁니다. 이 서비스에는 Apple의
   개인정보처리방침이 적용됩니다.</p>
-  <p><strong>4. 개발 후원(원하는 경우).</strong> 후원은 <strong>Google Play</strong> 결제로 이루어집니다. 결제는 전적으로
+  <p><strong>3. Google QR 코드 스캐너(Android).</strong> QR 코드 스캔은 휴대폰의 <strong>Google Play 서비스</strong>가 수행하며
+  카메라도 직접 제어합니다. 앱은 스캔한 코드의 텍스트만 받으며 카메라 권한을 요청하지 않습니다. 이 서비스에는 Google의
+  개인정보처리방침이 적용됩니다. iPhone에서는 외부 서비스가 관여하지 않습니다. 앱이 휴대폰에서 직접 카메라로 QR 코드를 읽으며,
+  어떤 이미지도 저장하거나 전송하지 않습니다.</p>
+  <p><strong>4. 개발 후원(Android, 원하는 경우).</strong> 후원은 <strong>Google Play</strong> 결제로 이루어집니다. 결제는 전적으로
   Google이 처리하며, 앱은 결제 수단을 볼 수 없고 이때 어떤 데이터도 전송하지 않습니다. 선택 사항이며 앱에서 아무것도 잠금
-  해제하지 않습니다.</p>
+  해제하지 않습니다. iPhone 버전에는 후원 기능이 없습니다.</p>
 </div>
 
 <h2>앱이 하지 않는 일</h2>
@@ -170,7 +180,8 @@ Mac과 휴대폰을 연결합니다.</p>
   <li>계정, 가입, 신원 확인이 없습니다.</li>
   <li>광고와 광고 추적기가 없습니다.</li>
   <li>분석 도구나 사용 통계가 없습니다.</li>
-  <li>위치, 연락처, 파일, 카메라에 접근하지 않습니다.</li>
+  <li>위치, 연락처, 파일에 접근하지 않습니다. Android에서는 카메라에도 접근하지 않으며, iPhone에서는 카메라를 QR 코드 스캔에만
+      사용하고 어떤 이미지도 저장하거나 전송하지 않습니다.</li>
   <li>데이터를 판매하거나 제3자와 공유하지 않습니다.</li>
 </ul>
 
@@ -178,17 +189,25 @@ Mac과 휴대폰을 연결합니다.</p>
 <ul>
   <li><strong>종단 간 암호화</strong> — 모든 측정값과 알림은 Mac에서 암호화(AES-256-GCM)되고 휴대폰에서만 복호화됩니다.</li>
   <li><strong>전송 중</strong> — 모든 연결은 TLS(HTTPS / WSS)를 사용합니다.</li>
-  <li><strong>기기에서</strong> — 키는 Mac의 키체인에 보관되고 휴대폰에서는 Android Keystore로 보호되며, 클라우드에 백업되지
-      않습니다.</li>
+  <li><strong>기기에서</strong> — 키는 Mac의 키체인에 보관되고 Android 휴대폰에서는 Android Keystore로 보호되며, 클라우드에 백업되지
+      않습니다. iPhone에서는 해당 기기에 묶인 채 키체인에 보관되어 iCloud 키체인에 들어가지 않으며 다른 기기로 복원할 수
+      없습니다.</li>
 </ul>
 
 <h2>요청하는 권한과 그 이유</h2>
+<p><strong>Android:</strong></p>
 <ul>
   <li><strong>인터넷 및 네트워크 상태</strong> — 릴레이에 연결하고 휴대폰이 오프라인인지 알기 위해.</li>
   <li><strong>알림</strong> — Mac의 알림을 표시하기 위해. Android가 페어링 직후 한 번 묻으며, 거부할 수 있습니다.</li>
   <li><strong>Firebase 메시지 수신</strong> — 앱이 닫혀 있을 때 알림을 받기 위해 Google 라이브러리가 추가합니다.</li>
 </ul>
 <p>이 권한은 Android 설정에서 언제든지 철회할 수 있습니다.</p>
+<p><strong>iPhone:</strong></p>
+<ul>
+  <li><strong>카메라</strong> — Mac에 표시된 QR 코드를 스캔하기 위해. 처음 스캔할 때 iOS가 묻으며, 이미지는 휴대폰에 남습니다.</li>
+  <li><strong>알림</strong> — Mac의 알림을 표시하기 위해. iOS가 페어링 직후 한 번 묻으며, 거부할 수 있습니다.</li>
+</ul>
+<p>이 권한은 iPhone의 <bdi>설정 › Mac Live</bdi>에서 언제든지 철회할 수 있습니다.</p>
 
 <h2>사용자의 권리</h2>
 <p>일반 개인정보 보호법(GDPR)은 열람, 정정, 삭제, 이의 제기 권리를 보장합니다. 게시자는 사용자를 식별할 수 있는 데이터를
@@ -203,7 +222,7 @@ Mac과 휴대폰을 연결합니다.</p>
 <p>앱이 바뀌면 이 방침도 바뀔 수 있습니다. 최종 업데이트 날짜는 이 페이지 상단에 표시됩니다. 중요한 변경 사항은 릴리스
 노트에 안내합니다.</p>
 
-<footer>Mac Live — Atria.Eponym · 프랑스<br>개인정보처리방침, 2026년 10월 11일 버전</footer>
+<footer>Mac Live — Atria.Eponym · 프랑스<br>개인정보처리방침, 2026년 10월 12일 버전</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

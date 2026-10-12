@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>プライバシーポリシー — <bdi>Mac Live</bdi></h1>
-<div class="sub">最終更新日：2026年10月11日</div>
+<div class="sub">最終更新日：2026年10月12日</div>
 
-<p><bdi>Mac Live</bdi> は、お使いの Android スマートフォンに Mac の状態（温度、プロセッサ、メモリ、ディスク、バッテリー、
+<p><bdi>Mac Live</bdi> は、お使いの Android スマートフォンまたは iPhone に Mac の状態（温度、プロセッサ、メモリ、ディスク、バッテリー、
 Time Machine バックアップなど）をリアルタイムで表示し、問題があればお知らせします。Mac にインストールした
 <bdi>Mac Live</bdi> アプリと連携して動作し、QR コードを読み取るだけでスマートフォンと関連付けられます。</p>
 
@@ -129,8 +129,11 @@ Time Machine バックアップなど）をリアルタイムで表示し、問�
 バックアップなし）。内容は種類、測定値、しきい値、時刻です。</p>
 
 <h2>ペアリングと鍵</h2>
-<p>Mac に表示される QR コードには、ランダムな識別子と秘密鍵が含まれています。Mac はこれを<strong>キーチェーン</strong>に、
-スマートフォンは <strong>Android Keystore</strong> で保護され端末のバックアップから除外された領域に保存します。秘密鍵が誰かに
+<p>Mac に表示される QR コードには、ランダムな識別子と秘密鍵が含まれています。Mac はこれを<strong>キーチェーン</strong>に保存します。
+Android では、スマートフォンは <strong>Android Keystore</strong> で保護され端末のバックアップから除外された領域に保存します。
+iPhone では、iOS の<strong>キーチェーン</strong>に保存されます。最初のロック解除後に読み取り可能で、このデバイスのみに限定されるため、
+iCloud キーチェーンには入らず、別のデバイスに復元することもできません。これを読み取れるのは、アラートを復号するためのアプリ自身の
+通知拡張機能だけです。秘密鍵が誰かに
 送られることはありません。リレーが受け取るのは秘密鍵から導いた証明だけで、それでは測定値を復号できません。</p>
 <p>関連付けはいつでも解除できます。スマートフォンで「この Mac の登録を解除」、または Mac で「すべてのスマートフォンを切断」を選ぶと、
 新しい鍵が作られます。</p>
@@ -138,31 +141,39 @@ Time Machine バックアップなど）をリアルタイムで表示し、問�
 <h2>スマートフォンに残るもの</h2>
 <ul>
   <li><strong>ペアリング情報</strong>：Mac の名前、識別子、秘密鍵</li>
-  <li>Google がアプリに割り当てる<strong>通知トークン</strong></li>
+  <li>アプリに割り当てられる<strong>通知トークン</strong>（Android では Google、iPhone では Apple が割り当て）</li>
   <li>アプリで選んだ<strong>言語</strong></li>
 </ul>
 <p>表示される履歴（最大で直近 24 時間）はメモリ上にのみあり、アプリを閉じると消えます。アプリをアンインストールすると、それ以外もすべて消去されます。</p>
 
 <h2>データを運ぶサービス</h2>
-<p>発行者は独自のサーバーを持っていません。4 つの外部サービスが関わっており、それぞれが見るものは次のとおりです。</p>
+<p>発行者は独自のサーバーを持っていません。Android では 4 つ、iPhone では 2 つの外部サービスが関わっており、それぞれが見るものは次のとおりです。</p>
 
 <div class="box warn">
   <p><strong>1. Cloudflare 上のリレー。</strong>Mac とスマートフォンは直接つながらず、発行者が <strong>Cloudflare</strong>
   のインフラ上で運用する小さなリレーを経由します。リレーは読むことのできない暗号化メッセージを中継するだけで、
   <strong>測定値は一切保存しません</strong>。Mac ごとに保存するのは、ランダムな識別子、アクセス証明の指紋（SHA-256）、登録日付き
-  の通知トークン最大 8 個、Mac の接続・切断時刻だけです。Mac が 90 日間接続しなければ、すべて自動的に削除されます。他のオンライン
+  の通知トークン（Google または Apple）最大 8 個、Mac の接続・切断時刻だけです。Mac が 90 日間接続しなければ、すべて自動的に削除されます。他のオンライン
   サービスと同様、Cloudflare は接続の技術データ（IP アドレス）を自社のプライバシーポリシーに従って処理します。リレーのエラーログに
   通知トークンの先頭 8 文字が含まれることはありますが、測定値が含まれることはありません。</p>
-  <p><strong>2. Firebase Cloud Messaging（Google）による通知。</strong>アプリを閉じているときにお知らせするため、リレーは
+  <p><strong>2. Android では Firebase Cloud Messaging（Google）による通知。</strong>アプリを閉じているときにお知らせするため、リレーは
   <strong>Google</strong> の通知サービスを使います。このサービスはスマートフォンのトークンと Mac のランダムな識別子を受け取ります。
   アラートは<strong>暗号化</strong>されたまま運ばれ、Google には読めません。復号して表示するのはスマートフォンです。「接続できません」
   「オンラインに戻りました」の 2 種類のメッセージには、ランダムな識別子と時刻だけが暗号化されずに含まれます。このサービスには
   Google のプライバシーポリシーが適用されます。</p>
-  <p><strong>3. Google の QR コードスキャナー。</strong>QR コードの読み取りはスマートフォンの <strong>Google Play 開発者サービス</strong>
+  <p><strong>iPhone では <bdi>Apple Push Notification service</bdi>（Apple）による通知。</strong>同じリレーが
+  <strong>Apple</strong> の通知サービスを使います。このサービスは iPhone のトークンと Mac のランダムな識別子を受け取ります。リレーは
+  このトークンを Google のものとまったく同じように扱います。Mac ごとに最大 8 個で、Mac が 90 日間接続しなければ削除されます。
+  アラートは<strong>エンドツーエンドで暗号化</strong>されたまま運ばれます。アプリの小さな拡張機能が iPhone 上でそれを復号して文面を
+  作成するため、Apple には Mac のデータは見えません。見えるのは、復号に失敗したときに表示される中立的な文面
+  「<bdi>Mac Live alert</bdi>」だけです。「接続できません」「オンラインに戻りました」のメッセージも、ここでもランダムな識別子と
+  時刻だけを含みます。このサービスには Apple のプライバシーポリシーが適用されます。</p>
+  <p><strong>3. Google の QR コードスキャナー（Android）。</strong>QR コードの読み取りはスマートフォンの <strong>Google Play 開発者サービス</strong>
   が行い、カメラもそちらが制御します。アプリが受け取るのは読み取ったコードの文字列だけで、カメラへのアクセスは要求しません。
-  このサービスには Google のプライバシーポリシーが適用されます。</p>
-  <p><strong>4. 開発の支援（ご希望の場合）。</strong>寄付は <strong>Google Play</strong> の決済で行われます。決済はすべて Google
-  が処理し、アプリがお支払い方法を見ることはなく、その際にデータを送ることもありません。任意であり、アプリの機能が増えることもありません。</p>
+  このサービスには Google のプライバシーポリシーが適用されます。iPhone では外部サービスは関わりません。アプリ自身がスマートフォン上で
+  カメラを使って QR コードを読み取り、画像を保存することも送信することもありません。</p>
+  <p><strong>4. 開発の支援（Android、ご希望の場合）。</strong>寄付は <strong>Google Play</strong> の決済で行われます。決済はすべて Google
+  が処理し、アプリがお支払い方法を見ることはなく、その際にデータを送ることもありません。任意であり、アプリの機能が増えることもありません。iPhone 版には寄付の機能はありません。</p>
 </div>
 
 <h2>アプリが行わないこと</h2>
@@ -170,7 +181,8 @@ Time Machine バックアップなど）をリアルタイムで表示し、問�
   <li>アカウント、登録、本人確認は一切ありません。</li>
   <li>広告や広告トラッカーはありません。</li>
   <li>アクセス解析や利用統計はありません。</li>
-  <li>位置情報、連絡先、ファイル、カメラにはアクセスしません。</li>
+  <li>位置情報、連絡先、ファイルにはアクセスしません。Android ではカメラにもアクセスしません。iPhone ではカメラは QR コードの
+      読み取りにのみ使われ、画像が保存・送信されることはありません。</li>
   <li>データの販売や第三者との共有はしません。</li>
 </ul>
 
@@ -179,17 +191,26 @@ Time Machine バックアップなど）をリアルタイムで表示し、問�
   <li><strong>エンドツーエンド暗号化</strong> — すべての測定値とアラートは Mac で暗号化され（AES-256-GCM）、スマートフォンでのみ
       復号されます。</li>
   <li><strong>通信中</strong> — すべての接続で TLS（HTTPS / WSS）を使用します。</li>
-  <li><strong>端末上</strong> — 鍵は Mac のキーチェーンに保存され、スマートフォンでは Android Keystore で保護されます。クラウドに
-      バックアップされることはありません。</li>
+  <li><strong>端末上</strong> — 鍵は Mac のキーチェーンに保存され、Android スマートフォンでは Android Keystore で保護されます。クラウドに
+      バックアップされることはありません。iPhone では、このデバイスに限定してキーチェーンに保存されます。iCloud キーチェーンには
+      入らず、別のデバイスに復元することもできません。</li>
 </ul>
 
 <h2>要求する権限とその理由</h2>
+<p><strong>Android の場合：</strong></p>
 <ul>
   <li><strong>インターネットとネットワーク状態</strong> — リレーに接続し、スマートフォンがオフラインかどうかを知るため。</li>
   <li><strong>通知</strong> — Mac のアラートを表示するため。Android がペアリング直後に一度だけ確認します。拒否することもできます。</li>
   <li><strong>Firebase メッセージの受信</strong> — アプリを閉じているときにアラートを受け取るため、Google のライブラリが追加します。</li>
 </ul>
 <p>これらの権限は Android の設定からいつでも取り消せます。</p>
+<p><strong>iPhone の場合：</strong></p>
+<ul>
+  <li><strong>カメラ</strong> — Mac に表示される QR コードを読み取るため。初めて読み取るときに iOS が確認します。画像はスマートフォンの
+      外に出ません。</li>
+  <li><strong>通知</strong> — Mac のアラートを表示するため。iOS がペアリング直後に一度だけ確認します。拒否することもできます。</li>
+</ul>
+<p>これらは iPhone の <bdi>設定 › Mac Live</bdi> からいつでも取り消せます。</p>
 
 <h2>あなたの権利</h2>
 <p>一般データ保護規則（GDPR）により、あなたにはアクセス、訂正、消去、異議申し立ての権利があります。発行者はあなたを特定できる
@@ -204,7 +225,7 @@ Time Machine バックアップなど）をリアルタイムで表示し、問�
 <p>アプリの変更に伴い、本ポリシーが変わることがあります。最終更新日はこのページの上部に記載しています。重要な変更はリリースノートで
 お知らせします。</p>
 
-<footer>Mac Live — Atria.Eponym · フランス<br>プライバシーポリシー、2026年10月11日版</footer>
+<footer>Mac Live — Atria.Eponym · フランス<br>プライバシーポリシー、2026年10月12日版</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

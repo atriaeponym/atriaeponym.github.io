@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Personvernerklæring — <bdi>Mac Live</bdi></h1>
-<div class="sub">Sist oppdatert: 11. oktober 2026</div>
+<div class="sub">Sist oppdatert: 12. oktober 2026</div>
 
-<p><bdi>Mac Live</bdi> viser direkte på Android-telefonen din hvordan Macen din har det
+<p><bdi>Mac Live</bdi> viser direkte på Android-telefonen eller iPhonen din hvordan Macen din har det
 (temperaturer, prosessor, minne, disker, batteri, Time Machine-sikkerhetskopier …) og varsler deg når
 noe er galt. Den fungerer sammen med appen <bdi>Mac Live</bdi> på Macen, som du kobler til telefonen
 ved å skanne en QR-kode.</p>
@@ -138,8 +138,11 @@ verdi, terskel og tidspunkt.</p>
 
 <h2>Sammenkobling og nøkler</h2>
 <p>QR-koden Macen viser, inneholder en tilfeldig ID og en hemmelig nøkkel. Macen lagrer dem i
-<strong>nøkkelringen</strong>; telefonen lagrer dem i lagring beskyttet av <strong>Android
-Keystore</strong>, unntatt fra telefonens sikkerhetskopier. Den hemmelige nøkkelen sendes aldri til
+<strong>nøkkelringen</strong>. På Android lagrer telefonen dem i lagring beskyttet av
+<strong>Android Keystore</strong>, unntatt fra telefonens sikkerhetskopier. På iPhone ligger de i
+iOS-<strong>Nøkkelringen</strong>, lesbare etter første opplåsing og bare på denne enheten: de går
+ikke inn i iCloud-nøkkelringen og kan ikke gjenopprettes på en annen enhet; bare appens egen
+varslingsutvidelse kan også lese dem, for å dekryptere varsler. Den hemmelige nøkkelen sendes aldri til
 noen: reléet mottar bare et bevis avledet av den, som ikke kan dekryptere målingene dine.</p>
 <p>Du kan bryte koblingen når som helst: «Glem denne Macen» på telefonen, eller «Koble fra alle
 telefoner» på Macen, som lager en ny nøkkel.</p>
@@ -147,39 +150,51 @@ telefoner» på Macen, som lager en ny nøkkel.</p>
 <h2>Hva som blir på telefonen</h2>
 <ul>
   <li><strong>sammenkoblingen</strong>: Macens navn, ID og hemmelig nøkkel;</li>
-  <li><strong>varslingstokenet</strong> Google tildeler appen;</li>
+  <li><strong>varslingstokenet</strong> appen får tildelt av Google på Android, av Apple på
+      iPhone;</li>
   <li><strong>språket</strong> du har valgt i appen.</li>
 </ul>
 <p>Historikken som vises (opptil de siste 24 timene) ligger i minnet og forsvinner når appen lukkes. Å
 avinstallere appen sletter alt annet.</p>
 
 <h2>Tjenestene som frakter dataene</h2>
-<p>Utgiveren har ingen egen server. Fire tredjepartstjenester er involvert, og her er nøyaktig hva
-hver av dem ser.</p>
+<p>Utgiveren har ingen egen server. Fire tredjepartstjenester er involvert på Android, to på
+iPhone, og her er nøyaktig hva hver av dem ser.</p>
 
 <div class="box warn">
   <p><strong>1. Reléet, hos Cloudflare.</strong> Macen og telefonen kobler seg ikke direkte til
   hverandre: de går via et lite relé som utgiveren driver på <strong>Cloudflare</strong> sin
   infrastruktur. Reléet videresender krypterte meldinger det ikke kan lese, og <strong>lagrer ingen
   målinger</strong>. For hver Mac lagrer det bare: den tilfeldige ID-en, et fingeravtrykk (SHA-256)
-  av tilgangsbeviset, høyst 8 varslingstokener med registreringsdato, og tidspunktene da Macen
+  av tilgangsbeviset, høyst 8 varslingstokener (Google eller Apple) med registreringsdato, og tidspunktene da Macen
   koblet til og fra. Alt slettes automatisk når Macen ikke har koblet til på 90 dager. Som alle
   nettjenester behandler Cloudflare tekniske tilkoblingsdata (IP-adresser) etter sin egen
   personvernerklæring. Reléets feillogger kan inneholde de 8 første tegnene i et varslingstoken,
   aldri en måling.</p>
-  <p><strong>2. Varsler, via Firebase Cloud Messaging (Google).</strong> For å varsle deg mens appen
+  <p><strong>2. Varsler, via Firebase Cloud Messaging (Google) på Android.</strong> For å varsle deg mens appen
   er lukket, bruker reléet varslingstjenesten til <strong>Google</strong>, som mottar telefonens token
   og Macens tilfeldige ID. Et varsel sendes <strong>kryptert</strong>: Google kan ikke lese det;
   telefonen dekrypterer og viser det. De to meldingene «kan ikke nås» og «er tilkoblet igjen»
   inneholder bare den tilfeldige ID-en og et tidspunkt, ukryptert. Tjenesten er underlagt Googles
   personvernerklæring.</p>
-  <p><strong>3. Googles QR-kodeleser.</strong> QR-koden skannes av telefonens <strong>Google
+  <p><strong>På iPhone, via <bdi>Apple Push Notification service</bdi> (Apple).</strong> Det samme
+  reléet bruker varslingstjenesten til <strong>Apple</strong>, som mottar iPhonens token og Macens
+  tilfeldige ID. Reléet lagrer dette tokenet akkurat som Googles: høyst 8 per Mac, slettet når
+  Macen ikke har koblet til på 90 dager. Et varsel sendes <strong>ende-til-ende-kryptert</strong>:
+  en liten utvidelse i appen dekrypterer det på iPhonen og skriver teksten, slik at Apple ikke ser
+  noen data fra Macen din, bare den nøytrale teksten «<bdi>Mac Live alert</bdi>» som vises hvis
+  dekrypteringen mislykkes. Også her inneholder meldingene «kan ikke nås» og «er tilkoblet igjen»
+  bare den tilfeldige ID-en og et tidspunkt. Tjenesten er underlagt Apples
+  personvernerklæring.</p>
+  <p><strong>3. Googles QR-kodeleser, på Android.</strong> QR-koden skannes av telefonens <strong>Google
   Play-tjenester</strong>, som selv styrer kameraet. Appen får bare teksten i koden og ber ikke om
-  kameratilgang. Tjenesten er underlagt Googles personvernerklæring.</p>
-  <p><strong>4. Støtte til utviklingen, hvis du vil.</strong> En gave betales via
+  kameratilgang. Tjenesten er underlagt Googles personvernerklæring. På iPhone er ingen
+  tredjepartstjeneste involvert: appen leser QR-koden selv med kameraet, på telefonen, og verken
+  lagrer eller sender noe bilde.</p>
+  <p><strong>4. Støtte til utviklingen, på Android, hvis du vil.</strong> En gave betales via
   <strong>Google Play</strong>. Betalingen håndteres helt av Google: appen ser aldri
   betalingsopplysningene dine og sender ingen data i den forbindelse. Det er frivillig og låser ikke
-  opp noe i appen.</p>
+  opp noe i appen. iPhone-versjonen tilbyr ingen gaver.</p>
 </div>
 
 <h2>Hva appen ikke gjør</h2>
@@ -187,7 +202,8 @@ hver av dem ser.</p>
   <li>Ingen konto, ingen registrering, ingen identifisering.</li>
   <li>Ingen reklame, ingen reklamesporere.</li>
   <li>Ingen analyseverktøy eller bruksstatistikk.</li>
-  <li>Ingen tilgang til posisjon, kontakter, filer eller kamera.</li>
+  <li>Ingen tilgang til posisjon, kontakter eller filer. Ingen kameratilgang på Android; på
+      iPhone brukes kameraet bare til å skanne QR-koden, og ingen bilder lagres eller sendes.</li>
   <li>Ingen salg eller deling av data med tredjeparter.</li>
 </ul>
 
@@ -197,10 +213,13 @@ hver av dem ser.</p>
       (AES-256-GCM) og dekrypteres bare på telefonen.</li>
   <li><strong>Under overføring</strong> — alle tilkoblinger bruker TLS (HTTPS / WSS).</li>
   <li><strong>På enhetene dine</strong> — nøklene ligger i Macens nøkkelring og beskyttes av Android
-      Keystore på telefonen; de sikkerhetskopieres aldri til skyen.</li>
+      Keystore på en Android-telefon; de sikkerhetskopieres aldri til skyen. På iPhone ligger de i
+      Nøkkelringen, bundet til den enheten: de går ikke inn i iCloud-nøkkelringen og kan ikke
+      gjenopprettes på en annen enhet.</li>
 </ul>
 
 <h2>Tillatelser som bes om, og hvorfor</h2>
+<p><strong>På Android:</strong></p>
 <ul>
   <li><strong>Internett og nettverksstatus</strong> — for å nå reléet og vite når telefonen er
       frakoblet.</li>
@@ -210,6 +229,14 @@ hver av dem ser.</p>
       varsler når appen er lukket.</li>
 </ul>
 <p>Du kan når som helst trekke tilbake tillatelsene i Android-innstillingene.</p>
+<p><strong>På iPhone:</strong></p>
+<ul>
+  <li><strong>Kamera</strong> — for å skanne QR-koden Macen viser. iOS spør første gang du
+      skanner; bildet blir på telefonen.</li>
+  <li><strong>Varslinger</strong> — for å vise varslene fra Macen. iOS spør én gang, rett etter
+      sammenkoblingen; du kan si nei.</li>
+</ul>
+<p>Du kan når som helst trekke dem tilbake i <bdi>Innstillinger › Mac Live</bdi> på iPhonen.</p>
 
 <h2>Rettighetene dine</h2>
 <p>Personvernforordningen gir deg rett til innsyn, retting, sletting og protest. Utgiveren har ingen
@@ -225,7 +252,7 @@ reléet resten etter 90 dager. Du kan også skrive til
 <p>Erklæringen kan endres hvis appen endres. Datoen for siste oppdatering står øverst på siden.
 Vesentlige endringer nevnes i versjonsnotatene.</p>
 
-<footer>Mac Live — Atria.Eponym · Frankrike<br>Personvernerklæring, versjon av 11. oktober 2026</footer>
+<footer>Mac Live — Atria.Eponym · Frankrike<br>Personvernerklæring, versjon av 12. oktober 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

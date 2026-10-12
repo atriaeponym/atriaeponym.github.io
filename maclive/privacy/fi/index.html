@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Tietosuojakäytäntö — <bdi>Mac Live</bdi></h1>
-<div class="sub">Päivitetty viimeksi: 11.10.2026</div>
+<div class="sub">Päivitetty viimeksi: 12.10.2026</div>
 
-<p><bdi>Mac Live</bdi> näyttää Android-puhelimessasi reaaliajassa Macisi tilan (lämpötilat,
+<p><bdi>Mac Live</bdi> näyttää Android-puhelimessasi tai iPhonessasi reaaliajassa Macisi tilan (lämpötilat,
 suoritin, muisti, levyt, akku, Time Machine -varmuuskopiot…) ja varoittaa, kun jokin on vialla. Se
 toimii yhdessä Maciin asennetun <bdi>Mac Live</bdi> -sovelluksen kanssa, jonka yhdistät puhelimeen
 skannaamalla QR-koodin.</p>
@@ -140,8 +140,12 @@ raja-arvo ja kellonaika.</p>
 
 <h2>Yhdistäminen ja avaimet</h2>
 <p>Macin näyttämä QR-koodi sisältää satunnaisen tunnisteen ja salaisen avaimen. Mac säilyttää ne
-<strong>avainnipussaan</strong>; puhelin säilyttää ne <strong>Android Keystoren</strong>
-suojaamassa tallennustilassa, joka on rajattu pois puhelimen varmuuskopioista. Salaista avainta ei
+<strong>avainnipussaan</strong>. Androidissa puhelin säilyttää ne <strong>Android Keystoren</strong>
+suojaamassa tallennustilassa, joka on rajattu pois puhelimen varmuuskopioista. iPhonessa ne
+säilytetään iOS:n <strong>avainnipussa</strong>, luettavissa ensimmäisen lukituksen avaamisen
+jälkeen ja vain tällä laitteella: ne eivät siirry iCloud-avainnippuun eikä niitä voi palauttaa
+toiselle laitteelle; vain sovelluksen oma ilmoituslaajennus voi lukea niitä myös, hälytysten
+purkamiseksi. Salaista avainta ei
 lähetetä kenellekään: välityspalvelin saa vain siitä johdetun todisteen, jolla mittauksiasi ei voi
 purkaa.</p>
 <p>Voit katkaista yhteyden milloin tahansa: ”Unohda tämä Mac” puhelimessa tai ”Katkaise kaikki
@@ -150,14 +154,15 @@ puhelimet” Macissa, mikä luo uuden avaimen.</p>
 <h2>Mitä puhelimeen jää</h2>
 <ul>
   <li><strong>yhdistämistiedot</strong>: Macin nimi, tunniste ja salainen avain;</li>
-  <li>Googlen sovellukselle antama <strong>ilmoitustunnus</strong>;</li>
+  <li><strong>ilmoitustunnus</strong>, jonka sovellukselle antaa Androidissa Google ja iPhonessa
+      Apple;</li>
   <li>sovelluksessa valitsemasi <strong>kieli</strong>.</li>
 </ul>
 <p>Näytetty historia (enintään viimeiset 24 tuntia) on muistissa ja katoaa, kun sovellus suljetaan.
 Sovelluksen poistaminen poistaa kaiken muun.</p>
 
 <h2>Tietoja välittävät palvelut</h2>
-<p>Julkaisijalla ei ole omaa palvelinta. Mukana on neljä kolmannen osapuolen palvelua, ja tässä on
+<p>Julkaisijalla ei ole omaa palvelinta. Mukana on Androidissa neljä ja iPhonessa kaksi kolmannen osapuolen palvelua, ja tässä on
 tarkalleen, mitä kukin näkee.</p>
 
 <div class="box warn">
@@ -165,24 +170,34 @@ tarkalleen, mitä kukin näkee.</p>
   toisiinsa: ne kulkevat pienen välityspalvelimen kautta, jota julkaisija ylläpitää
   <strong>Cloudflaren</strong> infrastruktuurissa. Välityspalvelin välittää salattuja viestejä, joita
   se ei voi lukea, eikä <strong>tallenna mittauksia</strong>. Jokaisesta Macista se säilyttää vain:
-  satunnaisen tunnisteen, pääsytodisteen sormenjäljen (SHA-256), enintään 8 ilmoitustunnusta
-  rekisteröintipäivineen sekä Macin yhdistämis- ja katkaisuajat. Kaikki poistetaan automaattisesti,
+  satunnaisen tunnisteen, pääsytodisteen sormenjäljen (SHA-256), enintään 8 ilmoitustunnusta (Google tai Apple) rekisteröintipäivineen sekä Macin yhdistämis- ja katkaisuajat. Kaikki poistetaan automaattisesti,
   kun Mac ei ole yhdistänyt 90 päivään. Kuten mikä tahansa verkkopalvelu, Cloudflare käsittelee
   yhteyksien teknisiä tietoja (IP-osoitteita) oman tietosuojakäytäntönsä mukaisesti.
   Välityspalvelimen virhelokeissa voi olla ilmoitustunnuksen 8 ensimmäistä merkkiä, ei koskaan
   mittausta.</p>
-  <p><strong>2. Ilmoitukset Firebase Cloud Messagingin (Google) kautta.</strong> Jotta voisit saada
+  <p><strong>2. Ilmoitukset Firebase Cloud Messagingin (Google) kautta Androidissa.</strong> Jotta voisit saada
   varoituksen sovelluksen ollessa suljettuna, välityspalvelin käyttää <strong>Googlen</strong>
   ilmoituspalvelua, joka saa puhelimesi tunnuksen ja Macin satunnaisen tunnisteen. Hälytys kulkee
   siellä <strong>salattuna</strong>: Google ei voi lukea sitä, vaan puhelimesi purkaa ja näyttää
   sen. Viestit ”ei vastaa” ja ”on taas verkossa” sisältävät vain satunnaisen tunnisteen ja
   kellonajan salaamattomina. Palveluun sovelletaan Googlen tietosuojakäytäntöä.</p>
-  <p><strong>3. Googlen QR-koodinlukija.</strong> QR-koodin skannaavat puhelimesi <strong>Google
+  <p><strong>iPhonessa <bdi>Apple Push Notification service</bdi> -palvelun (Apple) kautta.</strong>
+  Sama välityspalvelin käyttää <strong>Applen</strong> ilmoituspalvelua, joka saa iPhonesi
+  tunnuksen ja Macin satunnaisen tunnisteen. Välityspalvelin säilyttää tämän tunnuksen täsmälleen
+  kuten Googlen tunnukset: enintään 8 Macia kohden, ja ne poistetaan, kun Mac ei ole yhdistänyt 90
+  päivään. Hälytys kulkee siellä <strong>päästä päähän salattuna</strong>: sovelluksen pieni
+  laajennus purkaa sen iPhonessasi ja kirjoittaa sen tekstin, joten Apple ei näe Macisi tietoja,
+  vain neutraalin tekstin ”<bdi>Mac Live alert</bdi>”, joka näytetään, jos purkaminen epäonnistuu.
+  Viestit ”ei vastaa” ja ”on taas verkossa” sisältävät tässäkin vain satunnaisen tunnisteen ja
+  kellonajan. Palveluun sovelletaan Applen tietosuojakäytäntöä.</p>
+  <p><strong>3. Googlen QR-koodinlukija, Androidissa.</strong> QR-koodin skannaavat puhelimesi <strong>Google
   Play -palvelut</strong>, jotka hallitsevat kameraa itse. Sovellus saa vain skannatun koodin tekstin
-  eikä pyydä kameran käyttöoikeutta. Palveluun sovelletaan Googlen tietosuojakäytäntöä.</p>
-  <p><strong>4. Kehityksen tukeminen, jos haluat.</strong> Lahjoitus maksetaan <strong>Google
+  eikä pyydä kameran käyttöoikeutta. Palveluun sovelletaan Googlen tietosuojakäytäntöä. iPhonessa
+  mukana ei ole kolmannen osapuolen palvelua: sovellus lukee QR-koodin itse kameralla, puhelimessa,
+  eikä tallenna tai lähetä yhtään kuvaa.</p>
+  <p><strong>4. Kehityksen tukeminen Androidissa, jos haluat.</strong> Lahjoitus maksetaan <strong>Google
   Playn</strong> kautta. Maksun käsittelee kokonaan Google: sovellus ei koskaan näe maksutietojasi
-  eikä lähetä silloin mitään tietoja. Tämä on vapaaehtoista eikä avaa sovelluksessa mitään.</p>
+  eikä lähetä silloin mitään tietoja. Tämä on vapaaehtoista eikä avaa sovelluksessa mitään. iPhone-versiossa ei ole lahjoitusmahdollisuutta.</p>
 </div>
 
 <h2>Mitä sovellus ei tee</h2>
@@ -190,7 +205,9 @@ tarkalleen, mitä kukin näkee.</p>
   <li>Ei tiliä, ei rekisteröitymistä, ei tunnistamista.</li>
   <li>Ei mainoksia, ei mainosseurantaa.</li>
   <li>Ei analytiikkaa eikä käyttötilastoja.</li>
-  <li>Ei pääsyä sijaintiisi, yhteystietoihisi, tiedostoihisi tai kameraan.</li>
+  <li>Ei pääsyä sijaintiisi, yhteystietoihisi tai tiedostoihisi. Androidissa ei pääsyä kameraan;
+      iPhonessa kameraa käytetään vain QR-koodin skannaamiseen, eikä yhtään kuvaa tallenneta tai
+      lähetetä.</li>
   <li>Ei tietojen myyntiä tai jakamista kolmansille osapuolille.</li>
 </ul>
 
@@ -199,11 +216,14 @@ tarkalleen, mitä kukin näkee.</p>
   <li><strong>Päästä päähän -salaus</strong> — jokainen mittaus ja hälytys salataan Macissa
       (AES-256-GCM) ja puretaan vain puhelimessa.</li>
   <li><strong>Siirron aikana</strong> — kaikki yhteydet käyttävät TLS:ää (HTTPS / WSS).</li>
-  <li><strong>Laitteissasi</strong> — avaimet ovat Macin avainnipussa ja puhelimessa Android
-      Keystoren suojaamina; niitä ei koskaan varmuuskopioida pilveen.</li>
+  <li><strong>Laitteissasi</strong> — avaimet ovat Macin avainnipussa ja Android-puhelimessa Android
+      Keystoren suojaamina; niitä ei koskaan varmuuskopioida pilveen. iPhonessa ne ovat
+      avainnipussa, sidottuina tähän laitteeseen: ne eivät siirry iCloud-avainnippuun eikä niitä voi
+      palauttaa toiselle laitteelle.</li>
 </ul>
 
 <h2>Pyydetyt käyttöoikeudet ja miksi</h2>
+<p><strong>Androidissa:</strong></p>
 <ul>
   <li><strong>Internet ja verkon tila</strong> — välityspalvelimen tavoittamiseen ja sen
       tunnistamiseen, onko puhelin offline-tilassa.</li>
@@ -213,6 +233,14 @@ tarkalleen, mitä kukin näkee.</p>
       vastaanottamiseen sovelluksen ollessa suljettuna.</li>
 </ul>
 <p>Voit perua käyttöoikeudet milloin tahansa Androidin asetuksista.</p>
+<p><strong>iPhonessa:</strong></p>
+<ul>
+  <li><strong>Kamera</strong> — Macin näyttämän QR-koodin skannaamiseen. iOS kysyy ensimmäisellä
+      skannauskerralla; kuva pysyy puhelimessa.</li>
+  <li><strong>Ilmoitukset</strong> — Macin hälytysten näyttämiseen. iOS kysyy kerran heti
+      yhdistämisen jälkeen; voit kieltäytyä.</li>
+</ul>
+<p>Voit perua ne milloin tahansa iPhonen kohdassa <bdi>Asetukset › Mac Live</bdi>.</p>
 
 <h2>Oikeutesi</h2>
 <p>Yleinen tietosuoja-asetus antaa sinulle oikeuden tietojen saantiin, oikaisemiseen, poistamiseen
@@ -229,7 +257,7 @@ loput 90 päivän kuluttua. Voit myös kirjoittaa osoitteeseen
 <p>Tämä käytäntö voi muuttua, jos sovellus muuttuu. Viimeisimmän päivityksen päivämäärä näkyy sivun
 yläosassa. Olennaisista muutoksista kerrotaan julkaisutiedoissa.</p>
 
-<footer>Mac Live — Atria.Eponym · Ranska<br>Tietosuojakäytäntö, versio 11.10.2026</footer>
+<footer>Mac Live — Atria.Eponym · Ranska<br>Tietosuojakäytäntö, versio 12.10.2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

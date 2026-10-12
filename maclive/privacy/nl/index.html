@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Privacybeleid — <bdi>Mac Live</bdi></h1>
-<div class="sub">Laatst bijgewerkt: 11 oktober 2026</div>
+<div class="sub">Laatst bijgewerkt: 12 oktober 2026</div>
 
-<p><bdi>Mac Live</bdi> toont live op je Android-telefoon de toestand van je Mac (temperaturen,
+<p><bdi>Mac Live</bdi> toont live op je Android-telefoon of iPhone de toestand van je Mac (temperaturen,
 processor, geheugen, schijven, batterij, Time Machine-reservekopieën…) en waarschuwt je als er iets
 misgaat. Het werkt samen met de app <bdi>Mac Live</bdi> op je Mac, die je aan je telefoon koppelt
 door een QR-code te scannen.</p>
@@ -140,8 +140,12 @@ gemeten waarde, de drempel en het tijdstip.</p>
 
 <h2>Koppeling en sleutels</h2>
 <p>De QR-code die je Mac toont, bevat een willekeurige ID en een geheime sleutel. Je Mac bewaart ze
-in zijn <strong>sleutelhanger</strong>; je telefoon in opslag die beschermd wordt door de
-<strong>Android Keystore</strong> en is uitgesloten van telefoonback-ups. De geheime sleutel wordt
+in zijn <strong>sleutelhanger</strong>. Op Android bewaart je telefoon ze in opslag die beschermd
+wordt door de <strong>Android Keystore</strong> en is uitgesloten van telefoonback-ups. Op de iPhone
+staan ze in de <strong>Sleutelhanger</strong> van iOS, leesbaar na de eerste ontgrendeling en alleen
+op dit apparaat: ze gaan niet naar de iCloud-sleutelhanger en kunnen niet op een ander apparaat
+worden teruggezet; alleen de meldingsextensie van de app zelf kan ze ook lezen, om waarschuwingen
+te ontsleutelen. De geheime sleutel wordt
 naar niemand gestuurd: de relay krijgt alleen een daarvan afgeleid bewijs, waarmee je metingen
 niet te ontsleutelen zijn.</p>
 <p>Je kunt de koppeling altijd verbreken: „Deze Mac vergeten” op de telefoon, of „Alle telefoons
@@ -150,41 +154,53 @@ ontkoppelen” op de Mac, wat een nieuwe sleutel aanmaakt.</p>
 <h2>Wat op je telefoon blijft</h2>
 <ul>
   <li>de <strong>koppeling</strong>: naam van de Mac, ID en geheime sleutel;</li>
-  <li>het <strong>meldingstoken</strong> dat Google aan de app toekent;</li>
+  <li>het <strong>meldingstoken</strong> dat op Android door Google, op de iPhone door Apple aan
+      de app wordt toegekend;</li>
   <li>de <strong>taal</strong> die je in de app hebt gekozen.</li>
 </ul>
 <p>De getoonde geschiedenis (tot de laatste 24 uur) blijft in het geheugen en verdwijnt als de app
 sluit. De app verwijderen wist al het overige.</p>
 
 <h2>De diensten die de gegevens vervoeren</h2>
-<p>De uitgever heeft geen eigen server. Er zijn vier externe diensten bij betrokken; dit is precies
-wat elk ervan ziet.</p>
+<p>De uitgever heeft geen eigen server. Op Android zijn er vier externe diensten bij
+betrokken, op de iPhone twee; dit is precies wat elk ervan ziet.</p>
 
 <div class="box warn">
   <p><strong>1. De relay, bij Cloudflare.</strong> Je Mac en je telefoon maken geen directe
   verbinding: ze lopen via een kleine relay die de uitgever op de infrastructuur van
   <strong>Cloudflare</strong> draait. De relay geeft versleutelde berichten door die hij niet kan
   lezen en <strong>bewaart geen metingen</strong>. Per Mac bewaart hij alleen: de willekeurige ID,
-  een vingerafdruk (SHA-256) van het toegangsbewijs, maximaal 8 meldingstokens met hun
+  een vingerafdruk (SHA-256) van het toegangsbewijs, maximaal 8 meldingstokens (Google of Apple) met hun
   registratiedatum, en de tijdstippen waarop de Mac verbinding maakte en verbrak. Alles wordt
   automatisch gewist als de Mac 90 dagen geen verbinding heeft gemaakt. Zoals elke onlinedienst
   verwerkt Cloudflare technische verbindingsgegevens (IP-adressen) volgens zijn eigen
   privacybeleid. De foutlogs van de relay kunnen de eerste 8 tekens van een meldingstoken bevatten,
   nooit een meting.</p>
-  <p><strong>2. Meldingen, via Firebase Cloud Messaging (Google).</strong> Om je te waarschuwen
+  <p><strong>2. Meldingen, via Firebase Cloud Messaging (Google) op Android.</strong> Om je te waarschuwen
   terwijl de app gesloten is, gebruikt de relay de meldingsdienst van <strong>Google</strong>, die het
   token van je telefoon en de willekeurige ID van de Mac ontvangt. Een waarschuwing reist daar
   <strong>versleuteld</strong>: Google kan hem niet lezen; je telefoon ontsleutelt en toont hem. De
   twee berichten „onbereikbaar” en „weer online” bevatten alleen de willekeurige ID en een tijdstip,
   onversleuteld. Op deze dienst is het privacybeleid van Google van toepassing.</p>
-  <p><strong>3. De QR-codescanner van Google.</strong> De QR-code wordt gescand door de
+  <p><strong>Op de iPhone, via de <bdi>Apple Push Notification service</bdi> (Apple).</strong>
+  Dezelfde relay gebruikt de meldingsdienst van <strong>Apple</strong>, die het token van je iPhone
+  en de willekeurige ID van de Mac ontvangt. De relay bewaart dit token precies zoals die van
+  Google: maximaal 8 per Mac, gewist als de Mac 90 dagen geen verbinding heeft gemaakt. Een
+  waarschuwing reist daar <strong>end-to-end versleuteld</strong>: een kleine extensie van de app
+  ontsleutelt hem op je iPhone en schrijft de tekst, zodat Apple geen gegevens van je Mac ziet,
+  alleen de neutrale tekst „<bdi>Mac Live alert</bdi>” die verschijnt als het ontsleutelen mislukt.
+  Ook hier bevatten de berichten „onbereikbaar” en „weer online” alleen de willekeurige ID en een
+  tijdstip. Op deze dienst is het privacybeleid van Apple van toepassing.</p>
+  <p><strong>3. De QR-codescanner van Google, op Android.</strong> De QR-code wordt gescand door de
   <strong>Google Play-services</strong> van je telefoon, die zelf de camera aansturen. De app krijgt
   alleen de tekst van de gescande code en vraagt geen cameratoegang. Op deze dienst is het
-  privacybeleid van Google van toepassing.</p>
-  <p><strong>4. De ontwikkeling steunen, als je dat wilt.</strong> Een donatie loopt via de betaling
+  privacybeleid van Google van toepassing. Op de iPhone is geen externe dienst betrokken: de app
+  leest de QR-code zelf met de camera, op de telefoon, en bewaart of verstuurt geen enkel
+  beeld.</p>
+  <p><strong>4. De ontwikkeling steunen, op Android, als je dat wilt.</strong> Een donatie loopt via de betaling
   van <strong>Google Play</strong>. De betaling wordt volledig door Google afgehandeld: de app ziet
   nooit je betaalgegevens en verstuurt daarbij geen gegevens. Het is vrijwillig en ontgrendelt niets
-  in de app.</p>
+  in de app. De iPhone-versie biedt geen donaties aan.</p>
 </div>
 
 <h2>Wat de app niet doet</h2>
@@ -192,7 +208,9 @@ wat elk ervan ziet.</p>
   <li>Geen account, geen registratie, geen identificatie.</li>
   <li>Geen advertenties, geen advertentietrackers.</li>
   <li>Geen analysetools of gebruiksstatistieken.</li>
-  <li>Geen toegang tot je locatie, contacten, bestanden of camera.</li>
+  <li>Geen toegang tot je locatie, contacten of bestanden. Geen cameratoegang op Android; op de
+      iPhone dient de camera alleen om de QR-code te scannen, en er wordt geen beeld bewaard of
+      verstuurd.</li>
   <li>Geen verkoop of delen van gegevens met derden.</li>
 </ul>
 
@@ -202,10 +220,14 @@ wat elk ervan ziet.</p>
       versleuteld (AES-256-GCM) en alleen op je telefoon ontsleuteld.</li>
   <li><strong>Onderweg</strong> — alle verbindingen gebruiken TLS (HTTPS / WSS).</li>
   <li><strong>Op je apparaten</strong> — de sleutels staan in de sleutelhanger van de Mac en worden op
-      de telefoon beschermd door de Android Keystore; ze worden nooit in de cloud geback-upt.</li>
+      een Android-telefoon beschermd door de Android Keystore; ze worden nooit in de cloud
+      geback-upt. Op de iPhone staan ze in de Sleutelhanger, gebonden aan dat apparaat: ze gaan
+      niet naar de iCloud-sleutelhanger en kunnen niet op een ander apparaat worden
+      teruggezet.</li>
 </ul>
 
 <h2>Gevraagde machtigingen en waarom</h2>
+<p><strong>Op Android:</strong></p>
 <ul>
   <li><strong>Internet en netwerkstatus</strong> — om de relay te bereiken en te weten of je
       telefoon offline is.</li>
@@ -215,6 +237,14 @@ wat elk ervan ziet.</p>
       om waarschuwingen te ontvangen terwijl de app gesloten is.</li>
 </ul>
 <p>Je kunt deze machtigingen altijd intrekken in de Android-instellingen.</p>
+<p><strong>Op de iPhone:</strong></p>
+<ul>
+  <li><strong>Camera</strong> — om de QR-code te scannen die je Mac toont. iOS vraagt het bij de
+      eerste scan; het beeld blijft op de telefoon.</li>
+  <li><strong>Meldingen</strong> — om de waarschuwingen van je Mac te tonen. iOS vraagt het één
+      keer, direct na het koppelen; je mag weigeren.</li>
+</ul>
+<p>Je kunt ze altijd intrekken in <bdi>Instellingen › Mac Live</bdi> op de iPhone.</p>
 
 <h2>Je rechten</h2>
 <p>De Algemene verordening gegevensbescherming geeft je recht op inzage, rectificatie, wissing en
@@ -230,7 +260,7 @@ schrijven naar <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a
 <p>Dit beleid kan veranderen als de app verandert. De datum van de laatste update staat bovenaan
 deze pagina. Belangrijke wijzigingen worden vermeld in de release-opmerkingen.</p>
 
-<footer>Mac Live — Atria.Eponym · Frankrijk<br>Privacybeleid, versie van 11 oktober 2026</footer>
+<footer>Mac Live — Atria.Eponym · Frankrijk<br>Privacybeleid, versie van 12 oktober 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 
