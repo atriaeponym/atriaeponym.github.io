@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Privacy Policy — <bdi>Mac Live</bdi></h1>
-<div class="sub">Last updated: 11 October 2026</div>
+<div class="sub">Last updated: 12 October 2026</div>
 
-<p><bdi>Mac Live</bdi> shows the state of your Mac live on your Android phone (temperatures,
+<p><bdi>Mac Live</bdi> shows the state of your Mac live on your Android phone or iPhone (temperatures,
 processor, memory, disks, battery, Time Machine backups…) and warns you when something goes
 wrong. It works with the <bdi>Mac Live</bdi> app installed on your Mac, which you link to your
 phone by scanning a QR code.</p>
@@ -137,8 +137,11 @@ its kind, the measured value, the threshold and the time.</p>
 
 <h2>Pairing and keys</h2>
 <p>The QR code shown by your Mac holds a random identifier and a secret key. Your Mac keeps them
-in its <strong>Keychain</strong>; your phone keeps them in storage protected by the
-<strong>Android Keystore</strong>, excluded from phone backups. The secret key is never sent to
+in its <strong>Keychain</strong>. On Android, your phone keeps them in storage protected by the
+<strong>Android Keystore</strong>, excluded from phone backups. On iPhone, they are kept in the
+iOS <strong>Keychain</strong>, readable after the first unlock and on this device only: they do
+not go into iCloud Keychain and cannot be restored to another device; only the app's own
+notification extension can also read them, to decrypt alerts. The secret key is never sent to
 anyone: the relay only receives a proof derived from it, which cannot decrypt your readings.</p>
 <p>You can cut the link at any time: « Forget this Mac » on the phone, or « Disconnect all
 phones » on the Mac, which creates a new key.</p>
@@ -146,40 +149,52 @@ phones » on the Mac, which creates a new key.</p>
 <h2>What stays on your phone</h2>
 <ul>
   <li>the <strong>pairing</strong>: Mac name, identifier and secret key;</li>
-  <li>the <strong>notification token</strong> Google assigns to the app;</li>
+  <li>the <strong>notification token</strong> assigned to the app by Google on Android, by Apple
+      on iPhone;</li>
   <li>the <strong>language</strong> you chose in the app.</li>
 </ul>
 <p>The history on screen (up to the last 24 hours) stays in memory and disappears when the app
 closes. Uninstalling the app erases everything else.</p>
 
 <h2>The services that carry the data</h2>
-<p>The publisher owns no server. Four third-party services are involved, and here is exactly
-what each one sees.</p>
+<p>The publisher owns no server. Four third-party services are involved on Android, two on
+iPhone, and here is exactly what each one sees.</p>
 
 <div class="box warn">
   <p><strong>1. The relay, at Cloudflare.</strong> Your Mac and your phone do not connect to each
   other directly: they go through a small relay run by the publisher on
   <strong>Cloudflare</strong>'s infrastructure. The relay passes on encrypted messages it cannot
   read and <strong>keeps no readings</strong>. For each Mac it only keeps: the random identifier,
-  a fingerprint (SHA-256) of the access proof, at most 8 notification tokens with the date they
+  a fingerprint (SHA-256) of the access proof, at most 8 notification tokens (Google or Apple) with the date they
   were registered, and the times the Mac connected and disconnected. Everything is erased
   automatically once the Mac has not connected for 90 days. Like any online service, Cloudflare
   processes connection technical data (IP addresses) under its own privacy policy. The relay's
   error logs may contain the first 8 characters of a notification token, never a reading.</p>
-  <p><strong>2. Notifications, through Firebase Cloud Messaging (Google).</strong> To warn you
+  <p><strong>2. Notifications, through Firebase Cloud Messaging (Google) on Android.</strong> To warn you
   while the app is closed, the relay goes through <strong>Google</strong>'s notification service,
   which receives your phone's token and the Mac's random identifier. An alert travels there
   <strong>encrypted</strong>: Google cannot read it; your phone decrypts and displays it. The two
   messages « Mac unreachable » and « back online » only hold the random identifier and a time,
   unencrypted. This service is covered by Google's privacy policy.</p>
-  <p><strong>3. Google's QR code scanner.</strong> The QR code is scanned by your phone's
+  <p><strong>On iPhone, through the <bdi>Apple Push Notification service</bdi> (Apple).</strong>
+  The same relay goes through <strong>Apple</strong>'s notification service, which receives your
+  iPhone's token and the Mac's random identifier. The relay keeps this token exactly like
+  Google's: at most 8 per Mac, erased after the Mac has not connected for 90 days. An alert travels
+  there <strong>end-to-end encrypted</strong>: a small extension of the app decrypts it on your
+  iPhone and writes its text, so Apple sees no data from your Mac, only the neutral text
+  « <bdi>Mac Live alert</bdi> » shown if decryption fails. The « Mac unreachable » and « back
+  online » messages, here too, only hold the random identifier and a time. This service is
+  covered by Apple's privacy policy.</p>
+  <p><strong>3. Google's QR code scanner, on Android.</strong> The QR code is scanned by your phone's
   <strong>Google Play services</strong>, which handle the camera themselves. The app only
   receives the text of the scanned code and does not ask for camera access. This service is
-  covered by Google's privacy policy.</p>
-  <p><strong>4. Supporting development, if you choose to.</strong> A donation goes through
+  covered by Google's privacy policy. On iPhone, no third-party service is involved: the app
+  reads the QR code itself with the camera, on the phone, and neither saves nor sends any
+  image.</p>
+  <p><strong>4. Supporting development, on Android, if you choose to.</strong> A donation goes through
   <strong>Google Play</strong> billing. Payment is handled entirely by Google: the app never sees
   your payment details and sends no data on that occasion. This is optional and unlocks nothing
-  in the app.</p>
+  in the app. The iPhone version offers no donation.</p>
 </div>
 
 <h2>What the app does not do</h2>
@@ -187,7 +202,8 @@ what each one sees.</p>
   <li>No account, no sign-up, no identification.</li>
   <li>No advertising, no ad trackers.</li>
   <li>No analytics or usage statistics.</li>
-  <li>No access to your location, contacts, files or camera.</li>
+  <li>No access to your location, contacts or files. No camera access on Android; on iPhone, the
+      camera is only used to scan the QR code, and no image is saved or sent.</li>
   <li>No selling or sharing of data with third parties.</li>
 </ul>
 
@@ -197,10 +213,13 @@ what each one sees.</p>
       Mac (AES-256-GCM) and only decrypted on your phone.</li>
   <li><strong>In transit</strong> — every connection uses TLS (HTTPS / WSS).</li>
   <li><strong>On your devices</strong> — the keys are kept in the Mac's Keychain and protected by
-      the Android Keystore on the phone, and are never backed up to the cloud.</li>
+      the Android Keystore on an Android phone, and are never backed up to the cloud. On iPhone,
+      they are kept in the Keychain, bound to that device: they do not go into iCloud Keychain and
+      cannot be restored to another device.</li>
 </ul>
 
 <h2>Permissions requested, and why</h2>
+<p><strong>On Android:</strong></p>
 <ul>
   <li><strong>Internet and network state</strong> — to reach the relay and know when your phone
       is offline.</li>
@@ -210,6 +229,14 @@ what each one sees.</p>
       while the app is closed.</li>
 </ul>
 <p>You can withdraw these permissions at any time in Android settings.</p>
+<p><strong>On iPhone:</strong></p>
+<ul>
+  <li><strong>Camera</strong> — to scan the QR code shown by your Mac. iOS asks the first time
+      you scan; the image stays on the phone.</li>
+  <li><strong>Notifications</strong> — to show your Mac's alerts. iOS asks once, right after
+      pairing; you may refuse.</li>
+</ul>
+<p>You can withdraw them at any time in <bdi>Settings › Mac Live</bdi> on the iPhone.</p>
 
 <h2>Your rights</h2>
 <p>The General Data Protection Regulation gives you rights of access, rectification, erasure and
@@ -226,7 +253,7 @@ them.</p>
 <p>This policy may change if the app changes. The date of the last update is shown at the top of
 this page. Any substantial change will be mentioned in the release notes.</p>
 
-<footer>Mac Live — Atria.Eponym · France<br>Privacy policy, version of 11 October 2026</footer>
+<footer>Mac Live — Atria.Eponym · France<br>Privacy policy, version of 12 October 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Política de privacidade — <bdi>Mac Live</bdi></h1>
-<div class="sub">Última atualização: 11 de outubro de 2026</div>
+<div class="sub">Última atualização: 12 de outubro de 2026</div>
 
-<p><bdi>Mac Live</bdi> mostra ao vivo, no seu celular Android, o estado do seu Mac (temperaturas,
+<p><bdi>Mac Live</bdi> mostra ao vivo, no seu celular Android ou no seu iPhone, o estado do seu Mac (temperaturas,
 processador, memória, discos, bateria, backups do Time Machine…) e avisa você quando algo dá
 errado. Ele funciona com o app <bdi>Mac Live</bdi> instalado no seu Mac, que você conecta ao celular
 escaneando um QR code.</p>
@@ -140,8 +140,12 @@ Machine sem backup há 30 dias): o tipo, o valor medido, o limite e o horário.<
 
 <h2>O pareamento e as chaves</h2>
 <p>O QR code exibido pelo Mac contém um identificador aleatório e uma chave secreta. O Mac os guarda
-nas suas <strong>Chaves</strong> (Keychain); o celular os guarda em um armazenamento protegido pelo
-<strong>Keystore do Android</strong>, excluído dos backups do celular. A chave secreta nunca é
+nas suas <strong>Chaves</strong> (Keychain). No Android, o celular os guarda em um armazenamento
+protegido pelo <strong>Keystore do Android</strong>, excluído dos backups do celular. No iPhone,
+eles ficam nas <strong>Chaves</strong> do iOS, legíveis após o primeiro desbloqueio e somente neste
+dispositivo: não vão para as Chaves do iCloud e não podem ser restaurados em outro dispositivo; só a
+extensão de notificações do próprio app também pode lê-los, para descriptografar os alertas. A
+chave secreta nunca é
 enviada a ninguém: o relé só recebe uma prova derivada dela, que não permite descriptografar suas
 medições.</p>
 <p>Você pode cortar a ligação a qualquer momento: «Esquecer este Mac» no celular, ou «Desconectar
@@ -150,39 +154,51 @@ todos os celulares» no Mac, que cria uma chave nova.</p>
 <h2>O que fica no seu celular</h2>
 <ul>
   <li>o <strong>pareamento</strong>: nome do Mac, identificador e chave secreta;</li>
-  <li>o <strong>token de notificação</strong> que o Google atribui ao app;</li>
+  <li>o <strong>token de notificação</strong> atribuído ao app pelo Google no Android, pela Apple
+      no iPhone;</li>
   <li>o <strong>idioma</strong> escolhido no app.</li>
 </ul>
 <p>O histórico exibido (até as últimas 24 horas) fica na memória e desaparece quando o app é fechado.
 Desinstalar o app apaga todo o resto.</p>
 
 <h2>Os serviços que transportam os dados</h2>
-<p>O editor não tem nenhum servidor próprio. Quatro serviços de terceiros participam, e veja
-exatamente o que cada um enxerga.</p>
+<p>O editor não tem nenhum servidor próprio. Quatro serviços de terceiros participam no
+Android, dois no iPhone, e veja exatamente o que cada um enxerga.</p>
 
 <div class="box warn">
   <p><strong>1. O relé, na Cloudflare.</strong> O Mac e o celular não se conectam diretamente: passam
   por um pequeno relé operado pelo editor na infraestrutura da <strong>Cloudflare</strong>. O relé
   repassa mensagens criptografadas que não consegue ler e <strong>não guarda nenhuma
   medição</strong>. Para cada Mac guarda apenas: o identificador aleatório, uma impressão (SHA-256)
-  da prova de acesso, no máximo 8 tokens de notificação com a data de registro, e os horários de
+  da prova de acesso, no máximo 8 tokens de notificação (Google ou Apple) com a data de registro, e os horários de
   conexão e desconexão do Mac. Tudo é apagado automaticamente quando o Mac fica 90 dias sem se
   conectar. Como todo serviço online, a Cloudflare trata os dados técnicos das conexões (endereços
   IP) conforme sua própria política de privacidade. Os logs de erro do relé podem conter os 8
   primeiros caracteres de um token de notificação, nunca uma medição.</p>
-  <p><strong>2. As notificações, pelo Firebase Cloud Messaging (Google).</strong> Para avisar você com
+  <p><strong>2. As notificações, pelo Firebase Cloud Messaging (Google) no Android.</strong> Para avisar você com
   o app fechado, o relé usa o serviço de notificações do <strong>Google</strong>, que recebe o token
   do celular e o identificador aleatório do Mac. Um alerta viaja <strong>criptografado</strong>: o
   Google não consegue lê-lo; é o celular que o descriptografa e exibe. As duas mensagens
   «inacessível» e «online novamente» contêm apenas o identificador aleatório e um horário, sem
   criptografia. Este serviço segue a política de privacidade do Google.</p>
-  <p><strong>3. O leitor de QR code do Google.</strong> A leitura é feita pelo <strong>Google Play
+  <p><strong>No iPhone, pelo <bdi>Apple Push Notification service</bdi> (Apple).</strong> O mesmo
+  relé usa o serviço de notificações da <strong>Apple</strong>, que recebe o token do iPhone e o
+  identificador aleatório do Mac. O relé guarda esse token exatamente como os do Google: no máximo 8
+  por Mac, apagados quando o Mac fica 90 dias sem se conectar. Um alerta viaja
+  <strong>criptografado de ponta a ponta</strong>: uma pequena extensão do app o descriptografa no
+  iPhone e escreve o texto, de modo que a Apple não vê nenhum dado do seu Mac, apenas o texto neutro
+  «<bdi>Mac Live alert</bdi>» exibido se a descriptografia falhar. Aqui também as mensagens
+  «inacessível» e «online novamente» contêm apenas o identificador aleatório e um horário. Este
+  serviço segue a política de privacidade da Apple.</p>
+  <p><strong>3. O leitor de QR code do Google, no Android.</strong> A leitura é feita pelo <strong>Google Play
   Services</strong> do celular, que controla a própria câmera. O app recebe apenas o texto do código
-  lido e não pede acesso à câmera. Este serviço segue a política de privacidade do Google.</p>
-  <p><strong>4. O apoio ao desenvolvimento, se você quiser.</strong> Uma doação é feita pelo
+  lido e não pede acesso à câmera. Este serviço segue a política de privacidade do Google. No
+  iPhone, nenhum serviço de terceiros participa: o próprio app lê o QR code com a câmera, no
+  celular, e não salva nem envia nenhuma imagem.</p>
+  <p><strong>4. O apoio ao desenvolvimento, no Android, se você quiser.</strong> Uma doação é feita pelo
   pagamento do <strong>Google Play</strong>. O pagamento é processado inteiramente pelo Google: o app
   nunca vê seus meios de pagamento e não transmite nenhum dado nesse momento. É opcional e não
-  desbloqueia nada no app.</p>
+  desbloqueia nada no app. A versão para iPhone não oferece doações.</p>
 </div>
 
 <h2>O que o app não faz</h2>
@@ -190,7 +206,8 @@ exatamente o que cada um enxerga.</p>
   <li>Nenhuma conta, nenhum cadastro, nenhuma identificação.</li>
   <li>Nenhum anúncio, nenhum rastreador de publicidade.</li>
   <li>Nenhuma ferramenta de análise nem estatística de uso.</li>
-  <li>Nenhum acesso à sua localização, contatos, arquivos ou câmera.</li>
+  <li>Nenhum acesso à sua localização, contatos ou arquivos. Nenhum acesso à câmera no Android; no
+      iPhone, a câmera serve apenas para ler o QR code, e nenhuma imagem é salva ou enviada.</li>
   <li>Nenhuma venda nem compartilhamento de dados com terceiros.</li>
 </ul>
 
@@ -200,10 +217,13 @@ exatamente o que cada um enxerga.</p>
       Mac (AES-256-GCM) e só é descriptografado no celular.</li>
   <li><strong>Em trânsito</strong> — todas as conexões usam TLS (HTTPS / WSS).</li>
   <li><strong>Nos seus dispositivos</strong> — as chaves ficam nas Chaves do Mac e são protegidas
-      pelo Keystore do Android no celular; nunca vão para backup na nuvem.</li>
+      pelo Keystore do Android em um celular Android; nunca vão para backup na nuvem. No iPhone,
+      ficam nas Chaves, vinculadas a esse dispositivo: não vão para as Chaves do iCloud e não podem
+      ser restauradas em outro dispositivo.</li>
 </ul>
 
 <h2>Permissões solicitadas e por quê</h2>
+<p><strong>No Android:</strong></p>
 <ul>
   <li><strong>Internet e estado da rede</strong> — para alcançar o relé e saber se o celular está
       offline.</li>
@@ -213,6 +233,14 @@ exatamente o que cada um enxerga.</p>
       para receber alertas com o app fechado.</li>
 </ul>
 <p>Você pode retirar essas permissões a qualquer momento nas configurações do Android.</p>
+<p><strong>No iPhone:</strong></p>
+<ul>
+  <li><strong>Câmera</strong> — para ler o QR code exibido pelo Mac. O iOS pede na primeira
+      leitura; a imagem fica no celular.</li>
+  <li><strong>Notificações</strong> — para exibir os alertas do Mac. O iOS pede uma vez, logo após
+      o pareamento; você pode recusar.</li>
+</ul>
+<p>Você pode retirá-las a qualquer momento em <bdi>Ajustes › Mac Live</bdi> no iPhone.</p>
 
 <h2>Seus direitos</h2>
 <p>O Regulamento Geral de Proteção de Dados (e a LGPD) lhe dão direitos de acesso, correção,
@@ -229,7 +257,7 @@ elas.</p>
 <p>Esta política pode mudar se o app mudar. A data da última atualização aparece no topo desta
 página. Qualquer alteração importante será mencionada nas notas da versão.</p>
 
-<footer>Mac Live — Atria.Eponym · França<br>Política de privacidade, versão de 11 de outubro de 2026</footer>
+<footer>Mac Live — Atria.Eponym · França<br>Política de privacidade, versão de 12 de outubro de 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

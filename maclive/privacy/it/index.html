@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Informativa sulla privacy — <bdi>Mac Live</bdi></h1>
-<div class="sub">Ultimo aggiornamento: 11 ottobre 2026</div>
+<div class="sub">Ultimo aggiornamento: 12 ottobre 2026</div>
 
-<p><bdi>Mac Live</bdi> mostra in diretta, sul tuo telefono Android, lo stato del tuo Mac
+<p><bdi>Mac Live</bdi> mostra in diretta, sul tuo telefono Android o sul tuo iPhone, lo stato del tuo Mac
 (temperature, processore, memoria, dischi, batteria, backup di Time Machine…) e ti avvisa quando
 qualcosa non va. Funziona con l'app <bdi>Mac Live</bdi> installata sul Mac, che colleghi al
 telefono scansionando un codice QR.</p>
@@ -139,8 +139,12 @@ backup di Time Machine da 30 giorni): il tipo, il valore misurato, la soglia e l
 
 <h2>L'abbinamento e le chiavi</h2>
 <p>Il codice QR mostrato dal Mac contiene un identificativo casuale e una chiave segreta. Il Mac li
-conserva nel suo <strong>Portachiavi</strong>; il telefono li conserva in uno spazio protetto dal
-<strong>Keystore di Android</strong>, escluso dai backup del telefono. La chiave segreta non viene
+conserva nel suo <strong>Portachiavi</strong>. Su Android, il telefono li conserva in uno spazio
+protetto dal <strong>Keystore di Android</strong>, escluso dai backup del telefono. Su iPhone, sono
+conservati nel <strong>Portachiavi</strong> di iOS, leggibile dopo il primo sblocco e solo su questo
+dispositivo: non passano nel Portachiavi iCloud e non possono essere ripristinati su un altro
+dispositivo; solo l'estensione di notifica dell'app stessa può leggerli, per decifrare gli avvisi.
+La chiave segreta non viene
 mai inviata a nessuno: il relay riceve solo una prova derivata da essa, che non permette di
 decifrare le tue misure.</p>
 <p>Puoi interrompere il collegamento in qualsiasi momento: «Dimentica questo Mac» sul telefono,
@@ -149,40 +153,52 @@ oppure «Disconnetti tutti i telefoni» sul Mac, che crea una nuova chiave.</p>
 <h2>Cosa resta sul telefono</h2>
 <ul>
   <li>l'<strong>abbinamento</strong>: nome del Mac, identificativo e chiave segreta;</li>
-  <li>il <strong>token di notifica</strong> assegnato da Google all'app;</li>
+  <li>il <strong>token di notifica</strong> assegnato all'app da Google su Android, da Apple su
+      iPhone;</li>
   <li>la <strong>lingua</strong> scelta nell'app.</li>
 </ul>
 <p>La cronologia mostrata (fino alle ultime 24 ore) resta in memoria e scompare alla chiusura dell'app.
 Disinstallare l'app cancella tutto il resto.</p>
 
 <h2>I servizi che trasportano i dati</h2>
-<p>L'editore non possiede alcun server proprio. Intervengono quattro servizi di terze parti; ecco
-esattamente cosa vede ciascuno.</p>
+<p>L'editore non possiede alcun server proprio. Intervengono quattro servizi di terze parti su
+Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
 
 <div class="box warn">
   <p><strong>1. Il relay, su Cloudflare.</strong> Il Mac e il telefono non si collegano
   direttamente: passano da un piccolo relay gestito dall'editore sull'infrastruttura di
   <strong>Cloudflare</strong>. Il relay inoltra messaggi cifrati che non può leggere e <strong>non
   conserva alcuna misura</strong>. Per ogni Mac conserva solo: l'identificativo casuale, un'impronta
-  (SHA-256) della prova di accesso, al massimo 8 token di notifica con la data di registrazione, e
+  (SHA-256) della prova di accesso, al massimo 8 token di notifica (Google o Apple) con la data di registrazione, e
   gli orari di connessione e disconnessione del Mac. Tutto viene cancellato automaticamente quando
   il Mac non si collega da 90 giorni. Come ogni servizio online, Cloudflare tratta i dati tecnici
   delle connessioni (indirizzi IP) secondo la propria informativa. I log di errore del relay possono
   contenere i primi 8 caratteri di un token di notifica, mai una misura.</p>
-  <p><strong>2. Le notifiche, tramite Firebase Cloud Messaging (Google).</strong> Per avvisarti ad
+  <p><strong>2. Le notifiche, tramite Firebase Cloud Messaging (Google) su Android.</strong> Per avvisarti ad
   app chiusa, il relay usa il servizio di notifiche di <strong>Google</strong>, che riceve il token
   del telefono e l'identificativo casuale del Mac. Un avviso viaggia <strong>cifrato</strong>: Google
   non può leggerlo, è il telefono a decifrarlo e mostrarlo. I due messaggi «non raggiungibile» e «di
   nuovo online» contengono solo l'identificativo casuale e un orario, non cifrati. Questo servizio è
   regolato dall'informativa sulla privacy di Google.</p>
-  <p><strong>3. Il lettore di codici QR di Google.</strong> La scansione è eseguita dai
+  <p><strong>Su iPhone, tramite l'<bdi>Apple Push Notification service</bdi> (Apple).</strong> Lo
+  stesso relay usa il servizio di notifiche di <strong>Apple</strong>, che riceve il token
+  dell'iPhone e l'identificativo casuale del Mac. Il relay conserva questo token esattamente come
+  quelli di Google: al massimo 8 per Mac, cancellati quando il Mac non si collega da 90 giorni. Un
+  avviso viaggia <strong>cifrato end-to-end</strong>: una piccola estensione dell'app lo decifra
+  sull'iPhone e ne scrive il testo, così Apple non vede alcun dato del tuo Mac, solo il testo neutro
+  «<bdi>Mac Live alert</bdi>» mostrato se la decifratura non riesce. Anche qui i messaggi «non
+  raggiungibile» e «di nuovo online» contengono solo l'identificativo casuale e un orario. Questo
+  servizio è regolato dall'informativa sulla privacy di Apple.</p>
+  <p><strong>3. Il lettore di codici QR di Google, su Android.</strong> La scansione è eseguita dai
   <strong>servizi Google Play</strong> del telefono, che gestiscono direttamente la fotocamera.
   L'app riceve solo il testo del codice scansionato e non chiede l'accesso alla fotocamera. Questo
-  servizio è regolato dall'informativa sulla privacy di Google.</p>
-  <p><strong>4. Il sostegno allo sviluppo, se lo desideri.</strong> Una donazione avviene tramite il
+  servizio è regolato dall'informativa sulla privacy di Google. Su iPhone non interviene alcun
+  servizio di terze parti: l'app legge da sé il codice QR con la fotocamera, sul telefono, e non
+  salva né invia alcuna immagine.</p>
+  <p><strong>4. Il sostegno allo sviluppo, su Android, se lo desideri.</strong> Una donazione avviene tramite il
   pagamento di <strong>Google Play</strong>. Il pagamento è gestito interamente da Google: l'app non
   vede mai i tuoi metodi di pagamento e non trasmette alcun dato in quell'occasione. È facoltativo e
-  non sblocca nulla nell'app.</p>
+  non sblocca nulla nell'app. La versione per iPhone non propone donazioni.</p>
 </div>
 
 <h2>Cosa l'app non fa</h2>
@@ -190,7 +206,9 @@ esattamente cosa vede ciascuno.</p>
   <li>Nessun account, nessuna registrazione, nessuna identificazione.</li>
   <li>Nessuna pubblicità, nessun tracker pubblicitario.</li>
   <li>Nessuno strumento di analisi né statistica d'uso.</li>
-  <li>Nessun accesso a posizione, contatti, file o fotocamera.</li>
+  <li>Nessun accesso a posizione, contatti o file. Nessun accesso alla fotocamera su Android; su
+      iPhone la fotocamera serve solo a scansionare il codice QR, e nessuna immagine viene salvata
+      o inviata.</li>
   <li>Nessuna vendita o condivisione di dati con terzi.</li>
 </ul>
 
@@ -200,10 +218,13 @@ esattamente cosa vede ciascuno.</p>
       (AES-256-GCM) e decifrato solo sul telefono.</li>
   <li><strong>In transito</strong> — tutte le connessioni usano TLS (HTTPS / WSS).</li>
   <li><strong>Sui tuoi dispositivi</strong> — le chiavi sono custodite nel Portachiavi del Mac e
-      protette dal Keystore di Android sul telefono; non vengono mai salvate nel cloud.</li>
+      protette dal Keystore di Android su un telefono Android; non vengono mai salvate nel cloud.
+      Su iPhone sono custodite nel Portachiavi, legate a quel dispositivo: non passano nel
+      Portachiavi iCloud e non possono essere ripristinate su un altro dispositivo.</li>
 </ul>
 
 <h2>Autorizzazioni richieste e perché</h2>
+<p><strong>Su Android:</strong></p>
 <ul>
   <li><strong>Internet e stato della rete</strong> — per raggiungere il relay e sapere se il telefono
       è offline.</li>
@@ -213,6 +234,14 @@ esattamente cosa vede ciascuno.</p>
       ricevere gli avvisi ad app chiusa.</li>
 </ul>
 <p>Puoi revocare queste autorizzazioni in qualsiasi momento nelle impostazioni di Android.</p>
+<p><strong>Su iPhone:</strong></p>
+<ul>
+  <li><strong>Fotocamera</strong> — per scansionare il codice QR mostrato dal Mac. iOS la chiede
+      alla prima scansione; l'immagine resta sul telefono.</li>
+  <li><strong>Notifiche</strong> — per mostrare gli avvisi del Mac. iOS la chiede una volta, subito
+      dopo l'abbinamento; puoi rifiutarla.</li>
+</ul>
+<p>Puoi revocarle in qualsiasi momento in <bdi>Impostazioni › Mac Live</bdi> sull'iPhone.</p>
 
 <h2>I tuoi diritti</h2>
 <p>Il Regolamento generale sulla protezione dei dati ti riconosce i diritti di accesso, rettifica,
@@ -229,7 +258,7 @@ riguardano.</p>
 <p>Questa informativa può cambiare se l'app cambia. La data dell'ultimo aggiornamento è indicata in
 cima a questa pagina. Ogni modifica sostanziale sarà segnalata nelle note di versione.</p>
 
-<footer>Mac Live — Atria.Eponym · Francia<br>Informativa sulla privacy, versione dell'11 ottobre 2026</footer>
+<footer>Mac Live — Atria.Eponym · Francia<br>Informativa sulla privacy, versione del 12 ottobre 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

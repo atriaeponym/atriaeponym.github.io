@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Polityka prywatności — <bdi>Mac Live</bdi></h1>
-<div class="sub">Ostatnia aktualizacja: 11 października 2026</div>
+<div class="sub">Ostatnia aktualizacja: 12 października 2026</div>
 
-<p><bdi>Mac Live</bdi> pokazuje na żywo, na Twoim telefonie z Androidem, stan Twojego Maca
+<p><bdi>Mac Live</bdi> pokazuje na żywo, na Twoim telefonie z Androidem lub iPhonie, stan Twojego Maca
 (temperatury, procesor, pamięć, dyski, bateria, kopie Time Machine…) i ostrzega, gdy coś jest nie
 tak. Działa razem z aplikacją <bdi>Mac Live</bdi> zainstalowaną na Macu, którą łączysz z telefonem,
 skanując kod QR.</p>
@@ -138,8 +138,12 @@ baterii, brak kopii Time Machine od 30 dni): rodzaj, zmierzoną wartość, próg
 
 <h2>Parowanie i klucze</h2>
 <p>Kod QR wyświetlany przez Maca zawiera losowy identyfikator i tajny klucz. Mac przechowuje je w
-<strong>pęku kluczy</strong>; telefon przechowuje je w pamięci chronionej przez <strong>Android
-Keystore</strong>, wyłączonej z kopii zapasowych telefonu. Tajny klucz nigdy nie jest nikomu
+<strong>pęku kluczy</strong>. Na Androidzie telefon przechowuje je w pamięci chronionej przez
+<strong>Android Keystore</strong>, wyłączonej z kopii zapasowych telefonu. Na iPhonie są
+przechowywane w <strong>pęku kluczy</strong> iOS, dostępne po pierwszym odblokowaniu i tylko na tym
+urządzeniu: nie trafiają do pęku kluczy iCloud i nie można ich przywrócić na innym urządzeniu;
+oprócz aplikacji może je odczytać tylko jej własne rozszerzenie powiadomień, aby odszyfrować
+alerty. Tajny klucz nigdy nie jest nikomu
 wysyłany: przekaźnik otrzymuje tylko wyprowadzony z niego dowód, który nie pozwala odszyfrować
 pomiarów.</p>
 <p>Możesz w każdej chwili zerwać połączenie: „Zapomnij tego Maca” na telefonie albo „Rozłącz
@@ -148,14 +152,15 @@ wszystkie telefony” na Macu, co tworzy nowy klucz.</p>
 <h2>Co zostaje na telefonie</h2>
 <ul>
   <li><strong>parowanie</strong>: nazwa Maca, identyfikator i tajny klucz;</li>
-  <li><strong>token powiadomień</strong> nadany aplikacji przez Google;</li>
+  <li><strong>token powiadomień</strong> nadany aplikacji przez Google na Androidzie, a przez Apple
+      na iPhonie;</li>
   <li><strong>język</strong> wybrany w aplikacji.</li>
 </ul>
 <p>Wyświetlana historia (do ostatnich 24 godzin) pozostaje w pamięci i znika po zamknięciu aplikacji.
 Odinstalowanie aplikacji usuwa wszystko inne.</p>
 
 <h2>Usługi, które przenoszą dane</h2>
-<p>Wydawca nie ma własnego serwera. Uczestniczą cztery usługi zewnętrzne, a oto dokładnie, co każda
+<p>Wydawca nie ma własnego serwera. Na Androidzie uczestniczą cztery usługi zewnętrzne, na iPhonie dwie, a oto dokładnie, co każda
 z nich widzi.</p>
 
 <div class="box warn">
@@ -163,24 +168,35 @@ z nich widzi.</p>
   przez mały przekaźnik prowadzony przez wydawcę w infrastrukturze <strong>Cloudflare</strong>.
   Przekaźnik przekazuje zaszyfrowane wiadomości, których nie może odczytać, i <strong>nie przechowuje
   żadnych pomiarów</strong>. Dla każdego Maca przechowuje tylko: losowy identyfikator, odcisk
-  (SHA-256) dowodu dostępu, maksymalnie 8 tokenów powiadomień z datą rejestracji oraz godziny
+  (SHA-256) dowodu dostępu, maksymalnie 8 tokenów powiadomień (Google lub Apple) z datą rejestracji oraz godziny
   połączenia i rozłączenia Maca. Wszystko jest usuwane automatycznie, gdy Mac nie łączy się przez 90
   dni. Jak każda usługa internetowa, Cloudflare przetwarza techniczne dane połączeń (adresy IP)
   zgodnie z własną polityką prywatności. Dzienniki błędów przekaźnika mogą zawierać 8 pierwszych
   znaków tokenu powiadomień, nigdy pomiar.</p>
-  <p><strong>2. Powiadomienia przez Firebase Cloud Messaging (Google).</strong> Aby ostrzec Cię, gdy
+  <p><strong>2. Powiadomienia przez Firebase Cloud Messaging (Google) na Androidzie.</strong> Aby ostrzec Cię, gdy
   aplikacja jest zamknięta, przekaźnik korzysta z usługi powiadomień <strong>Google</strong>, która
   otrzymuje token telefonu i losowy identyfikator Maca. Alert jest przesyłany
   <strong>zaszyfrowany</strong>: Google nie może go odczytać; to telefon go odszyfrowuje i
   wyświetla. Dwie wiadomości „nieosiągalny” i „znów online” zawierają tylko losowy identyfikator i
   godzinę, bez szyfrowania. Usługa podlega polityce prywatności Google.</p>
-  <p><strong>3. Czytnik kodów QR Google.</strong> Kod skanują <strong>Usługi Google Play</strong> na
+  <p><strong>Na iPhonie przez <bdi>Apple Push Notification service</bdi> (Apple).</strong> Ten sam
+  przekaźnik korzysta z usługi powiadomień <strong>Apple</strong>, która otrzymuje token iPhone’a i
+  losowy identyfikator Maca. Przekaźnik przechowuje ten token dokładnie tak jak tokeny Google:
+  maksymalnie 8 na Maca, usuwane, gdy Mac nie łączy się przez 90 dni. Alert jest przesyłany
+  <strong>zaszyfrowany end-to-end</strong>: małe rozszerzenie aplikacji odszyfrowuje go na iPhonie i
+  zapisuje jego treść, więc Apple nie widzi żadnych danych z Maca, tylko neutralny tekst
+  „<bdi>Mac Live alert</bdi>” wyświetlany, gdy odszyfrowanie się nie powiedzie. Wiadomości
+  „nieosiągalny” i „znów online” również tu zawierają tylko losowy identyfikator i godzinę. Usługa
+  podlega polityce prywatności Apple.</p>
+  <p><strong>3. Czytnik kodów QR Google, na Androidzie.</strong> Kod skanują <strong>Usługi Google Play</strong> na
   telefonie, które same obsługują aparat. Aplikacja otrzymuje tylko tekst zeskanowanego kodu i nie
-  prosi o dostęp do aparatu. Usługa podlega polityce prywatności Google.</p>
-  <p><strong>4. Wsparcie rozwoju, jeśli chcesz.</strong> Darowizna jest opłacana przez
+  prosi o dostęp do aparatu. Usługa podlega polityce prywatności Google. Na iPhonie nie uczestniczy
+  żadna usługa zewnętrzna: aplikacja sama odczytuje kod QR aparatem, na telefonie, i nie zapisuje
+  ani nie wysyła żadnego obrazu.</p>
+  <p><strong>4. Wsparcie rozwoju, na Androidzie, jeśli chcesz.</strong> Darowizna jest opłacana przez
   <strong>Google Play</strong>. Płatność obsługuje w całości Google: aplikacja nigdy nie widzi Twoich
   danych płatniczych i nie przesyła przy tym żadnych danych. Jest to dobrowolne i niczego w aplikacji
-  nie odblokowuje.</p>
+  nie odblokowuje. Wersja na iPhone’a nie oferuje darowizn.</p>
 </div>
 
 <h2>Czego aplikacja nie robi</h2>
@@ -188,7 +204,9 @@ z nich widzi.</p>
   <li>Bez konta, bez rejestracji, bez identyfikacji.</li>
   <li>Bez reklam, bez trackerów reklamowych.</li>
   <li>Bez narzędzi analitycznych i statystyk użycia.</li>
-  <li>Bez dostępu do lokalizacji, kontaktów, plików czy aparatu.</li>
+  <li>Bez dostępu do lokalizacji, kontaktów czy plików. Bez dostępu do aparatu na Androidzie; na
+      iPhonie aparat służy wyłącznie do skanowania kodu QR, a żaden obraz nie jest zapisywany ani
+      wysyłany.</li>
   <li>Bez sprzedaży i udostępniania danych stronom trzecim.</li>
 </ul>
 
@@ -197,11 +215,14 @@ z nich widzi.</p>
   <li><strong>Szyfrowanie end-to-end</strong> — każdy pomiar i każdy alert jest szyfrowany na Macu
       (AES-256-GCM) i odszyfrowywany tylko na telefonie.</li>
   <li><strong>W transmisji</strong> — wszystkie połączenia używają TLS (HTTPS / WSS).</li>
-  <li><strong>Na urządzeniach</strong> — klucze są w pęku kluczy Maca, a na telefonie chroni je
-      Android Keystore; nigdy nie trafiają do kopii w chmurze.</li>
+  <li><strong>Na urządzeniach</strong> — klucze są w pęku kluczy Maca, a na telefonie z Androidem chroni je
+      Android Keystore; nigdy nie trafiają do kopii w chmurze. Na iPhonie są w pęku kluczy,
+      powiązane z tym urządzeniem: nie trafiają do pęku kluczy iCloud i nie można ich przywrócić
+      na innym urządzeniu.</li>
 </ul>
 
 <h2>Wymagane uprawnienia i dlaczego</h2>
+<p><strong>Na Androidzie:</strong></p>
 <ul>
   <li><strong>Internet i stan sieci</strong> — aby połączyć się z przekaźnikiem i wiedzieć, czy
       telefon jest offline.</li>
@@ -211,6 +232,14 @@ z nich widzi.</p>
       alerty przy zamkniętej aplikacji.</li>
 </ul>
 <p>Możesz w każdej chwili cofnąć te uprawnienia w ustawieniach Androida.</p>
+<p><strong>Na iPhonie:</strong></p>
+<ul>
+  <li><strong>Aparat</strong> — aby zeskanować kod QR wyświetlany przez Maca. iOS pyta przy
+      pierwszym skanowaniu; obraz zostaje na telefonie.</li>
+  <li><strong>Powiadomienia</strong> — aby pokazywać alerty z Maca. iOS pyta raz, zaraz po
+      sparowaniu; możesz odmówić.</li>
+</ul>
+<p>Możesz je w każdej chwili cofnąć w <bdi>Ustawienia › Mac Live</bdi> na iPhonie.</p>
 
 <h2>Twoje prawa</h2>
 <p>RODO daje Ci prawo dostępu, sprostowania, usunięcia danych i sprzeciwu. Wydawca nie posiada
@@ -227,7 +256,7 @@ danych.</p>
 <p>Polityka może się zmienić, jeśli zmieni się aplikacja. Data ostatniej aktualizacji znajduje się na
 górze strony. Każda istotna zmiana zostanie opisana w informacjach o wersji.</p>
 
-<footer>Mac Live — Atria.Eponym · Francja<br>Polityka prywatności, wersja z 11 października 2026</footer>
+<footer>Mac Live — Atria.Eponym · Francja<br>Polityka prywatności, wersja z 12 października 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 

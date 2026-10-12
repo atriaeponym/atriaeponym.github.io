@@ -95,9 +95,9 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 </div>
 
 <h1>Kebijakan Privasi — <bdi>Mac Live</bdi></h1>
-<div class="sub">Terakhir diperbarui: 11 Oktober 2026</div>
+<div class="sub">Terakhir diperbarui: 12 Oktober 2026</div>
 
-<p><bdi>Mac Live</bdi> menampilkan secara langsung di ponsel Android Anda kondisi Mac Anda (suhu, prosesor, memori, disk,
+<p><bdi>Mac Live</bdi> menampilkan secara langsung di ponsel Android atau iPhone Anda kondisi Mac Anda (suhu, prosesor, memori, disk,
 baterai, cadangan Time Machine…) dan memberi tahu Anda jika ada masalah. Aplikasi ini bekerja bersama aplikasi
 <bdi>Mac Live</bdi> yang terpasang di Mac, yang Anda hubungkan ke ponsel dengan memindai kode QR.</p>
 
@@ -135,8 +135,11 @@ ke baterai, baterai lemah, tidak ada cadangan Time Machine selama 30 hari): jeni
 diukur, ambang batas, dan waktunya.</p>
 
 <h2>Penyandingan dan kunci</h2>
-<p>Kode QR yang ditampilkan Mac berisi pengenal acak dan kunci rahasia. Mac menyimpannya di <strong>Rantai Kunci</strong>;
-ponsel menyimpannya di penyimpanan yang dilindungi <strong>Android Keystore</strong> dan dikecualikan dari cadangan ponsel.
+<p>Kode QR yang ditampilkan Mac berisi pengenal acak dan kunci rahasia. Mac menyimpannya di <strong>Rantai Kunci</strong>.
+Di Android, ponsel menyimpannya di penyimpanan yang dilindungi <strong>Android Keystore</strong> dan dikecualikan dari cadangan
+ponsel. Di iPhone, keduanya disimpan di <strong>Rantai Kunci</strong> iOS, dapat dibaca setelah pembukaan kunci pertama dan hanya
+di perangkat ini: keduanya tidak masuk ke Rantai Kunci iCloud dan tidak dapat dipulihkan ke perangkat lain; hanya ekstensi
+notifikasi milik aplikasi itu sendiri yang juga dapat membacanya, untuk mendekripsi peringatan.
 Kunci rahasia tidak pernah dikirim ke siapa pun: relai hanya menerima bukti turunan darinya, yang tidak dapat mendekripsi data
 pengukuran Anda.</p>
 <p>Anda dapat memutus tautan kapan saja: “Lupakan Mac ini” di ponsel, atau “Putuskan semua ponsel” di Mac, yang membuat kunci
@@ -145,34 +148,42 @@ baru.</p>
 <h2>Yang tersimpan di ponsel Anda</h2>
 <ul>
   <li><strong>penyandingan</strong>: nama Mac, pengenal, dan kunci rahasia;</li>
-  <li><strong>token notifikasi</strong> yang diberikan Google kepada aplikasi;</li>
+  <li><strong>token notifikasi</strong> yang diberikan kepada aplikasi oleh Google di Android, oleh Apple di iPhone;</li>
   <li><strong>bahasa</strong> yang Anda pilih di aplikasi.</li>
 </ul>
 <p>Riwayat yang ditampilkan (hingga 24 jam terakhir) hanya ada di memori dan hilang saat aplikasi ditutup. Menghapus aplikasi
 akan menghapus semua sisanya.</p>
 
 <h2>Layanan yang mengantarkan data</h2>
-<p>Penerbit tidak memiliki server sendiri. Empat layanan pihak ketiga terlibat, dan inilah tepatnya yang dilihat masing-masing.</p>
+<p>Penerbit tidak memiliki server sendiri. Empat layanan pihak ketiga terlibat di Android, dua di iPhone, dan inilah tepatnya yang dilihat masing-masing.</p>
 
 <div class="box warn">
   <p><strong>1. Relai di Cloudflare.</strong> Mac dan ponsel tidak terhubung langsung: keduanya melalui relai kecil yang
   dijalankan penerbit di infrastruktur <strong>Cloudflare</strong>. Relai meneruskan pesan terenkripsi yang tidak dapat
   dibacanya dan <strong>tidak menyimpan data pengukuran apa pun</strong>. Untuk setiap Mac, relai hanya menyimpan: pengenal acak,
-  sidik (SHA-256) dari bukti akses, paling banyak 8 token notifikasi beserta tanggal pendaftarannya, serta waktu Mac terhubung
+  sidik (SHA-256) dari bukti akses, paling banyak 8 token notifikasi (Google atau Apple) beserta tanggal pendaftarannya, serta waktu Mac terhubung
   dan terputus. Semuanya otomatis dihapus bila Mac tidak terhubung selama 90 hari. Seperti layanan daring lainnya, Cloudflare
   memproses data teknis koneksi (alamat IP) sesuai kebijakan privasinya sendiri. Log kesalahan relai dapat memuat 8 karakter
   pertama token notifikasi, tidak pernah data pengukuran.</p>
-  <p><strong>2. Notifikasi melalui Firebase Cloud Messaging (Google).</strong> Untuk memberi tahu Anda saat aplikasi tertutup,
+  <p><strong>2. Notifikasi melalui Firebase Cloud Messaging (Google) di Android.</strong> Untuk memberi tahu Anda saat aplikasi tertutup,
   relai memakai layanan notifikasi <strong>Google</strong>, yang menerima token ponsel Anda dan pengenal acak Mac. Peringatan
   dikirim <strong>terenkripsi</strong>: Google tidak dapat membacanya; ponsel Anda yang mendekripsi dan menampilkannya. Dua pesan
   “tidak dapat dijangkau” dan “kembali online” hanya berisi pengenal acak dan waktu, tanpa enkripsi. Layanan ini tunduk pada
   kebijakan privasi Google.</p>
-  <p><strong>3. Pemindai kode QR Google.</strong> Pemindaian dilakukan oleh <strong>Layanan Google Play</strong> di ponsel, yang
+  <p><strong>Di iPhone, melalui <bdi>Apple Push Notification service</bdi> (Apple).</strong> Relai yang sama memakai layanan
+  notifikasi <strong>Apple</strong>, yang menerima token iPhone Anda dan pengenal acak Mac. Relai menyimpan token ini persis seperti
+  token Google: paling banyak 8 per Mac, dihapus bila Mac tidak terhubung selama 90 hari. Peringatan dikirim <strong>terenkripsi
+  ujung ke ujung</strong>: ekstensi kecil aplikasi mendekripsinya di iPhone Anda dan menuliskan teksnya, sehingga Apple tidak melihat
+  data apa pun dari Mac Anda, hanya teks netral “<bdi>Mac Live alert</bdi>” yang ditampilkan bila dekripsi gagal. Pesan “tidak dapat
+  dijangkau” dan “kembali online” di sini pun hanya berisi pengenal acak dan waktu. Layanan ini tunduk pada kebijakan privasi
+  Apple.</p>
+  <p><strong>3. Pemindai kode QR Google, di Android.</strong> Pemindaian dilakukan oleh <strong>Layanan Google Play</strong> di ponsel, yang
   mengendalikan kamera sendiri. Aplikasi hanya menerima teks kode yang dipindai dan tidak meminta akses kamera. Layanan ini
-  tunduk pada kebijakan privasi Google.</p>
-  <p><strong>4. Dukungan pengembangan, jika Anda mau.</strong> Donasi dilakukan melalui pembayaran <strong>Google Play</strong>.
+  tunduk pada kebijakan privasi Google. Di iPhone, tidak ada layanan pihak ketiga yang terlibat: aplikasi membaca kode QR sendiri
+  dengan kamera, di ponsel, dan tidak menyimpan maupun mengirim gambar apa pun.</p>
+  <p><strong>4. Dukungan pengembangan, di Android, jika Anda mau.</strong> Donasi dilakukan melalui pembayaran <strong>Google Play</strong>.
   Pembayaran ditangani sepenuhnya oleh Google: aplikasi tidak pernah melihat metode pembayaran Anda dan tidak mengirim data apa
-  pun saat itu. Ini opsional dan tidak membuka apa pun di aplikasi.</p>
+  pun saat itu. Ini opsional dan tidak membuka apa pun di aplikasi. Versi iPhone tidak menyediakan donasi.</p>
 </div>
 
 <h2>Yang tidak dilakukan aplikasi</h2>
@@ -180,7 +191,8 @@ akan menghapus semua sisanya.</p>
   <li>Tanpa akun, tanpa pendaftaran, tanpa identifikasi.</li>
   <li>Tanpa iklan, tanpa pelacak iklan.</li>
   <li>Tanpa alat analitik atau statistik penggunaan.</li>
-  <li>Tanpa akses ke lokasi, kontak, file, atau kamera Anda.</li>
+  <li>Tanpa akses ke lokasi, kontak, atau file Anda. Tanpa akses kamera di Android; di iPhone, kamera hanya dipakai untuk memindai
+      kode QR, dan tidak ada gambar yang disimpan atau dikirim.</li>
   <li>Tanpa penjualan atau berbagi data dengan pihak ketiga.</li>
 </ul>
 
@@ -189,11 +201,13 @@ akan menghapus semua sisanya.</p>
   <li><strong>Enkripsi ujung ke ujung</strong> — setiap data pengukuran dan peringatan dienkripsi di Mac (AES-256-GCM) dan hanya
       didekripsi di ponsel.</li>
   <li><strong>Saat dikirim</strong> — semua koneksi memakai TLS (HTTPS / WSS).</li>
-  <li><strong>Di perangkat Anda</strong> — kunci disimpan di Rantai Kunci Mac dan dilindungi Android Keystore di ponsel; kunci
-      tidak pernah dicadangkan ke cloud.</li>
+  <li><strong>Di perangkat Anda</strong> — kunci disimpan di Rantai Kunci Mac dan dilindungi Android Keystore di ponsel Android; kunci
+      tidak pernah dicadangkan ke cloud. Di iPhone, kunci disimpan di Rantai Kunci, terikat pada perangkat itu: tidak masuk ke
+      Rantai Kunci iCloud dan tidak dapat dipulihkan ke perangkat lain.</li>
 </ul>
 
 <h2>Izin yang diminta dan alasannya</h2>
+<p><strong>Di Android:</strong></p>
 <ul>
   <li><strong>Internet dan status jaringan</strong> — untuk menjangkau relai dan mengetahui saat ponsel offline.</li>
   <li><strong>Notifikasi</strong> — untuk menampilkan peringatan Mac. Android menanyakannya sekali, tepat setelah penyandingan;
@@ -202,6 +216,14 @@ akan menghapus semua sisanya.</p>
       tertutup.</li>
 </ul>
 <p>Anda dapat mencabut izin ini kapan saja di pengaturan Android.</p>
+<p><strong>Di iPhone:</strong></p>
+<ul>
+  <li><strong>Kamera</strong> — untuk memindai kode QR yang ditampilkan Mac. iOS menanyakannya saat pemindaian pertama; gambar
+      tetap di ponsel.</li>
+  <li><strong>Notifikasi</strong> — untuk menampilkan peringatan Mac. iOS menanyakannya sekali, tepat setelah penyandingan; Anda
+      boleh menolak.</li>
+</ul>
+<p>Anda dapat mencabutnya kapan saja di <bdi>Pengaturan › Mac Live</bdi> di iPhone.</p>
 
 <h2>Hak Anda</h2>
 <p>Peraturan Perlindungan Data Umum (GDPR) memberi Anda hak akses, perbaikan, penghapusan, dan keberatan. Penerbit tidak
@@ -216,7 +238,7 @@ juga dapat menulis ke <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail
 <p>Kebijakan ini dapat berubah jika aplikasi berubah. Tanggal pembaruan terakhir tercantum di bagian atas halaman ini. Setiap
 perubahan penting akan disebutkan dalam catatan rilis.</p>
 
-<footer>Mac Live — Atria.Eponym · Prancis<br>Kebijakan privasi, versi 11 Oktober 2026</footer>
+<footer>Mac Live — Atria.Eponym · Prancis<br>Kebijakan privasi, versi 12 Oktober 2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 
