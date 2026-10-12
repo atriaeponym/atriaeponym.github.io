@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.atriaeponym.maclive",
+      "sha256_cert_fingerprints": [
+        "D1:58:03:F5:9C:28:A2:AD:B6:B9:9F:92:4B:B7:5C:17:40:9D:6E:A9:56:63:8B:E7:8F:10:0F:00:14:04:5F:23",
+        "85:6A:2A:19:AE:6E:94:C7:F7:72:1A:B2:4C:1D:19:6F:D5:FC:74:47:C7:CC:0D:34:02:6C:68:1B:C4:55:D5:E9"
+      ]
+    }
+  }
+]
