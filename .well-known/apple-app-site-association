@@ -6,6 +6,13 @@
         "components": [
           { "/": "/maclive/p", "comment": "Pairing link from the Mac's QR code; the secret stays in the fragment" }
         ]
+      },
+      {
+        "appIDs": ["U3W9377B5Y.com.atriaeponym.familypocket"],
+        "components": [
+          { "/": "/familypocket/join", "comment": "Family invitation link, code in ?t=" },
+          { "/": "/familypocket/join/*", "comment": "Family invitation link, code in ?t=" }
+        ]
       }
     ]
   }
