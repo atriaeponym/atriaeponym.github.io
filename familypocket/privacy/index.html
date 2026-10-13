@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index">
+<title>Politique de confidentialité — Family Pocket</title>
+<link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/familypocket/privacy/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/familypocket/privacy/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/familypocket/privacy/es/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.github.io/familypocket/privacy/de/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.github.io/familypocket/privacy/it/">
+<link rel="alternate" hreflang="pt" href="https://atriaeponym.github.io/familypocket/privacy/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.github.io/familypocket/privacy/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.github.io/familypocket/privacy/nl/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.github.io/familypocket/privacy/pl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.github.io/familypocket/privacy/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.github.io/familypocket/privacy/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.github.io/familypocket/privacy/fi/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.github.io/familypocket/privacy/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.github.io/familypocket/privacy/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.github.io/familypocket/privacy/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.github.io/familypocket/privacy/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.github.io/familypocket/privacy/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.github.io/familypocket/privacy/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.github.io/familypocket/privacy/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.github.io/familypocket/privacy/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.github.io/familypocket/privacy/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.github.io/familypocket/privacy/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.github.io/familypocket/privacy/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.github.io/familypocket/privacy/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.github.io/familypocket/privacy/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.github.io/familypocket/privacy/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.github.io/familypocket/privacy/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.github.io/familypocket/privacy/zh/">
+<script>
+(function(){
+  var have = ['en','fr','es','de','it','pt','pt-br','nl','pl','sv','nb','fi','el','tr','ru','uk','ar','he','fa','ur','hi','bn','th','vi','id','ja','ko','zh'];
+  function norm(t){
+    t = String(t || '').toLowerCase().replace('_','-');
+    if (t === 'pt-br') return 'pt-br';
+    var l = t.split('-')[0];
+    if (l === 'in') l = 'id';
+    if (l === 'iw') l = 'he';
+    if (l === 'no' || l === 'nn') l = 'nb';
+    return have.indexOf(l) >= 0 ? l : '';
+  }
+  var m = /[?&]lang=([^&#]+)/.exec(location.search);
+  var want = m ? norm(decodeURIComponent(m[1])) : '';
+  if (!want) {
+    var list = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < list.length && !want; i++) want = norm(list[i]);
+    if (!want) want = 'en';
+  }
+  var keep = location.search.replace(/([?&])lang=[^&#]*&?/, '$1').replace(/[?&]$/, '');
+  if (want && want !== 'fr') location.replace(want + '/' + keep + location.hash);
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F6F7F9;--card:#FFFFFF;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--accent:#4F46E5;--soft:#E0E7FF;--ok:#059669}
+@media (prefers-color-scheme:dark){:root{--page:#0B0F19;--card:#141A2A;--ink:#E8ECF4;--muted:#A3AEC2;--line:#253047;--accent:#818CF8;--soft:#25265A;--ok:#34D399}}
+body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
+     max-width:780px;margin:0 auto;font-size:16px}
+h1{font-size:26px;margin-bottom:6px;font-weight:700}
+.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
+h2{font-size:18px;margin:34px 0 10px;font-weight:700}
+p{margin-bottom:14px;color:var(--muted)}
+b,strong{color:var(--ink)}
+ul,ol{margin:0 0 16px 22px}
+[dir=rtl] ul,[dir=rtl] ol{margin:0 22px 16px 0}
+li{margin-bottom:9px;color:var(--muted)}
+a{color:var(--accent)}
+bdi{white-space:nowrap}
+.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
+     border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
+     padding:14px 22px;border-radius:14px;margin:8px 0 18px}
+.code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:4px 10px;border-radius:8px;word-break:break-all}
+.only-android,.only-ios,.only-desktop{display:none}
+.is-android .only-android,.is-ios .only-ios,.is-desktop .only-desktop{display:block}
+.no-code .needs-code{display:none}
+.lang{margin-bottom:24px}
+.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
+     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
+.all{margin-top:30px;font-size:13px;line-height:2;color:var(--muted)}
+.all a{color:var(--muted);margin-inline-end:10px;white-space:nowrap}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="lang">
+  <select aria-label="Language" onchange="location.href=this.value + location.search.replace(/([?&])lang=[^&#]*&?/, '$1').replace(/[?&]$/, '')">
+    <option value="en/">English</option>
+    <option value="?lang=fr" selected>Français</option>
+    <option value="es/">Español</option>
+    <option value="de/">Deutsch</option>
+    <option value="it/">Italiano</option>
+    <option value="pt/">Português</option>
+    <option value="pt-br/">Português (BR)</option>
+    <option value="nl/">Nederlands</option>
+    <option value="pl/">Polski</option>
+    <option value="sv/">Svenska</option>
+    <option value="nb/">Norsk</option>
+    <option value="fi/">Suomi</option>
+    <option value="el/">Ελληνικά</option>
+    <option value="tr/">Türkçe</option>
+    <option value="ru/">Русский</option>
+    <option value="uk/">Українська</option>
+    <option value="ar/">العربية</option>
+    <option value="he/">עברית</option>
+    <option value="fa/">فارسی</option>
+    <option value="ur/">اردو</option>
+    <option value="hi/">हिन्दी</option>
+    <option value="bn/">বাংলা</option>
+    <option value="th/">ไทย</option>
+    <option value="vi/">Tiếng Việt</option>
+    <option value="id/">Indonesia</option>
+    <option value="ja/">日本語</option>
+    <option value="ko/">한국어</option>
+    <option value="zh/">中文</option>
+  </select>
+</div>
+
+<h1>Politique de confidentialité — <bdi>Family Pocket</bdi></h1>
+<div class="sub">Dernière mise à jour : 12 octobre 2026</div>
+
+<p><bdi>Family Pocket</bdi> est un carnet de suivi de l'argent de poche et du budget, pour les
+adolescents, les jeunes adultes et leur famille. C'est un carnet de notes :
+<strong>aucun argent réel ne circule</strong>, l'application n'est reliée à aucun compte
+bancaire et ne fait aucun paiement.</p>
+
+<div class="box">
+  <p><strong>L'essentiel :</strong> sans famille, tout reste sur votre téléphone, sans compte.
+  Aucune publicité, aucun outil de mesure d'audience, aucune donnée vendue ni partagée à des fins
+  commerciales. En mode famille, seuls les membres de votre famille voient vos données, dans la
+  limite de ce que chacun a choisi de partager.</p>
+</div>
+
+<h2>Qui est responsable du traitement</h2>
+<p><bdi>Family Pocket</bdi> est éditée par <strong>Atria.Eponym</strong>, développeur individuel
+établi en France. Contact : <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+
+<h2>Utilisation seule (sans famille)</h2>
+<p>Les opérations que vous notez (montant, catégorie, note, date), vos catégories, vos objectifs
+d'épargne et vos réglages (prénom facultatif, devise) sont enregistrés <strong>uniquement sur
+votre téléphone</strong>. Aucun compte n'est créé et rien n'est envoyé à l'éditeur.</p>
+
+<h2>Sauvegardes</h2>
+<ul>
+  <li><strong>Sauvegarde automatique du téléphone.</strong> Android peut copier les données de
+      l'application dans votre propre compte Google (et l'iPhone dans votre propre iCloud). Cette
+      sauvegarde est gérée par votre téléphone ; sur Android 9 et plus elle est chiffrée avec le
+      code de verrouillage de votre écran. L'éditeur n'y a pas accès. Vous pouvez la désactiver
+      dans les réglages du téléphone.</li>
+  <li><strong>Fichier de sauvegarde.</strong> Vous pouvez créer un fichier contenant tout votre
+      carnet, éventuellement protégé par un mot de passe (chiffrement AES-256). Vous choisissez
+      où le ranger ; l'éditeur ne le reçoit pas.</li>
+</ul>
+
+<h2>Import et export</h2>
+<p>Les relevés bancaires que vous importez (CSV, OFX, QIF) et le fichier Markdown d'une autre
+application sont lus <strong>sur votre téléphone</strong> ; seules les lignes que vous
+confirmez sont ajoutées à votre carnet. Les fichiers que vous exportez (Excel, CSV, PDF,
+images) sont créés sur votre téléphone et partagés seulement là où vous le décidez. Les images
+destinées aux réseaux sociaux masquent les montants par défaut.</p>
+
+<h2>Mode famille</h2>
+<p>Le mode famille est facultatif. Il permet à un parent de suivre l'argent de poche de ses
+enfants, de régler l'argent de poche et à la famille de participer aux objectifs. Quand vous
+l'utilisez, les données suivantes sont stockées sur le service de synchronisation de
+l'application, hébergé par <strong>Supabase</strong> dans l'Union européenne :</p>
+<ul>
+  <li><strong>La famille</strong> : son nom, et pour chaque membre son prénom (ou pseudonyme),
+      son rôle (parent, ado, proche) et la date à partir de laquelle un ado partage son
+      historique.</li>
+  <li><strong>Le compte du parent</strong> : le parent se connecte avec son compte Google ; le
+      service reçoit l'identifiant et l'adresse e-mail de ce compte. Aucun mot de passe n'est
+      enregistré.</li>
+  <li><strong>Le compte d'un ado ou d'un proche</strong> : un identifiant anonyme, sans e-mail
+      ni mot de passe, créé quand il rejoint la famille avec l'invitation d'un parent.</li>
+  <li><strong>Le carnet des ados et des proches</strong> : opérations, catégories, objectifs et
+      participations aux objectifs, pour que la famille puisse les consulter.</li>
+  <li><strong>L'argent de poche</strong> : le mode choisi par le parent (désactivé, régulier ou
+      ponctuel), le montant, la fréquence et la date du prochain versement.</li>
+</ul>
+<p><strong>Qui voit quoi.</strong> Seuls les membres de votre famille ont accès à ces données,
+grâce à des règles de sécurité appliquées par le serveur. Un parent voit les opérations d'un ado
+datées à partir du jour que l'ado a choisi en rejoignant la famille (et qu'il peut changer). Un
+proche voit les objectifs des enfants et peut y participer.</p>
+<p><strong>Mineurs.</strong> Un ado ne peut rejoindre une famille qu'avec l'invitation d'un
+parent, qui vaut consentement parental.</p>
+
+<h2>Services de tiers</h2>
+<ul>
+  <li><strong>Supabase</strong> : hébergement du service de synchronisation du mode famille
+      (sous-traitant, Union européenne).</li>
+  <li><strong>Google</strong> : connexion du parent avec son compte Google, lecture du QR code
+      d'invitation par les services Google Play du téléphone, sauvegarde automatique Android,
+      distribution de l'application par Google Play. Les rapports de plantage de l'application
+      proviennent uniquement de Google Play, et seulement si vous avez accepté de partager des
+      données de diagnostic avec Google dans les réglages de votre téléphone.</li>
+</ul>
+<p>L'application ne contient aucun outil publicitaire ni de mesure d'audience.</p>
+
+<h2>Durée de conservation</h2>
+<p>Les données de votre téléphone y restent jusqu'à ce que vous les supprimiez ou désinstalliez
+l'application. Les données du mode famille sont conservées tant que le compte existe et
+supprimées dès la suppression du compte.</p>
+
+<h2>Supprimer votre compte et vos données</h2>
+<p>Dans l'application : <strong>Réglages → Famille → Supprimer mon compte famille</strong>.
+Votre compte et tout ce qu'il a stocké sur le service sont supprimés immédiatement ; si vous
+étiez le dernier parent, toute la famille l'est aussi. Sans l'application, voir la page
+<a href="https://atriaeponym.github.io/familypocket/delete/">Supprimer un compte</a>.</p>
+
+<h2>Vos droits</h2>
+<p>Conformément au RGPD, vous pouvez accéder à vos données, les rectifier, les supprimer, en
+recevoir une copie (export depuis l'application) ou vous opposer à leur traitement, en écrivant à
+<a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>. Vous pouvez aussi saisir la
+CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+
+<h2>Modifications</h2>
+<p>Toute modification de cette politique sera publiée sur cette page, avec sa date.</p>
+
+<footer>Family Pocket — Atria.Eponym · France<br>Politique de confidentialité, version du 12 octobre 2026</footer>
+
+<div class="all"><a href="en/" hreflang="en">English</a> <a href="?lang=fr" hreflang="fr">Français</a> <a href="es/" hreflang="es">Español</a> <a href="de/" hreflang="de">Deutsch</a> <a href="it/" hreflang="it">Italiano</a> <a href="pt/" hreflang="pt">Português</a> <a href="pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="nl/" hreflang="nl">Nederlands</a> <a href="pl/" hreflang="pl">Polski</a> <a href="sv/" hreflang="sv">Svenska</a> <a href="nb/" hreflang="nb">Norsk</a> <a href="fi/" hreflang="fi">Suomi</a> <a href="el/" hreflang="el">Ελληνικά</a> <a href="tr/" hreflang="tr">Türkçe</a> <a href="ru/" hreflang="ru">Русский</a> <a href="uk/" hreflang="uk">Українська</a> <a href="ar/" hreflang="ar">العربية</a> <a href="he/" hreflang="he">עברית</a> <a href="fa/" hreflang="fa">فارسی</a> <a href="ur/" hreflang="ur">اردو</a> <a href="hi/" hreflang="hi">हिन्दी</a> <a href="bn/" hreflang="bn">বাংলা</a> <a href="th/" hreflang="th">ไทย</a> <a href="vi/" hreflang="vi">Tiếng Việt</a> <a href="id/" hreflang="id">Indonesia</a> <a href="ja/" hreflang="ja">日本語</a> <a href="ko/" hreflang="ko">한국어</a> <a href="zh/" hreflang="zh-Hans">中文</a></div>
+
+</body>
+</html>
