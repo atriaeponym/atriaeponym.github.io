@@ -97,12 +97,14 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1c2336;font-size:1
 </div>
 
 <h1>Tietosuojakäytäntö — Speed GPS</h1>
-<div class="sub">Päivitetty viimeksi: 11.10.2026</div>
+<div class="sub">Päivitetty viimeksi: 15.10.2026</div>
 <p class="note">Tämä käännös on tarjottu käytön helpottamiseksi. Jos se poikkeaa <a href="../?lang=fr">ranskankielisestä versiosta</a>, ranskankielinen versio on ratkaiseva.</p>
 
 <p>Speed GPS on mobiilisovellus, joka näyttää sijaintisi, nopeutesi, korkeutesi
 sekä laitteestasi näkyvät navigointisatelliitit. Sillä voi myös tallentaa
 matkan ja viedä sen tiedostoon.</p>
+<p>Se on saatavilla Androidille ja iPhonelle. Seuraavat osiot kuvaavat Android-sovellusta;
+iPhonessa muuttuvat asiat on koottu alempana osioon ”iPhonessa”.</p>
 
 <div class="box">
   <p><strong>Tiivistettynä:</strong> Tämä sovellus ei luo tiliä, ei näytä mainoksia, ei
@@ -219,6 +221,39 @@ julkaisijan puolella.</p>
 <p>Voit perua nämä käyttöoikeudet milloin tahansa Androidin asetuksista. Vastaavat
 toiminnot lakkaavat silloin näkymästä, eikä se vaikuta muuhun sovellukseen.</p>
 
+<h2>iPhonessa</h2>
+<p>iPhone-versio noudattaa samoja periaatteita: ei tiliä, ei mainoksia, ei analytiikkaa
+eikä julkaisijalle lähetettäviä tietoja. Se eroaa seuraavissa kohdissa.</p>
+<ul>
+  <li><strong>Vähemmän luettuja tietoja</strong> — iOS ei anna pääsyä satelliitteihin, Wi-Fi-verkkoihin eikä
+      kantaman sisällä oleviin Bluetooth-laitteisiin: sovellus ei lue niitä. Sen näyttämä taivas
+      (Aurinko, Kuu, planeetat, tähdet) lasketaan iPhonessa kellonajan ja sijaintisi perusteella.</li>
+  <li><strong>Liikunta ja kuntoilu</strong> — luvallasi sovellus lukee barometrisen korkeusmittarin, askelten ja
+      kerrosten määrän sekä iPhonen tunnistaman liikkumistavan (kävely, juoksu, pyöräily, auto).
+      Nämä mittaukset näytetään ja lisätään matkan yhteenvetoon; ne eivät lähde iPhonesta.</li>
+  <li><strong>Matkasi</strong> — ne tallennetaan sovelluksen yksityiseen tallennustilaan, jonka iOS salaa, kun
+      iPhone on suojattu pääsykoodilla. Ne sisältyvät iPhonen varmuuskopioihin (iCloud tai tietokone), jos olet
+      ottanut ne käyttöön, Applen sääntöjen mukaisesti. Matkan poistaminen sovelluksessa poistaa
+      sen; sovelluksen poistaminen poistaa ne kaikki.</li>
+  <li><strong>Kartat ja paikkojen nimet</strong> — ne tulevat <strong>Applen</strong> palveluista: Kartat,
+      Katso ympärille ja iOS:ään sisäänrakennettu geokoodaus. Kartan tai paikan nimen näyttämiseksi
+      iOS välittää Applelle katsotun alueen tai koordinaattisi; tähän käsittelyyn sovelletaan Applen
+      tietosuojakäytäntöä. Google Mapsia ja Esriä ei käytetä iPhonessa.</li>
+  <li><strong>Lukittu näyttö ja Siri</strong> — käynnissä oleva matka voi näkyä lukitulla näytöllä ja
+      Dynamic Islandissa, ja sen voi aloittaa tai lopettaa Sirillä tai toimintopainikkeella. iOS
+      hoitaa nämä toiminnot iPhonessa; sovellus ei lähetä tällöin mitään.</li>
+  <li><strong>GPX-viennit</strong> — ne kulkevat iOS:n jakosivun kautta valitsemaasi sovellukseen tai
+      paikkaan.</li>
+  <li><strong>Ei maksuja</strong> — iPhone-versio ei tarjoa lahjoitusmahdollisuutta eikä avaa mitään
+      maksua.</li>
+  <li><strong>Kaatumisraportit</strong> — jos olet hyväksynyt iPhonen asetuksissa analyysin jakamisen
+      appikehittäjien kanssa, Apple voi välittää julkaisijalle nimettömiä kaatumisraportteja.
+      Sovellus itse ei lähetä niitä lainkaan.</li>
+  <li><strong>Pyydetyt käyttöoikeudet</strong> — sijainti sovelluksen käytön aikana, mikä riittää myös
+      jatkamaan matkaa näytön ollessa lukittuna (iOS näyttää silloin sinisen ilmaisimen), sekä pääsy
+      Liikunta ja kuntoilu -tietoihin. Voit perua ne milloin tahansa kohdassa Asetukset, Speed GPS.</li>
+</ul>
+
 <h2>Oikeutesi</h2>
 <p>EU:n yleinen tietosuoja-asetus antaa sinulle oikeuden saada pääsy henkilötietoihisi,
 oikaista ja poistaa ne sekä vastustaa niiden käsittelyä. Tämän sovelluksen kohdalla
@@ -236,7 +271,7 @@ koskevia tietoja.</p>
 <p>Tämä käytäntö voi muuttua, jos sovellus muuttuu. Viimeisimmän päivityksen päivämäärä näkyy
 tämän sivun yläosassa. Kaikista olennaisista muutoksista kerrotaan julkaisutiedoissa.</p>
 
-<footer>Speed GPS — Atria.Eponym · France<br>Tietosuojakäytäntö, versio 11.10.2026</footer>
+<footer>Speed GPS — Atria.Eponym · France<br>Tietosuojakäytäntö, versio 15.10.2026</footer>
 
 <div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../zh/" hreflang="zh-Hans">中文</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../he/" hreflang="he">עברית</a></div>
 
