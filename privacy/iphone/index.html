@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politique de confidentialité — Speed GPS pour iPhone</title>
+<link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/privacy/iphone/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/privacy/iphone/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/privacy/iphone/es/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.github.io/privacy/iphone/de/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.github.io/privacy/iphone/it/">
+<link rel="alternate" hreflang="pt" href="https://atriaeponym.github.io/privacy/iphone/pt/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.github.io/privacy/iphone/ar/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.github.io/privacy/iphone/zh/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.github.io/privacy/iphone/ja/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.github.io/privacy/iphone/hi/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.github.io/privacy/iphone/nb/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.github.io/privacy/iphone/sv/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.github.io/privacy/iphone/fi/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.github.io/privacy/iphone/ru/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.github.io/privacy/iphone/id/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.github.io/privacy/iphone/vi/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.github.io/privacy/iphone/ko/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.github.io/privacy/iphone/tr/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.github.io/privacy/iphone/pl/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.github.io/privacy/iphone/nl/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.github.io/privacy/iphone/uk/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.github.io/privacy/iphone/bn/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.github.io/privacy/iphone/pt-br/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.github.io/privacy/iphone/ur/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.github.io/privacy/iphone/fa/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.github.io/privacy/iphone/th/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.github.io/privacy/iphone/el/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.github.io/privacy/iphone/he/">
+<script>
+(function(){
+  var have = ['en','fr','es','de','it','pt','ar','zh','ja','hi','nb','sv','fi','ru','id','vi','ko','tr','pl','nl','uk','bn','pt-br','ur','fa','th','el','he'];
+  function norm(t){
+    t = String(t || '').toLowerCase().replace('_','-');
+    if (t === 'pt-br') return 'pt-br';
+    var l = t.split('-')[0];
+    if (l === 'in') l = 'id';
+    if (l === 'iw') l = 'he';
+    if (l === 'no' || l === 'nn') l = 'nb';
+    return have.indexOf(l) >= 0 ? l : '';
+  }
+  var m = /[?&]lang=([^&#]+)/.exec(location.search);
+  var want = m ? norm(decodeURIComponent(m[1])) : '';
+  if (!want) {
+    var list = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < list.length && !want; i++) want = norm(list[i]);
+    if (!want) want = 'en';
+  }
+  if (want && want !== 'fr') location.replace(want + '/');
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0A0D16;color:#C9D2E0;line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic',Tahoma,Helvetica,sans-serif;
+     max-width:780px;margin:0 auto;font-size:16px}
+h1{font-size:26px;color:#FFB347;margin-bottom:6px;font-weight:600}
+.sub{font-size:14px;color:#7D8594;margin-bottom:14px}
+.note{font-size:14px;color:#8A93A6;margin-bottom:24px;font-style:italic}
+h2{font-size:18px;color:#E8EDF5;margin:34px 0 10px;font-weight:600}
+p{margin-bottom:14px;color:#B8C1D1}
+b,strong{color:#E8EDF5}
+ul{margin:0 0 16px 22px}
+[dir=rtl] ul{margin:0 22px 16px 0}
+li{margin-bottom:9px;color:#B8C1D1}
+a{color:#FFB347}
+bdi{white-space:nowrap}
+.box{background:#111726;border:1px solid #1e2537;border-inline-start:3px solid #5CD6A8;
+     border-radius:10px;padding:16px 18px;margin:20px 0}
+.box.warn{border-inline-start-color:#FFB347}
+.box p:last-child{margin-bottom:0}
+.lang{margin-bottom:24px}
+.lang select{background:#141B2C;border:1px solid #2c3752;color:#C9D2E0;padding:8px 12px;
+     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
+.all{margin-top:30px;font-size:13px;line-height:2;color:#5f6b85}
+.all a{color:#8A93A6;margin-inline-end:10px;white-space:nowrap}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid #1c2336;font-size:13px;color:#5f6b85}
+</style>
+</head>
+<body>
+
+<div class="lang">
+  <select aria-label="Language" onchange="location.href=this.value">
+    <option value="en/">English</option>
+    <option value="?lang=fr" selected>Français</option>
+    <option value="es/">Español</option>
+    <option value="de/">Deutsch</option>
+    <option value="it/">Italiano</option>
+    <option value="pt/">Português</option>
+    <option value="ar/">العربية</option>
+    <option value="zh/">中文</option>
+    <option value="ja/">日本語</option>
+    <option value="hi/">हिन्दी</option>
+    <option value="nb/">Norsk</option>
+    <option value="sv/">Svenska</option>
+    <option value="fi/">Suomi</option>
+    <option value="ru/">Русский</option>
+    <option value="id/">Indonesia</option>
+    <option value="vi/">Tiếng Việt</option>
+    <option value="ko/">한국어</option>
+    <option value="tr/">Türkçe</option>
+    <option value="pl/">Polski</option>
+    <option value="nl/">Nederlands</option>
+    <option value="uk/">Українська</option>
+    <option value="bn/">বাংলা</option>
+    <option value="pt-br/">Português (BR)</option>
+    <option value="ur/">اردو</option>
+    <option value="fa/">فارسی</option>
+    <option value="th/">ไทย</option>
+    <option value="el/">Ελληνικά</option>
+    <option value="he/">עברית</option>
+  </select>
+</div>
+
+<h1>Politique de confidentialité — Speed GPS pour iPhone</h1>
+<div class="sub">Dernière mise à jour : 15 octobre 2026</div>
+
+<p>Speed GPS pour iPhone est une application qui affiche votre vitesse, votre position et votre
+altitude, enregistre vos trajets et vous montre le ciel au-dessus de vous. Cette page concerne
+uniquement l'application iPhone.</p>
+
+<div class="box">
+  <p><strong>L'essentiel :</strong> Cette application ne crée aucun compte, n'affiche aucune
+  publicité, ne contient aucun outil de mesure d'audience, et <strong>ne transmet vos données à
+  aucun serveur appartenant à l'éditeur</strong>. Vos positions, vos trajets et vos mesures
+  restent sur votre iPhone.</p>
+</div>
+
+<h2>Qui est responsable du traitement</h2>
+<p>Speed GPS est éditée par <strong>Atria.Eponym</strong>, développeur individuel établi en France.
+Contact : <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+
+<h2>Les données auxquelles l'application accède</h2>
+<p>L'application lit les informations suivantes sur votre iPhone, uniquement pendant que vous
+l'utilisez ou pendant un trajet que vous enregistrez :</p>
+<ul>
+  <li><strong>Votre position précise</strong>, pour afficher vos coordonnées, votre vitesse, votre
+      altitude et votre trajet, et pour calculer la position du Soleil, de la Lune, des planètes
+      et des étoiles au-dessus de vous.</li>
+  <li><strong>Mouvements et forme</strong>, avec votre accord : l'altimètre barométrique, le
+      nombre de pas et d'étages, et le type de déplacement que l'iPhone reconnaît (marche,
+      course, vélo, voiture).</li>
+  <li><strong>La boussole et l'état de l'iPhone</strong> : orientation, niveau de batterie, état
+      thermique, mode économie d'énergie, type de réseau, mémoire et stockage.</li>
+</ul>
+<p>iOS ne donne accès ni aux satellites, ni aux réseaux Wi-Fi, ni aux appareils Bluetooth à
+portée : l'application ne les lit pas.</p>
+
+<h2>Ce qui reste sur votre iPhone</h2>
+<p><strong>La totalité de ces mesures.</strong> Elles sont affichées à l'écran et, si vous
+enregistrez un trajet, conservées avec lui. Sont stockés localement :</p>
+<ul>
+  <li>vos <strong>trajets</strong> et leurs <strong>repères</strong> ;</li>
+  <li>vos <strong>préférences</strong>, comme le système d'unités.</li>
+</ul>
+<p>Supprimer un trajet dans l'application l'efface ; désinstaller l'application efface tous les
+trajets et les préférences. Les fichiers GPX que vous exportez passent par le menu Partager
+d'iOS, vers l'application ou l'endroit que vous choisissez : ils vous appartiennent.</p>
+
+<h2>Ce qui sort de votre iPhone</h2>
+<p>Trois fonctions seulement passent par un service extérieur, tous fournis par
+<strong>Apple</strong>.</p>
+
+<div class="box warn">
+  <p><strong>1. Les cartes et le nom des lieux.</strong> Les cartes, Look Around et le nom du lieu
+  où vous êtes viennent des services de cartographie d'Apple. Pour les afficher, iOS transmet à
+  Apple la zone consultée ou vos coordonnées. Ce traitement relève de la politique de
+  confidentialité d'Apple. Sans connexion, ces fonctions ne s'affichent pas et le reste de
+  l'application continue de fonctionner.</p>
+  <p><strong>2. Le soutien au développement, si vous y recourez.</strong> Un don passe par le
+  système d'achat de l'<strong>App Store</strong>, sans quitter l'application. Le paiement est
+  traité entièrement par Apple : l'application ne voit jamais vos moyens de paiement, et
+  <strong>aucune donnée de l'application n'est transmise</strong> à cette occasion — ni votre
+  position, ni vos trajets. Ce paiement relève des conditions et de la politique de
+  confidentialité d'Apple. Cette fonction est entièrement facultative et ne débloque rien dans
+  l'application.</p>
+  <p><strong>3. Les rapports de plantage, si vous l'avez accepté.</strong> Si, dans les réglages de
+  l'iPhone, vous partagez les analyses avec les développeurs, Apple peut transmettre à l'éditeur
+  des rapports de plantage anonymes. L'application elle-même n'en envoie aucun.</p>
+</div>
+
+<p>En dehors de ces trois cas, <strong>rien ne quitte votre iPhone</strong>. Le tableau de bord,
+le ciel, les capteurs et l'enregistrement de trajet fonctionnent intégralement hors ligne.</p>
+
+<h2>Ce que l'application ne fait pas</h2>
+<ul>
+  <li>Aucun compte, aucune inscription, aucune identification.</li>
+  <li>Aucune publicité, aucun traceur publicitaire, aucun suivi entre applications.</li>
+  <li>Aucun outil de mesure d'audience ni de statistiques d'usage.</li>
+  <li>Aucune transmission de vos trajets ou de vos positions à l'éditeur.</li>
+  <li>Aucune revente ni partage de données à des tiers.</li>
+</ul>
+
+<h2>Comment vos données sont protégées</h2>
+<p>L'éditeur ne détient aucun serveur et ne reçoit aucune de vos données : il n'y a donc aucune
+base de données à protéger, aucun mot de passe à voler, aucune fuite possible chez
+l'éditeur.</p>
+<ul>
+  <li><strong>Sur votre iPhone</strong> — vos trajets et vos réglages sont écrits dans l'espace
+      privé que iOS réserve à l'application. Aucune autre application ne peut y accéder. Si votre
+      iPhone est protégé par un code, iOS chiffre ces fichiers.</li>
+  <li><strong>Dans vos sauvegardes</strong> — vos trajets font partie des sauvegardes de l'iPhone
+      (iCloud ou ordinateur) si vous les avez activées, selon les règles d'Apple.</li>
+  <li><strong>En transit</strong> — les seules connexions sont celles des services d'Apple
+      décrits plus haut, chiffrées par HTTPS.</li>
+  <li><strong>Aucune authentification</strong> — l'application ne crée aucun compte et ne stocke
+      aucun identifiant, aucun jeton, aucun mot de passe.</li>
+</ul>
+
+<h2>L'écran verrouillé et Siri</h2>
+<p>Le trajet en cours peut s'afficher sur l'écran verrouillé et dans la Dynamic Island, et se
+démarrer ou s'arrêter par Siri ou le bouton Action. iOS gère ces fonctions sur l'iPhone ;
+l'application n'envoie rien à cette occasion.</p>
+
+<h2>Les autorisations demandées, et pourquoi</h2>
+<ul>
+  <li><strong>Position, pendant l'utilisation de l'application</strong> — sans elle,
+      l'application n'a aucun objet : ni vitesse, ni position, ni trajet, ni ciel. Elle suffit
+      aussi à poursuivre un trajet écran verrouillé : iOS affiche alors un indicateur bleu.
+      L'application ne demande jamais l'accès « toujours ».</li>
+  <li><strong>Mouvements et forme</strong> — pour l'altimètre, les pas, les étages et le type
+      de déplacement. Sans elle, ces mesures s'affichent « — ».</li>
+</ul>
+<p>Vous pouvez retirer ces autorisations à tout moment dans Réglages, Speed GPS. Les fonctions
+correspondantes cessent alors de s'afficher, sans que le reste soit affecté.</p>
+
+<h2>Vos droits</h2>
+<p>Le règlement général sur la protection des données vous donne un droit d'accès, de
+rectification, d'effacement et d'opposition sur vos données personnelles. Dans le cas de cette
+application, ces droits s'exercent <strong>directement sur votre iPhone</strong> : l'éditeur ne
+détient aucune donnée vous concernant, et n'a donc rien à vous communiquer ni à effacer. Pour
+supprimer l'intégralité des données, désinstallez l'application et effacez les fichiers GPX que
+vous auriez exportés.</p>
+<p>Pour toute question, écrivez à <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
+
+<h2>Enfants</h2>
+<p>Cette application ne s'adresse pas spécifiquement aux enfants et ne collecte sciemment aucune
+donnée les concernant.</p>
+
+<h2>Modifications</h2>
+<p>Cette politique peut évoluer si l'application change. La date de dernière mise à jour figure
+en haut de cette page. Toute modification substantielle sera signalée dans les notes de
+version.</p>
+
+<footer>Speed GPS pour iPhone — Atria.Eponym · France<br>Politique de confidentialité, version du 15 octobre 2026</footer>
+
+<div class="all"><a href="en/" hreflang="en">English</a> <a href="?lang=fr" hreflang="fr">Français</a> <a href="es/" hreflang="es">Español</a> <a href="de/" hreflang="de">Deutsch</a> <a href="it/" hreflang="it">Italiano</a> <a href="pt/" hreflang="pt">Português</a> <a href="ar/" hreflang="ar">العربية</a> <a href="zh/" hreflang="zh-Hans">中文</a> <a href="ja/" hreflang="ja">日本語</a> <a href="hi/" hreflang="hi">हिन्दी</a> <a href="nb/" hreflang="nb">Norsk</a> <a href="sv/" hreflang="sv">Svenska</a> <a href="fi/" hreflang="fi">Suomi</a> <a href="ru/" hreflang="ru">Русский</a> <a href="id/" hreflang="id">Indonesia</a> <a href="vi/" hreflang="vi">Tiếng Việt</a> <a href="ko/" hreflang="ko">한국어</a> <a href="tr/" hreflang="tr">Türkçe</a> <a href="pl/" hreflang="pl">Polski</a> <a href="nl/" hreflang="nl">Nederlands</a> <a href="uk/" hreflang="uk">Українська</a> <a href="bn/" hreflang="bn">বাংলা</a> <a href="pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="ur/" hreflang="ur">اردو</a> <a href="fa/" hreflang="fa">فارسی</a> <a href="th/" hreflang="th">ไทย</a> <a href="el/" hreflang="el">Ελληνικά</a> <a href="he/" hreflang="he">עברית</a></div>
+
+</body>
+</html>
