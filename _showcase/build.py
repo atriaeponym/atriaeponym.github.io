@@ -8,6 +8,7 @@ edit apps.json, run this script from the repository root, commit and push.
 
     python3 _showcase/build.py
 """
+import hashlib
 import html
 import json
 from pathlib import Path
@@ -109,13 +110,19 @@ def privacy(p: dict) -> str:
     return f'<a href="{html.escape(p["url"])}">{both(label)}</a>'
 
 
+def icon_url(path: str) -> str:
+    """Icon URL with a content hash, so a changed icon is never served from a browser's cache."""
+    digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:10]
+    return f"{path}?v={digest}"
+
+
 def card(a: dict) -> str:
     links = []
     if a.get("more"):
         links.append(f'<a href="{html.escape(a["more"])}">{both(lambda l: html.escape(TEXT[l]["more"]))}</a>')
     links += [privacy(p) for p in a.get("privacy", [])]
     desc = both(lambda l: html.escape(a["description"][l]))
-    return (f'<article class="app"><img src="{html.escape(a["icon"])}" alt="" width="72" height="72">'
+    return (f'<article class="app"><img src="{html.escape(icon_url(a["icon"]))}" alt="" width="72" height="72">'
             f'<div class="tx"><h2>{html.escape(a["name"])}</h2><p>{desc}</p>'
             f'<div class="stores">{"".join(store(s) for s in a["stores"])}</div>'
             f'<div class="links">{"".join(links)}</div></div></article>')
