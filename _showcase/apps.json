@@ -1,0 +1,93 @@
+{
+  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. status: live = published, soon = not yet available. Only real, published or announced apps; never fake data.",
+  "apps": [
+    {
+      "id": "familypocket",
+      "name": "Family Pocket",
+      "icon": "icons/familypocket.png",
+      "description": {
+        "fr": "Argent de poche et budget des ados, seul ou en famille. Sans pub, sans compte.",
+        "en": "Pocket money and budget for teens, alone or with family. No ads, no account."
+      },
+      "more": "familypocket/",
+      "privacy": [
+        {
+          "url": "familypocket/privacy/"
+        }
+      ],
+      "stores": [
+        {
+          "kind": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket"
+        },
+        {
+          "kind": "appstore",
+          "status": "live",
+          "url": "https://apps.apple.com/app/id6822458545"
+        }
+      ]
+    },
+    {
+      "id": "speedgps",
+      "name": "Speed GPS",
+      "icon": "icons/speedgps.png",
+      "description": {
+        "fr": "Compteur de vitesse GPS en temps réel, trajets et carte du ciel. Hors ligne, sans pub.",
+        "en": "Real-time GPS speedometer, trip recording and live sky map. Offline, no ads."
+      },
+      "privacy": [
+        {
+          "url": "privacy/",
+          "platform": "android"
+        },
+        {
+          "url": "privacy/iphone/",
+          "platform": "iphone"
+        }
+      ],
+      "stores": [
+        {
+          "kind": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps"
+        },
+        {
+          "kind": "appstore",
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "maclive",
+      "name": "Mac Live",
+      "icon": "icons/maclive.png",
+      "description": {
+        "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes.",
+        "en": "Your Mac live on your phone: temperatures, processor, battery and alerts."
+      },
+      "more": "maclive/",
+      "privacy": [
+        {
+          "url": "maclive/privacy/"
+        }
+      ],
+      "stores": [
+        {
+          "kind": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"
+        },
+        {
+          "kind": "mac",
+          "status": "live",
+          "url": "maclive/"
+        },
+        {
+          "kind": "appstore",
+          "status": "soon"
+        }
+      ]
+    }
+  ]
+}
