@@ -1,41 +1,100 @@
 {
-  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. status: live = published, soon = not yet available. Only real, published or announced apps; never fake data.",
+  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac) has its channel (play, appstore, direct) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates.",
   "apps": [
     {
       "id": "familypocket",
       "name": "Family Pocket",
       "icon": "icons/familypocket.png",
-      "description": {
+      "tagline": {
         "fr": "Argent de poche et budget des ados, seul ou en famille. Sans pub, sans compte.",
         "en": "Pocket money and budget for teens, alone or with family. No ads, no account."
       },
+      "features": {
+        "fr": [
+          "Argent de poche",
+          "Budget et catégories",
+          "Seul ou en famille",
+          "Sauvegarde chiffrée",
+          "Exports et graphiques"
+        ],
+        "en": [
+          "Pocket money",
+          "Budget and categories",
+          "Alone or with family",
+          "Encrypted backup",
+          "Exports and charts"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "live",
+          "url": "https://apps.apple.com/app/id6822458545"
+        }
+      ],
       "more": "familypocket/",
       "privacy": [
         {
           "url": "familypocket/privacy/"
         }
       ],
-      "stores": [
-        {
-          "kind": "play",
-          "status": "soon",
-          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket"
+      "teaser": {
+        "fr": {
+          "video": "teasers/familypocket-fr.mp4",
+          "poster": "teasers/familypocket-fr.jpg"
         },
-        {
-          "kind": "appstore",
-          "status": "live",
-          "url": "https://apps.apple.com/app/id6822458545"
+        "en": {
+          "video": "teasers/familypocket-en.mp4",
+          "poster": "teasers/familypocket-en.jpg"
         }
-      ]
+      }
     },
     {
       "id": "speedgps",
       "name": "Speed GPS",
       "icon": "icons/speedgps.png",
-      "description": {
-        "fr": "Compteur de vitesse GPS en temps réel, trajets et carte du ciel. Hors ligne, sans pub.",
-        "en": "Real-time GPS speedometer, trip recording and live sky map. Offline, no ads."
+      "tagline": {
+        "fr": "Compteur de vitesse GPS, carte du ciel et trajets, et bien plus encore. Hors ligne, sans pub.",
+        "en": "GPS speedometer, sky map and trips, and much more. Offline, no ads."
       },
+      "features": {
+        "fr": [
+          "Vitesse et altitude",
+          "Satellites et globe 3D",
+          "Trajets et export GPX",
+          "Réseaux Wi-Fi et Bluetooth",
+          "Batterie et énergie"
+        ],
+        "en": [
+          "Speed and altitude",
+          "Satellites and 3D globe",
+          "Trips and GPX export",
+          "Wi-Fi and Bluetooth networks",
+          "Battery and power"
+        ]
+      },
+      "more_features": true,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon"
+        }
+      ],
       "privacy": [
         {
           "url": "privacy/",
@@ -46,48 +105,77 @@
           "platform": "iphone"
         }
       ],
-      "stores": [
-        {
-          "kind": "play",
-          "status": "live",
-          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps"
+      "teaser": {
+        "fr": {
+          "video": "teasers/speedgps.mp4",
+          "poster": "teasers/speedgps.jpg"
         },
-        {
-          "kind": "appstore",
-          "status": "soon"
+        "en": {
+          "video": "teasers/speedgps.mp4",
+          "poster": "teasers/speedgps.jpg"
         }
-      ]
+      }
     },
     {
       "id": "maclive",
       "name": "Mac Live",
       "icon": "icons/maclive.png",
-      "description": {
-        "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes.",
-        "en": "Your Mac live on your phone: temperatures, processor, battery and alerts."
+      "tagline": {
+        "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.",
+        "en": "Your Mac live on your phone: temperatures, processor, battery and alerts, even with the app closed."
       },
+      "features": {
+        "fr": [
+          "Températures et processeur",
+          "Batterie et énergie",
+          "Historique 24 h",
+          "Alertes",
+          "Chiffré de bout en bout"
+        ],
+        "en": [
+          "Temperatures and processor",
+          "Battery and power",
+          "24 h history",
+          "Alerts",
+          "End-to-end encrypted"
+        ]
+      },
+      "more_features": true,
+      "platforms": [
+        {
+          "platform": "mac",
+          "channel": "direct",
+          "status": "live",
+          "url": "maclive/"
+        },
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon"
+        }
+      ],
       "more": "maclive/",
       "privacy": [
         {
           "url": "maclive/privacy/"
         }
       ],
-      "stores": [
-        {
-          "kind": "play",
-          "status": "live",
-          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"
+      "teaser": {
+        "fr": {
+          "video": "teasers/maclive.mp4",
+          "poster": "teasers/maclive.jpg"
         },
-        {
-          "kind": "mac",
-          "status": "live",
-          "url": "maclive/"
-        },
-        {
-          "kind": "appstore",
-          "status": "soon"
+        "en": {
+          "video": "teasers/maclive.mp4",
+          "poster": "teasers/maclive.jpg"
         }
-      ]
+      }
     }
   ]
 }
