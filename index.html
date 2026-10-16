@@ -1,45 +1,69 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<title>Atria Eponym</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atria Eponym</title>
+<meta name="description" content="Family Pocket, Speed GPS, Mac Live: apps by Atria.Eponym.">
+<link rel="icon" href="icons/familypocket.png">
 <style>
-  :root{ --bg:#0B1119; --card:#141C28; --ink:#E9EDF5; --dim:#8E9BB0;
-         --line:#26313F; --amber:#F5A623; }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-       font:400 16px/1.6 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif;
-       -webkit-font-smoothing:antialiased}
-  .w{max-width:640px;margin:0 auto;padding:72px 24px 64px}
-  h1{font:600 30px/1.2 inherit;margin:0 0 6px;letter-spacing:-.01em}
-  .sub{color:var(--amber);font:500 12px/1 inherit;letter-spacing:.14em;
-       text-transform:uppercase;margin:0 0 32px}
-  p{color:var(--dim);margin:0 0 18px}
-  a{color:var(--amber)}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
-        padding:20px 22px;margin:28px 0}
-  .card h2{font:600 14px/1 inherit;letter-spacing:.06em;text-transform:uppercase;
-           color:var(--ink);margin:0 0 10px}
-  footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;
-         color:var(--dim);font-size:14px}
+:root{--bg:#F6F7FA;--card:#FFFFFF;--ink:#141A24;--dim:#5D6878;--line:#E2E6EE;--amber:#B87500;--ok:#1E7F47;--soon:#7A8496}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1119;--card:#141C28;--ink:#E9EDF5;--dim:#8E9BB0;--line:#26313F;--amber:#F5A623;--ok:#4CC38A;--soon:#7B879B}}
+:root[data-theme="dark"]{--bg:#0B1119;--card:#141C28;--ink:#E9EDF5;--dim:#8E9BB0;--line:#26313F;--amber:#F5A623;--ok:#4CC38A;--soon:#7B879B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 -apple-system,"Segoe UI",Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:760px;margin:0 auto;padding:56px 16px 40px}
+.top{display:flex;justify-content:flex-end;margin:-32px 0 24px}
+.lang{display:flex;gap:4px}
+.lang button{font:600 13px/1 inherit;color:var(--dim);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.kicker{color:var(--amber);font:600 12px/1 inherit;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
+h1{font:650 34px/1.15 inherit;margin:0 0 10px;letter-spacing:-.015em}
+.lead{color:var(--dim);margin:0 0 32px;max-width:560px}
+.grid{display:grid;gap:16px}
+.app{display:flex;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.app img{width:72px;height:72px;border-radius:17px;flex:none;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.tx{min-width:0}
+.app h2{font:650 19px/1.2 inherit;margin:2px 0 6px}
+.app p{color:var(--dim);margin:0 0 12px;font-size:15px}
+.stores{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.st{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 inherit;padding:8px 11px;border-radius:999px;border:1px solid var(--line);text-decoration:none}
+.st svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.st.live{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,transparent)}
+.st.soon{color:var(--soon)}
+.links{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px}
+.links a{color:var(--amber);font-weight:600;text-decoration:none}
+footer{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;color:var(--dim);font-size:14px}
+footer a{color:var(--amber)}
+[data-l]{display:none}
+html[lang="fr"] [data-l="fr"],html[lang="en"] [data-l="en"]{display:revert}
+@media (max-width:480px){.app{flex-direction:column;gap:12px}h1{font-size:28px}}
 </style>
+</head>
+<body>
 <div class="w">
-  <p class="sub">Éditeur d'applications mobiles</p>
-  <h1>Atria Eponym</h1>
-  <p>Atria.Eponym, développeur individuel établi en France : applications mobiles pour
-     Android et iPhone.</p>
-
-  <div class="card">
-    <h2>Documents</h2>
-    <p style="margin:0"><a href="./privacy/">Politique de confidentialité de Speed GPS (Android)</a></p>
-    <p style="margin:6px 0 0"><a href="./privacy/iphone/">Politique de confidentialité de Speed GPS (iPhone)</a></p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p style="margin:0">atria.eponym@gmail.com</p>
-  </div>
-
-  <footer>
-    © 2026 Atria.Eponym
-  </footer>
+<div class="top"><div class="lang"><button data-set="fr">FR</button><button data-set="en">EN</button></div></div>
+<p class="kicker"><span data-l="fr">Applications mobiles</span><span data-l="en">Mobile apps</span></p>
+<h1>Atria Eponym</h1>
+<p class="lead"><span data-l="fr">Des applications simples et soignées pour Android, iPhone et Mac. Sans publicité, avec le moins de données possible.</span><span data-l="en">Simple, carefully made apps for Android, iPhone and Mac. No ads, as little data as possible.</span></p>
+<div class="grid">
+<article class="app"><img src="icons/familypocket.png" alt="" width="72" height="72"><div class="tx"><h2>Family Pocket</h2><p><span data-l="fr">Argent de poche et budget des ados, seul ou en famille. Sans pub, sans compte.</span><span data-l="en">Pocket money and budget for teens, alone or with family. No ads, no account.</span></p><div class="stores"><span class="st soon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span data-l="fr">Bientôt sur Google Play</span><span data-l="en">Coming to Google Play</span></span><a class="st live" href="https://apps.apple.com/app/id6822458545"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-l="fr">App Store</span><span data-l="en">App Store</span></a></div><div class="links"><a href="familypocket/"><span data-l="fr">En savoir plus</span><span data-l="en">Learn more</span></a><a href="familypocket/privacy/"><span data-l="fr">Confidentialité</span><span data-l="en">Privacy</span></a></div></div></article>
+<article class="app"><img src="icons/speedgps.png" alt="" width="72" height="72"><div class="tx"><h2>Speed GPS</h2><p><span data-l="fr">Compteur de vitesse GPS en temps réel, trajets et carte du ciel. Hors ligne, sans pub.</span><span data-l="en">Real-time GPS speedometer, trip recording and live sky map. Offline, no ads.</span></p><div class="stores"><a class="st live" href="https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-l="fr">Google Play</span><span data-l="en">Google Play</span></a><span class="st soon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span data-l="fr">Bientôt sur iPhone</span><span data-l="en">Coming to iPhone</span></span></div><div class="links"><a href="privacy/"><span data-l="fr">Confidentialité (Android)</span><span data-l="en">Privacy (Android)</span></a><a href="privacy/iphone/"><span data-l="fr">Confidentialité (iPhone)</span><span data-l="en">Privacy (iPhone)</span></a></div></div></article>
+<article class="app"><img src="icons/maclive.png" alt="" width="72" height="72"><div class="tx"><h2>Mac Live</h2><p><span data-l="fr">Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes.</span><span data-l="en">Your Mac live on your phone: temperatures, processor, battery and alerts.</span></p><div class="stores"><a class="st live" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-l="fr">Google Play</span><span data-l="en">Google Play</span></a><a class="st live" href="maclive/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-l="fr">Mac</span><span data-l="en">Mac</span></a><span class="st soon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span data-l="fr">Bientôt sur iPhone</span><span data-l="en">Coming to iPhone</span></span></div><div class="links"><a href="maclive/"><span data-l="fr">En savoir plus</span><span data-l="en">Learn more</span></a><a href="maclive/privacy/"><span data-l="fr">Confidentialité</span><span data-l="en">Privacy</span></a></div></div></article>
 </div>
+<footer><span data-l="fr">Atria.Eponym, développeur individuel établi en France</span><span data-l="en">Atria.Eponym, individual developer based in France</span> · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</footer>
+</div>
+<script>
+(function(){
+  function pick(l){
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set === l); });
+  }
+  var q = new URLSearchParams(location.search).get('lang');
+  var nav = (navigator.language || 'en').toLowerCase();
+  pick(q === 'fr' || q === 'en' ? q : (nav.indexOf('fr') === 0 ? 'fr' : 'en'));
+  document.querySelectorAll('.lang button').forEach(function(b){ b.onclick = function(){ pick(b.dataset.set); }; });
+})();
+</script>
+</body>
+</html>
