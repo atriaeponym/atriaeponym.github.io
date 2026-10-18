@@ -1,5 +1,5 @@
 {
-  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac) has its channel (play, appstore, direct) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates.",
+  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac = Mac/PC) has its channel (play, appstore, direct, msstore) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates.",
   "apps": [
     {
       "id": "familypocket",
@@ -38,6 +38,12 @@
           "channel": "appstore",
           "status": "live",
           "url": "https://apps.apple.com/app/id6822458545"
+        },
+        {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9PMVV9S1H489"
         }
       ],
       "more": "familypocket/",

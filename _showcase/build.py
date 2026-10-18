@@ -3,7 +3,7 @@
 
 The list lives in _showcase/apps.json (Jekyll does not publish folders starting with "_").
 Each app has a name, an icon, a tagline and feature chips in French and English, and one row per
-platform (Android, iPhone, Mac) with its channel (Google Play, App Store, direct download) and a
+platform (Android, iPhone, Mac/PC) with its channel (Google Play, App Store, direct download, Microsoft Store) and a
 real status (live / soon). When an app is published or changes status, edit apps.json, run this
 script from the repository root, commit and push.
 
@@ -23,11 +23,11 @@ PLATFORMS = ("android", "iphone", "mac")
 TEXT = {
     "fr": {
         "kicker": "Éditeur d'applications",
-        "lead": "Des applications simples et soignées pour Android, iPhone et Mac. Sans publicité, sans compte obligatoire, avec le moins de données possible.",
+        "lead": "Des applications simples et soignées pour Android, iPhone, Mac et PC. Sans publicité, sans compte obligatoire, avec le moins de données possible.",
         "apps": "applications", "platforms_n": "plateformes", "languages": "langues", "ads": "publicité",
         "all": "Toutes",
-        "android": "Android", "iphone": "iPhone", "mac": "Mac",
-        "play": "Google Play", "appstore": "App Store", "direct": "Téléchargement direct",
+        "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
+        "play": "Google Play", "appstore": "App Store", "direct": "Téléchargement direct", "msstore": "Microsoft Store (Windows)",
         "live": "Disponible", "soon": "Bientôt",
         "more_features": "et plus…",
         "more": "En savoir plus", "privacy": "Confidentialité",
@@ -36,11 +36,11 @@ TEXT = {
     },
     "en": {
         "kicker": "App publisher",
-        "lead": "Simple, carefully made apps for Android, iPhone and Mac. No ads, no mandatory account, as little data as possible.",
+        "lead": "Simple, carefully made apps for Android, iPhone, Mac and PC. No ads, no mandatory account, as little data as possible.",
         "apps": "apps", "platforms_n": "platforms", "languages": "languages", "ads": "ads",
         "all": "All",
-        "android": "Android", "iphone": "iPhone", "mac": "Mac",
-        "play": "Google Play", "appstore": "App Store", "direct": "Direct download",
+        "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
+        "play": "Google Play", "appstore": "App Store", "direct": "Direct download", "msstore": "Microsoft Store (Windows)",
         "live": "Available", "soon": "Coming soon",
         "more_features": "and more…",
         "more": "Learn more", "privacy": "Privacy",
@@ -238,7 +238,7 @@ def check(apps: list) -> None:
         for l, tz in a.get("teaser", {}).items():
             assert l in TEXT and (ROOT / tz["video"]).is_file() and (ROOT / tz["poster"]).is_file(), (a["id"], l)
         for p in a["platforms"]:
-            assert p["platform"] in PLATFORMS and p["channel"] in ("play", "appstore", "direct"), (a["id"], p)
+            assert p["platform"] in PLATFORMS and p["channel"] in ("play", "appstore", "direct", "msstore"), (a["id"], p)
             assert p["status"] in ("live", "soon") and (p["status"] == "soon" or p.get("url")), (a["id"], p)
 
 
@@ -257,7 +257,7 @@ def page(apps: list, standalone: bool) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atria Eponym</title>
-<meta name="description" content="Family Pocket, Speed GPS, Mac Live: apps by Atria.Eponym for Android, iPhone and Mac.">
+<meta name="description" content="Family Pocket, Speed GPS, Mac Live: apps by Atria.Eponym for Android, iPhone, Mac and PC.">
 <style>{CSS}</style>
 </head>
 <body>
