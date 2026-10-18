@@ -182,6 +182,57 @@
           "poster": "teasers/maclive.jpg"
         }
       }
+    },
+    {
+      "id": "dicteednb",
+      "name": "Brevet DNB Ortho & Grammaire",
+      "icon": "icons/dicteednb.png",
+      "tagline": {
+        "fr": "Les dictées du brevet, lues à voix haute, corrigées et notées comme à l'examen. Sans pub, sans compte.",
+        "en": "Dictations for the French brevet exam, read aloud, corrected and marked as on exam day. No ads, no account."
+      },
+      "features": {
+        "fr": [
+          "Dictées lues à voix haute",
+          "Correction mot à mot",
+          "Orthographe et grammaire",
+          "Conjugaison",
+          "Téléphone et PC reliés"
+        ],
+        "en": [
+          "Dictations read aloud",
+          "Word-by-word correction",
+          "Spelling and grammar",
+          "Conjugation",
+          "Phone and PC linked"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.dicteednb"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon",
+          "url": "https://apps.apple.com/app/id6824308790"
+        },
+        {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9N30XKR26HKB"
+        }
+      ],
+      "privacy": [
+        {
+          "url": "dicteednb/privacy/"
+        }
+      ]
     }
   ]
 }
