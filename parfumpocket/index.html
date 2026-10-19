@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index">
+<title>Parfum Pocket — le prix de tes parfums dans chaque boutique</title>
+<meta name="description" content="Le prix de tes parfums dans chaque boutique, et une alerte quand il baisse.">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/parfumpocket/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/parfumpocket/en/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F6F7F9;--card:#FFFFFF;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--accent:#1E3A33;--soft:#F3EDD6;--ok:#059669}
+@media (prefers-color-scheme:dark){:root{--page:#0B0F19;--card:#141A2A;--ink:#E8ECF4;--muted:#A3AEC2;--line:#253047;--accent:#D4B24A;--soft:#373017;--ok:#34D399}}
+body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
+     max-width:780px;margin:0 auto;font-size:16px}
+h1{font-size:26px;margin-bottom:6px;font-weight:700}
+.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
+h2{font-size:18px;margin:34px 0 10px;font-weight:700}
+p{margin-bottom:14px;color:var(--muted)}
+b,strong{color:var(--ink)}
+ul,ol{margin:0 0 16px 22px}
+[dir=rtl] ul,[dir=rtl] ol{margin:0 22px 16px 0}
+li{margin-bottom:9px;color:var(--muted)}
+a{color:var(--accent)}
+bdi{white-space:nowrap}
+.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
+     border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
+     padding:14px 22px;border-radius:14px;margin:8px 0 18px}
+.code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:4px 10px;border-radius:8px;word-break:break-all}
+.only-android,.only-ios,.only-desktop{display:none}
+.is-android .only-android,.is-ios .only-ios,.is-desktop .only-desktop{display:block}
+.no-code .needs-code{display:none}
+.lang{margin-bottom:24px}
+.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
+     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
+.all{margin-top:30px;font-size:13px;line-height:2;color:var(--muted)}
+.all a{color:var(--muted);margin-inline-end:10px;white-space:nowrap}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:10px}
+.hero img{width:72px;height:72px;border-radius:18px}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+html,body{overflow-x:hidden}
+.soon{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--muted);
+      font-weight:600;padding:12px 18px;border-radius:14px;font-size:15px}
+.soon b{color:var(--ink)}
+.shots{display:flex;gap:12px;overflow-x:auto;margin:18px 0 6px;padding-bottom:6px}
+.shots img{width:200px;height:auto;flex:0 0 auto;border-radius:16px;border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="sub"><a href="en/">English</a></div>
+<div class="hero"><img src="../icons/parfumpocket.png" alt="" width="72" height="72">
+<div><h1><bdi>Parfum Pocket</bdi></h1><div class="sub" style="margin:0">Le prix de tes parfums dans chaque boutique, et une alerte quand il baisse.</div></div></div>
+
+<p><bdi>Parfum Pocket</bdi> suit le prix de tes parfums dans plusieurs boutiques en ligne et te dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.</p>
+
+<div class="stores"><span class="soon">Bientôt sur <b>Google Play</b></span><span class="soon">Bientôt sur <b>l'App Store</b></span></div>
+
+<div class="shots">
+  <img src="img/fr-1.jpg" alt="Capture d'écran 1" width="540" height="1173" loading="lazy">
+  <img src="img/fr-2.jpg" alt="Capture d'écran 2" width="540" height="1173" loading="lazy">
+  <img src="img/fr-3.jpg" alt="Capture d'écran 3" width="540" height="1173" loading="lazy">
+</div>
+
+<div class="box"><p><strong>Gratuit, sans publicité, sans compte.</strong> Tes alertes et ta collection restent sur ton téléphone.</p></div>
+
+<h2>Le bon prix, au bon endroit</h2>
+<ul>
+  <li>Chaque offre est comparée au prix total livré : prix + livraison la moins chère à domicile.</li>
+  <li>Prix au millilitre et disponibilité de chaque boutique.</li>
+  <li>Chaque prix indique sa boutique, sa taille exacte et l'heure du relevé ; un prix trop ancien est grisé, jamais présenté comme actuel.</li>
+  <li>Uniquement les prix publics : ni code promo, ni prix réservé aux membres.</li>
+</ul>
+<h2>L'évolution des prix</h2>
+<ul>
+  <li>Une courbe par boutique, sur 30 jours, 90 jours ou depuis le début.</li>
+  <li>Le prix le plus bas de chaque période ; les jours sans relevé restent visibles.</li>
+</ul>
+<h2>Tes alertes</h2>
+<ul>
+  <li>Prix maximum, baisse minimale en %, nouveau prix le plus bas jamais relevé.</li>
+  <li>Ton téléphone vérifie chaque matin, après le relevé des prix, et te prévient une seule fois par offre.</li>
+</ul>
+<h2>Tes boutiques</h2>
+<ul>
+  <li>Suivies aujourd'hui : MyOrigines, Sabina et Parfumdo.</li>
+  <li>Colle le lien d'une page de parfum : l'application vérifie tout de suite qu'elle peut être suivie, ou te dit pourquoi.</li>
+  <li>Les boutiques sont des tiers : elles ne dépendent pas d'Atria.Eponym. Une boutique qui refuse la lecture automatique n'est jamais contournée.</li>
+</ul>
+
+<p>Disponible en 28 langues.</p>
+
+<h2>Informations</h2>
+<ul>
+  <li><a href="privacy/">Politique de confidentialité</a></li>
+  <li><a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></li>
+</ul>
+
+<footer>Parfum Pocket — Atria.Eponym · France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
+</body>
+</html>
