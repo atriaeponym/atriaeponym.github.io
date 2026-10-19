@@ -233,6 +233,51 @@
           "url": "dicteednb/privacy/"
         }
       ]
+    },
+    {
+      "id": "parfumpocket",
+      "name": "Parfum Pocket",
+      "icon": "icons/parfumpocket.png",
+      "tagline": {
+        "fr": "Le prix de tes parfums dans chaque boutique, livraison comprise, et une alerte quand il baisse. Sans pub, sans compte.",
+        "en": "The price of your perfumes in every shop, delivery included, and an alert when it drops. No ads, no account."
+      },
+      "features": {
+        "fr": [
+          "Prix total livré",
+          "Prix au ml",
+          "Historique des prix",
+          "Alertes de baisse",
+          "28 langues"
+        ],
+        "en": [
+          "Total delivered price",
+          "Price per ml",
+          "Price history",
+          "Drop alerts",
+          "28 languages"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon",
+          "url": "https://apps.apple.com/app/id6824535728"
+        }
+      ],
+      "privacy": [
+        {
+          "url": "parfumpocket/privacy/"
+        }
+      ]
     }
   ]
 }
