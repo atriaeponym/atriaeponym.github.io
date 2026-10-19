@@ -13,9 +13,9 @@ html,body{overflow-x:hidden}
 .shots img{width:200px;height:auto;flex:0 0 auto;border-radius:16px;border:1px solid var(--line)}
 """
 T = {
- "fr": dict(lang="fr", up="", title="Parfum Pocket — le prix de tes parfums dans chaque boutique",
+ "fr": dict(lang="fr", up="", title="Perfume Price Tracker — le prix de tes parfums dans chaque boutique",
   sub="Le prix de tes parfums dans chaque boutique, et une alerte quand il baisse.",
-  intro="<bdi>Parfum Pocket</bdi> suit le prix de tes parfums dans plusieurs boutiques en ligne et te dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.",
+  intro="<bdi>Perfume Price Tracker</bdi> suit le prix de tes parfums dans plusieurs boutiques en ligne et te dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.",
   soon="Bientôt sur", play="Google Play", ios="l'App Store",
   box="<strong>Gratuit, sans publicité, sans compte.</strong> Tes alertes et ta collection restent sur ton téléphone.",
   sections=[("Le bon prix, au bon endroit",[
@@ -35,9 +35,9 @@ T = {
     "Les boutiques sont des tiers : elles ne dépendent pas d'Atria.Eponym. Une boutique qui refuse la lecture automatique n'est jamais contournée."])],
   info="Informations", privacy="Politique de confidentialité", other="English", other_href="en/",
   langs="Disponible en 28 langues.", alt="Capture d'écran"),
- "en": dict(lang="en", up="../", title="Parfum Pocket — the price of your perfumes in every shop",
+ "en": dict(lang="en", up="../", title="Perfume Price Tracker — the price of your perfumes in every shop",
   sub="The price of your perfumes in every shop, and an alert when it drops.",
-  intro="<bdi>Parfum Pocket</bdi> follows the price of your perfumes in several online shops and tells you where to buy them at the best price, <strong>delivery included</strong>.",
+  intro="<bdi>Perfume Price Tracker</bdi> follows the price of your perfumes in several online shops and tells you where to buy them at the best price, <strong>delivery included</strong>.",
   soon="Soon on", play="Google Play", ios="the App Store",
   box="<strong>Free, no ads, no account.</strong> Your alerts and your collection stay on your phone.",
   sections=[("The right price, in the right place",[
@@ -77,7 +77,7 @@ for key, t in T.items():
 <body>
 <div class="sub"><a href="{t['other_href']}">{t['other']}</a></div>
 <div class="hero"><img src="{t['up']}../icons/parfumpocket.png" alt="" width="72" height="72">
-<div><h1><bdi>Parfum Pocket</bdi></h1><div class="sub" style="margin:0">{t['sub']}</div></div></div>
+<div><h1><bdi>Perfume Price Tracker</bdi></h1><div class="sub" style="margin:0">{t['sub']}</div></div></div>
 
 <p>{t['intro']}</p>
 
@@ -99,7 +99,7 @@ for key, t in T.items():
   <li><a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></li>
 </ul>
 
-<footer>Parfum Pocket — Atria.Eponym · France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
+<footer>Perfume Price Tracker — Atria.Eponym · France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
 </body>
 </html>
 """

@@ -236,7 +236,7 @@
     },
     {
       "id": "parfumpocket",
-      "name": "Parfum Pocket",
+      "name": "Perfume Price Tracker",
       "icon": "icons/parfumpocket.png",
       "tagline": {
         "fr": "Le prix de tes parfums dans chaque boutique, livraison comprise, et une alerte quand il baisse. Sans pub, sans compte.",
