@@ -3,6 +3,15 @@
     <channel>
         <title>Mac Live</title>
         <item>
+            <title>1.0.3</title>
+            <pubDate>Tue, 20 Oct 2026 17:20:34 +0200</pubDate>
+            <sparkle:version>1.0.3</sparkle:version>
+            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://atriaeponym.github.io/maclive/ComputerLive-1.0.3.dmg" length="2159257" type="application/octet-stream" sparkle:edSignature="+4U2aC/SnQqT8kWuFYcnY6MSLdJSLBYa1zKN6Smrtua5l2HECT1laxVeEPNMi949FATGiuoh59iBs8IBlYHjCg=="/>
+        </item>
+        <item>
             <title>1.0.2</title>
             <pubDate>Fri, 16 Oct 2026 16:01:52 +0200</pubDate>
             <sparkle:version>1.0.2</sparkle:version>
@@ -19,15 +28,6 @@
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://atriaeponym.github.io/maclive/MacLive-1.0.1.dmg" length="2161296" type="application/octet-stream" sparkle:edSignature="te8Gbc6hYeoAQS1kiXAJZVRNCOS4nBaCay80f9ldwH3xkjXZTIOrCg+hHrTruDgAwJZ++TUpWOFrt96kWHDYDQ=="/>
-        </item>
-        <item>
-            <title>1.0.0</title>
-            <pubDate>Mon, 12 Oct 2026 15:16:25 +0200</pubDate>
-            <sparkle:version>1.0.0</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://atriaeponym.github.io/maclive/MacLive-1.0.0.dmg" length="2157712" type="application/octet-stream" sparkle:edSignature="p9gWnZ39vYHZdoNVfBfKu8GjmqxqgqqWBU39L1K1LW8n84sr/SHnmA3NHrgDthsbTTPyVO73AUw7cN1TI7tfCQ=="/>
         </item>
     </channel>
 </rss>
