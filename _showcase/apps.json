@@ -1,5 +1,5 @@
 {
-  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac = Mac/PC) has its channel (play, appstore, direct, msstore) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates.",
+  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac = Mac/PC) has its channel (play, appstore, direct, msstore) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates. A platform may carry its own \"name\" when its store lists the app under another name (shown next to the channel).",
   "apps": [
     {
       "id": "familypocket",
@@ -124,7 +124,7 @@
     },
     {
       "id": "maclive",
-      "name": "Mac Live",
+      "name": "Computer Live",
       "icon": "icons/maclive.png",
       "tagline": {
         "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.",
@@ -158,12 +158,14 @@
           "platform": "android",
           "channel": "play",
           "status": "live",
-          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive",
+          "name": "Mac Live"
         },
         {
           "platform": "iphone",
           "channel": "appstore",
-          "status": "soon"
+          "status": "soon",
+          "url": "https://apps.apple.com/app/id6822078240"
         }
       ],
       "more": "maclive/",
