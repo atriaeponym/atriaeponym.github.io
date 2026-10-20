@@ -185,7 +185,7 @@ def row(p: dict) -> str:
     status = p["status"]
     badge = f'<span class="badge">{ICON["check"] if status == "live" else ICON["clock"]}{t(status)}</span>'
     inner = (f'<span class="pf">{ICON[p["platform"]]}<span><b>{t(p["platform"])}</b>'
-             f'<small>{t(p["channel"])}</small></span></span>{badge}')
+             f'<small>{t(p["channel"])}{" · " + html.escape(p["name"]) if p.get("name") else ""}</small></span></span>{badge}')
     if status == "live":
         return f'<a class="row live" href="{html.escape(p["url"])}">{inner}<span class="go">{ICON["arrow"]}</span></a>'
     return f'<div class="row soon">{inner}</div>'
