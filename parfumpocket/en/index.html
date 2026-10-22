@@ -43,6 +43,8 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-si
 .hero{display:flex;gap:16px;align-items:center;margin-bottom:10px}
 .hero img{width:72px;height:72px;border-radius:18px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.stores .btn{margin:0}
+@media (prefers-color-scheme:dark){.btn{color:#0B0F19}}
 html,body{overflow-x:hidden}
 .soon{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--muted);
       font-weight:600;padding:12px 18px;border-radius:14px;font-size:15px}
@@ -58,7 +60,7 @@ html,body{overflow-x:hidden}
 
 <p><bdi>Perfume Price Tracker</bdi> follows the price of your perfumes in several online shops and tells you where to buy them at the best price, <strong>delivery included</strong>.</p>
 
-<div class="stores"><span class="soon">Soon on <b>Google Play</b></span><span class="soon">Soon on <b>the App Store</b></span></div>
+<div class="stores"><a class="btn" href="https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket&hl=en">Get it on Google Play</a><a class="btn" href="https://apps.apple.com/app/id6824535728">Download on the App Store</a></div>
 
 <div class="shots">
   <img src="../img/en-1.jpg" alt="Screenshot 1" width="540" height="1173" loading="lazy">
