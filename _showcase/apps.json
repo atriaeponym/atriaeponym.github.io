@@ -244,8 +244,8 @@
       "name": "Perfume Price Tracker",
       "icon": "icons/parfumpocket.png",
       "tagline": {
-        "fr": "Le prix de tes parfums dans chaque boutique, livraison comprise, et une alerte quand il baisse. Sans pub, sans compte.",
-        "en": "The price of your perfumes in every shop, delivery included, and an alert when it drops. No ads, no account."
+        "fr": "Compare le prix de tes parfums entre boutiques, livraison comprise, et reçois une alerte quand il baisse. Sans pub, sans compte.",
+        "en": "Compare your perfume prices across shops, delivery included, and get an alert when they drop. No ads, no account."
       },
       "features": {
         "fr": [
