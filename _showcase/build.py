@@ -24,7 +24,7 @@ TEXT = {
     "fr": {
         "kicker": "Éditeur d'applications",
         "lead": "Des applications simples et soignées pour Android, iPhone, Mac et PC. Sans publicité, sans compte obligatoire, avec le moins de données possible.",
-        "apps": "applications", "platforms_n": "plateformes", "languages": "langues", "ads": "publicité",
+        "apps": "applications", "platforms_n": "plateformes", "languages": "langues", "upto": "jusqu’à ", "ads": "publicité",
         "all": "Toutes",
         "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
         "play": "Google Play", "appstore": "App Store", "direct": "Téléchargement direct", "msstore": "Microsoft Store (Windows)",
@@ -37,7 +37,7 @@ TEXT = {
     "en": {
         "kicker": "App publisher",
         "lead": "Simple, carefully made apps for Android, iPhone, Mac and PC. No ads, no mandatory account, as little data as possible.",
-        "apps": "apps", "platforms_n": "platforms", "languages": "languages", "ads": "ads",
+        "apps": "apps", "platforms_n": "platforms", "languages": "languages", "upto": "up to ", "ads": "ads",
         "all": "All",
         "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
         "play": "Google Play", "appstore": "App Store", "direct": "Direct download", "msstore": "Microsoft Store (Windows)",
@@ -253,8 +253,8 @@ def page(apps: list, standalone: bool) -> str:
     for pf in used:
         n = sum(any(p["platform"] == pf for p in a["platforms"]) for a in apps)
         filters.append(f'<button data-f="{pf}" aria-pressed="false">{ICON[pf]}{t(pf)} <em>{n}</em></button>')
-    # Every app ships in the same 28 languages and none shows ads (see each store listing).
-    stats = [(str(len(apps)), "apps"), (str(len(used)), "platforms_n"), ("28", "languages"), ("0", "ads")]
+    # Most apps ship in 28 languages, some in fewer (SoundCatch: French only); none shows ads.
+    stats = [(str(len(apps)), "apps"), (str(len(used)), "platforms_n"), (t("upto") + "28", "languages"), ("0", "ads")]
     stats_html = "".join(f'<div class="stat"><b>{v}</b><span>{t(k)}</span></div>' for v, k in stats)
     return f"""<!doctype html>
 <html lang="en">
