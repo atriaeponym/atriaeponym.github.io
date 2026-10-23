@@ -43,15 +43,24 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .lang a:hover{background:var(--soft)}
 .lang a[aria-current]{color:var(--accent);font-weight:650}
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:center;margin-bottom:34px}
-.orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;opacity:.55}
-.orbit ellipse{fill:none;stroke:url(#og);stroke-width:1}
-.orbit circle{fill:var(--accent2);filter:drop-shadow(0 0 6px #F5A623)}
+.hero>div{position:relative;z-index:1}
+.orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;overflow:visible}
+.orbit path{fill:none;stroke:url(#og);stroke-width:1;opacity:.55}
+.orbit circle{fill:var(--accent2)}
+.orbit .glow{filter:drop-shadow(0 0 6px #F5A623) drop-shadow(0 0 14px rgba(245,166,35,.7))}
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.sky i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;box-shadow:0 0 6px #fff;animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.95}}
+.sky b{position:absolute;top:var(--y);left:var(--x);width:140px;height:1.5px;border-radius:2px;background:linear-gradient(90deg,rgba(255,215,140,0),#FFE3A8);transform:rotate(-24deg);opacity:0;animation:shoot var(--t) linear infinite;animation-delay:var(--d)}
+@keyframes shoot{0%{opacity:0;translate:0 0}2%{opacity:1}9%{opacity:0;translate:-420px 190px}100%{opacity:0;translate:-420px 190px}}
+.w{z-index:1}
 .kicker{color:var(--accent);font-weight:650;font-size:12px;line-height:1;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px}
 h1{font-weight:800;font-size:clamp(38px,7vw,64px);line-height:1;margin:0 0 16px;letter-spacing:-.03em;background:linear-gradient(100deg,#FFE3A8 0%,#F5A623 45%,#E2721B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(245,166,35,.25))}
 .lead{color:var(--dim);margin:0;max-width:560px;font-size:17.5px}
 .cloud{position:relative;height:300px}
-.cloud img{position:absolute;width:var(--s);height:var(--s);border-radius:22%;box-shadow:0 12px 34px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08),0 0 30px rgba(245,166,35,.18);animation:float 7s ease-in-out infinite;animation-delay:var(--d)}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(var(--r))}}
+.cloud .tile{position:absolute;width:calc(var(--s) * var(--k, 1));height:calc(var(--s) * var(--k, 1));transform:rotate(var(--r));filter:drop-shadow(0 0 6px rgba(245,166,35,.45))}
+.cloud .tile canvas{display:block;width:100%;height:100%}
+.cloud img{position:absolute;width:calc(var(--s) * var(--k, 1));height:calc(var(--s) * var(--k, 1));border-radius:22%;box-shadow:0 12px 34px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08),0 0 30px rgba(245,166,35,.18);transform:rotate(var(--r))}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 30px}
 .stat{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:16px 18px;position:relative;overflow:hidden}
 .stat:after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(245,166,35,.7),transparent)}
@@ -102,21 +111,22 @@ footer .sig{font-weight:750;font-size:18px;color:var(--ink);margin:0 0 14px}
 footer .sig span{color:var(--accent)}
 footer a{color:var(--accent)}
 @keyframes fadein{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:230px;max-width:300px;width:calc(100% - 60px);margin:0 auto}.orbit{width:380px;height:380px;right:-120px;top:-40px}}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{left:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}}
 @media (max-width:760px){.app.has-media{grid-template-columns:1fr;gap:20px}.media{width:min(230px,70vw);order:-1}}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.orbit .moving,.sky{display:none}}
 </style>
 </head>
 <body>
+<div class="sky" aria-hidden="true"><i style="left:14%;top:18%;animation-delay:-0s;animation-duration:4s"></i><i style="left:38%;top:9%;animation-delay:-1.3s;animation-duration:5s"></i><i style="left:63%;top:26%;animation-delay:-2.1s;animation-duration:3.6s"></i><i style="left:82%;top:58%;animation-delay:-0.7s;animation-duration:4.4s"></i><i style="left:24%;top:72%;animation-delay:-2.8s;animation-duration:5.2s"></i><i style="left:51%;top:44%;animation-delay:-1.9s;animation-duration:3.8s"></i><i style="left:91%;top:12%;animation-delay:-3.1s;animation-duration:4.6s"></i><i style="left:7%;top:47%;animation-delay:-0.4s;animation-duration:4.1s"></i><i style="left:72%;top:84%;animation-delay:-2.4s;animation-duration:5s"></i><b style="--x:78%;--y:6%;--t:11s;--d:2s"></b><b style="--x:96%;--y:30%;--t:17s;--d:9s"></b></div>
 <div class="w">
 <div class="bar"><div class="brand"><img src="/icons/gecko.png?v=0c91602ebc" alt=""><span class="nm">Atria<span>.</span>Eponym</span></div><details class="lang"><summary aria-label="زبان"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>فارسی</summary><ul><li><a href="/" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="/pt/" hreflang="pt-PT" lang="pt-PT" data-lang="pt">Português</a></li><li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a></li><li><a href="/nl/" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="/sv/" hreflang="sv" lang="sv" data-lang="sv">Svenska</a></li><li><a href="/nb/" hreflang="nb" lang="nb" data-lang="nb">Norsk bokmål</a></li><li><a href="/fi/" hreflang="fi" lang="fi" data-lang="fi">Suomi</a></li><li><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="/uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li><li><a href="/el/" hreflang="el" lang="el" data-lang="el">Ελληνικά</a></li><li><a href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="/ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li><li><a href="/fa/" hreflang="fa" lang="fa" data-lang="fa" aria-current="page">فارسی</a></li><li><a href="/he/" hreflang="he" lang="he" data-lang="he">עברית</a></li><li><a href="/ur/" hreflang="ur" lang="ur" data-lang="ur">اردو</a></li><li><a href="/hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li><li><a href="/bn/" hreflang="bn" lang="bn" data-lang="bn">বাংলা</a></li><li><a href="/th/" hreflang="th" lang="th" data-lang="th">ไทย</a></li><li><a href="/vi/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li><li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li><li><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li><li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li><li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh">简体中文</a></li></ul></details></div>
 <div class="hero">
-<svg class="orbit" viewBox="0 0 520 520" aria-hidden="true"><defs><linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#F5A623" stop-opacity="0"/><stop offset=".5" stop-color="#F5A623" stop-opacity=".8"/><stop offset="1" stop-color="#F5A623" stop-opacity="0"/></linearGradient></defs><ellipse cx="260" cy="260" rx="240" ry="120" transform="rotate(-18 260 260)"/><ellipse cx="260" cy="260" rx="180" ry="80" transform="rotate(-18 260 260)"/><circle cx="470" cy="190" r="4"/></svg>
+<svg class="orbit" viewBox="0 0 520 520" aria-hidden="true"><defs><linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#F5A623" stop-opacity="0"/><stop offset=".5" stop-color="#F5A623" stop-opacity=".8"/><stop offset="1" stop-color="#F5A623" stop-opacity="0"/></linearGradient></defs><g transform="rotate(-18 260 260)"><path id="o1" d="M-15,260 a275,138 0 1,1 550,0 a275,138 0 1,1 -550,0"/><path id="o2" d="M50,260 a210,96 0 1,1 420,0 a210,96 0 1,1 -420,0"/><g class="moving"><circle r="4" opacity="1" class="glow"><animateMotion dur="84s" begin="-3.60s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="3.2" opacity="0.55"><animateMotion dur="84s" begin="-2.88s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="2.6" opacity="0.32"><animateMotion dur="84s" begin="-2.16s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="2" opacity="0.18"><animateMotion dur="84s" begin="-1.44s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="1.6" opacity="0.09"><animateMotion dur="84s" begin="-0.72s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="3" opacity="1" class="glow"><animateMotion dur="36s" begin="-17.60s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="2.4" opacity="0.55"><animateMotion dur="36s" begin="-17.28s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.95" opacity="0.32"><animateMotion dur="36s" begin="-16.96s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.5" opacity="0.18"><animateMotion dur="36s" begin="-16.64s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.2" opacity="0.09"><animateMotion dur="36s" begin="-16.32s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle></g></g></svg>
 <div><p class="kicker">ناشر اپلیکیشن</p>
 <h1>Atria.Eponym</h1>
 <p class="lead">اپ‌های ساده و با دقت ساخته‌شده برای Android، iPhone، Mac و PC. بدون تبلیغ، بدون حساب اجباری، با کمترین داده‌ی ممکن.</p></div>
-<div class="cloud" aria-hidden="true"><img src="/icons/familypocket.png?v=0bb92962f2" alt="" style="left:8%;top:4%;--s:92px;--r:-6deg;--d:-0s"><img src="/icons/speedgps.png?v=edbaa885c9" alt="" style="left:50%;top:0%;--s:78px;--r:5deg;--d:-1.2s"><img src="/icons/maclive.png?v=b003fc7988" alt="" style="left:70%;top:34%;--s:96px;--r:-3deg;--d:-0.6s"><img src="/icons/dicteednb.png?v=0692a46e89" alt="" style="left:30%;top:34%;--s:104px;--r:3deg;--d:-2.1s"><img src="/icons/parfumpocket.png?v=3f90378985" alt="" style="left:2%;top:60%;--s:76px;--r:6deg;--d:-1.6s"><img src="/icons/stockcockpit.png?v=8eab257cfe" alt="" style="left:56%;top:70%;--s:70px;--r:-5deg;--d:-0.3s"><img src="/icons/soundcatch.png?v=dc18552186" alt="" style="left:82%;top:4%;--s:58px;--r:8deg;--d:-2.6s"></div>
+<div class="cloud" aria-hidden="true"><img src="/icons/familypocket.png?v=0bb92962f2" alt="" style="left:1.8%;top:0.0%;--s:88px;--r:-6deg"><img src="/icons/speedgps.png?v=edbaa885c9" alt="" style="left:36.5%;top:2.0%;--s:82px;--r:4deg"><img src="/icons/maclive.png?v=b003fc7988" alt="" style="left:69.4%;top:49.3%;--s:96px;--r:-3deg"><img src="/icons/dicteednb.png?v=0692a46e89" alt="" style="left:33.5%;top:33.3%;--s:104px;--r:2deg"><img src="/icons/parfumpocket.png?v=3f90378985" alt="" style="left:2.9%;top:70.7%;--s:80px;--r:5deg"><img src="/icons/stockcockpit.png?v=8eab257cfe" alt="" style="left:36.5%;top:71.3%;--s:82px;--r:-5deg"><img src="/icons/soundcatch.png?v=dc18552186" alt="" style="left:71.8%;top:16.0%;--s:82px;--r:7deg"><div class="tile" style="left:-28.2%;top:32.0%;--s:110px;--r:-4deg"><canvas class="aizawa"></canvas></div></div>
 </div>
 <div class="stats"><div class="stat"><b>7</b><span>اپ</span></div><div class="stat"><b>3</b><span>پلتفرم</span></div><div class="stat"><b><small>تا </small>28</b><span>زبان</span></div><div class="stat"><b>0</b><span>تبلیغ</span></div></div>
 <div class="filters"><button data-f="all" aria-pressed="true">همه <em>7</em></button><button data-f="android" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android <em>7</em></button><button data-f="iphone" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="3"/><path d="M10.5 4.8h3"/></svg>iPhone <em>7</em></button><button data-f="mac" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="11" rx="1.6"/><path d="M2 19.5h20"/></svg>Mac/PC <em>4</em></button></div>
@@ -145,6 +155,52 @@ footer a{color:var(--accent)}
   document.querySelectorAll('.lang a').forEach(function(a){ a.onclick = function(){
     try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
   }; });
+  // Aizawa attractor in its tile among the icons: one trajectory drawn as a fading trail, turning slowly
+  // (Romain's equation-03 animation, in gold).
+  var cv = document.querySelector('.aizawa');
+  if (cv && cv.getContext) {
+    var g = cv.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2), W, H, on = true;
+    var a = .95, b = .7, c = .6, d = 3.5, e = .25, f = .1, st = [.1, 0, 0], pts = [], MAX = 1500, last = 0, t0 = 0;
+    function size() { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    function project(x, y, z, t) {
+      var ang = t * .2, ca = Math.cos(ang), sa = Math.sin(ang), xr = x * ca - y * sa, yr = x * sa + y * ca, sc = Math.min(W, H) * .3;
+      return [W / 2 + xr * sc, H / 2 + (z - .5) * sc * .6 - yr * sc * .2];
+    }
+    function advance(t, dt) {
+      var h = dt * .5 / 4;
+      for (var k = 0; k < 4; k++) {
+        var x = st[0], y = st[1], z = st[2];
+        st[0] += ((z - b) * x - d * y) * h;
+        st[1] += (d * x + (z - b) * y) * h;
+        st[2] += (c + a * z - z * z * z / 3 - (x * x + y * y) * (1 + e * z) + f * z * x * x * x) * h;
+      }
+      pts.push(project(st[0], st[1], st[2], t));
+      if (pts.length > MAX) pts.shift();
+    }
+    function frame(t, dt) {
+      g.globalCompositeOperation = 'destination-out'; g.fillStyle = 'rgba(0,0,0,.1)'; g.fillRect(0, 0, W, H);
+      g.globalCompositeOperation = 'source-over';
+      advance(t, dt);
+      g.lineWidth = 1.1;
+      for (var i = 1; i < pts.length; i++) {
+        g.strokeStyle = 'hsla(' + (38 + Math.sin(i * .01) * 10) + ',95%,' + (58 + Math.sin(i * .013) * 12) + '%,' + (i / pts.length * .95) + ')';  // gold, like the page
+        g.beginPath(); g.moveTo(pts[i - 1][0], pts[i - 1][1]); g.lineTo(pts[i][0], pts[i][1]); g.stroke();
+      }
+    }
+    function loop(ms) {
+      var t = ms / 1000, dt = Math.min(.05, t - (last || t)); last = t;
+      if (on && !document.hidden) frame(t, dt);
+      requestAnimationFrame(loop);
+    }
+    size(); addEventListener('resize', size);
+    // start with the trail already drawn: 40 s of trajectory computed before the first frame
+    for (var r = -2400; r < 0; r++) advance(performance.now() / 1000 + r / 60, 1 / 60);
+    if (still) frame(performance.now() / 1000, 0);  // reduced motion: one still drawing
+    else {
+      if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ on = es[0].isIntersecting; }).observe(cv);
+      requestAnimationFrame(loop);
+    }
+  }
   var fs = document.querySelectorAll('.filters button');
   fs.forEach(function(b){ b.onclick = function(){
     fs.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
