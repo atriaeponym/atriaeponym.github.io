@@ -198,6 +198,11 @@ def privacy(p: dict) -> str:
     return f'<a href="{html.escape(p["url"])}">{both(label)}</a>'
 
 
+def name(a: dict, l: str = "en") -> str:
+    """The app's name: one string, or {"fr": ..., "en": ...} when it differs by language."""
+    return a["name"][l] if isinstance(a["name"], dict) else a["name"]
+
+
 def media(a: dict, standalone: bool) -> str:
     """Looping teaser in a phone frame: muted, loaded only when visible, poster only under reduced motion."""
     tz = a.get("teaser")
@@ -210,7 +215,7 @@ def media(a: dict, standalone: bool) -> str:
         return f"{path}?v={hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:10]}"
     attrs = " ".join(f'data-{l}="{src(tz[l]["video"])}" data-{l}-poster="{src(tz[l]["poster"])}"' for l in TEXT)
     return (f'<div class="media"><div class="phone"><video {attrs} muted loop playsinline preload="none" '
-            f'aria-label="{html.escape(a["name"])}"></video></div>'
+            f'aria-label="{html.escape(name(a))}"></video></div>'
             f'<span class="example">{both(lambda l: html.escape(TEXT[l]["example"]))}</span></div>')
 
 
@@ -225,7 +230,7 @@ def card(a: dict, standalone: bool) -> str:
     m = media(a, standalone)
     return (f'<article class="app{" has-media" if m else ""}" data-p="{platforms}"><div class="body">'
             f'<div class="head"><img src="{html.escape(icon_src(a["icon"], standalone))}" alt="" width="60" height="60">'
-            f'<h2>{html.escape(a["name"])}</h2></div>'
+            f'<h2>{both(lambda l: html.escape(name(a, l)))}</h2></div>'
             f'<p class="tag">{both(lambda l: html.escape(a["tagline"][l]))}</p>'
             f'<div class="chips">{chips}</div>'
             f'<div class="rows">{"".join(row(p) for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])))}</div>'
@@ -257,7 +262,7 @@ def page(apps: list, standalone: bool) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atria Eponym</title>
-<meta name="description" content="Family Pocket, Speed GPS, Mac Live: apps by Atria.Eponym for Android, iPhone, Mac and PC.">
+<meta name="description" content="MyLilBudget, Speed GPS, Mac Live: apps by Atria.Eponym for Android, iPhone, Mac and PC.">
 <style>{CSS}</style>
 </head>
 <body>
