@@ -13,6 +13,13 @@
           { "/": "/familypocket/join", "comment": "Family invitation link, code in ?t=" },
           { "/": "/familypocket/join/*", "comment": "Family invitation link, code in ?t=" }
         ]
+      },
+      {
+        "appIDs": ["U3W9377B5Y.com.atriaeponym.stockcockpit"],
+        "components": [
+          { "/": "/stockcockpit/liste", "comment": "Share link of a list; the list stays in the fragment" },
+          { "/": "/stockcockpit/liste/*", "comment": "Share link of a list; the list stays in the fragment" }
+        ]
       }
     ]
   }
