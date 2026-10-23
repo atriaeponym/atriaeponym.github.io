@@ -4,9 +4,9 @@
     {
       "id": "familypocket",
       "name": {
-      "fr": "MonPtitBudget",
-      "en": "MyLilBudget"
-    },
+        "fr": "MonPtitBudget",
+        "en": "MyLilBudget"
+      },
       "icon": "icons/familypocket.png",
       "tagline": {
         "fr": "Argent de poche et budget des ados, seul ou en famille. Sans pub, sans compte.",
@@ -281,6 +281,50 @@
       "privacy": [
         {
           "url": "parfumpocket/privacy/"
+        }
+      ]
+    },
+    {
+      "id": "stockcockpit",
+      "name": "Stock Cockpit",
+      "icon": "icons/stockcockpit.png",
+      "tagline": {
+        "fr": "Cours de bourse Paris, Europe, US, Londres, différés 15 min. Gratuit, sans pub, sans compte.",
+        "en": "Stock prices for Paris, Europe, the US and London, 15-min delayed. Free, no ads, no account."
+      },
+      "features": {
+        "fr": [
+          "Cours d'Euronext Paris",
+          "Actions US et UK en euros",
+          "Bourses ouvertes en direct",
+          "Graphiques jour à année",
+          "Listes partageables"
+        ],
+        "en": [
+          "Euronext Paris prices",
+          "US and UK stocks in euros",
+          "Open markets at a glance",
+          "Day to year charts",
+          "Shareable lists"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon"
+        }
+      ],
+      "privacy": [
+        {
+          "url": "stockcockpit/privacy/"
         }
       ]
     }
