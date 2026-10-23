@@ -327,6 +327,75 @@
           "url": "stockcockpit/privacy/"
         }
       ]
+    },
+    {
+      "id": "soundcatch",
+      "name": "SoundCatch",
+      "icon": "icons/soundcatch.png",
+      "tagline": {
+        "fr": "Enregistreur audio : enregistre le son d'une appli ou ouvre un fichier, coupe les passages inutiles, exporte un fichier propre. Sans pub, sans compte.",
+        "en": "Audio recorder: record the sound of an app or open a file, cut out what you do not need, export one clean file. No ads, no account."
+      },
+      "features": {
+        "fr": [
+          "Son d'une appli",
+          "Fichiers audio et vidéo",
+          "Coupe sans clic",
+          "AAC, MP3, FLAC, Apple Lossless",
+          "Passages suspects repérés"
+        ],
+        "en": [
+          "Sound of one app",
+          "Audio and video files",
+          "Click-free cuts",
+          "AAC, MP3, FLAC, Apple Lossless",
+          "Suspect passages spotted"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "mac",
+          "channel": "direct",
+          "status": "live",
+          "url": "soundcatch/"
+        },
+        {
+          "platform": "mac",
+          "channel": "appstore",
+          "status": "soon",
+          "url": "https://apps.apple.com/app/id6826256541"
+        },
+        {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "soon"
+        },
+        {
+          "platform": "android",
+          "channel": "direct",
+          "status": "live",
+          "url": "soundcatch/#android"
+        },
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.soundcatch"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon",
+          "url": "https://apps.apple.com/app/id6826256541"
+        }
+      ],
+      "more": "soundcatch/",
+      "privacy": [
+        {
+          "url": "soundcatch/privacy/"
+        }
+      ]
     }
   ]
 }
