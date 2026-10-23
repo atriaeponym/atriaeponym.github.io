@@ -103,10 +103,11 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .lang summary{list-style:none;display:flex;align-items:center;gap:7px;font-weight:650;font-size:13px;line-height:1;color:#1A1206;background:var(--accent);border-radius:999px;padding:8px 12px;cursor:pointer}
 .lang summary::-webkit-details-marker{display:none}
 .lang summary svg{width:15px;height:15px}
-.lang ul{position:absolute;z-index:5;inset-inline-end:0;top:calc(100% + 8px);margin:0;padding:6px;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;width:min(360px,calc(100vw - 32px));background:#111823;border:1px solid var(--tile);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
+.lang ul{position:absolute;z-index:5;inset-inline-end:0;top:calc(100% + 8px);margin:0;padding:6px;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;width:min(460px,calc(100vw - 32px));background:#111823;border:1px solid var(--tile);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
 .lang a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:14px}
 .lang a:hover{background:var(--soft)}
 .lang a[aria-current]{color:var(--accent);font-weight:650}
+.lang a small{color:var(--dim);font-size:12px;font-weight:400;margin-inline-start:6px}
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:center;margin-bottom:34px}
 .hero>div{position:relative;z-index:1}
 .orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;overflow:visible}
@@ -194,6 +195,14 @@ SCRIPT = """<script>
     }); }, {rootMargin: '200px'});
     vids.forEach(function(v){ io.observe(v); });
   } else vids.forEach(start);
+  // Each language of the menu also gets its name in the page's language, small and in brackets.
+  try {
+    var ui = document.documentElement.lang, dn = new Intl.DisplayNames([ui], {type: 'language'});
+    document.querySelectorAll('.lang small[data-dn]').forEach(function(s){
+      var name = s.dataset.dn !== ui && dn.of(s.dataset.dn);
+      if (name) s.textContent = '(' + name + ')';
+    });
+  } catch (e) {}
   document.querySelectorAll('.lang a').forEach(function(a){ a.onclick = function(){
     try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
   }; });
@@ -434,7 +443,8 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
     alternates = "".join(f'<link rel="alternate" hreflang="{LANGS[l][1]}" href="{url(l)}">' for l in LANGS)
     alternates += f'<link rel="alternate" hreflang="x-default" href="{url("en")}">'
     menu = "".join(f'<li><a href="{"/" if l == "en" else "/" + l + "/"}" hreflang="{LANGS[l][1]}" lang="{LANGS[l][1]}" '
-                   f'data-lang="{l}"{" aria-current=\"page\"" if l == lang else ""}>{html.escape(LANGS[l][0])}</a></li>'
+                   f'data-lang="{l}"{" aria-current=\"page\"" if l == lang else ""}>{html.escape(LANGS[l][0])}'
+                   f'<small data-dn="{LANGS[l][1]}"></small></a></li>'
                    for l in LANGS)
     og_locales = "".join(f'<meta property="og:locale:alternate" content="{LANGS[l][1].replace("-", "_")}">'
                          for l in LANGS if l != lang)
