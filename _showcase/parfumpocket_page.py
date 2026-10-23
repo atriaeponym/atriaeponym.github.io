@@ -5,6 +5,8 @@ CSS = (site / "parfumpocket/terms/index.html").read_text().split("<style>")[1].s
 CSS += """.hero{display:flex;gap:16px;align-items:center;margin-bottom:10px}
 .hero img{width:72px;height:72px;border-radius:18px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.stores .btn{margin:0}
+@media (prefers-color-scheme:dark){.btn{color:#0B0F19}}
 html,body{overflow-x:hidden}
 .soon{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--muted);
       font-weight:600;padding:12px 18px;border-radius:14px;font-size:15px}
@@ -13,10 +15,10 @@ html,body{overflow-x:hidden}
 .shots img{width:200px;height:auto;flex:0 0 auto;border-radius:16px;border:1px solid var(--line)}
 """
 T = {
- "fr": dict(lang="fr", up="", title="Perfume Price Tracker — le prix de tes parfums dans chaque boutique",
-  sub="Le prix de tes parfums dans chaque boutique, et une alerte quand il baisse.",
+ "fr": dict(lang="fr", up="", title="Perfume Price Tracker — comparateur de prix parfum",
+  sub="Comparateur de prix parfum : prix livré, prix au ml, alerte quand il baisse.",
   intro="<bdi>Perfume Price Tracker</bdi> suit le prix de tes parfums dans plusieurs boutiques en ligne et te dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.",
-  soon="Bientôt sur", play="Google Play", ios="l'App Store",
+  play="Télécharger sur Google Play", ios="Télécharger sur l'App Store", hl="",
   box="<strong>Gratuit, sans publicité, sans compte.</strong> Tes alertes et ta collection restent sur ton téléphone.",
   sections=[("Le bon prix, au bon endroit",[
     "Chaque offre est comparée au prix total livré : prix + livraison la moins chère à domicile.",
@@ -35,10 +37,10 @@ T = {
     "Les boutiques sont des tiers : elles ne dépendent pas d'Atria.Eponym. Une boutique qui refuse la lecture automatique n'est jamais contournée."])],
   info="Informations", privacy="Politique de confidentialité", other="English", other_href="en/",
   langs="Disponible en 28 langues.", alt="Capture d'écran"),
- "en": dict(lang="en", up="../", title="Perfume Price Tracker — the price of your perfumes in every shop",
-  sub="The price of your perfumes in every shop, and an alert when it drops.",
+ "en": dict(lang="en", up="../", title="Perfume Price Tracker — compare perfume prices",
+  sub="Compare perfume and fragrance prices across shops: price per ml, drop alerts.",
   intro="<bdi>Perfume Price Tracker</bdi> follows the price of your perfumes in several online shops and tells you where to buy them at the best price, <strong>delivery included</strong>.",
-  soon="Soon on", play="Google Play", ios="the App Store",
+  play="Get it on Google Play", ios="Download on the App Store", hl="&hl=en",
   box="<strong>Free, no ads, no account.</strong> Your alerts and your collection stay on your phone.",
   sections=[("The right price, in the right place",[
     "Every offer is compared on its total delivered price: price + cheapest home delivery.",
@@ -81,7 +83,7 @@ for key, t in T.items():
 
 <p>{t['intro']}</p>
 
-<div class="stores"><span class="soon">{t['soon']} <b>{t['play']}</b></span><span class="soon">{t['soon']} <b>{t['ios']}</b></span></div>
+<div class="stores"><a class="btn" href="https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket{t['hl']}">{t['play']}</a><a class="btn" href="https://apps.apple.com/app/id6824535728">{t['ios']}</a></div>
 
 <div class="shots">
 {shots}
