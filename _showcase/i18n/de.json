@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "App-Herausgeber",
+  "lead": "Einfache, sorgfältig gemachte Apps für Android, iPhone, Mac und PC. Keine Werbung, kein Pflichtkonto, so wenig Daten wie möglich.",
+  "apps": "Apps",
+  "platforms_n": "Plattformen",
+  "languages": "Sprachen",
+  "upto": "bis zu ",
+  "ads": "Werbung",
+  "all": "Alle",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Direkter Download",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Verfügbar",
+  "soon": "Demnächst",
+  "more_features": "und mehr…",
+  "more": "Mehr erfahren",
+  "privacy": "Datenschutz",
+  "example": "Video mit Beispieldaten",
+  "publisher": "Atria.Eponym, Einzelentwickler mit Sitz in Frankreich",
+  "title": "Apps für Android, iPhone, Mac und PC",
+  "developed_by": "Entwickelt von",
+  "language": "Sprache"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Taschengeld",
+    "Budget und Kategorien",
+    "Allein oder mit Familie",
+    "Verschlüsselte Sicherung",
+    "Exporte und Diagramme"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Geschwindigkeit und Höhe",
+    "Satelliten und 3D-Globus",
+    "Fahrten und GPX-Export",
+    "Wi-Fi- und Bluetooth-Netze",
+    "Akku und Stromversorgung"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Temperaturen und Prozessor",
+    "Akku und Stromversorgung",
+    "24-h-Verlauf",
+    "Warnungen",
+    "Ende-zu-Ende-verschlüsselt"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Vorgelesene Diktate",
+    "Wort-für-Wort-Korrektur",
+    "Rechtschreibung und Grammatik",
+    "Konjugation",
+    "Handy und PC verbunden"
+   ],
+   "tagline": "Alles an Rechtschreibung, was das Diktat des brevet prüft (die französische Prüfung am Ende der 9. Klasse): jede Falle aus den Prüfungen seit 2011 und jeder Punkt des Lehrplans, in vorgelesenen Diktaten, korrigiert und benotet wie am Prüfungstag. Keine Werbung, kein Konto."
+  },
+  "parfumpocket": {
+   "features": [
+    "Gesamtpreis inkl. Versand",
+    "Preis pro ml",
+    "Preisverlauf",
+    "Alarme bei Preissenkung",
+    "28 Sprachen"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Kurse der Euronext Paris",
+    "US- und UK-Aktien in Euro",
+    "Offene Börsen auf einen Blick",
+    "Charts von Tag bis Jahr",
+    "Teilbare Listen"
+   ],
+   "tagline": "Aktienkurse für Paris, Europa, die USA und London, 15 Min. verzögert. Kostenlos, ohne Werbung, ohne Konto."
+  },
+  "soundcatch": {
+   "features": [
+    "Ton einer einzelnen App",
+    "Audio- und Videodateien",
+    "Schnitte ohne Knackser",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Verdächtige Stellen erkannt"
+   ],
+   "tagline": "Audiorekorder: Nimm den Ton einer App auf oder öffne eine Datei, schneide heraus, was du nicht brauchst, und exportiere eine saubere Datei. Keine Werbung, kein Konto."
+  }
+ }
+}

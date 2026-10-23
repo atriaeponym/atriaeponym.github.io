@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "アプリ開発者",
+  "lead": "Android、iPhone、Mac、PC向けの、シンプルで丁寧に作られたアプリ。広告なし、アカウント登録不要、データは必要最小限。",
+  "apps": "アプリ",
+  "platforms_n": "プラットフォーム",
+  "languages": "言語",
+  "upto": "最大",
+  "ads": "広告",
+  "all": "すべて",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "直接ダウンロード",
+  "msstore": "Microsoft Store（Windows）",
+  "live": "配信中",
+  "soon": "近日公開",
+  "more_features": "ほか…",
+  "more": "詳しく見る",
+  "privacy": "プライバシー",
+  "example": "サンプルデータを使った動画",
+  "publisher": "Atria.Eponym（フランスの個人開発者）",
+  "title": "Android、iPhone、Mac、PC向けアプリ",
+  "developed_by": "開発",
+  "language": "言語"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "お小遣い",
+    "予算とカテゴリ",
+    "ひとりでも家族でも",
+    "暗号化バックアップ",
+    "エクスポートとグラフ"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "速度と高度",
+    "衛星と3D地球儀",
+    "移動記録とGPX出力",
+    "Wi-FiとBluetooth",
+    "バッテリーと電力"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "温度とプロセッサ",
+    "バッテリーと電力",
+    "24時間の履歴",
+    "アラート",
+    "エンドツーエンド暗号化"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "読み上げ式ディクテ",
+    "単語ごとの添削",
+    "綴りと文法",
+    "動詞の活用",
+    "スマホとPCを連携"
+   ],
+   "tagline": "フランスの中学修了試験「brevet」のディクテで問われる綴りをすべて網羅：2011年以降の過去問に出たすべての落とし穴と、中学最終学年（第9学年）の学習範囲のすべての項目を、読み上げ式のディクテで出題し、本番と同じ基準で添削・採点します。広告なし、アカウント不要。"
+  },
+  "parfumpocket": {
+   "features": [
+    "送料込みの総額",
+    "1mlあたりの価格",
+    "価格の履歴",
+    "値下げアラート",
+    "28言語"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Euronext Paris の株価",
+    "米英の株をユーロで",
+    "開いている市場がひと目で",
+    "1日〜1年のチャート",
+    "共有できるリスト"
+   ],
+   "tagline": "パリ、欧州、米国、ロンドンの株価を15分遅れで表示。無料、広告なし、アカウント不要。"
+  },
+  "soundcatch": {
+   "features": [
+    "アプリ単位の音声",
+    "音声・動画ファイル",
+    "ノイズのないカット",
+    "AAC、MP3、FLAC、Apple Lossless",
+    "怪しい箇所を検出"
+   ],
+   "tagline": "オーディオレコーダー：アプリの音を録音、またはファイルを開き、不要な部分をカットして、きれいなファイル1つに書き出し。広告なし、アカウント不要。"
+  }
+ }
+}

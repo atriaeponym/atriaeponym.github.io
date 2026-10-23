@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atriaeponym.com/sitemap.xml

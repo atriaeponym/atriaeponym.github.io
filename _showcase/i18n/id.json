@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Penerbit aplikasi",
+  "lead": "Aplikasi sederhana yang dibuat dengan cermat untuk Android, iPhone, Mac, dan PC. Tanpa iklan, tanpa akun wajib, data seminimal mungkin.",
+  "apps": "aplikasi",
+  "platforms_n": "platform",
+  "languages": "bahasa",
+  "upto": "hingga ",
+  "ads": "iklan",
+  "all": "Semua",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Unduh langsung",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Tersedia",
+  "soon": "Segera hadir",
+  "more_features": "dan lainnya…",
+  "more": "Selengkapnya",
+  "privacy": "Privasi",
+  "example": "Video dengan data contoh",
+  "publisher": "Atria.Eponym, pengembang perorangan di Prancis",
+  "title": "Aplikasi untuk Android, iPhone, Mac, dan PC",
+  "developed_by": "Dikembangkan oleh",
+  "language": "Bahasa"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Uang saku",
+    "Anggaran dan kategori",
+    "Sendiri atau bersama keluarga",
+    "Cadangan terenkripsi",
+    "Ekspor dan grafik"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Kecepatan dan ketinggian",
+    "Satelit dan globe 3D",
+    "Perjalanan dan ekspor GPX",
+    "Jaringan Wi-Fi dan Bluetooth",
+    "Baterai dan daya"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Suhu dan prosesor",
+    "Baterai dan daya",
+    "Riwayat 24 jam",
+    "Peringatan",
+    "Terenkripsi end-to-end"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Dikte dibacakan",
+    "Koreksi kata per kata",
+    "Ejaan dan tata bahasa",
+    "Konjugasi",
+    "Ponsel dan PC terhubung"
+   ],
+   "tagline": "Semua ejaan yang diuji dalam dikte brevet, ujian nasional Prancis di akhir SMP: setiap jebakan dari soal-soal sejak 2011 dan setiap poin kurikulum kelas 9, dalam dikte yang dibacakan, dikoreksi, dan dinilai seperti saat ujian. Tanpa iklan, tanpa akun."
+  },
+  "parfumpocket": {
+   "features": [
+    "Harga total sampai rumah",
+    "Harga per ml",
+    "Riwayat harga",
+    "Peringatan harga turun",
+    "28 bahasa"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Harga Euronext Paris",
+    "Saham AS dan Inggris dalam euro",
+    "Pasar buka sekilas",
+    "Grafik harian hingga tahunan",
+    "Daftar yang bisa dibagikan"
+   ],
+   "tagline": "Harga saham Paris, Eropa, AS, dan London, tertunda 15 menit. Gratis, tanpa iklan, tanpa akun."
+  },
+  "soundcatch": {
+   "features": [
+    "Suara dari satu aplikasi",
+    "File audio dan video",
+    "Potongan tanpa bunyi klik",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Bagian mencurigakan ditandai"
+   ],
+   "tagline": "Perekam audio: rekam suara sebuah aplikasi atau buka file, potong bagian yang tidak perlu, ekspor satu file yang bersih. Tanpa iklan, tanpa akun."
+  }
+ }
+}

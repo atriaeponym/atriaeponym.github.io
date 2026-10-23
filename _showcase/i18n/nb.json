@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Apputgiver",
+  "lead": "Enkle, nøye utviklede apper for Android, iPhone, Mac og PC. Ingen reklame, ingen obligatorisk konto, så lite data som mulig.",
+  "apps": "apper",
+  "platforms_n": "plattformer",
+  "languages": "språk",
+  "upto": "opptil ",
+  "ads": "annonser",
+  "all": "Alle",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Direkte nedlasting",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Tilgjengelig",
+  "soon": "Kommer snart",
+  "more_features": "og mer…",
+  "more": "Les mer",
+  "privacy": "Personvern",
+  "example": "Video med eksempeldata",
+  "publisher": "Atria.Eponym, selvstendig utvikler med base i Frankrike",
+  "title": "Apper for Android, iPhone, Mac og PC",
+  "developed_by": "Utviklet av",
+  "language": "Språk"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Lommepenger",
+    "Budsjett og kategorier",
+    "Alene eller med familien",
+    "Kryptert sikkerhetskopi",
+    "Eksport og diagrammer"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Fart og høyde",
+    "Satellitter og 3D-globus",
+    "Turer og GPX-eksport",
+    "Wi-Fi- og Bluetooth-nettverk",
+    "Batteri og strøm"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Temperaturer og prosessor",
+    "Batteri og strøm",
+    "24 t historikk",
+    "Varsler",
+    "Ende-til-ende-kryptert"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Diktater lest høyt",
+    "Retting ord for ord",
+    "Rettskriving og grammatikk",
+    "Bøying av verb",
+    "Telefon og PC koblet sammen"
+   ],
+   "tagline": "All rettskrivingen som diktaten på den franske eksamenen brevet tester: alle fellene fra tidligere eksamensoppgaver siden 2011 og alle punktene i pensum for 9. trinn, i diktater som leses høyt, rettes og vurderes som på eksamensdagen. Ingen reklame, ingen konto."
+  },
+  "parfumpocket": {
+   "features": [
+    "Totalpris levert",
+    "Pris per ml",
+    "Prishistorikk",
+    "Varsler om prisfall",
+    "28 språk"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Kurser fra Euronext Paris",
+    "Aksjer fra USA og UK i euro",
+    "Åpne børser på et blikk",
+    "Grafer fra dag til år",
+    "Lister som kan deles"
+   ],
+   "tagline": "Aksjekurser for Paris, Europa, USA og London, forsinket 15 min. Gratis, ingen reklame, ingen konto."
+  },
+  "soundcatch": {
+   "features": [
+    "Lyden fra én app",
+    "Lyd- og videofiler",
+    "Klikkfrie kutt",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Mistenkelige partier oppdaget"
+   ],
+   "tagline": "Lydopptaker: ta opp lyden fra en app eller åpne en fil, klipp bort det du ikke trenger, og eksporter én ren fil. Ingen reklame, ingen konto."
+  }
+ }
+}
