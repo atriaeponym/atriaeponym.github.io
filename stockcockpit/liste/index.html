@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Liste Stock Cockpit</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F6F8FB;--card:#FFFFFF;--ink:#0E1624;--muted:#5A6577;--line:#E1E6EE;--accent:#B0760E;--soft:#F5ECD9;--chip:#EEF2F7}
+@media (prefers-color-scheme:dark){:root{--page:#090D14;--card:#131B28;--ink:#E9EEF6;--muted:#8995AA;--line:#1F2A3C;--accent:#F2B84B;--soft:#2A2414;--chip:#1A2436}}
+body{background:var(--page);color:var(--ink);line-height:1.55;padding:28px 16px 70px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;max-width:560px;margin:0 auto;font-size:16px}
+.eyebrow{font:600 11px ui-monospace,Menlo,monospace;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent)}
+h1{font-size:26px;font-weight:800;letter-spacing:-.5px;margin:6px 0 4px;overflow-wrap:anywhere}
+.sub{color:var(--muted);font-size:14px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 16px}
+.row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.logo{width:36px;height:36px;border-radius:11px;background:var(--chip);display:flex;align-items:center;justify-content:center;
+      font:800 10.5px ui-monospace,Menlo,monospace;flex:none}
+.nm{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.meta{font:500 11.5px ui-monospace,Menlo,monospace;color:var(--muted)}
+h2{font-size:16px;margin:28px 0 8px}
+p{color:var(--muted);font-size:14.5px;margin-bottom:10px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+.btn{flex:1 1 200px;display:flex;align-items:center;justify-content:center;height:48px;border-radius:14px;font-weight:700;
+     text-decoration:none;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.pri{background:var(--accent);color:#1B1405}
+.sec{background:var(--chip);color:var(--ink)}
+.err{background:var(--soft);border-radius:14px;padding:14px 16px;color:var(--ink);font-size:14.5px}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<!-- Page of the share links of Stock Cockpit (ListLink.kt): the list travels in the #fragment, which the
+     browser never sends to a server. With the app installed the link opens the app directly; this page
+     is what people without it see. Source: 6-bourse android/site/stockcockpit/liste/index.html -->
+<div class="eyebrow">Stock Cockpit · liste partagée</div>
+<h1 id="name">Liste partagée</h1>
+<div class="sub" id="count"></div>
+<div id="list"></div>
+
+<h2>L'ouvrir dans Stock Cockpit</h2>
+<p>Installez Stock Cockpit (gratuit, sans compte, sans publicité), puis rouvrez ce lien : la liste
+s'ajoute en un geste. Vous pouvez aussi copier le lien et le coller dans l'appli, Réglages ›
+Importer une liste.</p>
+<div class="btns">
+  <a class="btn pri" href="https://apps.apple.com/app/id6825065004">App Store</a>
+  <a class="btn pri" href="https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit">Google Play</a>
+</div>
+<div class="btns"><button class="btn sec" id="copy" type="button">Copier le lien</button></div>
+
+<footer>Stock Cockpit — Atria.Eponym, développeur individuel établi en France ·
+<a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a> ·
+<a href="../privacy/">Confidentialité</a></footer>
+
+<script>
+(function () {
+  var esc = function (t) { return t.replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); };
+  var fail = function () {
+    document.getElementById("name").textContent = "Lien incomplet";
+    document.getElementById("list").innerHTML = '<div class="err">Ce lien de liste est incomplet ou abîmé. Demandez à la personne qui vous l\'a envoyé de le partager à nouveau.</div>';
+  };
+  var data = location.hash.slice(1);
+  var lines;
+  try {
+    var b = data.replace(/-/g, "+").replace(/_/g, "/");
+    while (b.length % 4) b += "=";
+    var bytes = Uint8Array.from(atob(b), function (c) { return c.charCodeAt(0); });
+    lines = new TextDecoder("utf-8", { fatal: true }).decode(bytes).split("\n");
+  } catch (e) { return fail(); }
+  if (!data || lines.length < 2 || lines[0] !== "1" || !lines[1].trim()) return fail();
+  var items = lines.slice(2).filter(function (l) { return l.trim(); }).map(function (l) { return l.split("\t"); })
+    .filter(function (f) { return f.length === 5; });
+  document.title = lines[1].trim() + " · Stock Cockpit";
+  document.getElementById("name").textContent = lines[1].trim();
+  document.getElementById("count").textContent = items.length === 0 ? "Liste vide" : items.length + " valeur" + (items.length > 1 ? "s" : "");
+  var venues = { XPAR: "Euronext Paris", ALXP: "Euronext Growth Paris", XMLI: "Euronext Access Paris", XAMS: "Euronext Amsterdam", XBRU: "Euronext Brussels", XLIS: "Euronext Lisbon", MTAA: "Euronext Milan", XGAT: "Tradegate" };
+  if (items.length) document.getElementById("list").innerHTML = '<div class="card">' + items.map(function (f) {
+    return '<div class="row"><div class="logo">' + esc(f[2].slice(0, 4)) + '</div><div><div class="nm">' + esc(f[4]) +
+      '</div><div class="meta">' + esc(f[2]) + " · " + esc(venues[f[1]] || f[1]) + " · " + esc(f[3]) + '</div></div></div>';
+  }).join("") + "</div>";
+  document.getElementById("copy").addEventListener("click", function () {
+    var btn = this;
+    navigator.clipboard.writeText(location.href).then(function () { btn.textContent = "Lien copié"; }, function () { btn.textContent = "Copie impossible : sélectionnez l'adresse"; });
+  });
+})();
+</script>
+</body>
+</html>

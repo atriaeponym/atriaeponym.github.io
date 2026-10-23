@@ -25,5 +25,19 @@
         "7B:F1:E8:40:A0:C2:E8:0F:87:E7:99:79:BF:00:83:ED:5D:29:00:61:9F:03:CE:45:48:CE:29:CA:39:A3:2F:93"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.atriaeponym.stockcockpit",
+      "sha256_cert_fingerprints": [
+        "25:E3:97:78:0E:EA:80:5C:B1:96:2D:48:51:80:BE:10:E7:62:DE:CC:96:9D:37:8B:5B:59:31:31:3E:EC:03:64",
+        "2A:E8:90:17:89:7D:82:0A:C6:57:08:5F:E4:6D:86:2F:FE:9B:86:DB:DF:BA:1A:4F:B1:48:AB:3F:D8:60:FC:BC",
+        "85:6A:2A:19:AE:6E:94:C7:F7:72:1A:B2:4C:1D:19:6F:D5:FC:74:47:C7:CC:0D:34:02:6C:68:1B:C4:55:D5:E9"
+      ]
+    }
   }
 ]
