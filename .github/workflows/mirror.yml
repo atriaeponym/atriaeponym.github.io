@@ -1,0 +1,47 @@
+name: Mirror to atriaeponym.com
+
+# Copies this site to atriaeponym/atriaeponym.com on every push, rewriting absolute links to the
+# new domain. Same copy as the scheduled `mirror` workflow of that repository, which stays as a
+# fallback. Writes with the deploy key of atriaeponym.com stored in secret MIRROR_DEPLOY_KEY.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          repository: atriaeponym/atriaeponym.com
+          ssh-key: ${{ secrets.MIRROR_DEPLOY_KEY }}
+          path: mirror
+      - name: Copy and rewrite
+        run: |
+          rsync -a --delete \
+            --exclude .git --exclude .github --exclude CNAME --exclude README.md --exclude .keepalive \
+            source/ mirror/
+          find mirror -path mirror/.git -prune -o -type f \( -name '*.html' -o -name '*.xml' -o -name '*.txt' \) -print0 \
+            | xargs -0 sed -i 's#https://atriaeponym.github.io/#https://atriaeponym.com/#g'
+          echo atriaeponym.com > mirror/CNAME
+          date -u +%Y-%m > mirror/.keepalive
+      - name: Commit (the push rebuilds the site)
+        run: |
+          cd mirror
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qm "sync: atriaeponym.github.io $(git -C ../source rev-parse --short HEAD)"
+          git push -q
