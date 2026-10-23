@@ -45,6 +45,7 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:center;margin-bottom:34px}
 .hero>div{position:relative;z-index:1}
 .orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;overflow:visible}
+[dir="rtl"] .orbit{right:auto;left:-60px;transform:scaleX(-1)}
 .orbit path{fill:none;stroke:url(#og);stroke-width:1;opacity:.55}
 .orbit circle{fill:var(--accent2)}
 .orbit .glow{filter:drop-shadow(0 0 6px #F5A623) drop-shadow(0 0 14px rgba(245,166,35,.7))}
@@ -111,7 +112,7 @@ footer .sig{font-weight:750;font-size:18px;color:var(--ink);margin:0 0 14px}
 footer .sig span{color:var(--accent)}
 footer a{color:var(--accent)}
 @keyframes fadein{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{left:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{inset-inline-start:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}[dir="rtl"] .orbit{right:auto;left:-120px}}
 @media (max-width:760px){.app.has-media{grid-template-columns:1fr;gap:20px}.media{width:min(230px,70vw);order:-1}}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.orbit .moving,.sky{display:none}}
@@ -126,7 +127,7 @@ footer a{color:var(--accent)}
 <div><p class="kicker">অ্যাপ প্রকাশক</p>
 <h1>Atria.Eponym</h1>
 <p class="lead">Android, iPhone, Mac ও PC-র জন্য সহজ, যত্ন করে তৈরি অ্যাপ। কোনো বিজ্ঞাপন নেই, বাধ্যতামূলক অ্যাকাউন্ট নেই, যতটা সম্ভব কম ডেটা।</p></div>
-<div class="cloud" aria-hidden="true"><img src="/icons/familypocket.png?v=0bb92962f2" alt="" style="left:1.8%;top:0.0%;--s:88px;--r:-6deg"><img src="/icons/speedgps.png?v=edbaa885c9" alt="" style="left:36.5%;top:2.0%;--s:82px;--r:4deg"><img src="/icons/maclive.png?v=b003fc7988" alt="" style="left:69.4%;top:49.3%;--s:96px;--r:-3deg"><img src="/icons/dicteednb.png?v=0692a46e89" alt="" style="left:33.5%;top:33.3%;--s:104px;--r:2deg"><img src="/icons/parfumpocket.png?v=3f90378985" alt="" style="left:2.9%;top:70.7%;--s:80px;--r:5deg"><img src="/icons/stockcockpit.png?v=8eab257cfe" alt="" style="left:36.5%;top:71.3%;--s:82px;--r:-5deg"><img src="/icons/soundcatch.png?v=dc18552186" alt="" style="left:71.8%;top:16.0%;--s:82px;--r:7deg"><div class="tile" style="left:-28.2%;top:32.0%;--s:110px;--r:-4deg"><canvas class="aizawa"></canvas></div></div>
+<div class="cloud" aria-hidden="true"><img src="/icons/familypocket.png?v=0bb92962f2" alt="" style="inset-inline-start:1.8%;top:0.0%;--s:88px;--r:-6deg"><img src="/icons/speedgps.png?v=edbaa885c9" alt="" style="inset-inline-start:36.5%;top:2.0%;--s:82px;--r:4deg"><img src="/icons/maclive.png?v=b003fc7988" alt="" style="inset-inline-start:69.4%;top:49.3%;--s:96px;--r:-3deg"><img src="/icons/dicteednb.png?v=0692a46e89" alt="" style="inset-inline-start:33.5%;top:33.3%;--s:104px;--r:2deg"><img src="/icons/parfumpocket.png?v=3f90378985" alt="" style="inset-inline-start:2.9%;top:70.7%;--s:80px;--r:5deg"><img src="/icons/stockcockpit.png?v=8eab257cfe" alt="" style="inset-inline-start:36.5%;top:71.3%;--s:82px;--r:-5deg"><img src="/icons/soundcatch.png?v=dc18552186" alt="" style="inset-inline-start:71.8%;top:16.0%;--s:82px;--r:7deg"><div class="tile" style="inset-inline-start:-28.2%;top:32.0%;--s:110px;--r:-4deg"><canvas class="aizawa"></canvas></div></div>
 </div>
 <div class="stats"><div class="stat"><b>7</b><span>অ্যাপ</span></div><div class="stat"><b>3</b><span>প্ল্যাটফর্ম</span></div><div class="stat"><b><small>সর্বোচ্চ </small>28</b><span>ভাষা</span></div><div class="stat"><b>0</b><span>বিজ্ঞাপন</span></div></div>
 <div class="filters"><button data-f="all" aria-pressed="true">সব <em>7</em></button><button data-f="android" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android <em>7</em></button><button data-f="iphone" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="3"/><path d="M10.5 4.8h3"/></svg>iPhone <em>7</em></button><button data-f="mac" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="11" rx="1.6"/><path d="M2 19.5h20"/></svg>Mac/PC <em>4</em></button></div>

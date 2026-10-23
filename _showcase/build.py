@@ -110,6 +110,7 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:center;margin-bottom:34px}
 .hero>div{position:relative;z-index:1}
 .orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;overflow:visible}
+[dir="rtl"] .orbit{right:auto;left:-60px;transform:scaleX(-1)}
 .orbit path{fill:none;stroke:url(#og);stroke-width:1;opacity:.55}
 .orbit circle{fill:var(--accent2)}
 .orbit .glow{filter:drop-shadow(0 0 6px #F5A623) drop-shadow(0 0 14px rgba(245,166,35,.7))}
@@ -176,7 +177,7 @@ footer .sig{font-weight:750;font-size:18px;color:var(--ink);margin:0 0 14px}
 footer .sig span{color:var(--accent)}
 footer a{color:var(--accent)}
 @keyframes fadein{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{left:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{inset-inline-start:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}[dir="rtl"] .orbit{right:auto;left:-120px}}
 @media (max-width:760px){.app.has-media{grid-template-columns:1fr;gap:20px}.media{width:min(230px,70vw);order:-1}}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.orbit .moving,.sky{display:none}}
@@ -422,7 +423,8 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
              "soundcatch": (244, 48, 82, 7), "maclive": (236, 148, 96, -3)}
     def place(key):
         x, y, sz, r = spots[key]
-        return f'style="left:{x / 3.4:.1f}%;top:{y / 3:.1f}%;--s:{sz}px;--r:{r}deg"'
+        # inline-start: the layout mirrors itself on right-to-left pages, the icons stay upright
+        return f'style="inset-inline-start:{x / 3.4:.1f}%;top:{y / 3:.1f}%;--s:{sz}px;--r:{r}deg"'
     cloud = "".join(f'<img src="{html.escape(asset(a["icon"], standalone))}" alt="" {place(a["id"])}>'
                     for a in apps if a["id"] in spots)
     cloud += f'<div class="tile" {place("aizawa")}><canvas class="aizawa"></canvas></div>'
