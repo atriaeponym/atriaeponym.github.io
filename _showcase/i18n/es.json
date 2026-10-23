@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Editor de apps",
+  "lead": "Apps sencillas y cuidadas para Android, iPhone, Mac y PC. Sin anuncios, sin cuenta obligatoria y con los mínimos datos posibles.",
+  "apps": "apps",
+  "platforms_n": "plataformas",
+  "languages": "idiomas",
+  "upto": "hasta ",
+  "ads": "anuncios",
+  "all": "Todas",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Descarga directa",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Disponible",
+  "soon": "Próximamente",
+  "more_features": "y más…",
+  "more": "Más información",
+  "privacy": "Privacidad",
+  "example": "Vídeo con datos de ejemplo",
+  "publisher": "Atria.Eponym, desarrollador independiente establecido en Francia",
+  "title": "Apps para Android, iPhone, Mac y PC",
+  "developed_by": "Desarrollado por",
+  "language": "Idioma"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Dinero de bolsillo",
+    "Presupuesto y categorías",
+    "Solo o en familia",
+    "Copia de seguridad cifrada",
+    "Exportaciones y gráficos"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Velocidad y altitud",
+    "Satélites y globo 3D",
+    "Trayectos y exportación GPX",
+    "Redes Wi-Fi y Bluetooth",
+    "Batería y alimentación"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Temperaturas y procesador",
+    "Batería y alimentación",
+    "Historial de 24 h",
+    "Alertas",
+    "Cifrado de extremo a extremo"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Dictados leídos en voz alta",
+    "Corrección palabra a palabra",
+    "Ortografía y gramática",
+    "Conjugación",
+    "Móvil y PC vinculados"
+   ],
+   "tagline": "Toda la ortografía que evalúa el dictado del brevet (el examen nacional francés de final de 3.º de ESO): cada trampa de los exámenes desde 2011 y cada punto del temario, en dictados leídos en voz alta, corregidos y puntuados como el día del examen. Sin anuncios, sin cuenta."
+  },
+  "parfumpocket": {
+   "features": [
+    "Precio total con envío",
+    "Precio por ml",
+    "Historial de precios",
+    "Alertas de bajada",
+    "28 idiomas"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Cotizaciones Euronext Paris",
+    "Acciones EE. UU. y RU en euros",
+    "Bolsas abiertas de un vistazo",
+    "Gráficos de un día a un año",
+    "Listas para compartir"
+   ],
+   "tagline": "Cotizaciones bursátiles de París, Europa, EE. UU. y Londres, con 15 min de retraso. Gratis, sin anuncios, sin cuenta."
+  },
+  "soundcatch": {
+   "features": [
+    "Sonido de una sola app",
+    "Archivos de audio y vídeo",
+    "Cortes sin chasquidos",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Pasajes sospechosos detectados"
+   ],
+   "tagline": "Grabadora de audio: graba el sonido de una app o abre un archivo, corta lo que no necesitas y exporta un único archivo limpio. Sin anuncios, sin cuenta."
+  }
+ }
+}

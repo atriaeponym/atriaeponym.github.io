@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Editor de aplicações",
+  "lead": "Aplicações simples e cuidadas para Android, iPhone, Mac e PC. Sem anúncios, sem conta obrigatória, o mínimo de dados possível.",
+  "apps": "aplicações",
+  "platforms_n": "plataformas",
+  "languages": "idiomas",
+  "upto": "até ",
+  "ads": "anúncios",
+  "all": "Todas",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Transferência direta",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Disponível",
+  "soon": "Brevemente",
+  "more_features": "e mais…",
+  "more": "Saber mais",
+  "privacy": "Privacidade",
+  "example": "Vídeo com dados de exemplo",
+  "publisher": "Atria.Eponym, programador individual estabelecido em França",
+  "title": "Aplicações para Android, iPhone, Mac e PC",
+  "developed_by": "Desenvolvido por",
+  "language": "Idioma"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Mesada",
+    "Orçamento e categorias",
+    "Sozinho ou em família",
+    "Cópia de segurança cifrada",
+    "Exportações e gráficos"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Velocidade e altitude",
+    "Satélites e globo 3D",
+    "Viagens e exportação GPX",
+    "Redes Wi-Fi e Bluetooth",
+    "Bateria e alimentação"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Temperaturas e processador",
+    "Bateria e alimentação",
+    "Histórico de 24 h",
+    "Alertas",
+    "Encriptação ponto a ponto"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Ditados lidos em voz alta",
+    "Correção palavra a palavra",
+    "Ortografia e gramática",
+    "Conjugação",
+    "Telemóvel e PC ligados"
+   ],
+   "tagline": "Toda a ortografia avaliada no ditado do brevet, o exame nacional francês do final do 9.º ano: cada armadilha dos exames desde 2011 e cada ponto do programa, em ditados lidos em voz alta, corrigidos e classificados como no dia do exame. Sem anúncios, sem conta."
+  },
+  "parfumpocket": {
+   "features": [
+    "Preço total com entrega",
+    "Preço por ml",
+    "Histórico de preços",
+    "Alertas de descida",
+    "28 idiomas"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Cotações Euronext Paris",
+    "Ações dos EUA e RU em euros",
+    "Mercados abertos num relance",
+    "Gráficos de um dia a um ano",
+    "Listas partilháveis"
+   ],
+   "tagline": "Cotações da bolsa de Paris, Europa, EUA e Londres, com 15 min de atraso. Gratuita, sem anúncios, sem conta."
+  },
+  "soundcatch": {
+   "features": [
+    "Som de uma só aplicação",
+    "Ficheiros de áudio e vídeo",
+    "Cortes sem estalidos",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Passagens suspeitas detetadas"
+   ],
+   "tagline": "Gravador de áudio: grava o som de uma aplicação ou abre um ficheiro, corta o que não precisas e exporta um único ficheiro limpo. Sem anúncios, sem conta."
+  }
+ }
+}

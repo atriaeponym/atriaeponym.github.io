@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Uygulama yayıncısı",
+  "lead": "Android, iPhone, Mac ve PC için sade, özenle hazırlanmış uygulamalar. Reklam yok, zorunlu hesap yok, mümkün olduğunca az veri.",
+  "apps": "uygulama",
+  "platforms_n": "platform",
+  "languages": "dil",
+  "upto": "en fazla ",
+  "ads": "reklam",
+  "all": "Tümü",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Doğrudan indirme",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Mevcut",
+  "soon": "Yakında",
+  "more_features": "ve daha fazlası…",
+  "more": "Daha fazla bilgi",
+  "privacy": "Gizlilik",
+  "example": "Örnek verilerle video",
+  "publisher": "Atria.Eponym, Fransa'da yerleşik bağımsız geliştirici",
+  "title": "Android, iPhone, Mac ve PC için uygulamalar",
+  "developed_by": "Geliştiren",
+  "language": "Dil"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Harçlık",
+    "Bütçe ve kategoriler",
+    "Tek başına veya ailece",
+    "Şifreli yedekleme",
+    "Dışa aktarma ve grafikler"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Hız ve yükseklik",
+    "Uydular ve 3D küre",
+    "Yolculuklar ve GPX aktarımı",
+    "Wi-Fi ve Bluetooth ağları",
+    "Pil ve güç"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Sıcaklıklar ve işlemci",
+    "Pil ve güç",
+    "24 saatlik geçmiş",
+    "Uyarılar",
+    "Uçtan uca şifreli"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Sesli okunan dikteler",
+    "Kelime kelime düzeltme",
+    "Yazım ve dil bilgisi",
+    "Fiil çekimi",
+    "Telefon ve PC bağlantılı"
+   ],
+   "tagline": "Fransız brevet sınavının diktesinde ölçülen tüm yazım kuralları: 2011'den bu yana çıkmış sorulardaki her tuzak ve 9. sınıf müfredatının her konusu, sesli okunan, sınav günündeki gibi düzeltilip puanlanan diktelerde. Reklam yok, hesap yok."
+  },
+  "parfumpocket": {
+   "features": [
+    "Teslimat dahil toplam fiyat",
+    "ml başına fiyat",
+    "Fiyat geçmişi",
+    "Fiyat düşüş uyarıları",
+    "28 dil"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Euronext Paris fiyatları",
+    "Euro ile ABD ve UK hisseleri",
+    "Açık piyasalar tek bakışta",
+    "Günlükten yıllığa grafikler",
+    "Paylaşılabilir listeler"
+   ],
+   "tagline": "Paris, Avrupa, ABD ve Londra için hisse fiyatları, 15 dk gecikmeli. Ücretsiz, reklam yok, hesap yok."
+  },
+  "soundcatch": {
+   "features": [
+    "Tek bir uygulamanın sesi",
+    "Ses ve video dosyaları",
+    "Tıkırtısız kesimler",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Şüpheli bölüm tespiti"
+   ],
+   "tagline": "Ses kaydedici: bir uygulamanın sesini kaydet ya da bir dosya aç, gerekmeyen kısımları kes, tek bir temiz dosya olarak dışa aktar. Reklam yok, hesap yok."
+  }
+ }
+}

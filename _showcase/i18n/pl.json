@@ -1,0 +1,97 @@
+{
+ "ui": {
+  "kicker": "Wydawca aplikacji",
+  "lead": "Proste, starannie dopracowane aplikacje na Android, iPhone, Mac i PC. Bez reklam, bez obowiązkowego konta, jak najmniej danych.",
+  "apps": "aplikacji",
+  "platforms_n": "platformy",
+  "languages": "języków",
+  "upto": "do ",
+  "ads": "reklam",
+  "all": "Wszystkie",
+  "android": "Android",
+  "iphone": "iPhone",
+  "mac": "Mac/PC",
+  "play": "Google Play",
+  "appstore": "App Store",
+  "direct": "Pobieranie bezpośrednie",
+  "msstore": "Microsoft Store (Windows)",
+  "live": "Dostępna",
+  "soon": "Wkrótce",
+  "more_features": "i nie tylko…",
+  "more": "Więcej",
+  "privacy": "Prywatność",
+  "example": "Film z przykładowymi danymi",
+  "publisher": "Atria.Eponym, niezależny deweloper z siedzibą we Francji",
+  "title": "Aplikacje na Android, iPhone, Mac i PC",
+  "developed_by": "Stworzone przez",
+  "language": "Język"
+ },
+ "apps": {
+  "familypocket": {
+   "features": [
+    "Kieszonkowe",
+    "Budżet i kategorie",
+    "Samodzielnie lub z rodziną",
+    "Szyfrowana kopia zapasowa",
+    "Eksport i wykresy"
+   ]
+  },
+  "speedgps": {
+   "features": [
+    "Prędkość i wysokość",
+    "Satelity i globus 3D",
+    "Trasy i eksport GPX",
+    "Sieci Wi-Fi i Bluetooth",
+    "Bateria i zasilanie"
+   ]
+  },
+  "maclive": {
+   "features": [
+    "Temperatury i procesor",
+    "Bateria i zasilanie",
+    "Historia 24 h",
+    "Alerty",
+    "Szyfrowanie end-to-end"
+   ]
+  },
+  "dicteednb": {
+   "features": [
+    "Dyktanda czytane na głos",
+    "Poprawa słowo po słowie",
+    "Ortografia i gramatyka",
+    "Koniugacja",
+    "Telefon i PC połączone"
+   ],
+   "tagline": "Cała ortografia sprawdzana na dyktandzie francuskiego egzaminu brevet: każda pułapka z arkuszy od 2011 roku i każdy punkt programu 9. klasy, w dyktandach czytanych na głos, poprawianych i ocenianych jak w dniu egzaminu. Bez reklam, bez konta."
+  },
+  "parfumpocket": {
+   "features": [
+    "Cena całkowita z dostawą",
+    "Cena za ml",
+    "Historia cen",
+    "Alerty o spadkach cen",
+    "28 języków"
+   ]
+  },
+  "stockcockpit": {
+   "features": [
+    "Notowania Euronext Paris",
+    "Akcje z USA i UK w euro",
+    "Które giełdy są otwarte",
+    "Wykresy od dnia do roku",
+    "Listy do udostępniania"
+   ],
+   "tagline": "Notowania akcji z Paryża, Europy, USA i Londynu z 15-minutowym opóźnieniem. Za darmo, bez reklam, bez konta."
+  },
+  "soundcatch": {
+   "features": [
+    "Dźwięk jednej aplikacji",
+    "Pliki audio i wideo",
+    "Cięcia bez trzasków",
+    "AAC, MP3, FLAC, Apple Lossless",
+    "Wykryte podejrzane fragmenty"
+   ],
+   "tagline": "Rejestrator dźwięku: nagraj dźwięk aplikacji lub otwórz plik, wytnij to, czego nie potrzebujesz, i wyeksportuj jeden czysty plik. Bez reklam, bez konta."
+  }
+ }
+}

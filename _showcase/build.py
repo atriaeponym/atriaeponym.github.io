@@ -7,8 +7,14 @@ platform (Android, iPhone, Mac/PC) with its channel (Google Play, App Store, dir
 real status (live / soon). When an app is published or changes status, edit apps.json, run this
 script from the repository root, commit and push.
 
-    python3 _showcase/build.py              # writes index.html
-    python3 _showcase/build.py --standalone out.html   # same page with icons inlined (mockups)
+One page per language: English at the root (also the default for search engines), the 27 others in
+/<lang>/. Texts in French and English live here and in apps.json; the other languages in
+_showcase/i18n/<lang>.json (interface and feature chips) and _showcase/i18n/_store_taglines.json (the
+short description of the app's own store listing, when it exists in that language). The script also
+writes sitemap.xml and robots.txt.
+
+    python3 _showcase/build.py              # writes index.html, <lang>/index.html, sitemap.xml, robots.txt
+    python3 _showcase/build.py --standalone out.html [lang]   # one page with icons inlined (mockups)
 """
 import base64
 import hashlib
@@ -18,6 +24,24 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE = "https://atriaeponym.com"  # canonical address; atriaeponym.github.io serves the same files
+# Site language code: (native name, BCP 47 tag for hreflang and Open Graph, right-to-left)
+LANGS = {
+    "en": ("English", "en", False), "fr": ("Français", "fr", False), "de": ("Deutsch", "de", False),
+    "es": ("Español", "es", False), "it": ("Italiano", "it", False), "pt": ("Português", "pt-PT", False),
+    "pt-br": ("Português (Brasil)", "pt-BR", False), "nl": ("Nederlands", "nl", False),
+    "sv": ("Svenska", "sv", False), "nb": ("Norsk bokmål", "nb", False), "fi": ("Suomi", "fi", False),
+    "pl": ("Polski", "pl", False), "ru": ("Русский", "ru", False), "uk": ("Українська", "uk", False),
+    "el": ("Ελληνικά", "el", False), "tr": ("Türkçe", "tr", False), "ar": ("العربية", "ar", True),
+    "fa": ("فارسی", "fa", True), "he": ("עברית", "he", True), "ur": ("اردو", "ur", True),
+    "hi": ("हिन्दी", "hi", False), "bn": ("বাংলা", "bn", False), "th": ("ไทย", "th", False),
+    "vi": ("Tiếng Việt", "vi", False), "id": ("Bahasa Indonesia", "id", False), "ja": ("日本語", "ja", False),
+    "ko": ("한국어", "ko", False), "zh": ("简体中文", "zh-Hans", False),
+}
+# schema.org category of each app, for search engines
+CATEGORY = {"familypocket": "FinanceApplication", "speedgps": "TravelApplication", "maclive": "UtilitiesApplication",
+            "dicteednb": "EducationalApplication", "parfumpocket": "ShoppingApplication",
+            "stockcockpit": "FinanceApplication", "soundcatch": "MultimediaApplication"}
 PLATFORMS = ("android", "iphone", "mac")
 
 TEXT = {
@@ -33,6 +57,7 @@ TEXT = {
         "more": "En savoir plus", "privacy": "Confidentialité",
         "example": "Vidéo avec des données d'exemple",
         "publisher": "Atria.Eponym, développeur individuel établi en France",
+        "title": "Applications pour Android, iPhone, Mac et PC", "developed_by": "Développé par", "language": "Langue",
     },
     "en": {
         "kicker": "App publisher",
@@ -46,6 +71,7 @@ TEXT = {
         "more": "Learn more", "privacy": "Privacy",
         "example": "Video with example data",
         "publisher": "Atria.Eponym, individual developer based in France",
+        "title": "Apps for Android, iPhone, Mac and PC", "developed_by": "Developed by", "language": "Language",
     },
 }
 
@@ -56,6 +82,7 @@ ICON = {
     "mac": '<svg viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="11" rx="1.6"/><path d="M2 19.5h20"/></svg>',
     "arrow": '<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>',
     "check": '<svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>',
+    "globe": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>',
     "clock": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>',
 }
 
@@ -72,9 +99,14 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;line-height:1;letter-spacing:.02em}
 .brand img{width:30px;height:30px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1.5px var(--accent),0 0 14px rgba(245,166,35,.5)}
 .brand .nm span{color:var(--accent)}
-.lang{display:flex;gap:4px}
-.lang button{font-weight:600;font-size:12px;line-height:1;color:var(--dim);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 11px;cursor:pointer}
-.lang button[aria-pressed="true"]{color:#1A1206;background:var(--accent);border-color:var(--accent)}
+.lang{position:relative}
+.lang summary{list-style:none;display:flex;align-items:center;gap:7px;font-weight:650;font-size:13px;line-height:1;color:#1A1206;background:var(--accent);border-radius:999px;padding:8px 12px;cursor:pointer}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{width:15px;height:15px}
+.lang ul{position:absolute;z-index:5;inset-inline-end:0;top:calc(100% + 8px);margin:0;padding:6px;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;width:min(360px,calc(100vw - 32px));background:#111823;border:1px solid var(--tile);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
+.lang a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:14px}
+.lang a:hover{background:var(--soft)}
+.lang a[aria-current]{color:var(--accent);font-weight:650}
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:center;margin-bottom:34px}
 .orbit{position:absolute;right:-60px;top:-70px;width:520px;height:520px;pointer-events:none;opacity:.55}
 .orbit ellipse{fill:none;stroke:url(#og);stroke-width:1}
@@ -89,7 +121,7 @@ h1{font-weight:800;font-size:clamp(38px,7vw,64px);line-height:1;margin:0 0 16px;
 .stat{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:16px 18px;position:relative;overflow:hidden}
 .stat:after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(245,166,35,.7),transparent)}
 .stat b{display:block;font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-.01em;color:var(--accent2)}
-.stat b [data-l]{font-size:15px;font-weight:600;color:var(--dim)}
+.stat b small{font-size:15px;font-weight:600;color:var(--dim)}
 .stat span{color:var(--dim);font-size:13px}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
 .filters button{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;line-height:1;color:var(--dim);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer;transition:all .15s}
@@ -135,9 +167,6 @@ footer .sig{font-weight:750;font-size:18px;color:var(--ink);margin:0 0 14px}
 footer .sig span{color:var(--accent)}
 footer a{color:var(--accent)}
 @keyframes fadein{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-[data-l]{display:none}
-html[lang="fr"] [data-l="fr"],html[lang="en"] [data-l="en"]{display:revert}
-html[lang="fr"] .chips>[data-l="fr"],html[lang="en"] .chips>[data-l="en"]{display:contents}
 @media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:230px;max-width:300px;width:calc(100% - 60px);margin:0 auto}.orbit{width:380px;height:380px;right:-120px;top:-40px}}
 @media (max-width:760px){.app.has-media{grid-template-columns:1fr;gap:20px}.media{width:min(230px,70vw);order:-1}}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -147,29 +176,17 @@ html[lang="fr"] .chips>[data-l="fr"],html[lang="en"] .chips>[data-l="en"]{displa
 SCRIPT = """<script>
 (function(){
   var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vids = document.querySelectorAll('video[data-fr]');
-  function source(v){
-    var l = document.documentElement.lang, src = v.dataset[l];
-    v.poster = v.dataset[l + 'Poster'];
-    if (v.dataset.live && v.getAttribute('src') !== src) { v.src = src; if (!still) v.play().catch(function(){}); }
-  }
-  function pick(l){
-    document.documentElement.lang = l;
-    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set === l); });
-    vids.forEach(source);
-  }
+  var vids = document.querySelectorAll('video[data-src]');
+  function start(v){ if (!v.getAttribute('src')) v.src = v.dataset.src; if (!still) v.play().catch(function(){}); }
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(e){
-      var v = e.target;
-      if (e.isIntersecting) { v.dataset.live = '1'; source(v); if (!still) v.play().catch(function(){}); }
-      else v.pause();
+      if (e.isIntersecting) start(e.target); else e.target.pause();
     }); }, {rootMargin: '200px'});
     vids.forEach(function(v){ io.observe(v); });
-  } else vids.forEach(function(v){ v.dataset.live = '1'; });
-  var q = new URLSearchParams(location.search).get('lang');
-  var nav = (navigator.language || 'en').toLowerCase();
-  pick(q === 'fr' || q === 'en' ? q : (nav.indexOf('fr') === 0 ? 'fr' : 'en'));
-  document.querySelectorAll('.lang button').forEach(function(b){ b.onclick = function(){ pick(b.dataset.set); }; });
+  } else vids.forEach(start);
+  document.querySelectorAll('.lang a').forEach(function(a){ a.onclick = function(){
+    try { localStorage.setItem('lang', a.dataset.lang); } catch (e) {}
+  }; });
   var fs = document.querySelectorAll('.filters button');
   fs.forEach(function(b){ b.onclick = function(){
     fs.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
@@ -180,83 +197,127 @@ SCRIPT = """<script>
 })();
 </script>"""
 
+# On the English root only: a visitor whose browser asks for another language of the site, and who has
+# not picked one in the menu, is sent to that language's page. ?lang=xx forces a page.
+ROOT_REDIRECT = """<script>
+(function(){
+  var langs = %s, pick = null;
+  try { pick = localStorage.getItem('lang'); } catch (e) {}
+  var q = new URLSearchParams(location.search).get('lang');
+  if (q) pick = q;
+  if (!pick) {
+    var navs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < navs.length && !pick; i++) {
+      var n = navs[i].toLowerCase();
+      if (n === 'pt-br') pick = 'pt-br';
+      else if (n === 'no' || n.indexOf('no-') === 0 || n.indexOf('nn') === 0) pick = 'nb';
+      else if (n.indexOf('iw') === 0) pick = 'he';
+      else if (langs.indexOf(n.split('-')[0]) >= 0) pick = n.split('-')[0];
+    }
+  }
+  if (pick && pick !== 'en' && langs.indexOf(pick) >= 0) location.replace('/' + pick + '/' + location.hash);
+})();
+</script>"""
 
-def both(fn) -> str:
-    """The same piece of markup in both languages, shown according to <html lang>."""
-    return "".join(f'<span data-l="{l}">{fn(l)}</span>' for l in TEXT)
+
+def load_texts() -> dict:
+    """Interface texts per language, with the per-app texts under "_apps"."""
+    apps = json.loads((ROOT / "_showcase" / "apps.json").read_text(encoding="utf-8"))["apps"]
+    store = json.loads((ROOT / "_showcase" / "i18n" / "_store_taglines.json").read_text(encoding="utf-8"))["apps"]
+    out = {}
+    for lang in LANGS:
+        if lang in TEXT:
+            ui = dict(TEXT[lang])
+            ui["_apps"] = {a["id"]: {"tagline": a["tagline"][lang], "features": a["features"][lang]} for a in apps}
+        else:
+            ui = json.loads((ROOT / "_showcase" / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))
+            ui = {**ui["ui"], "_apps": ui["apps"]}
+            for a in apps:
+                own = ui["_apps"].setdefault(a["id"], {})
+                if lang in store.get(a["id"], {}):
+                    own["tagline"] = store[a["id"]][lang]
+                assert own.get("tagline") and own.get("features"), (lang, a["id"])
+        missing = set(TEXT["en"]) - set(ui)
+        assert not missing, (lang, missing)
+        out[lang] = ui
+    return out
 
 
-def t(key: str) -> str:
-    return both(lambda l: html.escape(TEXT[l][key]))
+def url(lang: str) -> str:
+    return f"{SITE}/" if lang == "en" else f"{SITE}/{lang}/"
 
 
-def icon_src(path: str, standalone: bool) -> str:
+def asset(path: str, standalone: bool) -> str:
     data = (ROOT / path).read_bytes()
     if standalone:
-        return "data:image/png;base64," + base64.b64encode(data).decode()
-    # A content hash in the URL, so a changed icon is never served from a browser's cache.
-    return f"{path}?v={hashlib.sha256(data).hexdigest()[:10]}"
+        kind = {"png": "image/png", "jpg": "image/jpeg", "mp4": "video/mp4"}[path.rsplit(".", 1)[1]]
+        return f"data:{kind};base64," + base64.b64encode(data).decode()
+    # Root-relative, so it works from every language folder and on both domains; a content hash in the
+    # URL, so a changed file is never served from a browser's cache.
+    return f"/{path}?v={hashlib.sha256(data).hexdigest()[:10]}"
 
 
-def row(p: dict) -> str:
+def local(path: str, lang: str) -> str:
+    """A page of the site, in the visitor's language when that version exists."""
+    path = path.strip("/")
+    if lang != "fr" and (ROOT / path / lang / "index.html").is_file():
+        return f"/{path}/{lang}/"
+    return f"/{path}/"
+
+
+def name(a: dict, lang: str) -> str:
+    """The app's name: one string, or {"fr": ..., "en": ...}; other languages use the English one."""
+    return a["name"] if isinstance(a["name"], str) else a["name"].get(lang, a["name"]["en"])
+
+
+def row(p: dict, T: dict) -> str:
     status = p["status"]
-    badge = f'<span class="badge">{ICON["check"] if status == "live" else ICON["clock"]}{t(status)}</span>'
-    inner = (f'<span class="pf">{ICON[p["platform"]]}<span><b>{t(p["platform"])}</b>'
-             f'<small>{t(p["channel"])}{" · " + html.escape(p["name"]) if p.get("name") else ""}</small></span></span>{badge}')
+    badge = f'<span class="badge">{ICON["check"] if status == "live" else ICON["clock"]}{html.escape(T[status])}</span>'
+    inner = (f'<span class="pf">{ICON[p["platform"]]}<span><b>{html.escape(T[p["platform"]])}</b>'
+             f'<small>{html.escape(T[p["channel"]])}{" · " + html.escape(p["name"]) if p.get("name") else ""}</small></span></span>{badge}')
     if status == "live":
-        return f'<a class="row live" href="{html.escape(p["url"])}">{inner}<span class="go">{ICON["arrow"]}</span></a>'
+        href = p["url"] if p["url"].startswith("http") else "/" + p["url"].lstrip("/")
+        return f'<a class="row live" href="{html.escape(href)}">{inner}<span class="go">{ICON["arrow"]}</span></a>'
     return f'<div class="row soon">{inner}</div>'
 
 
-def privacy(p: dict) -> str:
-    def label(l):
-        s = TEXT[l]["privacy"]
-        return html.escape(s + (f" {TEXT[l][p['platform']]}" if p.get("platform") else ""))
-    return f'<a href="{html.escape(p["url"])}">{both(label)}</a>'
-
-
-def name(a: dict, l: str = "en") -> str:
-    """The app's name: one string, or {"fr": ..., "en": ...} when it differs by language."""
-    return a["name"][l] if isinstance(a["name"], dict) else a["name"]
-
-
-def media(a: dict, standalone: bool) -> str:
+def media(a: dict, lang: str, standalone: bool) -> str:
     """Looping teaser in a phone frame: muted, loaded only when visible, poster only under reduced motion."""
     tz = a.get("teaser")
     if not tz:
         return ""
-    def src(path):
-        if standalone:
-            kind = "video/mp4" if path.endswith(".mp4") else "image/jpeg"
-            return f"data:{kind};base64," + base64.b64encode((ROOT / path).read_bytes()).decode()
-        return f"{path}?v={hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:10]}"
-    attrs = " ".join(f'data-{l}="{src(tz[l]["video"])}" data-{l}-poster="{src(tz[l]["poster"])}"' for l in TEXT)
-    return (f'<div class="media"><div class="phone"><video {attrs} muted loop playsinline preload="none" '
-            f'aria-label="{html.escape(name(a))}"></video></div>'
-            f'<span class="example">{both(lambda l: html.escape(TEXT[l]["example"]))}</span></div>')
+    tz = tz.get(lang) or tz.get("en") or next(iter(tz.values()))
+    return (f'<div class="media"><div class="phone"><video data-src="{asset(tz["video"], standalone)}" '
+            f'poster="{asset(tz["poster"], standalone)}" muted loop playsinline preload="none" '
+            f'aria-label="{html.escape(name(a, lang))}"></video></div><span class="example">{{example}}</span></div>')
 
 
-def card(a: dict, standalone: bool) -> str:
-    chips = both(lambda l: "".join(f"<span>{html.escape(f)}</span>" for f in a["features"][l])
-                 + (f'<span class="more">{html.escape(TEXT[l]["more_features"])}</span>' if a.get("more_features") else ""))
+def card(a: dict, lang: str, T: dict, standalone: bool) -> str:
+    own = T["_apps"][a["id"]]
+    chips = "".join(f"<span>{html.escape(f)}</span>" for f in own["features"])
+    if a.get("more_features"):
+        chips += f'<span class="more">{html.escape(T["more_features"])}</span>'
     links = []
     if a.get("more"):
-        links.append(f'<a href="{html.escape(a["more"])}">{t("more")}</a>')
-    links += [privacy(p) for p in a.get("privacy", [])]
+        links.append(f'<a href="{local(a["more"], lang)}">{html.escape(T["more"])}</a>')
+    for p in a.get("privacy", []):
+        label = T["privacy"] + (f' {T[p["platform"]]}' if p.get("platform") else "")
+        links.append(f'<a href="{local(p["url"], lang)}">{html.escape(label)}</a>')
     platforms = " ".join(p["platform"] for p in a["platforms"])
-    m = media(a, standalone)
-    return (f'<article class="app{" has-media" if m else ""}" data-p="{platforms}"><div class="body">'
-            f'<div class="head"><img src="{html.escape(icon_src(a["icon"], standalone))}" alt="" width="60" height="60">'
-            f'<h2>{both(lambda l: html.escape(name(a, l)))}</h2></div>'
-            f'<p class="tag">{both(lambda l: html.escape(a["tagline"][l]))}</p>'
+    m = media(a, lang, standalone).replace("{example}", html.escape(T["example"]))
+    return (f'<article class="app{" has-media" if m else ""}" id="{a["id"]}" data-p="{platforms}"><div class="body">'
+            f'<div class="head"><img src="{html.escape(asset(a["icon"], standalone))}" alt="" width="66" height="66">'
+            f'<h2>{html.escape(name(a, lang))}</h2></div>'
+            f'<p class="tag">{html.escape(own["tagline"])}</p>'
             f'<div class="chips">{chips}</div>'
-            f'<div class="rows">{"".join(row(p) for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])))}</div>'
+            f'<div class="rows">{"".join(row(p, T) for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])))}</div>'
             f'<div class="links">{"".join(links)}</div></div>{m}</article>')
 
 
 def check(apps: list) -> None:
     for a in apps:
         assert (ROOT / a["icon"]).is_file(), a["icon"]
+        assert a["id"] in CATEGORY, a["id"]
         for l, tz in a.get("teaser", {}).items():
             assert l in TEXT and (ROOT / tz["video"]).is_file() and (ROOT / tz["poster"]).is_file(), (a["id"], l)
         for p in a["platforms"]:
@@ -264,47 +325,98 @@ def check(apps: list) -> None:
             assert p["status"] in ("live", "soon") and (p["status"] == "soon" or p.get("url")), (a["id"], p)
 
 
-def page(apps: list, standalone: bool) -> str:
+def structured(apps: list, lang: str, T: dict) -> str:
+    """schema.org data: the publisher and each app, with only what the page itself shows."""
+    systems = {"android": "Android", "iphone": "iOS", "mac": "macOS, Windows"}
+    items = []
+    for i, a in enumerate(apps, 1):
+        live = [p for p in a["platforms"] if p["status"] == "live"]
+        app = {"@type": "SoftwareApplication", "name": name(a, lang), "description": T["_apps"][a["id"]]["tagline"],
+               "applicationCategory": CATEGORY[a["id"]], "image": f"{SITE}/{a['icon']}",
+               "operatingSystem": ", ".join(dict.fromkeys(systems[p["platform"]] for p in live)) or None,
+               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+               "author": {"@id": f"{SITE}/#publisher"},
+               "sameAs": [p["url"] for p in live if p["url"].startswith("http")] or None}
+        items.append({"@type": "ListItem", "position": i, "item": {k: v for k, v in app.items() if v}})
+    data = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Organization", "@id": f"{SITE}/#publisher", "name": "Atria.Eponym", "url": f"{SITE}/",
+         "logo": f"{SITE}/icons/gecko.png", "email": "atria.eponym@gmail.com"},
+        {"@type": "WebSite", "name": "Atria.Eponym", "url": f"{SITE}/", "inLanguage": LANGS[lang][1]},
+        {"@type": "ItemList", "name": T["title"], "itemListElement": items}]}
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
+    T = texts[lang]
+    native, tag, rtl = LANGS[lang]
     used = [pf for pf in PLATFORMS if any(p["platform"] == pf for a in apps for p in a["platforms"])]
-    filters = [f'<button data-f="all" aria-pressed="true">{t("all")} <em>{len(apps)}</em></button>']
+    filters = [f'<button data-f="all" aria-pressed="true">{html.escape(T["all"])} <em>{len(apps)}</em></button>']
     for pf in used:
         n = sum(any(p["platform"] == pf for p in a["platforms"]) for a in apps)
-        filters.append(f'<button data-f="{pf}" aria-pressed="false">{ICON[pf]}{t(pf)} <em>{n}</em></button>')
+        filters.append(f'<button data-f="{pf}" aria-pressed="false">{ICON[pf]}{html.escape(T[pf])} <em>{n}</em></button>')
     # Most apps ship in 28 languages, some in fewer (SoundCatch: French only); none shows ads.
-    stats = [(str(len(apps)), "apps"), (str(len(used)), "platforms_n"), (t("upto") + "28", "languages"), ("0", "ads")]
-    gecko = icon_src("icons/gecko.png", standalone)
+    upto = f'<small>{html.escape(T["upto"])}</small>' if T["upto"].strip() else ""
+    stats = [(str(len(apps)), "apps"), (str(len(used)), "platforms_n"), (upto + "28", "languages"), ("0", "ads")]
+    stats_html = "".join(f'<div class="stat"><b>{v}</b><span>{html.escape(T[k])}</span></div>' for v, k in stats)
+    gecko = asset("icons/gecko.png", standalone)
     # Floating app icons beside the title: position (left %, top %), size, tilt, animation delay.
     spots = [(8, 4, 92, -6, 0), (50, 0, 78, 5, 1.2), (70, 34, 96, -3, .6), (30, 34, 104, 3, 2.1),
              (2, 60, 76, 6, 1.6), (56, 70, 70, -5, .3), (82, 4, 58, 8, 2.6)]
-    cloud = "".join(f'<img src="{html.escape(icon_src(a["icon"], standalone))}" alt="" '
+    cloud = "".join(f'<img src="{html.escape(asset(a["icon"], standalone))}" alt="" '
                     f'style="left:{x}%;top:{y}%;--s:{sz}px;--r:{r}deg;--d:-{d}s">'
                     for a, (x, y, sz, r, d) in zip(apps, spots))
-    stats_html = "".join(f'<div class="stat"><b>{v}</b><span>{t(k)}</span></div>' for v, k in stats)
+    names = ", ".join(name(a, lang) for a in apps)
+    title = f"Atria.Eponym – {T['title']}"
+    desc = f"{T['lead']} {names}."
+    alternates = "".join(f'<link rel="alternate" hreflang="{LANGS[l][1]}" href="{url(l)}">' for l in LANGS)
+    alternates += f'<link rel="alternate" hreflang="x-default" href="{url("en")}">'
+    menu = "".join(f'<li><a href="{"/" if l == "en" else "/" + l + "/"}" hreflang="{LANGS[l][1]}" lang="{LANGS[l][1]}" '
+                   f'data-lang="{l}"{" aria-current=\"page\"" if l == lang else ""}>{html.escape(LANGS[l][0])}</a></li>'
+                   for l in LANGS)
+    og_locales = "".join(f'<meta property="og:locale:alternate" content="{LANGS[l][1].replace("-", "_")}">'
+                         for l in LANGS if l != lang)
+    redirect = ROOT_REDIRECT % json.dumps(list(LANGS)) if lang == "en" and not standalone else ""
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{tag}"{' dir="rtl"' if rtl else ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atria Eponym</title>
-<meta name="description" content="MyLilBudget, Speed GPS, Mac Live: apps by Atria.Eponym for Android, iPhone, Mac and PC.">
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(desc)}">
+<link rel="canonical" href="{url(lang)}">
+{alternates}
+<link rel="icon" href="/icons/gecko.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(desc)}">
+<meta property="og:url" content="{url(lang)}">
+<meta property="og:image" content="{SITE}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{tag.replace("-", "_")}">
+{og_locales}
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{structured(apps, lang, T)}</script>
+{redirect}
 <style>{CSS}</style>
 </head>
 <body>
 <div class="w">
-<div class="bar"><div class="brand"><img src="{gecko}" alt=""><span class="nm">Atria<span>.</span>Eponym</span></div><div class="lang"><button data-set="fr">FR</button><button data-set="en">EN</button></div></div>
+<div class="bar"><div class="brand"><img src="{gecko}" alt=""><span class="nm">Atria<span>.</span>Eponym</span></div><details class="lang"><summary aria-label="{html.escape(T["language"])}">{ICON["globe"]}{html.escape(native)}</summary><ul>{menu}</ul></details></div>
 <div class="hero">
 <svg class="orbit" viewBox="0 0 520 520" aria-hidden="true"><defs><linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#F5A623" stop-opacity="0"/><stop offset=".5" stop-color="#F5A623" stop-opacity=".8"/><stop offset="1" stop-color="#F5A623" stop-opacity="0"/></linearGradient></defs><ellipse cx="260" cy="260" rx="240" ry="120" transform="rotate(-18 260 260)"/><ellipse cx="260" cy="260" rx="180" ry="80" transform="rotate(-18 260 260)"/><circle cx="470" cy="190" r="4"/></svg>
-<div><p class="kicker">{t("kicker")}</p>
+<div><p class="kicker">{html.escape(T["kicker"])}</p>
 <h1>Atria.Eponym</h1>
-<p class="lead">{t("lead")}</p></div>
+<p class="lead">{html.escape(T["lead"])}</p></div>
 <div class="cloud" aria-hidden="true">{cloud}</div>
 </div>
 <div class="stats">{stats_html}</div>
 <div class="filters">{"".join(filters)}</div>
 <div class="grid">
-{chr(10).join(card(a, standalone) for a in apps)}
+{chr(10).join(card(a, lang, T, standalone) for a in apps)}
 </div>
-<footer><p class="by">{both(lambda l: "Développé par" if l == "fr" else "Developed by")}</p><img class="gecko" src="{gecko}" alt="" width="84" height="84"><p class="sig">Atria<span>.</span>Eponym</p><p>{t("publisher")} · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</p></footer>
+<footer><p class="by">{html.escape(T["developed_by"])}</p><img class="gecko" src="{gecko}" alt="" width="84" height="84"><p class="sig">Atria<span>.</span>Eponym</p><p>{html.escape(T["publisher"])} · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</p></footer>
 </div>
 {SCRIPT}
 </body>
@@ -312,15 +424,30 @@ def page(apps: list, standalone: bool) -> str:
 """
 
 
+def sitemap() -> str:
+    alternates = "".join(f'<xhtml:link rel="alternate" hreflang="{LANGS[l][1]}" href="{url(l)}"/>' for l in LANGS)
+    alternates += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url("en")}"/>'
+    urls = "".join(f"<url><loc>{url(l)}</loc>{alternates}</url>\n" for l in LANGS)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            f'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n{urls}</urlset>\n')
+
+
 def main() -> None:
     apps = json.loads((ROOT / "_showcase" / "apps.json").read_text(encoding="utf-8"))["apps"]
     check(apps)
-    if len(sys.argv) == 3 and sys.argv[1] == "--standalone":
-        Path(sys.argv[2]).write_text(page(apps, True), encoding="utf-8")
-        print(f"{sys.argv[2]}: {len(apps)} apps, icons inlined")
+    texts = load_texts()
+    if len(sys.argv) >= 3 and sys.argv[1] == "--standalone":
+        lang = sys.argv[3] if len(sys.argv) > 3 else "fr"
+        Path(sys.argv[2]).write_text(page(apps, lang, texts, True), encoding="utf-8")
+        print(f"{sys.argv[2]}: {len(apps)} apps, {lang}, icons inlined")
         return
-    (ROOT / "index.html").write_text(page(apps, False), encoding="utf-8")
-    print(f"index.html: {len(apps)} apps")
+    for lang in LANGS:
+        out = ROOT / "index.html" if lang == "en" else ROOT / lang / "index.html"
+        out.parent.mkdir(exist_ok=True)
+        out.write_text(page(apps, lang, texts, False), encoding="utf-8")
+    (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+    print(f"index.html + {len(LANGS) - 1} language pages, sitemap.xml, robots.txt: {len(apps)} apps")
 
 
 if __name__ == "__main__":
