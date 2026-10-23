@@ -1,0 +1,15 @@
+name: Mirror key test
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: atriaeponym/atriaeponym.com
+          ssh-key: ${{ secrets.MIRROR_DEPLOY_KEY }}
+      - run: |
+          git push origin HEAD:refs/heads/mirror-key-test
+          git push origin --delete mirror-key-test
