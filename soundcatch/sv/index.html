@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -125,33 +123,11 @@ bildspel. Appen är på franska.</p>
   <img src="../img/mac-2.jpg" alt="SoundCatch på Mac: val av app att spela in och inspelningsknappen" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>På Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Ladda ner <bdi>SoundCatch</bdi> 1.0 för Mac</a>
-<div class="meta">.dmg-fil · 83,7 MB · gratis · kontrollerad av Apple (notariserad)</div>
-<div class="meta">Mac med Apple-chip (M1 eller senare) · macOS 14.4 eller senare</div>
-<h2>Installera i 3 steg</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Öppna den hämtade filen</b><p>Dubbelklicka på <bdi>SoundCatch-1.0.dmg</bdi> i Hämtade filer.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Dra <bdi>SoundCatch</bdi> till <bdi>Applications</bdi></b><p>Öppna den sedan från mappen Applications.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Klicka på ”Tillåt” vid första inspelningen</b><p>macOS ber en gång om behörigheten ”Ljudinspelning”. Du hittar den i Systeminställningar → Integritet och säkerhet.</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>På Mac</h2><span class="btn off"><bdi>App Store</bdi><small>Kommer snart</small></span><div class="meta">Mac med Apple-chip (M1 eller senare) · macOS 14.4 eller senare</div></div>
+<div class="platform" id="iphone"><h2>På iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>Kommer snart</small></span><div class="meta">iOS 17 eller senare</div></div>
+<div class="platform" id="android"><h2>På Android</h2><span class="btn off"><bdi>Google Play</bdi><small>Kommer snart</small></span><div class="meta">Android 10 eller senare</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>På Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Ladda ner <bdi>SoundCatch</bdi> 1.0.0 för Android</a>
-<div class="meta">.apk-fil · 2,4 MB · gratis · signerad av Atria.Eponym · snart även på Google Play · appen är på franska</div>
-<div class="meta">Android 10 eller senare</div>
-<h2>Installera i 3 steg</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Öppna den hämtade filen</b><p>Tryck på <bdi>SoundCatch-1.0.0.apk</bdi> i nedladdningsaviseringen eller i Filer → Nedladdningar.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Tillåt installationen</b><p>Android ber dig låta webbläsaren installera appar: aktivera ”Tillåt från den här källan”, gå tillbaka och tryck på ”Installera”.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Godkänn vid varje inspelning</b><p>Första gången tillåter du ”Spela in ljud” (bara ljudet från appar fångas upp, aldrig mikrofonen). Sedan ber Android om ditt godkännande för delning vid varje inspelning: välj ”Dela hela skärmen” eller appen du vill spela in. Låt skärmen vara på medan du spelar in.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">Signeringscertifikat (SHA-256): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>Gratis, utan reklam, utan konto.</strong> Ingenting skickas någonstans: ljudet du spelar in och filerna du exporterar stannar på din enhet.</p></div>
 

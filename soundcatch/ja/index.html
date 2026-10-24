@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -122,33 +120,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="Mac版SoundCatch：録音するアプリの選択と録音ボタン" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>Mac版</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Mac版<bdi>SoundCatch</bdi> 1.0をダウンロード</a>
-<div class="meta">.dmgファイル · 83.7 MB · 無料 · Appleによる確認済み（公証済み）</div>
-<div class="meta">Appleシリコン搭載Mac（M1以降）· macOS 14.4以降</div>
-<h2>3ステップでインストール</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>ダウンロードしたファイルを開く</b><p>「ダウンロード」フォルダにある<bdi>SoundCatch-1.0.dmg</bdi>をダブルクリックします。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b><bdi>SoundCatch</bdi>を<bdi>Applications</bdi>にドラッグ</b><p>その後、Applicationsフォルダから開きます。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>初めて録音するときに「許可」をクリック</b><p>macOSが一度だけ「オーディオ録音」の許可を求めます。この設定は「システム設定」→「プライバシーとセキュリティ」にあります。</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>Mac版</h2><span class="btn off"><bdi>App Store</bdi><small>近日公開</small></span><div class="meta">Appleシリコン搭載Mac（M1以降）· macOS 14.4以降</div></div>
+<div class="platform" id="iphone"><h2>iPhone版</h2><span class="btn off"><bdi>App Store</bdi><small>近日公開</small></span><div class="meta">iOS 17以降</div></div>
+<div class="platform" id="android"><h2>Android版</h2><span class="btn off"><bdi>Google Play</bdi><small>近日公開</small></span><div class="meta">Android 10以降</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>Android版</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Android版<bdi>SoundCatch</bdi> 1.0.0をダウンロード</a>
-<div class="meta">.apkファイル · 2.4 MB · 無料 · Atria.Eponymによる署名 · Google Playにも近日公開 · アプリはフランス語表示</div>
-<div class="meta">Android 10以降</div>
-<h2>3ステップでインストール</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>ダウンロードしたファイルを開く</b><p>ダウンロードの通知、または「ファイル」→「ダウンロード」で<bdi>SoundCatch-1.0.0.apk</bdi>をタップします。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>インストールを許可</b><p>ブラウザにアプリのインストールを許可するようAndroidが求めます。「この提供元のアプリを許可」をオンにして戻り、「インストール」をタップします。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>録音のたびに許可</b><p>初回は「音声の録音」を許可します（取り込まれるのはアプリの音だけで、マイクの音は決して録音されません）。その後は録音のたびにAndroidが共有の同意を求めるので、「画面全体を共有」または録音するアプリを選びます。録音中は画面をオンのままにしてください。</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">署名証明書（SHA-256）： 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>無料、広告なし、アカウント不要。</strong>どこにも何も送信されません。録音した音も書き出したファイルも、お使いのデバイスに残ります。</p></div>
 

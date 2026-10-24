@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -122,33 +120,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="Mac 版 SoundCatch：选择要录制的应用以及录制按钮" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>Mac 版</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ 下载 Mac 版 <bdi>SoundCatch</bdi> 1.0</a>
-<div class="meta">.dmg 文件 · 83.7 MB · 免费 · 已通过 Apple 验证（已公证）</div>
-<div class="meta">搭载 Apple 芯片的 Mac（M1 或更新机型）· macOS 14.4 或更高版本</div>
-<h2>3 步完成安装</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>打开下载的文件</b><p>在“下载”文件夹中双击 <bdi>SoundCatch-1.0.dmg</bdi>。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>将 <bdi>SoundCatch</bdi> 拖到 <bdi>Applications</bdi></b><p>然后从 Applications 文件夹中打开它。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>首次录制时，点按“允许”</b><p>macOS 会请求一次“音频录制”权限。你可以在“系统设置”→“隐私与安全性”中找到它。</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>Mac 版</h2><span class="btn off"><bdi>App Store</bdi><small>即将推出</small></span><div class="meta">搭载 Apple 芯片的 Mac（M1 或更新机型）· macOS 14.4 或更高版本</div></div>
+<div class="platform" id="iphone"><h2>iPhone 版</h2><span class="btn off"><bdi>App Store</bdi><small>即将推出</small></span><div class="meta">iOS 17 或更高版本</div></div>
+<div class="platform" id="android"><h2>Android 版</h2><span class="btn off"><bdi>Google Play</bdi><small>即将推出</small></span><div class="meta">Android 10 或更高版本</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>Android 版</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ 下载 Android 版 <bdi>SoundCatch</bdi> 1.0.0</a>
-<div class="meta">.apk 文件 · 2.4 MB · 免费 · 由 Atria.Eponym 签名 · 即将登陆 Google Play · 应用为法语界面</div>
-<div class="meta">Android 10 或更高版本</div>
-<h2>3 步完成安装</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>打开下载的文件</b><p>在下载通知中，或在“文件”→“下载”中点按 <bdi>SoundCatch-1.0.0.apk</bdi>。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>允许安装</b><p>Android 会请你允许浏览器安装应用：打开“允许来自此来源的应用”，返回，然后点按“安装”。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>每次录制时都需同意</b><p>首次使用时，请允许“录音”权限（只捕获应用的声音，绝不录制麦克风）。之后每次录制，Android 都会请你同意共享：选择“共享整个屏幕”或要录制的应用。录制期间请保持屏幕常亮。</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">签名证书（SHA-256）： 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>免费、无广告、无需账号。</strong>不会向任何地方发送任何内容：你录制的声音和导出的文件都保留在你的设备上。</p></div>
 

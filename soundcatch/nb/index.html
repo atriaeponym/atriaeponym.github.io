@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -125,33 +123,11 @@ bildefremvisning. Appen er på fransk.</p>
   <img src="../img/mac-2.jpg" alt="SoundCatch på Mac: valg av appen som skal tas opp, og opptaksknappen" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>På Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Last ned <bdi>SoundCatch</bdi> 1.0 for Mac</a>
-<div class="meta">.dmg-fil · 83,7 MB · gratis · kontrollert av Apple (notarisert)</div>
-<div class="meta">Mac med Apple-brikke (M1 eller nyere) · macOS 14.4 eller nyere</div>
-<h2>Installer i 3 trinn</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Åpne den nedlastede filen</b><p>Dobbeltklikk på <bdi>SoundCatch-1.0.dmg</bdi> i Nedlastinger.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Dra <bdi>SoundCatch</bdi> til <bdi>Applications</bdi></b><p>Åpne den deretter fra Applications-mappen.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Ved første opptak klikker du «Tillat»</b><p>macOS ber én gang om tillatelsen «Lydopptak». Du finner den igjen i Systeminnstillinger → Personvern og sikkerhet.</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>På Mac</h2><span class="btn off"><bdi>App Store</bdi><small>Kommer snart</small></span><div class="meta">Mac med Apple-brikke (M1 eller nyere) · macOS 14.4 eller nyere</div></div>
+<div class="platform" id="iphone"><h2>På iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>Kommer snart</small></span><div class="meta">iOS 17 eller nyere</div></div>
+<div class="platform" id="android"><h2>På Android</h2><span class="btn off"><bdi>Google Play</bdi><small>Kommer snart</small></span><div class="meta">Android 10 eller nyere</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>På Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Last ned <bdi>SoundCatch</bdi> 1.0.0 for Android</a>
-<div class="meta">.apk-fil · 2,4 MB · gratis · signert av Atria.Eponym · snart også på Google Play · appen er på fransk</div>
-<div class="meta">Android 10 eller nyere</div>
-<h2>Installer i 3 trinn</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Åpne den nedlastede filen</b><p>Trykk på <bdi>SoundCatch-1.0.0.apk</bdi> i nedlastingsvarselet eller i Filer → Nedlastinger.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Tillat installasjonen</b><p>Android ber deg la nettleseren installere apper: slå på «Tillat fra denne kilden», gå tilbake og trykk på «Installer».</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Godta ved hvert opptak</b><p>Første gang tillater du «Ta opp lyd» (bare lyden fra apper fanges opp, aldri mikrofonen). Deretter ber Android om samtykke til deling ved hvert opptak: velg «Del hele skjermen» eller appen som skal tas opp. La skjermen være på mens du tar opp.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">Signeringssertifikat (SHA-256): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>Gratis, uten reklame, uten konto.</strong> Ingenting sendes noe sted: lyden du tar opp og filene du eksporterer, blir på enheten din.</p></div>
 

@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -124,33 +122,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="SoundCatch на Mac: вибір програми для запису та кнопка запису" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>На Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Завантажити <bdi>SoundCatch</bdi> 1.0 для Mac</a>
-<div class="meta">Файл .dmg · 83,7 МБ · безкоштовно · перевірено Apple (нотаризація)</div>
-<div class="meta">Mac із чипом Apple (M1 або новіший) · macOS 14.4 або новіша</div>
-<h2>Встановлення у 3 кроки</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Відкрий завантажений файл</b><p>Двічі клацни <bdi>SoundCatch-1.0.dmg</bdi> у папці «Завантаження».</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Перетягни <bdi>SoundCatch</bdi> до <bdi>Applications</bdi></b><p>Потім відкрий програму з папки Applications.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Під час першого запису натисни «Дозволити»</b><p>macOS один раз попросить дозвіл «Запис аудіо». Його можна знайти в Системних параметрах → Приватність і безпека.</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>На Mac</h2><span class="btn off"><bdi>App Store</bdi><small>Незабаром</small></span><div class="meta">Mac із чипом Apple (M1 або новіший) · macOS 14.4 або новіша</div></div>
+<div class="platform" id="iphone"><h2>На iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>Незабаром</small></span><div class="meta">iOS 17 або новіша</div></div>
+<div class="platform" id="android"><h2>На Android</h2><span class="btn off"><bdi>Google Play</bdi><small>Незабаром</small></span><div class="meta">Android 10 або новіша</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>На Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Завантажити <bdi>SoundCatch</bdi> 1.0.0 для Android</a>
-<div class="meta">Файл .apk · 2,4 МБ · безкоштовно · підписано Atria.Eponym · незабаром також у Google Play · програма французькою</div>
-<div class="meta">Android 10 або новіша</div>
-<h2>Встановлення у 3 кроки</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Відкрий завантажений файл</b><p>Торкнися <bdi>SoundCatch-1.0.0.apk</bdi> у сповіщенні про завантаження або у Файли → Завантаження.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Дозволь установлення</b><p>Android попросить дозволити браузеру встановлювати програми: увімкни «Дозволити з цього джерела», повернися назад і торкнися «Встановити».</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Погоджуйся під час кожного запису</b><p>Першого разу дозволь «Записувати аудіо» (записується лише звук програм, ніколи — мікрофон). Потім під час кожного запису Android питає згоду на трансляцію: вибери «Транслювати весь екран» або програму, яку треба записати. Не вимикай екран під час запису.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">Сертифікат підпису (SHA-256): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>Безкоштовно, без реклами, без облікового запису.</strong> Нічого нікуди не надсилається: звук, який ти записуєш, і файли, які ти експортуєш, залишаються на твоєму пристрої.</p></div>
 

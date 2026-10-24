@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -125,33 +123,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="SoundCatch ב-Mac: בחירת האפליקציה להקלטה וכפתור ההקלטה" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>ב-Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ הורדת <bdi>SoundCatch</bdi> 1.0 ל-Mac</a>
-<div class="meta">קובץ <bdi>.dmg</bdi> · <bdi>83.7 MB</bdi> · חינם · נבדק על ידי Apple (עבר נוטריזציה)</div>
-<div class="meta">Mac עם שבב של Apple (<bdi>M1</bdi> ואילך) · <bdi>macOS 14.4</bdi> ואילך</div>
-<h2>התקנה ב-3 שלבים</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>פתחו את הקובץ שהורדתם</b><p>לחצו לחיצה כפולה על <bdi>SoundCatch-1.0.dmg</bdi> בתיקיית ההורדות.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>גררו את <bdi>SoundCatch</bdi> אל <bdi>Applications</bdi></b><p>ואז פתחו אותה מתיקיית <bdi>Applications</bdi>.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>בהקלטה הראשונה, לחצו על "אפשר"</b><p><bdi>macOS</bdi> מבקש פעם אחת את ההרשאה "הקלטת אודיו". אפשר למצוא אותה ב"הגדרות המערכת" ← "פרטיות ואבטחה".</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>ב-Mac</h2><span class="btn off"><bdi>App Store</bdi><small>בקרוב</small></span><div class="meta">Mac עם שבב של Apple (<bdi>M1</bdi> ואילך) · <bdi>macOS 14.4</bdi> ואילך</div></div>
+<div class="platform" id="iphone"><h2>ב-iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>בקרוב</small></span><div class="meta"><bdi>iOS 17</bdi> ואילך</div></div>
+<div class="platform" id="android"><h2>ב-Android</h2><span class="btn off"><bdi>Google Play</bdi><small>בקרוב</small></span><div class="meta"><bdi>Android 10</bdi> ואילך</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>ב-Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ הורדת <bdi>SoundCatch</bdi> 1.0.0 ל-Android</a>
-<div class="meta">קובץ <bdi>.apk</bdi> · <bdi>2.4 MB</bdi> · חינם · חתום על ידי Atria.Eponym · בקרוב גם ב-Google Play · האפליקציה בצרפתית</div>
-<div class="meta"><bdi>Android 10</bdi> ואילך</div>
-<h2>התקנה ב-3 שלבים</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>פתחו את הקובץ שהורדתם</b><p>הקישו על <bdi>SoundCatch-1.0.0.apk</bdi> בהתראת ההורדה או ב"קבצים" ← "הורדות".</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>אשרו את ההתקנה</b><p>Android יבקש מכם לאפשר לדפדפן להתקין אפליקציות: הפעילו את "אפשר ממקור זה", חזרו אחורה ואז הקישו על "התקנה".</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>אשרו בכל הקלטה</b><p>בפעם הראשונה, אשרו את "הקלטת אודיו" (נקלט רק הצליל של האפליקציות, אף פעם לא המיקרופון). לאחר מכן Android יבקש בכל הקלטה את הסכמתכם לשיתוף: בחרו "שיתוף כל המסך" או את האפליקציה שרוצים להקליט. השאירו את המסך דולק במהלך ההקלטה.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">אישור חתימה (<bdi>SHA-256</bdi>): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>חינם, בלי פרסומות, בלי חשבון.</strong> שום דבר לא נשלח לשום מקום: הצליל שאתם מקליטים והקבצים שאתם מייצאים נשארים במכשיר שלכם.</p></div>
 
