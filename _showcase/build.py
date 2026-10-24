@@ -168,6 +168,11 @@ a.row:hover{background:rgba(76,195,138,.08);border-color:rgba(76,195,138,.45)}
 .live .badge{color:var(--ok);background:var(--okbg)}
 .soon .badge{color:var(--soon);background:var(--soonbg)}
 .row .go{color:var(--dim)}
+.stores{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:auto 0 10px}
+.stores a{display:block;line-height:0;border-radius:9px;transition:transform .15s,box-shadow .15s}
+.stores a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.25)}
+.stores img{height:46px;width:auto;display:block}
+.stores .play img{height:46px}
 .links{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;margin-top:14px}
 .links a{color:var(--accent);font-weight:600;text-decoration:none}
 .links a:hover{text-decoration:underline}
@@ -315,7 +320,7 @@ def url(lang: str) -> str:
 def asset(path: str, standalone: bool) -> str:
     data = (ROOT / path).read_bytes()
     if standalone:
-        kind = {"png": "image/png", "jpg": "image/jpeg", "mp4": "video/mp4"}[path.rsplit(".", 1)[1]]
+        kind = {"svg": "image/svg+xml", "png": "image/png", "jpg": "image/jpeg", "mp4": "video/mp4"}[path.rsplit(".", 1)[1]]
         return f"data:{kind};base64," + base64.b64encode(data).decode()
     # Root-relative, so it works from every language folder and on both domains; a content hash in the
     # URL, so a changed file is never served from a browser's cache.
@@ -357,6 +362,20 @@ def media(a: dict, lang: str, standalone: bool) -> str:
             f'aria-label="{html.escape(name(a, lang))}"></video></div><span class="example">{{example}}</span></div>')
 
 
+STORE_BADGE = {"appstore": "appstore.svg", "play": "play.png", "msstore": "msstore.svg"}
+
+
+def store_badges(a: dict, lang: str, T: dict, standalone: bool) -> str:
+    """Official store badges for the stores where the app is live."""
+    out = []
+    for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])):
+        if p["status"] == "live" and p["channel"] in STORE_BADGE:
+            src = asset(f"badges/{lang}/{STORE_BADGE[p['channel']]}", standalone)
+            out.append(f'<a class="store {p["channel"]}" href="{html.escape(p["url"])}">'
+                       f'<img src="{html.escape(src)}" alt="{html.escape(T[p["channel"]])}"></a>')
+    return f'<div class="stores">{"".join(out)}</div>' if out else ""
+
+
 def card(a: dict, lang: str, T: dict, standalone: bool) -> str:
     own = T["_apps"][a["id"]]
     chips = "".join(f"<span>{html.escape(f)}</span>" for f in own["features"])
@@ -375,7 +394,8 @@ def card(a: dict, lang: str, T: dict, standalone: bool) -> str:
             f'<h2>{html.escape(name(a, lang))}</h2></div>'
             f'<p class="tag">{html.escape(own["tagline"])}</p>'
             f'<div class="chips">{chips}</div>'
-            f'<div class="rows">{"".join(row(p, T) for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])))}</div>'
+            f'{store_badges(a, lang, T, standalone)}'
+            f'<div class="rows">{"".join(row(p, T) for p in sorted(a["platforms"], key=lambda p: PLATFORMS.index(p["platform"])) if p["status"] != "live" or p["channel"] not in STORE_BADGE)}</div>'
             f'<div class="links">{"".join(links)}</div></div>{m}</article>')
 
 
