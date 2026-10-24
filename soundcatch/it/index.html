@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -122,33 +120,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="SoundCatch su Mac: la scelta dell'app da registrare e il pulsante di registrazione" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>Su Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Scarica <bdi>SoundCatch</bdi> 1.0 per Mac</a>
-<div class="meta">File .dmg · 83,7 MB · gratuito · verificato da Apple (autenticato)</div>
-<div class="meta">Mac con chip Apple (M1 o successivo) · macOS 14.4 o successivo</div>
-<h2>Installa in 3 passaggi</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Apri il file scaricato</b><p>Fai doppio clic su <bdi>SoundCatch-1.0.dmg</bdi> nella cartella Download.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Trascina <bdi>SoundCatch</bdi> in <bdi>Applicazioni</bdi></b><p>Poi aprila dalla cartella Applicazioni.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Alla prima registrazione, fai clic su «Consenti»</b><p>macOS chiede una sola volta l'autorizzazione «Registrazione audio». La trovi in Impostazioni di Sistema → Privacy e sicurezza.</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>Su Mac</h2><span class="btn off"><bdi>App Store</bdi><small>Presto disponibile</small></span><div class="meta">Mac con chip Apple (M1 o successivo) · macOS 14.4 o successivo</div></div>
+<div class="platform" id="iphone"><h2>Su iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>Presto disponibile</small></span><div class="meta">iOS 17 o successivo</div></div>
+<div class="platform" id="android"><h2>Su Android</h2><span class="btn off"><bdi>Google Play</bdi><small>Presto disponibile</small></span><div class="meta">Android 10 o successivo</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>Su Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Scarica <bdi>SoundCatch</bdi> 1.0.0 per Android</a>
-<div class="meta">File .apk · 2,4 MB · gratuito · firmato da Atria.Eponym · presto anche su Google Play · app in francese</div>
-<div class="meta">Android 10 o successivo</div>
-<h2>Installa in 3 passaggi</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Apri il file scaricato</b><p>Tocca <bdi>SoundCatch-1.0.0.apk</bdi> nella notifica del download o in File → Download.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Consenti l'installazione</b><p>Android ti chiede di consentire al browser di installare app: attiva «Consenti da questa fonte», torna indietro, poi tocca «Installa».</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>A ogni registrazione, accetta</b><p>La prima volta, consenti «Registrare audio» (viene catturato solo il suono delle app, mai il microfono). Poi, a ogni registrazione, Android chiede il consenso alla condivisione: scegli «Condividi intero schermo» o l'app da registrare. Tieni lo schermo acceso durante la registrazione.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">Certificato di firma (SHA-256): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>Gratuito, senza pubblicità, senza account.</strong> Non viene inviato nulla da nessuna parte: il suono che registri e i file che esporti restano sul tuo dispositivo.</p></div>
 

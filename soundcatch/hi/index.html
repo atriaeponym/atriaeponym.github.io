@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -122,33 +120,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="Mac पर SoundCatch: रिकॉर्ड करने के लिए ऐप का चुनाव और रिकॉर्ड बटन" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>Mac पर</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Mac के लिए <bdi>SoundCatch</bdi> 1.0 डाउनलोड करें</a>
-<div class="meta">.dmg फ़ाइल · 83.7 MB · मुफ़्त · Apple द्वारा जाँची गई (notarized)</div>
-<div class="meta">Apple silicon वाला Mac (M1 या नया) · macOS 14.4 या नया</div>
-<h2>3 चरणों में इंस्टॉल करें</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>डाउनलोड की गई फ़ाइल खोलें</b><p>अपने डाउनलोड में <bdi>SoundCatch-1.0.dmg</bdi> पर डबल-क्लिक करें।</p></div></div>
-  <div class="step"><div class="n">2</div><div><b><bdi>SoundCatch</bdi> को <bdi>Applications</bdi> में खींचें</b><p>फिर उसे Applications फ़ोल्डर से खोलें।</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>पहली रिकॉर्डिंग पर “अनुमति दें” पर क्लिक करें</b><p>macOS एक बार “ऑडियो रिकॉर्डिंग” की अनुमति माँगता है। यह सिस्टम सेटिंग्ज़ → गोपनीयता और सुरक्षा में मिलती है।</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>Mac पर</h2><span class="btn off"><bdi>App Store</bdi><small>जल्द आ रहा है</small></span><div class="meta">Apple silicon वाला Mac (M1 या नया) · macOS 14.4 या नया</div></div>
+<div class="platform" id="iphone"><h2>iPhone पर</h2><span class="btn off"><bdi>App Store</bdi><small>जल्द आ रहा है</small></span><div class="meta">iOS 17 या नया</div></div>
+<div class="platform" id="android"><h2>Android पर</h2><span class="btn off"><bdi>Google Play</bdi><small>जल्द आ रहा है</small></span><div class="meta">Android 10 या नया</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>Android पर</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Android के लिए <bdi>SoundCatch</bdi> 1.0.0 डाउनलोड करें</a>
-<div class="meta">.apk फ़ाइल · 2.4 MB · मुफ़्त · Atria.Eponym द्वारा साइन की गई · जल्द ही Google Play पर भी · ऐप फ़्रेंच में</div>
-<div class="meta">Android 10 या नया</div>
-<h2>3 चरणों में इंस्टॉल करें</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>डाउनलोड की गई फ़ाइल खोलें</b><p>डाउनलोड की सूचना में या Files → डाउनलोड में <bdi>SoundCatch-1.0.0.apk</bdi> पर टैप करें।</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>इंस्टॉल करने की अनुमति दें</b><p>Android आपसे अपने ब्राउज़र को ऐप इंस्टॉल करने देने के लिए कहता है: “इस स्रोत से अनुमति दें” चालू करें, वापस जाएँ, फिर “इंस्टॉल करें” पर टैप करें।</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>हर रिकॉर्डिंग पर स्वीकार करें</b><p>पहली बार “ऑडियो रिकॉर्ड करें” की अनुमति दें (सिर्फ़ ऐप्स की आवाज़ कैप्चर होती है, माइक्रोफ़ोन कभी नहीं)। इसके बाद Android हर रिकॉर्डिंग पर शेयर करने की सहमति माँगता है: “पूरी स्क्रीन शेयर करें” या रिकॉर्ड किया जाने वाला ऐप चुनें। रिकॉर्डिंग के दौरान स्क्रीन चालू रखें।</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">साइनिंग सर्टिफ़िकेट (SHA-256): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>मुफ़्त, बिना विज्ञापन, बिना अकाउंट।</strong> कुछ भी कहीं नहीं भेजा जाता: आप जो आवाज़ रिकॉर्ड करते हैं और जो फ़ाइलें एक्सपोर्ट करते हैं, वे आपके डिवाइस पर ही रहती हैं।</p></div>
 

@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -125,33 +123,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="Mac پر SoundCatch: ریکارڈ کرنے کے لیے ایپ کا انتخاب اور ریکارڈ بٹن" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>Mac پر</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ Mac کے لیے <bdi>SoundCatch</bdi> 1.0 ڈاؤن لوڈ کریں</a>
-<div class="meta"><bdi>.dmg</bdi> فائل · <bdi>83.7 MB</bdi> · مفت · Apple سے تصدیق شدہ (نوٹرائزڈ)</div>
-<div class="meta">Apple چِپ والا Mac (<bdi>M1</bdi> یا نیا) · <bdi>macOS 14.4</bdi> یا نیا</div>
-<h2>3 مراحل میں انسٹال کریں</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>ڈاؤن لوڈ کی گئی فائل کھولیں</b><p>اپنے ڈاؤن لوڈز میں <bdi>SoundCatch-1.0.dmg</bdi> پر ڈبل کلک کریں۔</p></div></div>
-  <div class="step"><div class="n">2</div><div><b><bdi>SoundCatch</bdi> کو <bdi>Applications</bdi> میں گھسیٹیں</b><p>پھر اسے <bdi>Applications</bdi> فولڈر سے کھولیں۔</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>پہلی ریکارڈنگ پر “اجازت دیں” پر کلک کریں</b><p><bdi>macOS</bdi> ایک بار “آڈیو ریکارڈنگ” کی اجازت مانگتا ہے۔ یہ سسٹم سیٹنگز ← پرائیویسی اور سیکیورٹی میں موجود ہوتی ہے۔</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>Mac پر</h2><span class="btn off"><bdi>App Store</bdi><small>جلد آ رہا ہے</small></span><div class="meta">Apple چِپ والا Mac (<bdi>M1</bdi> یا نیا) · <bdi>macOS 14.4</bdi> یا نیا</div></div>
+<div class="platform" id="iphone"><h2>iPhone پر</h2><span class="btn off"><bdi>App Store</bdi><small>جلد آ رہا ہے</small></span><div class="meta"><bdi>iOS 17</bdi> یا نیا</div></div>
+<div class="platform" id="android"><h2>Android پر</h2><span class="btn off"><bdi>Google Play</bdi><small>جلد آ رہا ہے</small></span><div class="meta"><bdi>Android 10</bdi> یا نیا</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>Android پر</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ Android کے لیے <bdi>SoundCatch</bdi> 1.0.0 ڈاؤن لوڈ کریں</a>
-<div class="meta"><bdi>.apk</bdi> فائل · <bdi>2.4 MB</bdi> · مفت · Atria.Eponym کی جانب سے دستخط شدہ · جلد Google Play پر بھی · ایپ فرانسیسی میں</div>
-<div class="meta"><bdi>Android 10</bdi> یا نیا</div>
-<h2>3 مراحل میں انسٹال کریں</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>ڈاؤن لوڈ کی گئی فائل کھولیں</b><p>ڈاؤن لوڈ کی اطلاع میں یا فائلز ← ڈاؤن لوڈز میں <bdi>SoundCatch-1.0.0.apk</bdi> پر ٹیپ کریں۔</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>انسٹالیشن کی اجازت دیں</b><p>Android آپ سے کہتا ہے کہ اپنے براؤزر کو ایپس انسٹال کرنے کی اجازت دیں: “اس ماخذ سے اجازت دیں” آن کریں، واپس جائیں، پھر “انسٹال کریں” پر ٹیپ کریں۔</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>ہر ریکارڈنگ پر منظوری دیں</b><p>پہلی بار “آڈیو ریکارڈ کریں” کی اجازت دیں (صرف ایپس کی آواز ریکارڈ ہوتی ہے، مائیکروفون کبھی نہیں)۔ پھر Android ہر ریکارڈنگ پر شیئرنگ کی منظوری مانگتا ہے: “پوری اسکرین کا اشتراک کریں” یا وہ ایپ منتخب کریں جسے ریکارڈ کرنا ہے۔ ریکارڈنگ کے دوران اسکرین آن رکھیں۔</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">دستخطی سرٹیفکیٹ (<bdi>SHA-256</bdi>): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>مفت، اشتہارات کے بغیر، اکاؤنٹ کے بغیر۔</strong> کچھ بھی کہیں نہیں بھیجا جاتا: آپ کی ریکارڈ کی ہوئی آواز اور ایکسپورٹ کی ہوئی فائلیں آپ کے آلے پر ہی رہتی ہیں۔</p></div>
 

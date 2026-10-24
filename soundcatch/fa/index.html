@@ -63,14 +63,12 @@ bdi{white-space:nowrap}
 .box p:last-child{margin-bottom:0}
 .btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
      padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.btn.off{background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
 .meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .shots{display:grid;gap:14px;margin:20px 0 6px}
 .shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
-   display:grid;place-items:center}
-.step p{font-size:14.5px;margin:2px 0 0}
 .platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
 .platform h2{margin-top:0}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -125,33 +123,11 @@ footer a{color:var(--muted)}
   <img src="../img/mac-2.jpg" alt="SoundCatch روی Mac: انتخاب برنامه برای ضبط و دکمه ضبط" width="1600" height="1000" loading="lazy">
 </div>
 
-<div class="platform" id="mac">
-<h2>روی Mac</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ دانلود <bdi>SoundCatch</bdi> 1.0 برای Mac</a>
-<div class="meta">فایل <bdi>.dmg</bdi> · 83.7 مگابایت · رایگان · بررسی‌شده توسط Apple (نوتاریزه‌شده)</div>
-<div class="meta">Mac با تراشه Apple (<bdi>M1</bdi> یا جدیدتر) · <bdi>macOS 14.4</bdi> یا جدیدتر</div>
-<h2>نصب در 3 مرحله</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>فایل دانلودشده را باز کنید</b><p>در پوشه دانلودها روی <bdi>SoundCatch-1.0.dmg</bdi> دوبار کلیک کنید.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b><bdi>SoundCatch</bdi> را به <bdi>Applications</bdi> بکشید</b><p>سپس آن را از پوشه <bdi>Applications</bdi> باز کنید.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>در اولین ضبط، روی «اجازه دادن» کلیک کنید</b><p><bdi>macOS</bdi> یک بار مجوز «ضبط صدا» را درخواست می‌کند. این مجوز در تنظیمات سیستم ← حریم خصوصی و امنیت قرار دارد.</p></div></div>
+<div class="stores">
+<div class="platform" id="mac"><h2>روی Mac</h2><span class="btn off"><bdi>App Store</bdi><small>به‌زودی</small></span><div class="meta">Mac با تراشه Apple (<bdi>M1</bdi> یا جدیدتر) · <bdi>macOS 14.4</bdi> یا جدیدتر</div></div>
+<div class="platform" id="iphone"><h2>روی iPhone</h2><span class="btn off"><bdi>App Store</bdi><small>به‌زودی</small></span><div class="meta"><bdi>iOS 17</bdi> یا جدیدتر</div></div>
+<div class="platform" id="android"><h2>روی Android</h2><span class="btn off"><bdi>Google Play</bdi><small>به‌زودی</small></span><div class="meta"><bdi>Android 10</bdi> یا جدیدتر</div></div>
 </div>
-</div>
-
-<div class="platform" id="android">
-<h2>روی Android</h2>
-<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ دانلود <bdi>SoundCatch</bdi> 1.0.0 برای Android</a>
-<div class="meta">فایل <bdi>.apk</bdi> · 2.4 مگابایت · رایگان · امضاشده توسط Atria.Eponym · به‌زودی در Google Play هم · برنامه به زبان فرانسوی</div>
-<div class="meta"><bdi>Android 10</bdi> یا جدیدتر</div>
-<h2>نصب در 3 مرحله</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>فایل دانلودشده را باز کنید</b><p>روی <bdi>SoundCatch-1.0.0.apk</bdi> در اعلان دانلود یا در فایل‌ها ← بارگیری‌ها ضربه بزنید.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>اجازه نصب بدهید</b><p>Android از شما می‌خواهد به مرورگرتان اجازه نصب برنامه بدهید: «مجاز کردن از این منبع» را روشن کنید، برگردید و سپس روی «نصب» ضربه بزنید.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>در هر ضبط، موافقت کنید</b><p>بار اول، مجوز «ضبط صدا» را بدهید (فقط صدای برنامه‌ها ضبط می‌شود، هرگز میکروفون). سپس Android در هر ضبط رضایت شما را برای هم‌رسانی می‌پرسد: «هم‌رسانی کل صفحه» یا برنامه‌ای را که می‌خواهید ضبط کنید انتخاب کنید. در طول ضبط، صفحه را روشن نگه دارید.</p></div></div>
-</div>
-<div class="meta" style="overflow-wrap:anywhere">گواهی امضا (<bdi>SHA-256</bdi>): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
-</div>
-<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>رایگان، بدون تبلیغات، بدون حساب کاربری.</strong> هیچ چیز به هیچ جا ارسال نمی‌شود: صدایی که ضبط می‌کنید و فایل‌هایی که خروجی می‌گیرید روی دستگاه خودتان می‌مانند.</p></div>
 
