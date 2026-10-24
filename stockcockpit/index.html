@@ -92,11 +92,10 @@ footer p+p{margin-top:6px}
 <script>
 // Store switches: set "live" to true once the store page really answers (not a 404).
 // - appstore: App Store page answers 404 until the iPhone app is published.
-// - microsoft: in Microsoft Store certification.
 var STORES = {
   play:      { live: true,  url: "https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit", label: "Disponible sur" },
   appstore:  { live: false, url: "https://apps.apple.com/app/id6825065004", label: "Télécharger dans l’" },
-  microsoft: { live: false, url: "https://apps.microsoft.com/detail/9MSVWVC0L4J5", label: "Disponible sur" }
+  microsoft: { live: true,  url: "https://apps.microsoft.com/detail/9MSVWVC0L4J5", label: "Disponible sur" }
 };
 
 // Live stores become links; "soon" ones stay plain text.
