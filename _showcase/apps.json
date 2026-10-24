@@ -356,26 +356,9 @@
       "platforms": [
         {
           "platform": "mac",
-          "channel": "direct",
-          "status": "live",
-          "url": "soundcatch/"
-        },
-        {
-          "platform": "mac",
           "channel": "appstore",
           "status": "soon",
           "url": "https://apps.apple.com/app/id6826256541"
-        },
-        {
-          "platform": "mac",
-          "channel": "msstore",
-          "status": "soon"
-        },
-        {
-          "platform": "android",
-          "channel": "direct",
-          "status": "live",
-          "url": "soundcatch/#android"
         },
         {
           "platform": "android",
