@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index">
+<title>SoundCatch — מקליט אודיו ל-Mac</title>
+<meta name="description" content="הקליטו את הצליל של אפליקציה ב-Mac או פתחו קובץ, חתכו את מה שלא צריך וייצאו קובץ אחד נקי.">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/soundcatch/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/soundcatch/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/soundcatch/es/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/soundcatch/de/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/soundcatch/it/">
+<link rel="alternate" hreflang="pt" href="https://atriaeponym.com/soundcatch/pt/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/soundcatch/ar/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/soundcatch/zh/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/soundcatch/ja/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/soundcatch/hi/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/soundcatch/nb/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/soundcatch/sv/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/soundcatch/fi/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/soundcatch/ru/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/soundcatch/id/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/soundcatch/vi/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/soundcatch/ko/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/soundcatch/tr/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/soundcatch/pl/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/soundcatch/nl/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/soundcatch/uk/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/soundcatch/bn/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/soundcatch/pt-br/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/soundcatch/ur/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/soundcatch/fa/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/soundcatch/th/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/soundcatch/el/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/soundcatch/he/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F6F6F9;--card:#FFFFFF;--ink:#14141C;--muted:#4D4D60;--line:#E3E3EC;--accent:#C76A12;--btn:#FF9F43;--ok:#1E7F47}
+@media (prefers-color-scheme:dark){:root{--page:#0B0B12;--card:#12121C;--ink:#ECECF4;--muted:#A9A9BC;--line:#26263A;--accent:#FFB76B;--btn:#FF9F43;--ok:#4CC38A}}
+body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
+     max-width:860px;margin:0 auto;font-size:16px}
+html,body{overflow-x:hidden}
+h1{font-size:28px;margin-bottom:4px;font-weight:700}
+.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
+h2{font-size:19px;margin:36px 0 10px;font-weight:700}
+p{margin-bottom:14px;color:var(--muted)}
+b,strong{color:var(--ink)}
+ul{margin:0 0 16px 22px}
+[dir=rtl] ul{margin:0 22px 16px 0}
+li{margin-bottom:9px;color:var(--muted)}
+a{color:var(--accent)}
+bdi{white-space:nowrap}
+.lang{margin-bottom:20px}
+.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
+     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.hero img{width:76px;height:76px;border-radius:18px}
+.tag{color:var(--muted);font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
+     border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.btn{display:inline-block;background:var(--btn);color:#1b1006;text-decoration:none;font-weight:700;
+     padding:14px 24px;border-radius:14px;margin:6px 0 8px}
+.meta{font-size:13.5px;color:var(--muted)}
+.shots{display:grid;gap:14px;margin:20px 0 6px}
+.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--btn);color:#1b1006;font-weight:700;
+   display:grid;place-items:center}
+.step p{font-size:14.5px;margin:2px 0 0}
+.platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+.platform h2{margin-top:0}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="lang">
+  <select aria-label="Language" onchange="location.href=this.value">
+    <option value="../en/" data-hl="en">English</option>
+    <option value="../?lang=fr" data-hl="fr">Français</option>
+    <option value="../es/" data-hl="es">Español</option>
+    <option value="../de/" data-hl="de">Deutsch</option>
+    <option value="../it/" data-hl="it">Italiano</option>
+    <option value="../pt/" data-hl="pt">Português</option>
+    <option value="../ar/" data-hl="ar">العربية</option>
+    <option value="../zh/" data-hl="zh-Hans">中文</option>
+    <option value="../ja/" data-hl="ja">日本語</option>
+    <option value="../hi/" data-hl="hi">हिन्दी</option>
+    <option value="../nb/" data-hl="nb">Norsk</option>
+    <option value="../sv/" data-hl="sv">Svenska</option>
+    <option value="../fi/" data-hl="fi">Suomi</option>
+    <option value="../ru/" data-hl="ru">Русский</option>
+    <option value="../id/" data-hl="id">Indonesia</option>
+    <option value="../vi/" data-hl="vi">Tiếng Việt</option>
+    <option value="../ko/" data-hl="ko">한국어</option>
+    <option value="../tr/" data-hl="tr">Türkçe</option>
+    <option value="../pl/" data-hl="pl">Polski</option>
+    <option value="../nl/" data-hl="nl">Nederlands</option>
+    <option value="../uk/" data-hl="uk">Українська</option>
+    <option value="../bn/" data-hl="bn">বাংলা</option>
+    <option value="../pt-br/" data-hl="pt-BR">Português (BR)</option>
+    <option value="../ur/" data-hl="ur">اردو</option>
+    <option value="../fa/" data-hl="fa">فارسی</option>
+    <option value="../th/" data-hl="th">ไทย</option>
+    <option value="../el/" data-hl="el">Ελληνικά</option>
+    <option value="../he/" data-hl="he" selected>עברית</option>
+  </select>
+</div>
+
+<div class="hero"><img src="../../icons/soundcatch.png" alt="" width="76" height="76">
+<div><h1><bdi>SoundCatch</bdi></h1><div class="tag">מקליטים, חותכים, מייצאים.</div></div></div>
+
+<p><bdi>SoundCatch</bdi> הוא <strong>מקליט אודיו</strong>: הוא מקליט את הצליל שיוצא מאפליקציה
+שבחרתם (או מכל ה-Mac), או פותח כל קובץ אודיו או וידאו. אתם רואים את צורת הגל, מסמנים בעכבר את מה שלא
+צריך, מאזינים לו, מוחקים אותו ומייצאים קובץ אחד נקי — למשל כפסקול
+למצגת תמונות. האפליקציה בצרפתית.</p>
+
+<div class="shots">
+  <img src="../img/mac-1.jpg" alt="SoundCatch ב-Mac: צורת הגל של הקלטה, קטע מסומן ופורמטי הייצוא" width="1600" height="1000" loading="lazy">
+  <img src="../img/mac-2.jpg" alt="SoundCatch ב-Mac: בחירת האפליקציה להקלטה וכפתור ההקלטה" width="1600" height="1000" loading="lazy">
+</div>
+
+<div class="platform" id="mac">
+<h2>ב-Mac</h2>
+<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-1.0/SoundCatch-1.0.dmg">⬇ הורדת <bdi>SoundCatch</bdi> 1.0 ל-Mac</a>
+<div class="meta">קובץ <bdi>.dmg</bdi> · <bdi>83.7 MB</bdi> · חינם · נבדק על ידי Apple (עבר נוטריזציה)</div>
+<div class="meta">Mac עם שבב של Apple (<bdi>M1</bdi> ואילך) · <bdi>macOS 14.4</bdi> ואילך</div>
+<h2>התקנה ב-3 שלבים</h2>
+<div class="steps">
+  <div class="step"><div class="n">1</div><div><b>פתחו את הקובץ שהורדתם</b><p>לחצו לחיצה כפולה על <bdi>SoundCatch-1.0.dmg</bdi> בתיקיית ההורדות.</p></div></div>
+  <div class="step"><div class="n">2</div><div><b>גררו את <bdi>SoundCatch</bdi> אל <bdi>Applications</bdi></b><p>ואז פתחו אותה מתיקיית <bdi>Applications</bdi>.</p></div></div>
+  <div class="step"><div class="n">3</div><div><b>בהקלטה הראשונה, לחצו על "אפשר"</b><p><bdi>macOS</bdi> מבקש פעם אחת את ההרשאה "הקלטת אודיו". אפשר למצוא אותה ב"הגדרות המערכת" ← "פרטיות ואבטחה".</p></div></div>
+</div>
+</div>
+
+<div class="platform" id="android">
+<h2>ב-Android</h2>
+<a class="btn" href="https://github.com/atriaeponym/atriaeponym.github.io/releases/download/soundcatch-android-1.0.0/SoundCatch-1.0.0.apk">⬇ הורדת <bdi>SoundCatch</bdi> 1.0.0 ל-Android</a>
+<div class="meta">קובץ <bdi>.apk</bdi> · <bdi>2.4 MB</bdi> · חינם · חתום על ידי Atria.Eponym · בקרוב גם ב-Google Play · האפליקציה בצרפתית</div>
+<div class="meta"><bdi>Android 10</bdi> ואילך</div>
+<h2>התקנה ב-3 שלבים</h2>
+<div class="steps">
+  <div class="step"><div class="n">1</div><div><b>פתחו את הקובץ שהורדתם</b><p>הקישו על <bdi>SoundCatch-1.0.0.apk</bdi> בהתראת ההורדה או ב"קבצים" ← "הורדות".</p></div></div>
+  <div class="step"><div class="n">2</div><div><b>אשרו את ההתקנה</b><p>Android יבקש מכם לאפשר לדפדפן להתקין אפליקציות: הפעילו את "אפשר ממקור זה", חזרו אחורה ואז הקישו על "התקנה".</p></div></div>
+  <div class="step"><div class="n">3</div><div><b>אשרו בכל הקלטה</b><p>בפעם הראשונה, אשרו את "הקלטת אודיו" (נקלט רק הצליל של האפליקציות, אף פעם לא המיקרופון). לאחר מכן Android יבקש בכל הקלטה את הסכמתכם לשיתוף: בחרו "שיתוף כל המסך" או את האפליקציה שרוצים להקליט. השאירו את המסך דולק במהלך ההקלטה.</p></div></div>
+</div>
+<div class="meta" style="overflow-wrap:anywhere">אישור חתימה (<bdi>SHA-256</bdi>): 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
+</div>
+<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
+
+<div class="box"><p><strong>חינם, בלי פרסומות, בלי חשבון.</strong> שום דבר לא נשלח לשום מקום: הצליל שאתם מקליטים והקבצים שאתם מייצאים נשארים במכשיר שלכם.</p></div>
+
+<h2>מה SoundCatch עושה</h2>
+<ul>
+  <li><strong>מקליט את הצליל של אפליקציה</strong> שבוחרים מרשימה (או של כל ה-Mac), בלי מיקרופון ובלי מנהל התקן אודיו שצריך להתקין.</li>
+  <li><strong>פותח קובץ</strong> אודיו או וידאו: פשוט גוררים אותו לחלון.</li>
+  <li><strong>חותך</strong>: מסמנים בעכבר, מאזינים, מוחקים; כמה סימונים בבת אחת; מעבר הדרגתי של 20 אלפיות שנייה בכל חיבור כדי שלא יישמעו קליקים; ביטול וביצוע מחדש.</li>
+  <li><strong>מאתר קטעים חשודים</strong> (שקט, שינויים בעוצמה או בגוון, דיבור) ומציע לכם אותם: שום דבר לא נחתך בלעדיכם.</li>
+  <li><strong>מייצא</strong> ל-AAC (<bdi>.m4a</bdi>), MP3, Apple Lossless או FLAC, לתיקייה שתבחרו. הצליל נשאר באיכות אולפן עד הייצוא.</li>
+</ul>
+
+<p>הקליטו צליל לשימושכם האישי וכבדו את זכויות היצירות ואת תנאי השירותים שאתם מאזינים להם.</p>
+
+<h2>מידע</h2>
+<ul>
+  <li><a href="../privacy/he/">מדיניות פרטיות</a></li>
+  <li><a href="mailto:atria.eponym@gmail.com?subject=SoundCatch">atria.eponym@gmail.com</a></li>
+</ul>
+
+<footer><bdi>SoundCatch</bdi> — Atria.Eponym, מפתח עצמאי הפועל בצרפת · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a> · © 2026 Atria.Eponym</footer>
+<script>
+(function(){
+  try {
+    var names = new Intl.DisplayNames([navigator.language], {type: 'language'});
+    document.querySelectorAll('.lang option').forEach(function(o){
+      var n = names.of(o.dataset.hl);
+      if (n && n.toLowerCase() !== o.textContent.toLowerCase()) o.textContent += ' (' + n + ')';
+    });
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

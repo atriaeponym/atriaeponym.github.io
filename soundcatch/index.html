@@ -6,14 +6,62 @@
 <meta name="robots" content="index">
 <title>SoundCatch — enregistreur audio pour Mac</title>
 <meta name="description" content="Enregistre le son d'une appli de ton Mac ou ouvre un fichier, coupe les passages inutiles, exporte un fichier propre.">
-<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/soundcatch/">
 <link rel="alternate" hreflang="en" href="https://atriaeponym.com/soundcatch/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/soundcatch/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/soundcatch/es/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/soundcatch/de/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/soundcatch/it/">
+<link rel="alternate" hreflang="pt" href="https://atriaeponym.com/soundcatch/pt/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/soundcatch/ar/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/soundcatch/zh/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/soundcatch/ja/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/soundcatch/hi/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/soundcatch/nb/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/soundcatch/sv/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/soundcatch/fi/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/soundcatch/ru/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/soundcatch/id/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/soundcatch/vi/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/soundcatch/ko/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/soundcatch/tr/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/soundcatch/pl/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/soundcatch/nl/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/soundcatch/uk/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/soundcatch/bn/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/soundcatch/pt-br/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/soundcatch/ur/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/soundcatch/fa/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/soundcatch/th/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/soundcatch/el/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/soundcatch/he/">
+<script>
+(function(){
+  var have = ['en','fr','es','de','it','pt','ar','zh','ja','hi','nb','sv','fi','ru','id','vi','ko','tr','pl','nl','uk','bn','pt-br','ur','fa','th','el','he'];
+  function norm(t){
+    t = String(t || '').toLowerCase().replace('_','-');
+    if (t === 'pt-br') return 'pt-br';
+    var l = t.split('-')[0];
+    if (l === 'in') l = 'id';
+    if (l === 'iw') l = 'he';
+    if (l === 'no' || l === 'nn') l = 'nb';
+    return have.indexOf(l) >= 0 ? l : '';
+  }
+  var m = /[?&]lang=([^&#]+)/.exec(location.search);
+  var want = m ? norm(decodeURIComponent(m[1])) : '';
+  if (!want) {
+    var list = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < list.length && !want; i++) want = norm(list[i]);
+    if (!want) want = 'en';
+  }
+  if (want && want !== 'fr') location.replace(want + '/');
+})();
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--page:#F6F6F9;--card:#FFFFFF;--ink:#14141C;--muted:#4D4D60;--line:#E3E3EC;--accent:#C76A12;--btn:#FF9F43;--ok:#1E7F47}
 @media (prefers-color-scheme:dark){:root{--page:#0B0B12;--card:#12121C;--ink:#ECECF4;--muted:#A9A9BC;--line:#26263A;--accent:#FFB76B;--btn:#FF9F43;--ok:#4CC38A}}
 body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
-     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
      max-width:860px;margin:0 auto;font-size:16px}
 html,body{overflow-x:hidden}
 h1{font-size:28px;margin-bottom:4px;font-weight:700}
@@ -22,9 +70,13 @@ h2{font-size:19px;margin:36px 0 10px;font-weight:700}
 p{margin-bottom:14px;color:var(--muted)}
 b,strong{color:var(--ink)}
 ul{margin:0 0 16px 22px}
+[dir=rtl] ul{margin:0 22px 16px 0}
 li{margin-bottom:9px;color:var(--muted)}
 a{color:var(--accent)}
 bdi{white-space:nowrap}
+.lang{margin-bottom:20px}
+.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
+     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
 .hero{display:flex;gap:16px;align-items:center;margin-bottom:12px}
 .hero img{width:76px;height:76px;border-radius:18px}
 .tag{color:var(--muted);font-size:16px}
@@ -48,7 +100,40 @@ footer a{color:var(--muted)}
 </style>
 </head>
 <body>
-<div class="sub"><a href="en/">English</a></div>
+
+<div class="lang">
+  <select aria-label="Language" onchange="location.href=this.value">
+    <option value="en/" data-hl="en">English</option>
+    <option value="?lang=fr" data-hl="fr" selected>Français</option>
+    <option value="es/" data-hl="es">Español</option>
+    <option value="de/" data-hl="de">Deutsch</option>
+    <option value="it/" data-hl="it">Italiano</option>
+    <option value="pt/" data-hl="pt">Português</option>
+    <option value="ar/" data-hl="ar">العربية</option>
+    <option value="zh/" data-hl="zh-Hans">中文</option>
+    <option value="ja/" data-hl="ja">日本語</option>
+    <option value="hi/" data-hl="hi">हिन्दी</option>
+    <option value="nb/" data-hl="nb">Norsk</option>
+    <option value="sv/" data-hl="sv">Svenska</option>
+    <option value="fi/" data-hl="fi">Suomi</option>
+    <option value="ru/" data-hl="ru">Русский</option>
+    <option value="id/" data-hl="id">Indonesia</option>
+    <option value="vi/" data-hl="vi">Tiếng Việt</option>
+    <option value="ko/" data-hl="ko">한국어</option>
+    <option value="tr/" data-hl="tr">Türkçe</option>
+    <option value="pl/" data-hl="pl">Polski</option>
+    <option value="nl/" data-hl="nl">Nederlands</option>
+    <option value="uk/" data-hl="uk">Українська</option>
+    <option value="bn/" data-hl="bn">বাংলা</option>
+    <option value="pt-br/" data-hl="pt-BR">Português (BR)</option>
+    <option value="ur/" data-hl="ur">اردو</option>
+    <option value="fa/" data-hl="fa">فارسی</option>
+    <option value="th/" data-hl="th">ไทย</option>
+    <option value="el/" data-hl="el">Ελληνικά</option>
+    <option value="he/" data-hl="he">עברית</option>
+  </select>
+</div>
+
 <div class="hero"><img src="../icons/soundcatch.png" alt="" width="76" height="76">
 <div><h1><bdi>SoundCatch</bdi></h1><div class="tag">Enregistre, coupe, exporte.</div></div></div>
 
@@ -88,7 +173,7 @@ propre — par exemple pour la bande-son d'un montage photo.</p>
 </div>
 <div class="meta" style="overflow-wrap:anywhere">Certificat de signature (SHA-256) : 09:43:4C:07:07:B4:7F:00:57:D7:E1:D9:18:E2:99:5E:A0:3A:37:C2:38:D5:94:22:F8:CA:5A:11:98:B9:27:A2</div>
 </div>
-<!-- IPHONE: section « Sur iPhone » (App Store) à ajouter ici, même gabarit que #mac. -->
+<!-- IPHONE: iPhone section (App Store) goes here, same layout as #mac. -->
 
 <div class="box"><p><strong>Gratuit, sans publicité, sans compte.</strong> Rien n'est envoyé nulle part : le son que tu enregistres et les fichiers que tu exportes restent sur ton appareil.</p></div>
 
@@ -105,10 +190,21 @@ propre — par exemple pour la bande-son d'un montage photo.</p>
 
 <h2>Informations</h2>
 <ul>
-  <li><a href="privacy/">Politique de confidentialité</a></li>
+  <li><a href="privacy/?lang=fr">Politique de confidentialité</a></li>
   <li><a href="mailto:atria.eponym@gmail.com?subject=SoundCatch">atria.eponym@gmail.com</a></li>
 </ul>
 
 <footer><bdi>SoundCatch</bdi> — Atria.Eponym, développeur individuel établi en France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a> · © 2026 Atria.Eponym</footer>
+<script>
+(function(){
+  try {
+    var names = new Intl.DisplayNames([navigator.language], {type: 'language'});
+    document.querySelectorAll('.lang option').forEach(function(o){
+      var n = names.of(o.dataset.hl);
+      if (n && n.toLowerCase() !== o.textContent.toLowerCase()) o.textContent += ' (' + n + ')';
+    });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
