@@ -128,7 +128,7 @@
     },
     {
       "id": "maclive",
-      "name": "Computer Live",
+      "name": "Mac Live · Computer Live",
       "icon": "icons/maclive.png",
       "tagline": {
         "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.",
@@ -156,7 +156,41 @@
           "platform": "mac",
           "channel": "direct",
           "status": "live",
-          "url": "maclive/"
+          "url": "maclive/",
+          "label": "Mac",
+          "systems": [
+            "apple"
+          ],
+          "name": {
+            "en": "Computer Live · companion",
+            "fr": "Computer Live · compagnon",
+            "de": "Computer Live · Begleiter",
+            "es": "Computer Live · compañero",
+            "it": "Computer Live · compagno",
+            "pt": "Computer Live · companheiro",
+            "pt-br": "Computer Live · companheiro",
+            "nl": "Computer Live · begeleider",
+            "sv": "Computer Live · följeslagare",
+            "nb": "Computer Live · følgesvenn",
+            "fi": "Computer Live · kumppani",
+            "pl": "Computer Live · towarzysz",
+            "ru": "Computer Live · компаньон",
+            "uk": "Computer Live · компаньйон",
+            "el": "Computer Live · συνοδός",
+            "tr": "Computer Live · yardımcı",
+            "ar": "Computer Live · المرافق",
+            "fa": "Computer Live · همراه",
+            "he": "Computer Live · רכיב נלווה",
+            "hi": "Computer Live · साथी",
+            "bn": "Computer Live · সঙ্গী",
+            "ur": "Computer Live · ساتھی",
+            "id": "Computer Live · pendamping",
+            "vi": "Computer Live · ứng dụng đồng hành",
+            "th": "Computer Live · โปรแกรมคู่หู",
+            "ja": "Computer Live · コンパニオン",
+            "ko": "Computer Live · 컴패니언",
+            "zh": "Computer Live · 配套程序"
+          }
         },
         {
           "platform": "android",
@@ -169,7 +203,8 @@
           "platform": "iphone",
           "channel": "appstore",
           "status": "soon",
-          "url": "https://apps.apple.com/app/id6822078240"
+          "url": "https://apps.apple.com/app/id6822078240",
+          "name": "Computer Live"
         }
       ],
       "more": "maclive/",

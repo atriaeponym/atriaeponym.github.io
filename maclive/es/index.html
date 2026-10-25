@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Computer Live para Mac</title>
+<title>Mac Live y Computer Live: tu Mac en directo en tu teléfono</title>
 <link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/maclive/en/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/maclive/">
 <link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/maclive/es/">
@@ -72,7 +72,27 @@ h1{font-size:28px}
 .step b{color:#E8EDF5}
 .step p{font-size:14.5px;margin:2px 0 0}
 .play{display:inline-flex;gap:8px;align-items:center;border:1px solid #2C3A52;border-radius:10px;padding:9px 14px;
-      color:#E8EDF5;text-decoration:none;font-size:14px;margin-top:6px}
+      color:#E8EDF5;text-decoration:none;font-size:14px}
+.play.soon{color:#7D8594;border-style:dashed}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.step .cta{display:inline-block;max-width:100%;margin:14px 0 6px;font-size:16px;padding:12px 22px;line-height:1.35}
+.btns .play{display:inline-block;max-width:100%}
+.lead{font-size:17px}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;background:#111A26;
+     border:1px solid #1E2A3A;border-radius:16px;padding:18px;margin-top:18px}
+.part{text-align:center}
+.part svg{display:block;margin:0 auto 8px}
+.who{color:#E8EDF5;font-weight:700}
+.names{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 6px}
+.nm{display:inline-flex;flex-direction:column;align-items:center;background:#14303a;border:1px solid #2a5866;
+    border-radius:12px;padding:6px 12px;min-width:120px}
+.nm b{color:#fff;font-size:17px}
+.nm small{color:#38D5F0;font-size:11.5px;letter-spacing:.04em}
+.what{font-size:13.5px;color:#7D8594}
+.arrow{color:#38D5F0;font-size:13px;text-align:center;line-height:1.3}
+.arrow span{display:block;font-size:26px}
+.note{font-size:14px;color:#7D8594;margin:10px 2px 0}
+@media(max-width:560px){.duo{grid-template-columns:1fr}}
 footer a{color:#8A93A6}
 </style>
 </head>
@@ -111,24 +131,30 @@ footer a{color:#8A93A6}
   </select>
 </div>
 
-<div class="hero">
-  <div class="logo"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="15" height="10" rx="1.5"/><path d="M1 17h17"/><rect x="17" y="8" width="6" height="12" rx="1.3"/><path d="M19.4 18h1.2"/></svg></div>
-  <div><h1><bdi>Computer Live</bdi> para Mac</h1><div class="tag">Tu Mac, en directo en tu teléfono Android.</div></div>
-</div>
+<h1>Tu Mac, en directo en tu teléfono</h1>
+<p class="lead">Temperaturas, procesador, memoria, disco y batería de tu Mac, en tu teléfono, estés donde estés. Para ello hacen falta <b>dos piezas, ambas gratuitas</b>:</p>
 
-<a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ Descargar <bdi>Computer Live</bdi> 1.0.3</a>
-<div class="meta">Archivo .dmg · 2,2 MB · gratis · validado por Apple</div>
-<div class="meta">Mac con chip de Apple (M1 o posterior) · macOS 14 o posterior</div>
+<div class="duo">
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M1 20h22"/></svg><div class="who">En el Mac</div>
+    <div class="names"><span class="nm"><b>Computer Live</b><small>para Mac · compañero</small></span></div>
+    <div class="what">Mide y envía. No hay nada que mirar.</div></div>
+  <div class="arrow"><span>⇄</span>cifrado de extremo a extremo</div>
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 19h3"/></svg><div class="who">En el teléfono</div>
+    <div class="names"><span class="nm"><b>Mac Live</b><small>Android</small></span><span class="nm"><b>Computer Live</b><small>iPhone</small></span></div>
+    <div class="what">La app que miras.</div></div>
+</div>
+<p class="note"><bdi>Computer Live</bdi> para Mac es el compañero de la app del teléfono: sin él, la app no tiene nada que mostrar; por sí solo, no muestra nada en el Mac.</p>
 
 <h2>Instalar en 3 pasos</h2>
 <div class="steps">
-  <div class="step"><div class="n">1</div><div><b>Abre el archivo descargado</b><p>Haz doble clic en <bdi>ComputerLive-1.0.3.dmg</bdi> en tus Descargas.</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>Arrastra <bdi>Computer Live</bdi> a <bdi>Applications</bdi></b><p>Después ábrela: su icono aparece en la barra de menús, en la parte superior de la pantalla.</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>Escanea el código QR con tu teléfono</b><p>En el menú de <bdi>Computer Live</bdi>, elige «Añadir un teléfono…» y escanea el código con la app de Android.</p></div></div>
+  <div class="step"><div class="n">1</div><div><b>Instala la app en tu teléfono</b>
+    <div class="btns"><a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ <bdi>Mac Live</bdi> para Android, en Google Play</a><span class="play soon"><bdi>Computer Live</bdi> para iPhone, en el App Store — muy pronto</span></div></div></div>
+  <div class="step"><div class="n">2</div><div><b>Instala el compañero <bdi>Computer Live</bdi> en tu Mac</b><p>Haz doble clic en <bdi>ComputerLive-1.0.3.dmg</bdi> en tus Descargas.</p><p>Arrastra <bdi>Computer Live</bdi> a <bdi>Applications</bdi>. Después ábrela: su icono aparece en la barra de menús, en la parte superior de la pantalla.</p>
+    <a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ Descargar el compañero <bdi>Computer Live</bdi> 1.0.3</a>
+    <div class="meta">Archivo .dmg · 2,2 MB · gratis · validado por Apple</div>
+<div class="meta">Mac con chip de Apple (M1 o posterior) · macOS 14 o posterior</div></div></div>
+  <div class="step"><div class="n">3</div><div><b>Conecta los dos</b><p>En el menú de <bdi>Computer Live</bdi> en el Mac, elige «Añadir un teléfono…» y escanea el código QR con la app del teléfono. Eso es todo.</p></div></div>
 </div>
-
-<div class="box"><p><b>¿Aún no tienes la app en tu teléfono?</b><br>Es gratis en Google Play.</p>
-<a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ <bdi>Mac Live</bdi> en Google Play</a></div>
 
 <h2>Lo que debes saber</h2>
 <ul>

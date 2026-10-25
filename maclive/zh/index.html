@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Computer Live（Mac 版）</title>
+<title>Mac Live 与 Computer Live：在手机上实时查看你的 Mac</title>
 <link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/maclive/en/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/maclive/">
 <link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/maclive/es/">
@@ -72,7 +72,27 @@ h1{font-size:28px}
 .step b{color:#E8EDF5}
 .step p{font-size:14.5px;margin:2px 0 0}
 .play{display:inline-flex;gap:8px;align-items:center;border:1px solid #2C3A52;border-radius:10px;padding:9px 14px;
-      color:#E8EDF5;text-decoration:none;font-size:14px;margin-top:6px}
+      color:#E8EDF5;text-decoration:none;font-size:14px}
+.play.soon{color:#7D8594;border-style:dashed}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.step .cta{display:inline-block;max-width:100%;margin:14px 0 6px;font-size:16px;padding:12px 22px;line-height:1.35}
+.btns .play{display:inline-block;max-width:100%}
+.lead{font-size:17px}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;background:#111A26;
+     border:1px solid #1E2A3A;border-radius:16px;padding:18px;margin-top:18px}
+.part{text-align:center}
+.part svg{display:block;margin:0 auto 8px}
+.who{color:#E8EDF5;font-weight:700}
+.names{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 6px}
+.nm{display:inline-flex;flex-direction:column;align-items:center;background:#14303a;border:1px solid #2a5866;
+    border-radius:12px;padding:6px 12px;min-width:120px}
+.nm b{color:#fff;font-size:17px}
+.nm small{color:#38D5F0;font-size:11.5px;letter-spacing:.04em}
+.what{font-size:13.5px;color:#7D8594}
+.arrow{color:#38D5F0;font-size:13px;text-align:center;line-height:1.3}
+.arrow span{display:block;font-size:26px}
+.note{font-size:14px;color:#7D8594;margin:10px 2px 0}
+@media(max-width:560px){.duo{grid-template-columns:1fr}}
 footer a{color:#8A93A6}
 </style>
 </head>
@@ -111,24 +131,30 @@ footer a{color:#8A93A6}
   </select>
 </div>
 
-<div class="hero">
-  <div class="logo"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="15" height="10" rx="1.5"/><path d="M1 17h17"/><rect x="17" y="8" width="6" height="12" rx="1.3"/><path d="M19.4 18h1.2"/></svg></div>
-  <div><h1><bdi>Computer Live</bdi>（Mac 版）</h1><div class="tag">你的 Mac，实时显示在 Android 手机上。</div></div>
-</div>
+<h1>在手机上实时查看你的 Mac</h1>
+<p class="lead">随时随地在手机上查看 Mac 的温度、处理器、内存、磁盘和电池。为此需要<b>两个部分，都免费</b>：</p>
 
-<a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ 下载 <bdi>Computer Live</bdi> 1.0.3</a>
-<div class="meta">.dmg 文件 · 2.2 MB · 免费 · 经 Apple 公证</div>
-<div class="meta">配备 Apple 芯片的 Mac（M1 或更新）· macOS 14 或更新</div>
+<div class="duo">
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M1 20h22"/></svg><div class="who">在 Mac 上</div>
+    <div class="names"><span class="nm"><b>Computer Live</b><small>Mac 版 · 配套程序</small></span></div>
+    <div class="what">负责测量和发送，无需查看。</div></div>
+  <div class="arrow"><span>⇄</span>端到端加密</div>
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 19h3"/></svg><div class="who">在手机上</div>
+    <div class="names"><span class="nm"><b>Mac Live</b><small>Android</small></span><span class="nm"><b>Computer Live</b><small>iPhone</small></span></div>
+    <div class="what">你用来查看的应用。</div></div>
+</div>
+<p class="note">Mac 版 <bdi>Computer Live</bdi> 是手机应用的配套程序：没有它，应用就没有内容可显示；单独使用时，它不会在 Mac 上显示任何内容。</p>
 
 <h2>三步安装</h2>
 <div class="steps">
-  <div class="step"><div class="n">1</div><div><b>打开下载的文件</b><p>在“下载”文件夹中双击 <bdi>ComputerLive-1.0.3.dmg</bdi>。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b>将 <bdi>Computer Live</bdi> 拖到 <bdi>Applications</bdi></b><p>然后打开它：它的图标会出现在屏幕顶部的菜单栏中。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>用手机扫描二维码</b><p>在 <bdi>Computer Live</bdi> 菜单中选择“添加手机…”，然后用 Android 应用扫描二维码。</p></div></div>
+  <div class="step"><div class="n">1</div><div><b>在手机上安装应用</b>
+    <div class="btns"><a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ Android 版 <bdi>Mac Live</bdi>，Google Play</a><span class="play soon">iPhone 版 <bdi>Computer Live</bdi>，App Store — 即将推出</span></div></div></div>
+  <div class="step"><div class="n">2</div><div><b>在 Mac 上安装配套程序 <bdi>Computer Live</bdi></b><p>在“下载”文件夹中双击 <bdi>ComputerLive-1.0.3.dmg</bdi>。</p><p>将 <bdi>Computer Live</bdi> 拖到 <bdi>Applications</bdi>。然后打开它：它的图标会出现在屏幕顶部的菜单栏中。</p>
+    <a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ 下载配套程序 <bdi>Computer Live</bdi> 1.0.3</a>
+    <div class="meta">.dmg 文件 · 2.2 MB · 免费 · 经 Apple 公证</div>
+<div class="meta">配备 Apple 芯片的 Mac（M1 或更新）· macOS 14 或更新</div></div></div>
+  <div class="step"><div class="n">3</div><div><b>将两者连接</b><p>在 Mac 上的 <bdi>Computer Live</bdi> 菜单中选择“添加手机…”，然后用手机应用扫描二维码。就这么简单。</p></div></div>
 </div>
-
-<div class="box"><p><b>手机上还没有这个应用？</b><br>它在 Google Play 上免费提供。</p>
-<a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ Google Play 上的 <bdi>Mac Live</bdi></a></div>
 
 <h2>须知</h2>
 <ul>

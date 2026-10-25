@@ -364,15 +364,16 @@ def logos(p: dict) -> str:
         names = ["android"]
     elif p["platform"] == "iphone":
         names = ["apple"]
-    else:   # computer: what the channel really installs on
-        names = {"msstore": ["windows"], "appstore": ["apple"]}.get(p["channel"], ["apple", "windows"])
+    else:   # computer: what the channel really installs on, unless the row names its systems
+        names = p.get("systems") or {"msstore": ["windows"], "appstore": ["apple"]}.get(p["channel"], ["apple", "windows"])
     return "".join(ICON["logo_" + n] for n in names)
 
 
 def row(p: dict, lang: str, T: dict, standalone: bool) -> str:
     status = p["status"]
-    inner = (f'<span class="pf"><span class="marks">{logos(p)}{ICON[p["platform"]]}</span><span><b>{html.escape(T[p["platform"]])}</b>'
-             f'<small>{html.escape(T[p["channel"]])}{" · " + html.escape(p["name"]) if p.get("name") else ""}</small></span></span>')
+    label = p.get("label") or T[p["platform"]]
+    inner = (f'<span class="pf"><span class="marks">{logos(p)}{ICON[p["platform"]]}</span><span><b>{html.escape(label)}</b>'
+             f'<small>{html.escape(T[p["channel"]])}{" · " + html.escape(name(p, lang)) if p.get("name") else ""}</small></span></span>')
     if status == "live" and p["channel"] in STORE_BADGE:
         src = asset(f"badges/{lang}/{STORE_BADGE[p['channel']]}", standalone)
         return (f'<a class="row live store {p["channel"]}" href="{html.escape(p["url"])}">{inner}'
@@ -383,7 +384,7 @@ def row(p: dict, lang: str, T: dict, standalone: bool) -> str:
         if p["channel"] == "direct":
             # no store, so a download badge drawn in the stores' style: the systems' marks and where it runs
             dl = (f'<span class="sb dl"><span class="dlm">{logos(p)}</span><span><small>{html.escape(T["direct"])}</small>'
-                  f'<b>{html.escape(T[p["platform"]])}</b></span></span>')
+                  f'<b>{html.escape(label)}</b></span></span>')
             return f'<a class="row live store direct" href="{html.escape(href)}">{inner}{dl}</a>'
         return f'<a class="row live" href="{html.escape(href)}">{inner}{badge}<span class="go">{ICON["arrow"]}</span></a>'
     return f'<div class="row soon">{inner}{badge}</div>'
