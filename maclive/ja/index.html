@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Computer Live（Mac 版）</title>
+<title>Mac Live と Computer Live：Mac をスマートフォンでライブ表示</title>
 <link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/maclive/en/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/maclive/">
 <link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/maclive/es/">
@@ -72,7 +72,27 @@ h1{font-size:28px}
 .step b{color:#E8EDF5}
 .step p{font-size:14.5px;margin:2px 0 0}
 .play{display:inline-flex;gap:8px;align-items:center;border:1px solid #2C3A52;border-radius:10px;padding:9px 14px;
-      color:#E8EDF5;text-decoration:none;font-size:14px;margin-top:6px}
+      color:#E8EDF5;text-decoration:none;font-size:14px}
+.play.soon{color:#7D8594;border-style:dashed}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.step .cta{display:inline-block;max-width:100%;margin:14px 0 6px;font-size:16px;padding:12px 22px;line-height:1.35}
+.btns .play{display:inline-block;max-width:100%}
+.lead{font-size:17px}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;background:#111A26;
+     border:1px solid #1E2A3A;border-radius:16px;padding:18px;margin-top:18px}
+.part{text-align:center}
+.part svg{display:block;margin:0 auto 8px}
+.who{color:#E8EDF5;font-weight:700}
+.names{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 6px}
+.nm{display:inline-flex;flex-direction:column;align-items:center;background:#14303a;border:1px solid #2a5866;
+    border-radius:12px;padding:6px 12px;min-width:120px}
+.nm b{color:#fff;font-size:17px}
+.nm small{color:#38D5F0;font-size:11.5px;letter-spacing:.04em}
+.what{font-size:13.5px;color:#7D8594}
+.arrow{color:#38D5F0;font-size:13px;text-align:center;line-height:1.3}
+.arrow span{display:block;font-size:26px}
+.note{font-size:14px;color:#7D8594;margin:10px 2px 0}
+@media(max-width:560px){.duo{grid-template-columns:1fr}}
 footer a{color:#8A93A6}
 </style>
 </head>
@@ -111,24 +131,30 @@ footer a{color:#8A93A6}
   </select>
 </div>
 
-<div class="hero">
-  <div class="logo"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="15" height="10" rx="1.5"/><path d="M1 17h17"/><rect x="17" y="8" width="6" height="12" rx="1.3"/><path d="M19.4 18h1.2"/></svg></div>
-  <div><h1><bdi>Computer Live</bdi>（Mac 版）</h1><div class="tag">あなたの Mac を、Android スマートフォンでリアルタイムに。</div></div>
-</div>
+<h1>Mac を、スマートフォンでライブ表示</h1>
+<p class="lead">Mac の温度、プロセッサ、メモリ、ディスク、バッテリーを、どこにいてもスマートフォンで確認できます。そのために<b>2 つのソフト（どちらも無料）</b>が必要です：</p>
 
-<a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ <bdi>Computer Live</bdi> 1.0.3 をダウンロード</a>
-<div class="meta">.dmg ファイル · 2.2 MB · 無料 · Apple による公証済み</div>
-<div class="meta">Apple シリコン搭載 Mac（M1 以降）· macOS 14 以降</div>
+<div class="duo">
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M1 20h22"/></svg><div class="who">Mac 側</div>
+    <div class="names"><span class="nm"><b>Computer Live</b><small>Mac 用 · コンパニオン</small></span></div>
+    <div class="what">計測して送信します。画面はありません。</div></div>
+  <div class="arrow"><span>⇄</span>エンドツーエンド暗号化</div>
+  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 19h3"/></svg><div class="who">スマートフォン側</div>
+    <div class="names"><span class="nm"><b>Mac Live</b><small>Android</small></span><span class="nm"><b>Computer Live</b><small>iPhone</small></span></div>
+    <div class="what">実際に見るアプリです。</div></div>
+</div>
+<p class="note">Mac 用 <bdi>Computer Live</bdi> はスマートフォンアプリのコンパニオンです。これがないとアプリには何も表示されず、これだけでは Mac 上に何も表示されません。</p>
 
 <h2>3 ステップでインストール</h2>
 <div class="steps">
-  <div class="step"><div class="n">1</div><div><b>ダウンロードしたファイルを開く</b><p>「ダウンロード」フォルダの <bdi>ComputerLive-1.0.3.dmg</bdi> をダブルクリックします。</p></div></div>
-  <div class="step"><div class="n">2</div><div><b><bdi>Computer Live</bdi> を <bdi>Applications</bdi> にドラッグ</b><p>そのあと開くと、画面上部のメニューバーにアイコンが表示されます。</p></div></div>
-  <div class="step"><div class="n">3</div><div><b>スマートフォンで QR コードを読み取る</b><p><bdi>Computer Live</bdi> のメニューで「スマートフォンを追加…」を選び、Android アプリでコードを読み取ります。</p></div></div>
+  <div class="step"><div class="n">1</div><div><b>スマートフォンにアプリをインストール</b>
+    <div class="btns"><a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ Android 用 <bdi>Mac Live</bdi>（Google Play）</a><span class="play soon">iPhone 用 <bdi>Computer Live</bdi>（App Store）— 近日公開</span></div></div></div>
+  <div class="step"><div class="n">2</div><div><b>Mac にコンパニオン <bdi>Computer Live</bdi> をインストール</b><p>「ダウンロード」フォルダの <bdi>ComputerLive-1.0.3.dmg</bdi> をダブルクリックします。</p><p><bdi>Computer Live</bdi> を <bdi>Applications</bdi> にドラッグ。そのあと開くと、画面上部のメニューバーにアイコンが表示されます。</p>
+    <a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ コンパニオン <bdi>Computer Live</bdi> 1.0.3 をダウンロード</a>
+    <div class="meta">.dmg ファイル · 2.2 MB · 無料 · Apple による公証済み</div>
+<div class="meta">Apple シリコン搭載 Mac（M1 以降）· macOS 14 以降</div></div></div>
+  <div class="step"><div class="n">3</div><div><b>2 つをつなぐ</b><p>Mac の <bdi>Computer Live</bdi> メニューで「スマートフォンを追加…」を選び、スマートフォンのアプリで QR コードを読み取ります。これで完了です。</p></div></div>
 </div>
-
-<div class="box"><p><b>スマートフォンにまだアプリがありませんか？</b><br>Google Play で無料で入手できます。</p>
-<a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ Google Play の <bdi>Mac Live</bdi></a></div>
 
 <h2>知っておきたいこと</h2>
 <ul>
