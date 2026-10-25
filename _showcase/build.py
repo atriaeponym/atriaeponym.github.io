@@ -453,7 +453,7 @@ def structured(apps: list, lang: str, T: dict) -> str:
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
-GOATCOUNTER = ""   # https://atriaeponym.goatcounter.com: cookieless, anonymous visit count
+GOATCOUNTER = "atriaeponym"   # https://atriaeponym.goatcounter.com: cookieless, anonymous visit count
 
 
 def counter(T: dict, standalone: bool) -> str:
