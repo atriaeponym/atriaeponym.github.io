@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index">
+<title>Diapo — photo viewer for Mac, Windows, iPhone and Android</title>
+<meta name="description" content="The photos of a folder or a whole disk, big, subfolders included. Your photos are never modified.">
+<link rel="canonical" href="https://atriaeponym.com/diapo/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/diapo/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/diapo/en/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/diapo/en/">
+<link rel="icon" href="/icons/diapo.png">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F7F5F0;--card:#FFFFFF;--ink:#17150F;--muted:#5F5A50;--line:#E6E1D6;--accent:#A87A1E;--ok:#0B9A69}
+@media (prefers-color-scheme:dark){:root{--page:#141416;--card:#1D1D20;--ink:#EEEEEE;--muted:#9A9AA0;--line:#2A2A2E;--accent:#E9C46A;--ok:#3BD69B}}
+body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     max-width:860px;margin:0 auto;font-size:16px}
+html,body{overflow-x:hidden}
+h1{font-size:28px;margin-bottom:4px;font-weight:700}
+h2{font-size:19px;margin:36px 0 10px;font-weight:700}
+p{margin-bottom:14px;color:var(--muted)}
+b,strong{color:var(--ink)}
+ul{margin:0 0 16px 22px}
+li{margin-bottom:9px;color:var(--muted)}
+a{color:var(--accent)}
+bdi{white-space:nowrap}
+.top{display:flex;justify-content:flex-end;font-size:14px;margin-bottom:16px}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.hero img{width:76px;height:76px;border-radius:18px}
+.tag{color:var(--muted);font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
+     border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.btn{display:inline-block;font-weight:700;padding:14px 24px;border-radius:14px;margin:6px 0 8px;
+     background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
+.meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+.platform h2{margin-top:0}
+.shots{display:grid;gap:14px;margin:20px 0 6px}
+.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.phones{display:flex;gap:14px;overflow-x:auto;margin:6px 0 6px;padding-bottom:6px}
+.phones img{width:220px;height:auto;flex:0 0 auto;border-radius:22px;border:1px solid var(--line)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="top"><a href="../?lang=fr" hreflang="fr">Français</a></div>
+
+<div class="hero"><img src="/icons/diapo.png" alt="" width="76" height="76">
+<div><h1><bdi>Diapo</bdi></h1><div class="tag">Your photos, big</div></div></div>
+
+<p><bdi>Diapo</bdi> shows the photos of a folder or a whole disk big on screen, subfolders included. You go from one photo to the next with the arrow keys, and your photos are never modified.</p>
+
+<div class="shots"><img src="../img/mac-1-en.jpg" alt="Diapo on Mac: the home screen, with the folders to resume" width="1600" height="1000" loading="lazy"><img src="../img/mac-2-en.jpg" alt="Diapo on Mac: Filmstrip mode, the photo and a strip of thumbnails" width="1600" height="1000" loading="lazy"><img src="../img/mac-3-en.jpg" alt="Diapo on Mac: Contact Sheet mode, a grid of thumbnails" width="1600" height="1000" loading="lazy"></div>
+<div class="phones"><img src="../img/iphone-2-en.jpg" alt="Diapo on iPhone: Filmstrip mode" width="600" height="1304" loading="lazy"><img src="../img/iphone-4.jpg" alt="Diapo on iPhone: a photo in full screen" width="600" height="1304" loading="lazy"></div>
+
+<div class="stores"><div class="platform" id="mac"><h2>On Mac</h2><span class="btn"><bdi>App Store</bdi><small>Coming soon</small></span><div class="meta">macOS 14 or later</div></div><div class="platform" id="windows"><h2>On Windows</h2><span class="btn"><bdi>Microsoft Store</bdi><small>Coming soon</small></span><div class="meta">Windows 10 (1809) or later</div></div><div class="platform" id="iphone"><h2>On iPhone</h2><span class="btn"><bdi>App Store</bdi><small>Coming soon</small></span><div class="meta">iOS 17 or later</div></div><div class="platform" id="android"><h2>On Android</h2><span class="btn"><bdi>Google Play</bdi><small>Coming soon</small></span><div class="meta">Android 8 or later</div></div></div>
+
+<div class="box"><p><strong>14-day free trial (15 days on Windows), then a one-time purchase to keep using it. No subscription.</strong> No ads, no tracking, no account.</p></div>
+
+<h2>View</h2><ul><li>Three modes: <strong>Full Screen</strong>, <strong>Filmstrip</strong> (the photo and a vertical strip of thumbnails) and <strong>Contact Sheet</strong> (a grid of thumbnails).</li><li>Arrow keys ← →, click, wheel or touchpad to move on. The space bar starts the automatic slideshow.</li><li>On a phone: swipe to go from one photo to the next, pinch to zoom, double tap for full screen.</li><li>Photos are shown the right way up, from their EXIF orientation.</li><li>Diapo resumes at the last photo seen in each folder.</li></ul><h2>Formats</h2><ul><li>JPEG, HEIC, PNG, TIFF, WebP, GIF, BMP and RAW (Canon CR2/CR3, Nikon NEF, Sony ARW, DNG…).</li></ul><h2>Favorites and selections</h2><ul><li>A heart, or the F key, adds a photo to your Favorites.</li><li>Selections: while browsing your disks, mark photos with a click, then copy them into a folder to share them. Duplicates are skipped by their content.</li></ul><h2>Your photos stay untouched</h2><ul><li>Diapo never modifies, moves, renames or deletes a photo. It only makes copies, when you ask for them.</li></ul>
+
+<p>Available in 28 languages.</p>
+
+<h2>Information</h2>
+<ul>
+  <li><a href="../privacy/en/">Privacy policy</a></li>
+  <li><a href="mailto:atria.eponym@gmail.com?subject=Diapo">atria.eponym@gmail.com</a></li>
+</ul>
+
+<footer><bdi>Diapo</bdi> — Atria.Eponym, independent developer based in France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a> · © 2026 Atria.Eponym</footer>
+</body>
+</html>

@@ -94,6 +94,16 @@
         "Passagens suspeitas detetadas"
       ],
       "tagline": "Gravador de áudio: grava o som de uma aplicação ou abre um ficheiro, corta o que não precisas e exporta um único ficheiro limpo. Sem anúncios, sem conta."
+    },
+    "diapo": {
+      "features": [
+        "Ecrã completo, Película e Folha de contactos",
+        "Todos os formatos, incluindo RAW",
+        "Seleções para partilhar",
+        "Fotos nunca alteradas",
+        "Sem publicidade, sem rastreio, sem conta"
+      ],
+      "tagline": "As fotos de uma pasta ou de um disco inteiro, em grande, incluindo subpastas. As suas fotos nunca são alteradas."
     }
   }
 }

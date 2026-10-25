@@ -94,6 +94,16 @@
         "Bagian mencurigakan ditandai"
       ],
       "tagline": "Perekam audio: rekam suara sebuah aplikasi atau buka file, potong bagian yang tidak perlu, ekspor satu file yang bersih. Tanpa iklan, tanpa akun."
+    },
+    "diapo": {
+      "features": [
+        "Layar Penuh, Pita Film, dan Lembar Kontak",
+        "Semua format, termasuk RAW",
+        "Seleksi untuk dibagikan",
+        "Foto tidak pernah diubah",
+        "Tanpa iklan, tanpa pelacakan, tanpa akun"
+      ],
+      "tagline": "Foto dari satu folder atau seluruh disk, tampil besar, termasuk subfolder. Foto Anda tidak pernah diubah."
     }
   }
 }

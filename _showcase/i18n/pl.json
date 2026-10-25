@@ -94,6 +94,16 @@
         "Wykryte podejrzane fragmenty"
       ],
       "tagline": "Rejestrator dźwięku: nagraj dźwięk aplikacji lub otwórz plik, wytnij to, czego nie potrzebujesz, i wyeksportuj jeden czysty plik. Bez reklam, bez konta."
+    },
+    "diapo": {
+      "features": [
+        "Pełny ekran, Klisza i Stykówka",
+        "Wszystkie formaty, także RAW",
+        "Zestawy do udostępnienia",
+        "Zdjęcia nigdy nie są zmieniane",
+        "Bez reklam, bez śledzenia, bez konta"
+      ],
+      "tagline": "Zdjęcia z folderu lub całego dysku w dużym formacie, razem z podfolderami. Zdjęcia nigdy nie są modyfikowane."
     }
   }
 }

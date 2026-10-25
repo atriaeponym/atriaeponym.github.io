@@ -94,6 +94,16 @@
         "Verdächtige Stellen erkannt"
       ],
       "tagline": "Audiorekorder: Nimm den Ton einer App auf oder öffne eine Datei, schneide heraus, was du nicht brauchst, und exportiere eine saubere Datei. Keine Werbung, kein Konto."
+    },
+    "diapo": {
+      "features": [
+        "Vollbild, Filmstreifen und Kontaktbogen",
+        "Alle Formate, auch RAW",
+        "Auswahlen zum Teilen",
+        "Fotos werden nie verändert",
+        "Keine Werbung, kein Tracking, kein Konto"
+      ],
+      "tagline": "Die Fotos eines Ordners oder einer ganzen Festplatte, in groß, Unterordner inklusive. Ihre Fotos werden nie verändert."
     }
   }
 }

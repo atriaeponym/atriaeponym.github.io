@@ -94,6 +94,16 @@
         "Pasajes sospechosos detectados"
       ],
       "tagline": "Grabadora de audio: graba el sonido de una app o abre un archivo, corta lo que no necesitas y exporta un único archivo limpio. Sin anuncios, sin cuenta."
+    },
+    "diapo": {
+      "features": [
+        "Pantalla completa, Película y Hoja de contactos",
+        "Todos los formatos, incluido RAW",
+        "Selecciones para compartir",
+        "Fotos nunca modificadas",
+        "Sin publicidad, sin rastreo, sin cuenta"
+      ],
+      "tagline": "Las fotos de una carpeta o de un disco entero, en grande, con sus subcarpetas. Sus fotos nunca se modifican."
     }
   }
 }

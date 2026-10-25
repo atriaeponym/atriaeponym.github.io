@@ -94,6 +94,16 @@
         "Şüpheli bölüm tespiti"
       ],
       "tagline": "Ses kaydedici: bir uygulamanın sesini kaydet ya da bir dosya aç, gerekmeyen kısımları kes, tek bir temiz dosya olarak dışa aktar. Reklam yok, hesap yok."
+    },
+    "diapo": {
+      "features": [
+        "Tam Ekran, Film Şeridi ve Kontak Baskı",
+        "RAW dahil tüm biçimler",
+        "Paylaşmak için seçkiler",
+        "Fotoğraflar asla değiştirilmez",
+        "Reklam yok, izleme yok, hesap yok"
+      ],
+      "tagline": "Bir klasördeki ya da tüm diskteki fotoğraflar, alt klasörler dahil, büyük boyutta. Fotoğraflarınız asla değiştirilmez."
     }
   }
 }

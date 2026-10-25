@@ -94,6 +94,16 @@
         "Passaggi sospetti individuati"
       ],
       "tagline": "Registratore audio: registra l'audio di un'app o apri un file, taglia ciò che non ti serve, esporta un unico file pulito. Niente pubblicità, nessun account."
+    },
+    "diapo": {
+      "features": [
+        "Schermo intero, Pellicola e Provini",
+        "Tutti i formati, anche RAW",
+        "Selezioni da condividere",
+        "Foto mai modificate",
+        "Niente pubblicità, niente tracciamento, nessun account"
+      ],
+      "tagline": "Le foto di una cartella o di un intero disco, in grande, sottocartelle comprese. Le sue foto non vengono mai modificate."
     }
   }
 }

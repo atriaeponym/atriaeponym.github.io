@@ -94,6 +94,16 @@
         "Phát hiện đoạn đáng ngờ"
       ],
       "tagline": "Trình ghi âm: ghi âm thanh của một ứng dụng hoặc mở một tệp, cắt bỏ phần không cần, xuất ra một tệp sạch. Không quảng cáo, không tài khoản."
+    },
+    "diapo": {
+      "features": [
+        "Toàn màn hình, Cuộn phim và Bảng ảnh",
+        "Mọi định dạng, kể cả RAW",
+        "Tuyển chọn để chia sẻ",
+        "Ảnh không bao giờ bị thay đổi",
+        "Không quảng cáo, không theo dõi, không cần tài khoản"
+      ],
+      "tagline": "Xem lớn ảnh của một thư mục hoặc cả một ổ đĩa, kể cả thư mục con. Ảnh của quý vị không bao giờ bị thay đổi."
     }
   }
 }
