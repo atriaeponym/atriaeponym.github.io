@@ -512,6 +512,8 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only dark">
+<meta name="theme-color" content="#070B12">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url(lang)}">
