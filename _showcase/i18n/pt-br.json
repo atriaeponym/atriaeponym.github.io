@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "Editor de apps",
-  "lead": "Apps simples e bem-feitos para Android, iPhone, Mac e PC. Sem anúncios, sem conta obrigatória, o mínimo de dados possível.",
-  "apps": "apps",
-  "platforms_n": "plataformas",
-  "languages": "idiomas",
-  "upto": "até ",
-  "ads": "anúncios",
-  "all": "Todos",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Download direto",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Disponível",
-  "soon": "Em breve",
-  "more_features": "e mais…",
-  "more": "Saiba mais",
-  "privacy": "Privacidade",
-  "example": "Vídeo com dados de exemplo",
-  "publisher": "Atria.Eponym, desenvolvedor individual sediado na França",
-  "title": "Apps para Android, iPhone, Mac e PC",
-  "developed_by": "Desenvolvido por",
-  "language": "Idioma"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Mesada",
-    "Orçamento e categorias",
-    "Sozinho ou em família",
-    "Backup criptografado",
-    "Exportações e gráficos"
-   ]
+  "ui": {
+    "kicker": "Editor de apps",
+    "lead": "Apps simples e bem-feitos para Android, iPhone, Mac e PC. Sem anúncios, sem conta obrigatória, o mínimo de dados possível.",
+    "apps": "apps",
+    "platforms_n": "plataformas",
+    "languages": "idiomas",
+    "upto": "até ",
+    "ads": "anúncios",
+    "all": "Todos",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Download direto",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Disponível",
+    "soon": "Em breve",
+    "more_features": "e mais…",
+    "more": "Saiba mais",
+    "privacy": "Privacidade",
+    "example": "Vídeo com dados de exemplo",
+    "publisher": "Atria.Eponym, desenvolvedor individual sediado na França",
+    "title": "Apps para Android, iPhone, Mac e PC",
+    "developed_by": "Desenvolvido por",
+    "language": "Idioma",
+    "visits": "visitas",
+    "visits_note": "contagem anônima, sem cookies"
   },
-  "speedgps": {
-   "features": [
-    "Velocidade e altitude",
-    "Satélites e globo 3D",
-    "Viagens e exportação GPX",
-    "Redes Wi-Fi e Bluetooth",
-    "Bateria e energia"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Temperaturas e processador",
-    "Bateria e energia",
-    "Histórico de 24 h",
-    "Alertas",
-    "Criptografia de ponta a ponta"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Ditados lidos em voz alta",
-    "Correção palavra por palavra",
-    "Ortografia e gramática",
-    "Conjugação",
-    "Celular e PC conectados"
-   ],
-   "tagline": "Toda a ortografia cobrada no ditado do brevet, o exame nacional francês do fim do 9º ano: cada pegadinha das provas desde 2011 e cada ponto do programa, em ditados lidos em voz alta, corrigidos e avaliados como no dia da prova. Sem anúncios, sem conta."
-  },
-  "parfumpocket": {
-   "features": [
-    "Preço total com entrega",
-    "Preço por ml",
-    "Histórico de preços",
-    "Alertas de queda",
-    "28 idiomas"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Cotações da Euronext Paris",
-    "Ações dos EUA e UK em euros",
-    "Mercados abertos de relance",
-    "Gráficos de um dia a um ano",
-    "Listas compartilháveis"
-   ],
-   "tagline": "Cotações de ações de Paris, Europa, EUA e Londres, com atraso de 15 min. Grátis, sem anúncios, sem conta."
-  },
-  "soundcatch": {
-   "features": [
-    "Som de um único app",
-    "Arquivos de áudio e vídeo",
-    "Cortes sem estalos",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Trechos suspeitos detectados"
-   ],
-   "tagline": "Gravador de áudio: grave o som de um app ou abra um arquivo, corte o que você não precisa e exporte um único arquivo limpo. Sem anúncios, sem conta."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Mesada",
+        "Orçamento e categorias",
+        "Sozinho ou em família",
+        "Backup criptografado",
+        "Exportações e gráficos"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Velocidade e altitude",
+        "Satélites e globo 3D",
+        "Viagens e exportação GPX",
+        "Redes Wi-Fi e Bluetooth",
+        "Bateria e energia"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Temperaturas e processador",
+        "Bateria e energia",
+        "Histórico de 24 h",
+        "Alertas",
+        "Criptografia de ponta a ponta"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Ditados lidos em voz alta",
+        "Correção palavra por palavra",
+        "Ortografia e gramática",
+        "Conjugação",
+        "Celular e PC conectados"
+      ],
+      "tagline": "Toda a ortografia cobrada no ditado do brevet, o exame nacional francês do fim do 9º ano: cada pegadinha das provas desde 2011 e cada ponto do programa, em ditados lidos em voz alta, corrigidos e avaliados como no dia da prova. Sem anúncios, sem conta."
+    },
+    "parfumpocket": {
+      "features": [
+        "Preço total com entrega",
+        "Preço por ml",
+        "Histórico de preços",
+        "Alertas de queda",
+        "28 idiomas"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Cotações da Euronext Paris",
+        "Ações dos EUA e UK em euros",
+        "Mercados abertos de relance",
+        "Gráficos de um dia a um ano",
+        "Listas compartilháveis"
+      ],
+      "tagline": "Cotações de ações de Paris, Europa, EUA e Londres, com atraso de 15 min. Grátis, sem anúncios, sem conta."
+    },
+    "soundcatch": {
+      "features": [
+        "Som de um único app",
+        "Arquivos de áudio e vídeo",
+        "Cortes sem estalos",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Trechos suspeitos detectados"
+      ],
+      "tagline": "Gravador de áudio: grave o som de um app ou abra um arquivo, corte o que você não precisa e exporte um único arquivo limpo. Sem anúncios, sem conta."
+    }
   }
- }
 }

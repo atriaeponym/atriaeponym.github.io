@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "App-uitgever",
-  "lead": "Eenvoudige, zorgvuldig gemaakte apps voor Android, iPhone, Mac en PC. Geen advertenties, geen verplicht account, zo weinig mogelijk gegevens.",
-  "apps": "apps",
-  "platforms_n": "platforms",
-  "languages": "talen",
-  "upto": "tot ",
-  "ads": "advertenties",
-  "all": "Alle",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Directe download",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Beschikbaar",
-  "soon": "Binnenkort",
-  "more_features": "en meer…",
-  "more": "Meer informatie",
-  "privacy": "Privacy",
-  "example": "Video met voorbeeldgegevens",
-  "publisher": "Atria.Eponym, zelfstandig ontwikkelaar gevestigd in Frankrijk",
-  "title": "Apps voor Android, iPhone, Mac en PC",
-  "developed_by": "Ontwikkeld door",
-  "language": "Taal"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Zakgeld",
-    "Budget en categorieën",
-    "Alleen of met het gezin",
-    "Versleutelde back-up",
-    "Exports en grafieken"
-   ]
+  "ui": {
+    "kicker": "App-uitgever",
+    "lead": "Eenvoudige, zorgvuldig gemaakte apps voor Android, iPhone, Mac en PC. Geen advertenties, geen verplicht account, zo weinig mogelijk gegevens.",
+    "apps": "apps",
+    "platforms_n": "platforms",
+    "languages": "talen",
+    "upto": "tot ",
+    "ads": "advertenties",
+    "all": "Alle",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Directe download",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Beschikbaar",
+    "soon": "Binnenkort",
+    "more_features": "en meer…",
+    "more": "Meer informatie",
+    "privacy": "Privacy",
+    "example": "Video met voorbeeldgegevens",
+    "publisher": "Atria.Eponym, zelfstandig ontwikkelaar gevestigd in Frankrijk",
+    "title": "Apps voor Android, iPhone, Mac en PC",
+    "developed_by": "Ontwikkeld door",
+    "language": "Taal",
+    "visits": "bezoeken",
+    "visits_note": "anonieme telling, zonder cookies"
   },
-  "speedgps": {
-   "features": [
-    "Snelheid en hoogte",
-    "Satellieten en 3D-wereldbol",
-    "Ritten en GPX-export",
-    "Wi-Fi- en Bluetooth-netwerken",
-    "Batterij en voeding"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Temperaturen en processor",
-    "Batterij en voeding",
-    "Geschiedenis van 24 u",
-    "Meldingen",
-    "End-to-end versleuteld"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Voorgelezen dictees",
-    "Correctie woord voor woord",
-    "Spelling en grammatica",
-    "Vervoeging",
-    "Telefoon en PC gekoppeld"
-   ],
-   "tagline": "Alle spelling die het dictee van het brevet toetst, het Franse eindexamen van het 9e leerjaar: elke valkuil uit de examens sinds 2011 en elk punt van het lesprogramma, in voorgelezen dictees, verbeterd en beoordeeld zoals op de examendag. Geen advertenties, geen account."
-  },
-  "parfumpocket": {
-   "features": [
-    "Totaalprijs incl. verzending",
-    "Prijs per ml",
-    "Prijsgeschiedenis",
-    "Meldingen bij prijsdaling",
-    "28 talen"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Koersen van Euronext Paris",
-    "VS- en VK-aandelen in euro",
-    "Open beurzen in één oogopslag",
-    "Grafieken van dag tot jaar",
-    "Deelbare lijsten"
-   ],
-   "tagline": "Aandelenkoersen voor Parijs, Europa, de VS en Londen, 15 min vertraagd. Gratis, geen advertenties, geen account."
-  },
-  "soundcatch": {
-   "features": [
-    "Geluid van één app",
-    "Audio- en videobestanden",
-    "Knippen zonder klikjes",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Verdachte passages opgespoord"
-   ],
-   "tagline": "Audiorecorder: neem het geluid van een app op of open een bestand, knip weg wat je niet nodig hebt en exporteer één schoon bestand. Geen advertenties, geen account."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Zakgeld",
+        "Budget en categorieën",
+        "Alleen of met het gezin",
+        "Versleutelde back-up",
+        "Exports en grafieken"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Snelheid en hoogte",
+        "Satellieten en 3D-wereldbol",
+        "Ritten en GPX-export",
+        "Wi-Fi- en Bluetooth-netwerken",
+        "Batterij en voeding"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Temperaturen en processor",
+        "Batterij en voeding",
+        "Geschiedenis van 24 u",
+        "Meldingen",
+        "End-to-end versleuteld"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Voorgelezen dictees",
+        "Correctie woord voor woord",
+        "Spelling en grammatica",
+        "Vervoeging",
+        "Telefoon en PC gekoppeld"
+      ],
+      "tagline": "Alle spelling die het dictee van het brevet toetst, het Franse eindexamen van het 9e leerjaar: elke valkuil uit de examens sinds 2011 en elk punt van het lesprogramma, in voorgelezen dictees, verbeterd en beoordeeld zoals op de examendag. Geen advertenties, geen account."
+    },
+    "parfumpocket": {
+      "features": [
+        "Totaalprijs incl. verzending",
+        "Prijs per ml",
+        "Prijsgeschiedenis",
+        "Meldingen bij prijsdaling",
+        "28 talen"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Koersen van Euronext Paris",
+        "VS- en VK-aandelen in euro",
+        "Open beurzen in één oogopslag",
+        "Grafieken van dag tot jaar",
+        "Deelbare lijsten"
+      ],
+      "tagline": "Aandelenkoersen voor Parijs, Europa, de VS en Londen, 15 min vertraagd. Gratis, geen advertenties, geen account."
+    },
+    "soundcatch": {
+      "features": [
+        "Geluid van één app",
+        "Audio- en videobestanden",
+        "Knippen zonder klikjes",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Verdachte passages opgespoord"
+      ],
+      "tagline": "Audiorecorder: neem het geluid van een app op of open een bestand, knip weg wat je niet nodig hebt en exporteer één schoon bestand. Geen advertenties, geen account."
+    }
   }
- }
 }

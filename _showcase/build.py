@@ -58,6 +58,7 @@ TEXT = {
         "example": "Vidéo avec des données d'exemple",
         "publisher": "Atria.Eponym, développeur individuel établi en France",
         "title": "Applications pour Android, iPhone, Mac et PC", "developed_by": "Développé par", "language": "Langue",
+        "visits": "visites", "visits_note": "comptage anonyme, sans cookie",
     },
     "en": {
         "kicker": "App publisher",
@@ -72,6 +73,7 @@ TEXT = {
         "example": "Video with example data",
         "publisher": "Atria.Eponym, individual developer based in France",
         "title": "Apps for Android, iPhone, Mac and PC", "developed_by": "Developed by", "language": "Language",
+        "visits": "visits", "visits_note": "anonymous count, no cookies",
     },
 }
 
@@ -83,7 +85,8 @@ ICON = {
     # brand marks (Simple Icons, CC0; Windows drawn as its four panes), filled, in each brand's colour
     "logo_android": '<svg class="logo" viewBox="0 0 24 24" style="fill:#3DDC84"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>',
     "logo_apple": '<svg class="logo" viewBox="0 0 24 24" style="fill:#EEF1F7"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>',
-    "logo_windows": '<svg class="logo" viewBox="0 0 24 24" style="fill:#00A4EF"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg>',
+    "logo_windows": '<svg class="logo" viewBox="0 0 24 24"><path style="fill:#F25022" d="M2 2h9.5v9.5H2z"/><path style="fill:#7FBA00" d="M12.5 2H22v9.5h-9.5z"/><path style="fill:#00A4EF" d="M2 12.5h9.5V22H2z"/><path style="fill:#FFB900" d="M12.5 12.5H22V22h-9.5z"/></svg>',
+    "eye": '<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
     "arrow": '<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>',
     "check": '<svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>',
     "globe": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>',
@@ -176,6 +179,9 @@ a.row:hover{background:rgba(76,195,138,.08);border-color:rgba(76,195,138,.45)}
 .row .marks svg{width:20px;height:20px}
 .row .marks svg.logo{stroke:none}
 .row .sb{height:40px;width:auto;flex:none;display:block;border-radius:7px}
+.row .dl{display:flex;align-items:center;gap:8px;padding:0 12px 0 10px;background:#000;border:1px solid #A6A6A6;color:#fff;line-height:1.05}
+.row .dl .dlm{display:flex;gap:4px}.row .dl .dlm svg{width:19px;height:19px}
+.row .dl small{display:block;font-size:9.5px;font-weight:500;opacity:.92}.row .dl b{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em}
 a.row.store:hover .sb{box-shadow:0 0 0 1px rgba(255,255,255,.35)}
 @media (max-width:480px){.row .sb{height:34px}.row .pf small{display:none}}
 .links{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;margin-top:14px}
@@ -187,6 +193,9 @@ footer .gecko{display:block;width:84px;height:84px;margin:0 auto 10px;border-rad
 footer .sig{font-weight:750;font-size:18px;color:var(--ink);margin:0 0 14px}
 footer .sig span{color:var(--accent)}
 footer a{color:var(--accent)}
+footer .visits{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;margin:14px 0 0}
+footer .visits svg{width:15px;height:15px}
+footer .visits b{color:var(--ink);font-weight:650}
 @keyframes fadein{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
 @media (max-width:860px){.hero{grid-template-columns:1fr}.cloud{height:280px;max-width:300px;width:calc(100% - 40px);margin:0 auto;--k:.86}.cloud .tile{inset-inline-start:-11%!important}.orbit{width:380px;height:380px;right:-120px;top:-40px}[dir="rtl"] .orbit{right:auto;left:-120px}}
 @media (max-width:760px){.app.has-media{grid-template-columns:1fr;gap:20px}.media{width:min(230px,70vw);order:-1}}
@@ -370,6 +379,11 @@ def row(p: dict, lang: str, T: dict, standalone: bool) -> str:
     badge = f'<span class="badge">{ICON["check"] if status == "live" else ICON["clock"]}{html.escape(T[status])}</span>'
     if status == "live":
         href = p["url"] if p["url"].startswith("http") else "/" + p["url"].lstrip("/")
+        if p["channel"] == "direct":
+            # no store, so a download badge drawn in the stores' style: the systems' marks and where it runs
+            dl = (f'<span class="sb dl"><span class="dlm">{logos(p)}</span><span><small>{html.escape(T["direct"])}</small>'
+                  f'<b>{html.escape(T[p["platform"]])}</b></span></span>')
+            return f'<a class="row live store direct" href="{html.escape(href)}">{inner}{dl}</a>'
         return f'<a class="row live" href="{html.escape(href)}">{inner}{badge}<span class="go">{ICON["arrow"]}</span></a>'
     return f'<div class="row soon">{inner}{badge}</div>'
 
@@ -437,6 +451,22 @@ def structured(apps: list, lang: str, T: dict) -> str:
         {"@type": "WebSite", "name": "Atria.Eponym", "url": f"{SITE}/", "inLanguage": LANGS[lang][1]},
         {"@type": "ItemList", "name": T["title"], "itemListElement": items}]}
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+
+
+GOATCOUNTER = ""   # https://atriaeponym.goatcounter.com: cookieless, anonymous visit count
+
+
+def counter(T: dict, standalone: bool) -> str:
+    """Total visits of the site under the footer, counted by GoatCounter (no cookie, no personal data).
+    Hidden until the number arrives; mockups (standalone) neither count nor show it."""
+    if standalone or not GOATCOUNTER:
+        return ""
+    base = f"https://{GOATCOUNTER}.goatcounter.com"
+    return (f'<p class="visits" hidden>{ICON["eye"]}<b></b> {html.escape(T["visits"])} · {html.escape(T["visits_note"])}</p>'
+            f'<script data-goatcounter="{base}/count" async src="//gc.zgo.at/count.js"></script>'
+            "<script>fetch('" + base + "/counter/TOTAL.json').then(function(r){return r.ok?r.json():null})"
+            ".then(function(d){if(!d)return;var p=document.querySelector('.visits');"
+            "p.querySelector('b').textContent=d.count;p.hidden=false}).catch(function(){})</script>")
 
 
 def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
@@ -518,7 +548,7 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
 <div class="grid">
 {chr(10).join(card(a, lang, T, standalone) for a in apps)}
 </div>
-<footer><p class="by">{html.escape(T["developed_by"])}</p><img class="gecko" src="{gecko}" alt="" width="84" height="84"><p class="sig">Atria<span>.</span>Eponym</p><p>{html.escape(T["publisher"])} · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</p></footer>
+<footer><p class="by">{html.escape(T["developed_by"])}</p><img class="gecko" src="{gecko}" alt="" width="84" height="84"><p class="sig">Atria<span>.</span>Eponym</p><p>{html.escape(T["publisher"])} · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</p>{counter(T, standalone)}</footer>
 </div>
 {SCRIPT}
 </body>
