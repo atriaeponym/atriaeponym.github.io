@@ -41,7 +41,8 @@ LANGS = {
 # schema.org category of each app, for search engines
 CATEGORY = {"familypocket": "FinanceApplication", "speedgps": "TravelApplication", "maclive": "UtilitiesApplication",
             "dicteednb": "EducationalApplication", "parfumpocket": "ShoppingApplication",
-            "stockcockpit": "FinanceApplication", "soundcatch": "MultimediaApplication"}
+            "stockcockpit": "FinanceApplication", "soundcatch": "MultimediaApplication",
+            "diapo": "MultimediaApplication"}
 PLATFORMS = ("android", "iphone", "mac")
 
 TEXT = {
@@ -441,7 +442,8 @@ def structured(apps: list, lang: str, T: dict) -> str:
         app = {"@type": "SoftwareApplication", "name": name(a, lang), "description": T["_apps"][a["id"]]["tagline"],
                "applicationCategory": CATEGORY[a["id"]], "image": f"{SITE}/{a['icon']}",
                "operatingSystem": ", ".join(dict.fromkeys(systems[p["platform"]] for p in live)) or None,
-               "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+               # a paid app (free trial, then a purchase) claims no free offer
+               "offers": None if a.get("paid") else {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
                "author": {"@id": f"{SITE}/#publisher"},
                "sameAs": [p["url"] for p in live if p["url"].startswith("http")] or None}
         items.append({"@type": "ListItem", "position": i, "item": {k: v for k, v in app.items() if v}})

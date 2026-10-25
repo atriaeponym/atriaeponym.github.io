@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index">
+<title>Diapo — visionneuse photo pour Mac, Windows, iPhone et Android</title>
+<meta name="description" content="Les photos d&#x27;un dossier ou d&#x27;un disque entier, en grand, sous-dossiers compris. Vos photos ne sont jamais modifiées.">
+<link rel="canonical" href="https://atriaeponym.com/diapo/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/diapo/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/diapo/en/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/diapo/en/">
+<link rel="icon" href="/icons/diapo.png">
+<script>
+(function(){
+  // French page: a visitor whose browser does not ask for French first gets the English one; ?lang=fr stays.
+  if (/[?&]lang=fr\b/.test(location.search)) return;
+  var l = (navigator.languages || [navigator.language || ''])[0] || '';
+  if (l.toLowerCase().split('-')[0] !== 'fr') location.replace('en/');
+})();
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--page:#F7F5F0;--card:#FFFFFF;--ink:#17150F;--muted:#5F5A50;--line:#E6E1D6;--accent:#A87A1E;--ok:#0B9A69}
+@media (prefers-color-scheme:dark){:root{--page:#141416;--card:#1D1D20;--ink:#EEEEEE;--muted:#9A9AA0;--line:#2A2A2E;--accent:#E9C46A;--ok:#3BD69B}}
+body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     max-width:860px;margin:0 auto;font-size:16px}
+html,body{overflow-x:hidden}
+h1{font-size:28px;margin-bottom:4px;font-weight:700}
+h2{font-size:19px;margin:36px 0 10px;font-weight:700}
+p{margin-bottom:14px;color:var(--muted)}
+b,strong{color:var(--ink)}
+ul{margin:0 0 16px 22px}
+li{margin-bottom:9px;color:var(--muted)}
+a{color:var(--accent)}
+bdi{white-space:nowrap}
+.top{display:flex;justify-content:flex-end;font-size:14px;margin-bottom:16px}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.hero img{width:76px;height:76px;border-radius:18px}
+.tag{color:var(--muted);font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
+     border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p:last-child{margin-bottom:0}
+.btn{display:inline-block;font-weight:700;padding:14px 24px;border-radius:14px;margin:6px 0 8px;
+     background:var(--line);color:var(--muted)}
+.btn small{display:block;font-weight:400;font-size:12.5px}
+.meta{font-size:13.5px;color:var(--muted)}
+.stores{display:grid;gap:0 16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.platform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+.platform h2{margin-top:0}
+.shots{display:grid;gap:14px;margin:20px 0 6px}
+.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.phones{display:flex;gap:14px;overflow-x:auto;margin:6px 0 6px;padding-bottom:6px}
+.phones img{width:220px;height:auto;flex:0 0 auto;border-radius:22px;border:1px solid var(--line)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="top"><a href="en/" hreflang="en">English</a></div>
+
+<div class="hero"><img src="/icons/diapo.png" alt="" width="76" height="76">
+<div><h1><bdi>Diapo</bdi></h1><div class="tag">Vos photos en grand</div></div></div>
+
+<p><bdi>Diapo</bdi> affiche en grand les photos d'un dossier ou d'un disque entier, sous-dossiers compris. Vous passez d'une photo à l'autre avec les flèches du clavier, et vos photos ne sont jamais modifiées.</p>
+
+<div class="shots"><img src="img/mac-1-fr.jpg" alt="Diapo sur Mac : l&#x27;accueil, avec les dossiers à reprendre" width="1600" height="1000" loading="lazy"><img src="img/mac-2-fr.jpg" alt="Diapo sur Mac : le mode Pellicule, la photo et une bande de miniatures" width="1600" height="1000" loading="lazy"><img src="img/mac-3-fr.jpg" alt="Diapo sur Mac : le mode Planche, une grille de miniatures" width="1600" height="1000" loading="lazy"></div>
+<div class="phones"><img src="img/iphone-2-fr.jpg" alt="Diapo sur iPhone : le mode Pellicule" width="600" height="1304" loading="lazy"><img src="img/iphone-4.jpg" alt="Diapo sur iPhone : une photo en plein écran" width="600" height="1304" loading="lazy"></div>
+
+<div class="stores"><div class="platform" id="mac"><h2>Sur Mac</h2><span class="btn"><bdi>App Store</bdi><small>Bientôt disponible</small></span><div class="meta">macOS 14 ou plus récent</div></div><div class="platform" id="windows"><h2>Sur Windows</h2><span class="btn"><bdi>Microsoft Store</bdi><small>Bientôt disponible</small></span><div class="meta">Windows 10 (1809) ou plus récent</div></div><div class="platform" id="iphone"><h2>Sur iPhone</h2><span class="btn"><bdi>App Store</bdi><small>Bientôt disponible</small></span><div class="meta">iOS 17 ou plus récent</div></div><div class="platform" id="android"><h2>Sur Android</h2><span class="btn"><bdi>Google Play</bdi><small>Bientôt disponible</small></span><div class="meta">Android 8 ou plus récent</div></div></div>
+
+<div class="box"><p><strong>Essai gratuit de 14 jours (15 jours sous Windows), puis un achat unique pour continuer. Pas d'abonnement.</strong> Pas de publicité, pas de pistage, pas de compte.</p></div>
+
+<h2>Regarder</h2><ul><li>Trois modes : <strong>Plein écran</strong>, <strong>Pellicule</strong> (la photo et une bande verticale de miniatures) et <strong>Planche</strong> (une grille de miniatures).</li><li>Flèches ← →, clic, molette ou pavé tactile pour avancer. La barre d'espace lance le diaporama automatique.</li><li>Sur téléphone : balayez pour passer d'une photo à l'autre, pincez pour zoomer, touchez deux fois pour le plein écran.</li><li>Les photos s'affichent dans le bon sens, d'après leur orientation EXIF.</li><li>Diapo reprend à la dernière photo vue dans chaque dossier.</li></ul><h2>Formats</h2><ul><li>JPEG, HEIC, PNG, TIFF, WebP, GIF, BMP et RAW (Canon CR2/CR3, Nikon NEF, Sony ARW, DNG…).</li></ul><h2>Favoris et sélections</h2><ul><li>Un cœur, ou la touche F, ajoute une photo à vos Favoris.</li><li>Sélections : en parcourant vos disques, marquez des photos d'un clic, puis copiez-les dans un dossier pour les partager. Les doublons sont écartés d'après leur contenu.</li></ul><h2>Vos photos restent intactes</h2><ul><li>Diapo ne modifie, ne déplace, ne renomme et ne supprime jamais une photo. Il ne crée que des copies, quand vous le demandez.</li></ul>
+
+<p>Disponible en 28 langues.</p>
+
+<h2>Informations</h2>
+<ul>
+  <li><a href="privacy/">Politique de confidentialité</a></li>
+  <li><a href="mailto:atria.eponym@gmail.com?subject=Diapo">atria.eponym@gmail.com</a></li>
+</ul>
+
+<footer><bdi>Diapo</bdi> — Atria.Eponym, développeur individuel établi en France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a> · © 2026 Atria.Eponym</footer>
+</body>
+</html>

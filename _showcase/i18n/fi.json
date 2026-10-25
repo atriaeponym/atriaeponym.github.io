@@ -94,6 +94,16 @@
         "Epäilyttävät kohdat merkitty"
       ],
       "tagline": "Äänitallennin: tallenna sovelluksen ääni tai avaa tiedosto, leikkaa pois tarpeeton ja vie yksi siisti tiedosto. Ei mainoksia, ei tiliä."
+    },
+    "diapo": {
+      "features": [
+        "Koko näyttö, Filmiliuska ja Kontaktiarkki",
+        "Kaikki muodot, myös RAW",
+        "Valikoimat jaettaviksi",
+        "Kuvia ei koskaan muokata",
+        "Ei mainoksia, ei seurantaa, ei tiliä"
+      ],
+      "tagline": "Kansion tai koko levyn kuvat suurina, alikansiot mukaan lukien. Kuvia ei koskaan muokata."
     }
   }
 }

@@ -94,6 +94,16 @@
         "Mistenkelige partier oppdaget"
       ],
       "tagline": "Lydopptaker: ta opp lyden fra en app eller åpne en fil, klipp bort det du ikke trenger, og eksporter én ren fil. Ingen reklame, ingen konto."
+    },
+    "diapo": {
+      "features": [
+        "Fullskjerm, Filmremse og Kontaktark",
+        "Alle formater, også RAW",
+        "Utvalg å dele",
+        "Bildene endres aldri",
+        "Ingen reklame, ingen sporing, ingen konto"
+      ],
+      "tagline": "Bildene i en mappe eller på en hel disk, i stort format, undermapper inkludert. Bildene endres aldri."
     }
   }
 }

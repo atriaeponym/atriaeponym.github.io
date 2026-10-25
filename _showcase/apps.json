@@ -1,5 +1,5 @@
 {
-  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac = Mac/PC) has its channel (play, appstore, direct, msstore) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates. A platform may carry its own \"name\" when its store lists the app under another name (shown next to the channel).",
+  "_readme": "Source of the home page (index.html). Edit, then run: python3 _showcase/build.py. Each platform (android, iphone, mac = Mac/PC) has its channel (play, appstore, direct, msstore) and a real status: live = the store page answers, soon = submitted or announced. Real data only. Optional teaser: video/poster per language (teasers/<id>-<lang>.mp4/.jpg), example data only, no real name or coordinates. A platform may carry its own \"name\" when its store lists the app under another name (shown next to the channel). \"paid\": true for an app sold after a free trial (no free Offer in the search-engine data).",
   "apps": [
     {
       "id": "familypocket",
@@ -378,6 +378,62 @@
       "privacy": [
         {
           "url": "soundcatch/privacy/"
+        }
+      ]
+    },
+    {
+      "id": "diapo",
+      "name": "Diapo",
+      "icon": "icons/diapo.png",
+      "tagline": {
+        "fr": "Vos photos en grand, d'un dossier ou d'un disque entier. Elles ne sont jamais modifiées.",
+        "en": "Your photos, big, from a folder or a whole disk. They are never modified."
+      },
+      "features": {
+        "fr": [
+          "Plein écran, Pellicule, Planche",
+          "Tous formats, dont RAW",
+          "Sélections à partager",
+          "Photos jamais modifiées",
+          "Sans pub, sans compte"
+        ],
+        "en": [
+          "Full Screen, Filmstrip, Contact Sheet",
+          "All formats, RAW included",
+          "Selections to share",
+          "Photos never modified",
+          "No ads, no account"
+        ]
+      },
+      "more_features": false,
+      "paid": true,
+      "platforms": [
+        {
+          "platform": "mac",
+          "channel": "appstore",
+          "status": "soon"
+        },
+        {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "soon"
+        },
+        {
+          "platform": "iphone",
+          "channel": "appstore",
+          "status": "soon"
+        },
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "soon",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.diapo"
+        }
+      ],
+      "more": "diapo/",
+      "privacy": [
+        {
+          "url": "diapo/privacy/"
         }
       ]
     }

@@ -94,6 +94,16 @@
         "Verdachte passages opgespoord"
       ],
       "tagline": "Audiorecorder: neem het geluid van een app op of open een bestand, knip weg wat je niet nodig hebt en exporteer één schoon bestand. Geen advertenties, geen account."
+    },
+    "diapo": {
+      "features": [
+        "Schermvullend, Filmstrip en Contactafdruk",
+        "Alle formaten, ook RAW",
+        "Selecties om te delen",
+        "Foto's nooit gewijzigd",
+        "Geen reclame, geen tracking, geen account"
+      ],
+      "tagline": "De foto's van een map of een hele schijf, in het groot, submappen inbegrepen. Uw foto's worden nooit gewijzigd."
     }
   }
 }

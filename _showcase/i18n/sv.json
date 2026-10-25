@@ -94,6 +94,16 @@
         "Misstänkta partier hittas"
       ],
       "tagline": "Ljudinspelare: spela in ljudet från en app eller öppna en fil, klipp bort det du inte behöver och exportera en enda ren fil. Ingen reklam, inget konto."
+    },
+    "diapo": {
+      "features": [
+        "Helskärm, Filmremsa och Kontaktark",
+        "Alla format, även RAW",
+        "Urval att dela",
+        "Bilderna ändras aldrig",
+        "Ingen reklam, ingen spårning, inget konto"
+      ],
+      "tagline": "Bilderna i en mapp eller på en hel disk, i stort format, undermappar inräknade. Bilderna ändras aldrig."
     }
   }
 }

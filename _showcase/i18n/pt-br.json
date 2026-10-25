@@ -94,6 +94,16 @@
         "Trechos suspeitos detectados"
       ],
       "tagline": "Gravador de áudio: grave o som de um app ou abra um arquivo, corte o que você não precisa e exporte um único arquivo limpo. Sem anúncios, sem conta."
+    },
+    "diapo": {
+      "features": [
+        "Tela cheia, Película e Folha de contatos",
+        "Todos os formatos, incluindo RAW",
+        "Seleções para compartilhar",
+        "Fotos nunca alteradas",
+        "Sem anúncios, sem rastreamento, sem conta"
+      ],
+      "tagline": "As fotos de uma pasta ou de um disco inteiro, em tamanho grande, com subpastas. Suas fotos nunca são alteradas."
     }
   }
 }
