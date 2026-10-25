@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "Nhà phát hành ứng dụng",
-  "lead": "Ứng dụng đơn giản, chăm chút cho Android, iPhone, Mac và PC. Không quảng cáo, không bắt buộc tài khoản, dữ liệu ở mức tối thiểu.",
-  "apps": "ứng dụng",
-  "platforms_n": "nền tảng",
-  "languages": "ngôn ngữ",
-  "upto": "tối đa ",
-  "ads": "quảng cáo",
-  "all": "Tất cả",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Tải trực tiếp",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Đã phát hành",
-  "soon": "Sắp ra mắt",
-  "more_features": "và nhiều hơn…",
-  "more": "Tìm hiểu thêm",
-  "privacy": "Quyền riêng tư",
-  "example": "Video với dữ liệu mẫu",
-  "publisher": "Atria.Eponym, nhà phát triển cá nhân tại Pháp",
-  "title": "Ứng dụng cho Android, iPhone, Mac và PC",
-  "developed_by": "Phát triển bởi",
-  "language": "Ngôn ngữ"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Tiền tiêu vặt",
-    "Ngân sách và danh mục",
-    "Một mình hoặc cả nhà",
-    "Sao lưu mã hóa",
-    "Xuất dữ liệu và biểu đồ"
-   ]
+  "ui": {
+    "kicker": "Nhà phát hành ứng dụng",
+    "lead": "Ứng dụng đơn giản, chăm chút cho Android, iPhone, Mac và PC. Không quảng cáo, không bắt buộc tài khoản, dữ liệu ở mức tối thiểu.",
+    "apps": "ứng dụng",
+    "platforms_n": "nền tảng",
+    "languages": "ngôn ngữ",
+    "upto": "tối đa ",
+    "ads": "quảng cáo",
+    "all": "Tất cả",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Tải trực tiếp",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Đã phát hành",
+    "soon": "Sắp ra mắt",
+    "more_features": "và nhiều hơn…",
+    "more": "Tìm hiểu thêm",
+    "privacy": "Quyền riêng tư",
+    "example": "Video với dữ liệu mẫu",
+    "publisher": "Atria.Eponym, nhà phát triển cá nhân tại Pháp",
+    "title": "Ứng dụng cho Android, iPhone, Mac và PC",
+    "developed_by": "Phát triển bởi",
+    "language": "Ngôn ngữ",
+    "visits": "lượt truy cập",
+    "visits_note": "đếm ẩn danh, không dùng cookie"
   },
-  "speedgps": {
-   "features": [
-    "Tốc độ và độ cao",
-    "Vệ tinh và quả địa cầu 3D",
-    "Hành trình và xuất GPX",
-    "Mạng Wi-Fi và Bluetooth",
-    "Pin và nguồn điện"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Nhiệt độ và bộ xử lý",
-    "Pin và nguồn điện",
-    "Lịch sử 24 giờ",
-    "Cảnh báo",
-    "Mã hóa đầu cuối"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Chính tả được đọc to",
-    "Sửa từng từ",
-    "Chính tả và ngữ pháp",
-    "Chia động từ",
-    "Liên kết điện thoại và PC"
-   ],
-   "tagline": "Toàn bộ chính tả mà bài nghe-viết của kỳ thi brevet (kỳ thi quốc gia Pháp cuối bậc THCS) kiểm tra: mọi bẫy trong đề các năm từ 2011 và mọi điểm của chương trình lớp 9, qua các bài nghe-viết được đọc to, sửa và chấm điểm như ngày thi thật. Không quảng cáo, không tài khoản."
-  },
-  "parfumpocket": {
-   "features": [
-    "Tổng giá đã gồm phí giao",
-    "Giá mỗi ml",
-    "Lịch sử giá",
-    "Cảnh báo giảm giá",
-    "28 ngôn ngữ"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Giá Euronext Paris",
-    "Cổ phiếu Mỹ, Anh bằng euro",
-    "Thị trường đang mở",
-    "Biểu đồ từ ngày đến năm",
-    "Danh sách chia sẻ được"
-   ],
-   "tagline": "Giá cổ phiếu Paris, châu Âu, Mỹ và London, trễ 15 phút. Miễn phí, không quảng cáo, không tài khoản."
-  },
-  "soundcatch": {
-   "features": [
-    "Âm thanh của một ứng dụng",
-    "Tệp âm thanh và video",
-    "Cắt không tiếng click",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Phát hiện đoạn đáng ngờ"
-   ],
-   "tagline": "Trình ghi âm: ghi âm thanh của một ứng dụng hoặc mở một tệp, cắt bỏ phần không cần, xuất ra một tệp sạch. Không quảng cáo, không tài khoản."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Tiền tiêu vặt",
+        "Ngân sách và danh mục",
+        "Một mình hoặc cả nhà",
+        "Sao lưu mã hóa",
+        "Xuất dữ liệu và biểu đồ"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Tốc độ và độ cao",
+        "Vệ tinh và quả địa cầu 3D",
+        "Hành trình và xuất GPX",
+        "Mạng Wi-Fi và Bluetooth",
+        "Pin và nguồn điện"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Nhiệt độ và bộ xử lý",
+        "Pin và nguồn điện",
+        "Lịch sử 24 giờ",
+        "Cảnh báo",
+        "Mã hóa đầu cuối"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Chính tả được đọc to",
+        "Sửa từng từ",
+        "Chính tả và ngữ pháp",
+        "Chia động từ",
+        "Liên kết điện thoại và PC"
+      ],
+      "tagline": "Toàn bộ chính tả mà bài nghe-viết của kỳ thi brevet (kỳ thi quốc gia Pháp cuối bậc THCS) kiểm tra: mọi bẫy trong đề các năm từ 2011 và mọi điểm của chương trình lớp 9, qua các bài nghe-viết được đọc to, sửa và chấm điểm như ngày thi thật. Không quảng cáo, không tài khoản."
+    },
+    "parfumpocket": {
+      "features": [
+        "Tổng giá đã gồm phí giao",
+        "Giá mỗi ml",
+        "Lịch sử giá",
+        "Cảnh báo giảm giá",
+        "28 ngôn ngữ"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Giá Euronext Paris",
+        "Cổ phiếu Mỹ, Anh bằng euro",
+        "Thị trường đang mở",
+        "Biểu đồ từ ngày đến năm",
+        "Danh sách chia sẻ được"
+      ],
+      "tagline": "Giá cổ phiếu Paris, châu Âu, Mỹ và London, trễ 15 phút. Miễn phí, không quảng cáo, không tài khoản."
+    },
+    "soundcatch": {
+      "features": [
+        "Âm thanh của một ứng dụng",
+        "Tệp âm thanh và video",
+        "Cắt không tiếng click",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Phát hiện đoạn đáng ngờ"
+      ],
+      "tagline": "Trình ghi âm: ghi âm thanh của một ứng dụng hoặc mở một tệp, cắt bỏ phần không cần, xuất ra một tệp sạch. Không quảng cáo, không tài khoản."
+    }
   }
- }
 }

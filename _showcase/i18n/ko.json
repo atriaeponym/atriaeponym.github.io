@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "앱 퍼블리셔",
-  "lead": "Android, iPhone, Mac, PC를 위한 단순하고 정성껏 만든 앱. 광고 없음, 필수 계정 없음, 데이터는 최소한으로.",
-  "apps": "앱",
-  "platforms_n": "플랫폼",
-  "languages": "언어",
-  "upto": "최대 ",
-  "ads": "광고",
-  "all": "전체",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "직접 다운로드",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "출시됨",
-  "soon": "출시 예정",
-  "more_features": "그 외…",
-  "more": "자세히 보기",
-  "privacy": "개인정보 보호",
-  "example": "예시 데이터로 만든 영상",
-  "publisher": "Atria.Eponym, 프랑스의 개인 개발자",
-  "title": "Android, iPhone, Mac, PC용 앱",
-  "developed_by": "개발",
-  "language": "언어"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "용돈 관리",
-    "예산과 카테고리",
-    "혼자서도 가족과도",
-    "암호화 백업",
-    "내보내기와 차트"
-   ]
+  "ui": {
+    "kicker": "앱 퍼블리셔",
+    "lead": "Android, iPhone, Mac, PC를 위한 단순하고 정성껏 만든 앱. 광고 없음, 필수 계정 없음, 데이터는 최소한으로.",
+    "apps": "앱",
+    "platforms_n": "플랫폼",
+    "languages": "언어",
+    "upto": "최대 ",
+    "ads": "광고",
+    "all": "전체",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "직접 다운로드",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "출시됨",
+    "soon": "출시 예정",
+    "more_features": "그 외…",
+    "more": "자세히 보기",
+    "privacy": "개인정보 보호",
+    "example": "예시 데이터로 만든 영상",
+    "publisher": "Atria.Eponym, 프랑스의 개인 개발자",
+    "title": "Android, iPhone, Mac, PC용 앱",
+    "developed_by": "개발",
+    "language": "언어",
+    "visits": "회 방문",
+    "visits_note": "익명 집계, 쿠키 없음"
   },
-  "speedgps": {
-   "features": [
-    "속도와 고도",
-    "위성과 3D 지구본",
-    "이동 기록과 GPX 내보내기",
-    "Wi-Fi 및 Bluetooth 네트워크",
-    "배터리와 전원"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "온도와 프로세서",
-    "배터리와 전원",
-    "24시간 기록",
-    "알림",
-    "종단간 암호화"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "읽어 주는 받아쓰기",
-    "단어별 교정",
-    "철자와 문법",
-    "동사 활용",
-    "휴대폰과 PC 연동"
-   ],
-   "tagline": "프랑스 중학교 졸업 시험 brevet의 받아쓰기에서 출제되는 철자를 모두 담았습니다. 2011년 이후 기출문제의 모든 함정과 중학교 마지막 학년(9학년) 교육과정의 모든 항목을 읽어 주는 받아쓰기로 익히고, 시험 당일과 같은 기준으로 교정·채점합니다. 광고 없음, 계정 없음."
-  },
-  "parfumpocket": {
-   "features": [
-    "배송비 포함 총액",
-    "ml당 가격",
-    "가격 기록",
-    "가격 인하 알림",
-    "28개 언어"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Euronext Paris 시세",
-    "미국·영국 주식을 유로로",
-    "개장 시장 한눈에",
-    "일간~연간 차트",
-    "공유 가능한 목록"
-   ],
-   "tagline": "파리, 유럽, 미국, 런던의 주가를 15분 지연으로 제공. 무료, 광고 없음, 계정 없음."
-  },
-  "soundcatch": {
-   "features": [
-    "앱 하나의 소리",
-    "오디오·비디오 파일",
-    "잡음 없는 자르기",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "의심 구간 탐지"
-   ],
-   "tagline": "오디오 레코더: 앱의 소리를 녹음하거나 파일을 열고, 필요 없는 부분을 잘라 내 깔끔한 파일 하나로 내보냅니다. 광고 없음, 계정 없음."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "용돈 관리",
+        "예산과 카테고리",
+        "혼자서도 가족과도",
+        "암호화 백업",
+        "내보내기와 차트"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "속도와 고도",
+        "위성과 3D 지구본",
+        "이동 기록과 GPX 내보내기",
+        "Wi-Fi 및 Bluetooth 네트워크",
+        "배터리와 전원"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "온도와 프로세서",
+        "배터리와 전원",
+        "24시간 기록",
+        "알림",
+        "종단간 암호화"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "읽어 주는 받아쓰기",
+        "단어별 교정",
+        "철자와 문법",
+        "동사 활용",
+        "휴대폰과 PC 연동"
+      ],
+      "tagline": "프랑스 중학교 졸업 시험 brevet의 받아쓰기에서 출제되는 철자를 모두 담았습니다. 2011년 이후 기출문제의 모든 함정과 중학교 마지막 학년(9학년) 교육과정의 모든 항목을 읽어 주는 받아쓰기로 익히고, 시험 당일과 같은 기준으로 교정·채점합니다. 광고 없음, 계정 없음."
+    },
+    "parfumpocket": {
+      "features": [
+        "배송비 포함 총액",
+        "ml당 가격",
+        "가격 기록",
+        "가격 인하 알림",
+        "28개 언어"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Euronext Paris 시세",
+        "미국·영국 주식을 유로로",
+        "개장 시장 한눈에",
+        "일간~연간 차트",
+        "공유 가능한 목록"
+      ],
+      "tagline": "파리, 유럽, 미국, 런던의 주가를 15분 지연으로 제공. 무료, 광고 없음, 계정 없음."
+    },
+    "soundcatch": {
+      "features": [
+        "앱 하나의 소리",
+        "오디오·비디오 파일",
+        "잡음 없는 자르기",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "의심 구간 탐지"
+      ],
+      "tagline": "오디오 레코더: 앱의 소리를 녹음하거나 파일을 열고, 필요 없는 부분을 잘라 내 깔끔한 파일 하나로 내보냅니다. 광고 없음, 계정 없음."
+    }
   }
- }
 }

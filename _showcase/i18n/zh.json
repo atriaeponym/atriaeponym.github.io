@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "应用发行商",
-  "lead": "为 Android、iPhone、Mac 和 PC 精心打造的简洁应用。无广告，无需注册账号，尽可能少收集数据。",
-  "apps": "款应用",
-  "platforms_n": "个平台",
-  "languages": "种语言",
-  "upto": "最多 ",
-  "ads": "广告",
-  "all": "全部",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "直接下载",
-  "msstore": "Microsoft Store（Windows）",
-  "live": "已上架",
-  "soon": "即将推出",
-  "more_features": "更多…",
-  "more": "了解更多",
-  "privacy": "隐私",
-  "example": "使用示例数据的视频",
-  "publisher": "Atria.Eponym，法国独立开发者",
-  "title": "适用于 Android、iPhone、Mac 和 PC 的应用",
-  "developed_by": "开发者",
-  "language": "语言"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "零花钱",
-    "预算与分类",
-    "个人或家庭使用",
-    "加密备份",
-    "导出与图表"
-   ]
+  "ui": {
+    "kicker": "应用发行商",
+    "lead": "为 Android、iPhone、Mac 和 PC 精心打造的简洁应用。无广告，无需注册账号，尽可能少收集数据。",
+    "apps": "款应用",
+    "platforms_n": "个平台",
+    "languages": "种语言",
+    "upto": "最多 ",
+    "ads": "广告",
+    "all": "全部",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "直接下载",
+    "msstore": "Microsoft Store（Windows）",
+    "live": "已上架",
+    "soon": "即将推出",
+    "more_features": "更多…",
+    "more": "了解更多",
+    "privacy": "隐私",
+    "example": "使用示例数据的视频",
+    "publisher": "Atria.Eponym，法国独立开发者",
+    "title": "适用于 Android、iPhone、Mac 和 PC 的应用",
+    "developed_by": "开发者",
+    "language": "语言",
+    "visits": "次访问",
+    "visits_note": "匿名统计，不使用 Cookie"
   },
-  "speedgps": {
-   "features": [
-    "速度与海拔",
-    "卫星与 3D 地球",
-    "行程与 GPX 导出",
-    "Wi-Fi 与 Bluetooth 网络",
-    "电池与电源"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "温度与处理器",
-    "电池与电源",
-    "24 小时历史",
-    "警报",
-    "端到端加密"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "朗读听写",
-    "逐词批改",
-    "拼写与语法",
-    "动词变位",
-    "手机与电脑联动"
-   ],
-   "tagline": "涵盖法国初中毕业考试 brevet 听写考查的全部拼写要点：2011 年以来历年真题中的所有陷阱，以及初中最后一年（九年级）大纲的每个知识点，以朗读听写的形式呈现，并按考试当天的标准批改和评分。无广告，无需账号。"
-  },
-  "parfumpocket": {
-   "features": [
-    "含运费总价",
-    "每毫升价格",
-    "价格历史",
-    "降价提醒",
-    "28 种语言"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Euronext Paris 行情",
-    "美英股票欧元计价",
-    "开市状态一目了然",
-    "日至年走势图",
-    "可分享的列表"
-   ],
-   "tagline": "巴黎、欧洲、美国和伦敦的股票行情，延迟 15 分钟。免费，无广告，无需账号。"
-  },
-  "soundcatch": {
-   "features": [
-    "单个应用的声音",
-    "音频和视频文件",
-    "无爆音剪切",
-    "AAC、MP3、FLAC、Apple Lossless",
-    "标出可疑片段"
-   ],
-   "tagline": "录音工具：录制某个应用的声音或打开文件，剪掉不需要的部分，导出一个干净的文件。无广告，无需账号。"
+  "apps": {
+    "familypocket": {
+      "features": [
+        "零花钱",
+        "预算与分类",
+        "个人或家庭使用",
+        "加密备份",
+        "导出与图表"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "速度与海拔",
+        "卫星与 3D 地球",
+        "行程与 GPX 导出",
+        "Wi-Fi 与 Bluetooth 网络",
+        "电池与电源"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "温度与处理器",
+        "电池与电源",
+        "24 小时历史",
+        "警报",
+        "端到端加密"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "朗读听写",
+        "逐词批改",
+        "拼写与语法",
+        "动词变位",
+        "手机与电脑联动"
+      ],
+      "tagline": "涵盖法国初中毕业考试 brevet 听写考查的全部拼写要点：2011 年以来历年真题中的所有陷阱，以及初中最后一年（九年级）大纲的每个知识点，以朗读听写的形式呈现，并按考试当天的标准批改和评分。无广告，无需账号。"
+    },
+    "parfumpocket": {
+      "features": [
+        "含运费总价",
+        "每毫升价格",
+        "价格历史",
+        "降价提醒",
+        "28 种语言"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Euronext Paris 行情",
+        "美英股票欧元计价",
+        "开市状态一目了然",
+        "日至年走势图",
+        "可分享的列表"
+      ],
+      "tagline": "巴黎、欧洲、美国和伦敦的股票行情，延迟 15 分钟。免费，无广告，无需账号。"
+    },
+    "soundcatch": {
+      "features": [
+        "单个应用的声音",
+        "音频和视频文件",
+        "无爆音剪切",
+        "AAC、MP3、FLAC、Apple Lossless",
+        "标出可疑片段"
+      ],
+      "tagline": "录音工具：录制某个应用的声音或打开文件，剪掉不需要的部分，导出一个干净的文件。无广告，无需账号。"
+    }
   }
- }
 }

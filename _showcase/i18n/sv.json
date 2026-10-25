@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "Apputgivare",
-  "lead": "Enkla, omsorgsfullt gjorda appar för Android, iPhone, Mac och PC. Ingen reklam, inget obligatoriskt konto, så lite data som möjligt.",
-  "apps": "appar",
-  "platforms_n": "plattformar",
-  "languages": "språk",
-  "upto": "upp till ",
-  "ads": "reklam",
-  "all": "Alla",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Direkt nedladdning",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Tillgänglig",
-  "soon": "Kommer snart",
-  "more_features": "och mer…",
-  "more": "Läs mer",
-  "privacy": "Integritet",
-  "example": "Video med exempeldata",
-  "publisher": "Atria.Eponym, enskild utvecklare baserad i Frankrike",
-  "title": "Appar för Android, iPhone, Mac och PC",
-  "developed_by": "Utvecklad av",
-  "language": "Språk"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Veckopeng",
-    "Budget och kategorier",
-    "Ensam eller med familjen",
-    "Krypterad säkerhetskopia",
-    "Export och diagram"
-   ]
+  "ui": {
+    "kicker": "Apputgivare",
+    "lead": "Enkla, omsorgsfullt gjorda appar för Android, iPhone, Mac och PC. Ingen reklam, inget obligatoriskt konto, så lite data som möjligt.",
+    "apps": "appar",
+    "platforms_n": "plattformar",
+    "languages": "språk",
+    "upto": "upp till ",
+    "ads": "reklam",
+    "all": "Alla",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Direkt nedladdning",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Tillgänglig",
+    "soon": "Kommer snart",
+    "more_features": "och mer…",
+    "more": "Läs mer",
+    "privacy": "Integritet",
+    "example": "Video med exempeldata",
+    "publisher": "Atria.Eponym, enskild utvecklare baserad i Frankrike",
+    "title": "Appar för Android, iPhone, Mac och PC",
+    "developed_by": "Utvecklad av",
+    "language": "Språk",
+    "visits": "besök",
+    "visits_note": "anonym räkning, utan cookies"
   },
-  "speedgps": {
-   "features": [
-    "Hastighet och höjd",
-    "Satelliter och 3D-glob",
-    "Resor och GPX-export",
-    "Wi-Fi- och Bluetooth-nätverk",
-    "Batteri och ström"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Temperaturer och processor",
-    "Batteri och ström",
-    "24 h historik",
-    "Varningar",
-    "End-to-end-krypterad"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Diktamen som läses upp",
-    "Rättning ord för ord",
-    "Stavning och grammatik",
-    "Verbböjning",
-    "Mobil och PC kopplade"
-   ],
-   "tagline": "All stavning som diktamen i brevet prövar, det franska nationella provet i slutet av årskurs 9: varje fälla från proven sedan 2011 och varje punkt i kursplanen, i diktamen som läses upp, rättas och poängsätts som på provdagen. Ingen reklam, inget konto."
-  },
-  "parfumpocket": {
-   "features": [
-    "Totalpris inkl. frakt",
-    "Pris per ml",
-    "Prishistorik",
-    "Larm vid prissänkning",
-    "28 språk"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Kurser på Euronext Paris",
-    "USA- och UK-aktier i euro",
-    "Öppna börser med en blick",
-    "Diagram från dag till år",
-    "Delbara listor"
-   ],
-   "tagline": "Aktiekurser för Paris, Europa, USA och London, 15 min fördröjda. Gratis, ingen reklam, inget konto."
-  },
-  "soundcatch": {
-   "features": [
-    "Ljud från en enda app",
-    "Ljud- och videofiler",
-    "Klippning utan klick",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Misstänkta partier hittas"
-   ],
-   "tagline": "Ljudinspelare: spela in ljudet från en app eller öppna en fil, klipp bort det du inte behöver och exportera en enda ren fil. Ingen reklam, inget konto."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Veckopeng",
+        "Budget och kategorier",
+        "Ensam eller med familjen",
+        "Krypterad säkerhetskopia",
+        "Export och diagram"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Hastighet och höjd",
+        "Satelliter och 3D-glob",
+        "Resor och GPX-export",
+        "Wi-Fi- och Bluetooth-nätverk",
+        "Batteri och ström"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Temperaturer och processor",
+        "Batteri och ström",
+        "24 h historik",
+        "Varningar",
+        "End-to-end-krypterad"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Diktamen som läses upp",
+        "Rättning ord för ord",
+        "Stavning och grammatik",
+        "Verbböjning",
+        "Mobil och PC kopplade"
+      ],
+      "tagline": "All stavning som diktamen i brevet prövar, det franska nationella provet i slutet av årskurs 9: varje fälla från proven sedan 2011 och varje punkt i kursplanen, i diktamen som läses upp, rättas och poängsätts som på provdagen. Ingen reklam, inget konto."
+    },
+    "parfumpocket": {
+      "features": [
+        "Totalpris inkl. frakt",
+        "Pris per ml",
+        "Prishistorik",
+        "Larm vid prissänkning",
+        "28 språk"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Kurser på Euronext Paris",
+        "USA- och UK-aktier i euro",
+        "Öppna börser med en blick",
+        "Diagram från dag till år",
+        "Delbara listor"
+      ],
+      "tagline": "Aktiekurser för Paris, Europa, USA och London, 15 min fördröjda. Gratis, ingen reklam, inget konto."
+    },
+    "soundcatch": {
+      "features": [
+        "Ljud från en enda app",
+        "Ljud- och videofiler",
+        "Klippning utan klick",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Misstänkta partier hittas"
+      ],
+      "tagline": "Ljudinspelare: spela in ljudet från en app eller öppna en fil, klipp bort det du inte behöver och exportera en enda ren fil. Ingen reklam, inget konto."
+    }
   }
- }
 }

@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "Editore di app",
-  "lead": "App semplici e curate per Android, iPhone, Mac e PC. Niente pubblicità, nessun account obbligatorio, meno dati possibile.",
-  "apps": "app",
-  "platforms_n": "piattaforme",
-  "languages": "lingue",
-  "upto": "fino a ",
-  "ads": "pubblicità",
-  "all": "Tutte",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Download diretto",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Disponibile",
-  "soon": "In arrivo",
-  "more_features": "e altro…",
-  "more": "Scopri di più",
-  "privacy": "Privacy",
-  "example": "Video con dati di esempio",
-  "publisher": "Atria.Eponym, sviluppatore individuale con sede in Francia",
-  "title": "App per Android, iPhone, Mac e PC",
-  "developed_by": "Sviluppato da",
-  "language": "Lingua"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Paghetta",
-    "Budget e categorie",
-    "Da solo o in famiglia",
-    "Backup crittografato",
-    "Esportazioni e grafici"
-   ]
+  "ui": {
+    "kicker": "Editore di app",
+    "lead": "App semplici e curate per Android, iPhone, Mac e PC. Niente pubblicità, nessun account obbligatorio, meno dati possibile.",
+    "apps": "app",
+    "platforms_n": "piattaforme",
+    "languages": "lingue",
+    "upto": "fino a ",
+    "ads": "pubblicità",
+    "all": "Tutte",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Download diretto",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Disponibile",
+    "soon": "In arrivo",
+    "more_features": "e altro…",
+    "more": "Scopri di più",
+    "privacy": "Privacy",
+    "example": "Video con dati di esempio",
+    "publisher": "Atria.Eponym, sviluppatore individuale con sede in Francia",
+    "title": "App per Android, iPhone, Mac e PC",
+    "developed_by": "Sviluppato da",
+    "language": "Lingua",
+    "visits": "visite",
+    "visits_note": "conteggio anonimo, senza cookie"
   },
-  "speedgps": {
-   "features": [
-    "Velocità e altitudine",
-    "Satelliti e globo 3D",
-    "Viaggi ed esportazione GPX",
-    "Reti Wi-Fi e Bluetooth",
-    "Batteria e alimentazione"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Temperature e processore",
-    "Batteria e alimentazione",
-    "Cronologia di 24 h",
-    "Avvisi",
-    "Crittografia end-to-end"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Dettati letti ad alta voce",
-    "Correzione parola per parola",
-    "Ortografia e grammatica",
-    "Coniugazione",
-    "Telefono e PC collegati"
-   ],
-   "tagline": "Tutta l'ortografia valutata nel dettato del brevet, l'esame nazionale francese di fine terza media: ogni trappola delle prove dal 2011 e ogni punto del programma, in dettati letti ad alta voce, corretti e valutati come il giorno dell'esame. Niente pubblicità, nessun account."
-  },
-  "parfumpocket": {
-   "features": [
-    "Prezzo totale con spedizione",
-    "Prezzo al ml",
-    "Storico prezzi",
-    "Avvisi di ribasso",
-    "28 lingue"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Quotazioni Euronext Paris",
-    "Azioni USA e UK in euro",
-    "Borse aperte a colpo d'occhio",
-    "Grafici da un giorno a un anno",
-    "Liste condivisibili"
-   ],
-   "tagline": "Quotazioni di Borsa per Parigi, l'Europa, gli USA e Londra, con 15 min di ritardo. Gratis, niente pubblicità, nessun account."
-  },
-  "soundcatch": {
-   "features": [
-    "Audio di una sola app",
-    "File audio e video",
-    "Tagli senza clic",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Passaggi sospetti individuati"
-   ],
-   "tagline": "Registratore audio: registra l'audio di un'app o apri un file, taglia ciò che non ti serve, esporta un unico file pulito. Niente pubblicità, nessun account."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Paghetta",
+        "Budget e categorie",
+        "Da solo o in famiglia",
+        "Backup crittografato",
+        "Esportazioni e grafici"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Velocità e altitudine",
+        "Satelliti e globo 3D",
+        "Viaggi ed esportazione GPX",
+        "Reti Wi-Fi e Bluetooth",
+        "Batteria e alimentazione"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Temperature e processore",
+        "Batteria e alimentazione",
+        "Cronologia di 24 h",
+        "Avvisi",
+        "Crittografia end-to-end"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Dettati letti ad alta voce",
+        "Correzione parola per parola",
+        "Ortografia e grammatica",
+        "Coniugazione",
+        "Telefono e PC collegati"
+      ],
+      "tagline": "Tutta l'ortografia valutata nel dettato del brevet, l'esame nazionale francese di fine terza media: ogni trappola delle prove dal 2011 e ogni punto del programma, in dettati letti ad alta voce, corretti e valutati come il giorno dell'esame. Niente pubblicità, nessun account."
+    },
+    "parfumpocket": {
+      "features": [
+        "Prezzo totale con spedizione",
+        "Prezzo al ml",
+        "Storico prezzi",
+        "Avvisi di ribasso",
+        "28 lingue"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Quotazioni Euronext Paris",
+        "Azioni USA e UK in euro",
+        "Borse aperte a colpo d'occhio",
+        "Grafici da un giorno a un anno",
+        "Liste condivisibili"
+      ],
+      "tagline": "Quotazioni di Borsa per Parigi, l'Europa, gli USA e Londra, con 15 min di ritardo. Gratis, niente pubblicità, nessun account."
+    },
+    "soundcatch": {
+      "features": [
+        "Audio di una sola app",
+        "File audio e video",
+        "Tagli senza clic",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Passaggi sospetti individuati"
+      ],
+      "tagline": "Registratore audio: registra l'audio di un'app o apri un file, taglia ciò che non ti serve, esporta un unico file pulito. Niente pubblicità, nessun account."
+    }
   }
- }
 }

@@ -1,97 +1,99 @@
 {
- "ui": {
-  "kicker": "Sovellusjulkaisija",
-  "lead": "Yksinkertaisia, huolella tehtyjä sovelluksia Androidille, iPhonelle, Macille ja PC:lle. Ei mainoksia, ei pakollista tiliä, mahdollisimman vähän tietoja.",
-  "apps": "sovellusta",
-  "platforms_n": "alustaa",
-  "languages": "kieltä",
-  "upto": "jopa ",
-  "ads": "mainosta",
-  "all": "Kaikki",
-  "android": "Android",
-  "iphone": "iPhone",
-  "mac": "Mac/PC",
-  "play": "Google Play",
-  "appstore": "App Store",
-  "direct": "Suora lataus",
-  "msstore": "Microsoft Store (Windows)",
-  "live": "Saatavilla",
-  "soon": "Tulossa pian",
-  "more_features": "ja paljon muuta…",
-  "more": "Lue lisää",
-  "privacy": "Tietosuoja",
-  "example": "Video esimerkkitiedoilla",
-  "publisher": "Atria.Eponym, Ranskassa toimiva yksityinen kehittäjä",
-  "title": "Sovelluksia Androidille, iPhonelle, Macille ja PC:lle",
-  "developed_by": "Kehittäjä",
-  "language": "Kieli"
- },
- "apps": {
-  "familypocket": {
-   "features": [
-    "Viikkorahat",
-    "Budjetti ja luokat",
-    "Yksin tai perheen kanssa",
-    "Salattu varmuuskopio",
-    "Viennit ja kaaviot"
-   ]
+  "ui": {
+    "kicker": "Sovellusjulkaisija",
+    "lead": "Yksinkertaisia, huolella tehtyjä sovelluksia Androidille, iPhonelle, Macille ja PC:lle. Ei mainoksia, ei pakollista tiliä, mahdollisimman vähän tietoja.",
+    "apps": "sovellusta",
+    "platforms_n": "alustaa",
+    "languages": "kieltä",
+    "upto": "jopa ",
+    "ads": "mainosta",
+    "all": "Kaikki",
+    "android": "Android",
+    "iphone": "iPhone",
+    "mac": "Mac/PC",
+    "play": "Google Play",
+    "appstore": "App Store",
+    "direct": "Suora lataus",
+    "msstore": "Microsoft Store (Windows)",
+    "live": "Saatavilla",
+    "soon": "Tulossa pian",
+    "more_features": "ja paljon muuta…",
+    "more": "Lue lisää",
+    "privacy": "Tietosuoja",
+    "example": "Video esimerkkitiedoilla",
+    "publisher": "Atria.Eponym, Ranskassa toimiva yksityinen kehittäjä",
+    "title": "Sovelluksia Androidille, iPhonelle, Macille ja PC:lle",
+    "developed_by": "Kehittäjä",
+    "language": "Kieli",
+    "visits": "käyntiä",
+    "visits_note": "nimetön laskenta, ilman evästeitä"
   },
-  "speedgps": {
-   "features": [
-    "Nopeus ja korkeus",
-    "Satelliitit ja 3D-maapallo",
-    "Matkat ja GPX-vienti",
-    "Wi-Fi- ja Bluetooth-verkot",
-    "Akku ja virta"
-   ]
-  },
-  "maclive": {
-   "features": [
-    "Lämpötilat ja suoritin",
-    "Akku ja virta",
-    "24 h historia",
-    "Hälytykset",
-    "Päästä päähän salattu"
-   ]
-  },
-  "dicteednb": {
-   "features": [
-    "Ääneen luetut sanelut",
-    "Korjaus sana sanalta",
-    "Oikeinkirjoitus ja kielioppi",
-    "Verbien taivutus",
-    "Puhelin ja PC yhdistettynä"
-   ],
-   "tagline": "Kaikki oikeinkirjoitus, jota ranskalaisen brevet-kokeen sanelu mittaa: jokainen vuodesta 2011 vanhoista kokeista löytynyt ansa ja jokainen 9. luokan opetussuunnitelman kohta ääneen luetuissa saneluissa, jotka korjataan ja arvostellaan kuten koepäivänä. Ei mainoksia, ei tiliä."
-  },
-  "parfumpocket": {
-   "features": [
-    "Kokonaishinta toimitettuna",
-    "Hinta per ml",
-    "Hintahistoria",
-    "Hinnanlaskuhälytykset",
-    "28 kieltä"
-   ]
-  },
-  "stockcockpit": {
-   "features": [
-    "Euronext Paris -kurssit",
-    "USA:n ja UK:n osakkeet euroina",
-    "Avoimet pörssit heti näkyvissä",
-    "Kaaviot päivästä vuoteen",
-    "Jaettavat listat"
-   ],
-   "tagline": "Osakekurssit Pariisista, Euroopasta, Yhdysvalloista ja Lontoosta 15 minuutin viiveellä. Ilmainen, ei mainoksia, ei tiliä."
-  },
-  "soundcatch": {
-   "features": [
-    "Yhden sovelluksen ääni",
-    "Ääni- ja videotiedostot",
-    "Leikkaukset ilman naksahduksia",
-    "AAC, MP3, FLAC, Apple Lossless",
-    "Epäilyttävät kohdat merkitty"
-   ],
-   "tagline": "Äänitallennin: tallenna sovelluksen ääni tai avaa tiedosto, leikkaa pois tarpeeton ja vie yksi siisti tiedosto. Ei mainoksia, ei tiliä."
+  "apps": {
+    "familypocket": {
+      "features": [
+        "Viikkorahat",
+        "Budjetti ja luokat",
+        "Yksin tai perheen kanssa",
+        "Salattu varmuuskopio",
+        "Viennit ja kaaviot"
+      ]
+    },
+    "speedgps": {
+      "features": [
+        "Nopeus ja korkeus",
+        "Satelliitit ja 3D-maapallo",
+        "Matkat ja GPX-vienti",
+        "Wi-Fi- ja Bluetooth-verkot",
+        "Akku ja virta"
+      ]
+    },
+    "maclive": {
+      "features": [
+        "Lämpötilat ja suoritin",
+        "Akku ja virta",
+        "24 h historia",
+        "Hälytykset",
+        "Päästä päähän salattu"
+      ]
+    },
+    "dicteednb": {
+      "features": [
+        "Ääneen luetut sanelut",
+        "Korjaus sana sanalta",
+        "Oikeinkirjoitus ja kielioppi",
+        "Verbien taivutus",
+        "Puhelin ja PC yhdistettynä"
+      ],
+      "tagline": "Kaikki oikeinkirjoitus, jota ranskalaisen brevet-kokeen sanelu mittaa: jokainen vuodesta 2011 vanhoista kokeista löytynyt ansa ja jokainen 9. luokan opetussuunnitelman kohta ääneen luetuissa saneluissa, jotka korjataan ja arvostellaan kuten koepäivänä. Ei mainoksia, ei tiliä."
+    },
+    "parfumpocket": {
+      "features": [
+        "Kokonaishinta toimitettuna",
+        "Hinta per ml",
+        "Hintahistoria",
+        "Hinnanlaskuhälytykset",
+        "28 kieltä"
+      ]
+    },
+    "stockcockpit": {
+      "features": [
+        "Euronext Paris -kurssit",
+        "USA:n ja UK:n osakkeet euroina",
+        "Avoimet pörssit heti näkyvissä",
+        "Kaaviot päivästä vuoteen",
+        "Jaettavat listat"
+      ],
+      "tagline": "Osakekurssit Pariisista, Euroopasta, Yhdysvalloista ja Lontoosta 15 minuutin viiveellä. Ilmainen, ei mainoksia, ei tiliä."
+    },
+    "soundcatch": {
+      "features": [
+        "Yhden sovelluksen ääni",
+        "Ääni- ja videotiedostot",
+        "Leikkaukset ilman naksahduksia",
+        "AAC, MP3, FLAC, Apple Lossless",
+        "Epäilyttävät kohdat merkitty"
+      ],
+      "tagline": "Äänitallennin: tallenna sovelluksen ääni tai avaa tiedosto, leikkaa pois tarpeeton ja vie yksi siisti tiedosto. Ei mainoksia, ei tiliä."
+    }
   }
- }
 }
