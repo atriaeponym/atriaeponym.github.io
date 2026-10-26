@@ -451,7 +451,8 @@
         {
           "platform": "mac",
           "channel": "msstore",
-          "status": "soon"
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9P6MPV8Q9ZP1"
         },
         {
           "platform": "iphone",
