@@ -370,6 +370,10 @@ def logos(p: dict) -> str:
 def row(p: dict, lang: str, T: dict, standalone: bool) -> str:
     status = p["status"]
     label = p.get("label") or T[p["platform"]]
+    if p["platform"] == "mac" and not p.get("label"):
+        # a computer row names only the systems its channel installs on (Mac or PC)
+        names = p.get("systems") or {"msstore": ["windows"], "appstore": ["apple"]}.get(p["channel"], ["apple", "windows"])
+        label = {("apple",): "Mac", ("windows",): "PC"}.get(tuple(names), label)
     inner = (f'<span class="pf"><span class="marks">{logos(p)}{ICON[p["platform"]]}</span><span><b>{html.escape(label)}</b>'
              f'<small>{html.escape(T[p["channel"]])}{" · " + html.escape(name(p, lang)) if p.get("name") else ""}</small></span></span>')
     if status == "live" and p["channel"] in STORE_BADGE:
