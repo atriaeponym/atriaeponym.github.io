@@ -97,10 +97,10 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 <h1>Polityka prywatności — <bdi>Mac Live</bdi></h1>
 <div class="sub">Ostatnia aktualizacja: 14 października 2026</div>
 
-<p><bdi>Mac Live</bdi> pokazuje na żywo, na Twoim telefonie z Androidem lub iPhonie, stan Twojego Maca
+<p><bdi>Mac Live</bdi> pokazuje na żywo, na telefonie z Androidem lub iPhonie, stan Maca
 (temperatury, procesor, pamięć, dyski, bateria, kopie Time Machine…) i ostrzega, gdy coś jest nie
-tak. Działa razem z aplikacją <bdi>Mac Live</bdi> zainstalowaną na Macu, którą łączysz z telefonem,
-skanując kod QR.</p>
+tak. Działa razem z aplikacją <bdi>Mac Live</bdi> zainstalowaną na Macu, łączoną z telefonem
+przez zeskanowanie kodu QR.</p>
 
 <div class="box">
   <p><strong>Najważniejsze:</strong> bez konta, bez reklam, bez narzędzi analitycznych. Pomiary z
@@ -121,17 +121,17 @@ Francji. Kontakt: <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com
   <li><strong>Najbardziej aktywne procesy</strong>: ich nazwy i udział w użyciu procesora.</li>
   <li><strong>Połączenia Maca</strong>: urządzenia Bluetooth (nazwa, typ, połączone czy nie),
       urządzenia USB, ekrany (nazwa, rozdzielczość), woluminy (nazwa, rozmiar, wolne miejsce), rodzaj
-      połączenia z internetem, adres lokalny i nazwa routera. Nazwa Twojej sieci Wi-Fi nie jest
+      połączenia z internetem, adres lokalny i nazwa routera. Nazwa sieci Wi-Fi nie jest
       przesyłana.</li>
   <li><strong>Time Machine</strong>: data ostatniej kopii, trwająca kopia, nazwa dysku kopii i czy
       jest podłączony.</li>
   <li><strong>Tożsamość Maca</strong>: nazwa, model, czip, liczba rdzeni, pamięć, wersja macOS i
-      obraz modelu, abyś rozpoznał swojego Maca.</li>
+      obraz modelu, aby łatwo rozpoznać Maca.</li>
 </ul>
 <p>Gdy aplikacja jest zamknięta, Mac nie wysyła żadnych pomiarów. Przechowuje w swojej pamięci przez
 24 godziny jeden punkt na minutę dla trzech pomiarów — obciążenia procesora, temperatury procesora i
 poboru mocy — i wysyła tę <strong>historię</strong>, zaszyfrowaną end-to-end jak wszystko inne, na
-telefon, gdy otwierasz aplikację; jest ona usuwana przy ponownym uruchomieniu Maca i nigdy nie jest
+telefon, przy otwarciu aplikacji; jest ona usuwana przy ponownym uruchomieniu Maca i nigdy nie jest
 zapisywana na dysku. Mac pilnuje też kilku progów i wysyła <strong>alert</strong>, gdy któryś
 zostanie przekroczony (wysoka temperatura, prawie pełny dysk, przejście na baterię, niski poziom
 baterii, brak kopii Time Machine od 30 dni): rodzaj, zmierzoną wartość, próg i godzinę.</p>
@@ -146,7 +146,7 @@ oprócz aplikacji może je odczytać tylko jej własne rozszerzenie powiadomień
 alerty. Tajny klucz nigdy nie jest nikomu
 wysyłany: przekaźnik otrzymuje tylko wyprowadzony z niego dowód, który nie pozwala odszyfrować
 pomiarów.</p>
-<p>Możesz w każdej chwili zerwać połączenie: „Zapomnij tego Maca” na telefonie albo „Rozłącz
+<p>Połączenie można w każdej chwili zerwać: „Zapomnij tego Maca” na telefonie albo „Rozłącz
 wszystkie telefony” na Macu, co tworzy nowy klucz.</p>
 
 <h2>Co zostaje na telefonie</h2>
@@ -173,7 +173,7 @@ z nich widzi.</p>
   dni. Jak każda usługa internetowa, Cloudflare przetwarza techniczne dane połączeń (adresy IP)
   zgodnie z własną polityką prywatności. Dzienniki błędów przekaźnika mogą zawierać 8 pierwszych
   znaków tokenu powiadomień, nigdy pomiar.</p>
-  <p><strong>2. Powiadomienia przez Firebase Cloud Messaging (Google) na Androidzie.</strong> Aby ostrzec Cię, gdy
+  <p><strong>2. Powiadomienia przez Firebase Cloud Messaging (Google) na Androidzie.</strong> Aby ostrzegać, gdy
   aplikacja jest zamknięta, przekaźnik korzysta z usługi powiadomień <strong>Google</strong>, która
   otrzymuje token telefonu i losowy identyfikator Maca. Alert jest przesyłany
   <strong>zaszyfrowany</strong>: Google nie może go odczytać; to telefon go odszyfrowuje i
@@ -193,8 +193,8 @@ z nich widzi.</p>
   prosi o dostęp do aparatu. Usługa podlega polityce prywatności Google. Na iPhonie nie uczestniczy
   żadna usługa zewnętrzna: aplikacja sama odczytuje kod QR aparatem, na telefonie, i nie zapisuje
   ani nie wysyła żadnego obrazu.</p>
-  <p><strong>4. Wsparcie rozwoju, na Androidzie, jeśli chcesz.</strong> Darowizna jest opłacana przez
-  <strong>Google Play</strong>. Płatność obsługuje w całości Google: aplikacja nigdy nie widzi Twoich
+  <p><strong>4. Wsparcie rozwoju, na Androidzie, opcjonalne.</strong> Darowizna jest opłacana przez
+  <strong>Google Play</strong>. Płatność obsługuje w całości Google: aplikacja nigdy nie widzi
   danych płatniczych i nie przesyła przy tym żadnych danych. Jest to dobrowolne i niczego w aplikacji
   nie odblokowuje. Wersja na iPhone’a nie oferuje darowizn.</p>
 </div>
@@ -210,7 +210,7 @@ z nich widzi.</p>
   <li>Bez sprzedaży i udostępniania danych stronom trzecim.</li>
 </ul>
 
-<h2>Jak chronione są Twoje dane</h2>
+<h2>Jak chronione są dane</h2>
 <ul>
   <li><strong>Szyfrowanie end-to-end</strong> — każdy pomiar i każdy alert jest szyfrowany na Macu
       (AES-256-GCM) i odszyfrowywany tylko na telefonie.</li>
@@ -227,26 +227,26 @@ z nich widzi.</p>
   <li><strong>Internet i stan sieci</strong> — aby połączyć się z przekaźnikiem i wiedzieć, czy
       telefon jest offline.</li>
   <li><strong>Powiadomienia</strong> — aby pokazywać alerty z Maca. Android pyta raz, zaraz po
-      sparowaniu; możesz odmówić.</li>
+      sparowaniu; można odmówić.</li>
   <li><strong>Odbieranie wiadomości Firebase</strong> — dodane przez bibliotekę Google, aby odbierać
       alerty przy zamkniętej aplikacji.</li>
   <li><strong>Działanie w tle</strong> — dopóki aplikacja pozostaje otwarta za inną aplikacją lub przy zablokowanym ekranie, Android pokazuje powiadomienie i utrzymuje połączenie z Makiem; zamknięcie aplikacji je kończy.</li>
 </ul>
-<p>Możesz w każdej chwili cofnąć te uprawnienia w ustawieniach Androida.</p>
+<p>Te uprawnienia można w każdej chwili cofnąć w ustawieniach Androida.</p>
 <p><strong>Na iPhonie:</strong></p>
 <ul>
   <li><strong>Aparat</strong> — aby zeskanować kod QR wyświetlany przez Maca. iOS pyta przy
       pierwszym skanowaniu; obraz zostaje na telefonie.</li>
   <li><strong>Powiadomienia</strong> — aby pokazywać alerty z Maca. iOS pyta raz, zaraz po
-      sparowaniu; możesz odmówić.</li>
+      sparowaniu; można odmówić.</li>
 </ul>
-<p>Możesz je w każdej chwili cofnąć w <bdi>Ustawienia › Mac Live</bdi> na iPhonie.</p>
+<p>Można je w każdej chwili cofnąć w <bdi>Ustawienia › Mac Live</bdi> na iPhonie.</p>
 
-<h2>Twoje prawa</h2>
-<p>RODO daje Ci prawo dostępu, sprostowania, usunięcia danych i sprzeciwu. Wydawca nie posiada
-danych, które pozwalają Cię zidentyfikować: przekaźnik zna tylko losowe identyfikatory. Aby usunąć
+<h2>Prawa użytkownika</h2>
+<p>RODO przyznaje prawo dostępu, sprostowania, usunięcia danych i sprzeciwu. Wydawca nie posiada
+danych, które pozwalają zidentyfikować użytkownika: przekaźnik zna tylko losowe identyfikatory. Aby usunąć
 wszystko: „Zapomnij tego Maca” usuwa token telefonu z przekaźnika, a po odinstalowaniu obu aplikacji
-przekaźnik usuwa resztę po 90 dniach. Możesz też napisać na
+przekaźnik usuwa resztę po 90 dniach. Można też napisać na
 <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
 
 <h2>Dzieci</h2>
