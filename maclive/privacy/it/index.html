@@ -97,14 +97,14 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:1
 <h1>Informativa sulla privacy — <bdi>Mac Live</bdi></h1>
 <div class="sub">Ultimo aggiornamento: 14 ottobre 2026</div>
 
-<p><bdi>Mac Live</bdi> mostra in diretta, sul tuo telefono Android o sul tuo iPhone, lo stato del tuo Mac
-(temperature, processore, memoria, dischi, batteria, backup di Time Machine…) e ti avvisa quando
-qualcosa non va. Funziona con l'app <bdi>Mac Live</bdi> installata sul Mac, che colleghi al
+<p><bdi>Mac Live</bdi> mostra in diretta, sul suo telefono Android o sul suo iPhone, lo stato del suo Mac
+(temperature, processore, memoria, dischi, batteria, backup di Time Machine…) e La avvisa quando
+qualcosa non va. Funziona con l'app <bdi>Mac Live</bdi> installata sul Mac, che Lei collega al
 telefono scansionando un codice QR.</p>
 
 <div class="box">
   <p><strong>In sintesi:</strong> nessun account, nessuna pubblicità, nessuno strumento di analisi.
-  Le misure del tuo Mac arrivano al telefono <strong>cifrate end-to-end</strong>: né l'editore né i
+  Le misure del suo Mac arrivano al telefono <strong>cifrate end-to-end</strong>: né l'editore né i
   servizi che le trasportano possono leggerle. Le chiavi di cifratura non lasciano mai il Mac e il
   telefono.</p>
 </div>
@@ -113,7 +113,7 @@ telefono scansionando un codice QR.</p>
 <p><bdi>Mac Live</bdi> è pubblicata da <strong>Atria.Eponym</strong>, sviluppatore indipendente con
 sede in Francia. Contatto: <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
 
-<h2>Cosa invia il Mac al tuo telefono</h2>
+<h2>Cosa invia il Mac al suo telefono</h2>
 <p>Mentre l'app è aperta sul telefono, il Mac le invia, circa ogni due secondi quando è sullo schermo e ogni 30 secondi quando resta aperta in background:</p>
 <ul>
   <li><strong>Lo stato dell'hardware</strong>: temperature, consumo elettrico, attività e frequenza
@@ -123,16 +123,16 @@ sede in Francia. Contatto: <a href="mailto:atria.eponym@gmail.com">atria.eponym@
   <li><strong>Le connessioni del Mac</strong>: dispositivi Bluetooth (nome, tipo, connesso o no),
       dispositivi USB, schermi (nome, risoluzione), volumi di archiviazione (nome, dimensione, spazio
       libero), tipo di collegamento a Internet, indirizzo locale e nome del router. Il nome della
-      tua rete Wi-Fi non viene trasmesso.</li>
+      sua rete Wi-Fi non viene trasmesso.</li>
   <li><strong>Time Machine</strong>: data dell'ultimo backup, backup in corso, nome del disco di
       backup e se è collegato.</li>
   <li><strong>L'identità del Mac</strong>: nome, modello, chip, numero di core, memoria, versione di
-      macOS e l'immagine del suo modello, per riconoscere il tuo Mac.</li>
+      macOS e l'immagine del suo modello, per riconoscere il suo Mac.</li>
 </ul>
 <p>Quando l'app è chiusa, il Mac non invia alcuna misura. Conserva nella sua memoria, per 24 ore, un
 punto al minuto di tre misure — utilizzo del processore, temperatura del processore e consumo
 elettrico — e invia questa <strong>cronologia</strong>, cifrata end-to-end come tutto il resto, al
-telefono quando apri l'app; viene cancellata al riavvio del Mac e non viene mai scritta su disco. Il
+telefono quando apre l'app; viene cancellata al riavvio del Mac e non viene mai scritta su disco. Il
 Mac continua inoltre a sorvegliare alcune soglie e invia un <strong>avviso</strong> quando una viene
 superata (temperatura elevata, disco quasi pieno, passaggio a batteria, batteria scarica, nessun
 backup di Time Machine da 30 giorni): il tipo, il valore misurato, la soglia e l'ora.</p>
@@ -146,8 +146,8 @@ dispositivo: non passano nel Portachiavi iCloud e non possono essere ripristinat
 dispositivo; solo l'estensione di notifica dell'app stessa può leggerli, per decifrare gli avvisi.
 La chiave segreta non viene
 mai inviata a nessuno: il relay riceve solo una prova derivata da essa, che non permette di
-decifrare le tue misure.</p>
-<p>Puoi interrompere il collegamento in qualsiasi momento: «Dimentica questo Mac» sul telefono,
+decifrare le sue misure.</p>
+<p>Può interrompere il collegamento in qualsiasi momento: «Dimentica questo Mac» sul telefono,
 oppure «Disconnetti tutti i telefoni» sul Mac, che crea una nuova chiave.</p>
 
 <h2>Cosa resta sul telefono</h2>
@@ -174,7 +174,7 @@ Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
   il Mac non si collega da 90 giorni. Come ogni servizio online, Cloudflare tratta i dati tecnici
   delle connessioni (indirizzi IP) secondo la propria informativa. I log di errore del relay possono
   contenere i primi 8 caratteri di un token di notifica, mai una misura.</p>
-  <p><strong>2. Le notifiche, tramite Firebase Cloud Messaging (Google) su Android.</strong> Per avvisarti ad
+  <p><strong>2. Le notifiche, tramite Firebase Cloud Messaging (Google) su Android.</strong> Per avvisarLa ad
   app chiusa, il relay usa il servizio di notifiche di <strong>Google</strong>, che riceve il token
   del telefono e l'identificativo casuale del Mac. Un avviso viaggia <strong>cifrato</strong>: Google
   non può leggerlo, è il telefono a decifrarlo e mostrarlo. I due messaggi «non raggiungibile» e «di
@@ -185,7 +185,7 @@ Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
   dell'iPhone e l'identificativo casuale del Mac. Il relay conserva questo token esattamente come
   quelli di Google: al massimo 8 per Mac, cancellati quando il Mac non si collega da 90 giorni. Un
   avviso viaggia <strong>cifrato end-to-end</strong>: una piccola estensione dell'app lo decifra
-  sull'iPhone e ne scrive il testo, così Apple non vede alcun dato del tuo Mac, solo il testo neutro
+  sull'iPhone e ne scrive il testo, così Apple non vede alcun dato del suo Mac, solo il testo neutro
   «<bdi>Mac Live alert</bdi>» mostrato se la decifratura non riesce. Anche qui i messaggi «non
   raggiungibile» e «di nuovo online» contengono solo l'identificativo casuale e un orario. Questo
   servizio è regolato dall'informativa sulla privacy di Apple.</p>
@@ -195,9 +195,9 @@ Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
   servizio è regolato dall'informativa sulla privacy di Google. Su iPhone non interviene alcun
   servizio di terze parti: l'app legge da sé il codice QR con la fotocamera, sul telefono, e non
   salva né invia alcuna immagine.</p>
-  <p><strong>4. Il sostegno allo sviluppo, su Android, se lo desideri.</strong> Una donazione avviene tramite il
+  <p><strong>4. Il sostegno allo sviluppo, su Android, se lo desidera.</strong> Una donazione avviene tramite il
   pagamento di <strong>Google Play</strong>. Il pagamento è gestito interamente da Google: l'app non
-  vede mai i tuoi metodi di pagamento e non trasmette alcun dato in quell'occasione. È facoltativo e
+  vede mai i suoi metodi di pagamento e non trasmette alcun dato in quell'occasione. È facoltativo e
   non sblocca nulla nell'app. La versione per iPhone non propone donazioni.</p>
 </div>
 
@@ -212,12 +212,12 @@ Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
   <li>Nessuna vendita o condivisione di dati con terzi.</li>
 </ul>
 
-<h2>Come sono protetti i tuoi dati</h2>
+<h2>Come sono protetti i suoi dati</h2>
 <ul>
   <li><strong>Cifratura end-to-end</strong> — ogni misura e ogni avviso è cifrato sul Mac
       (AES-256-GCM) e decifrato solo sul telefono.</li>
   <li><strong>In transito</strong> — tutte le connessioni usano TLS (HTTPS / WSS).</li>
-  <li><strong>Sui tuoi dispositivi</strong> — le chiavi sono custodite nel Portachiavi del Mac e
+  <li><strong>Sui suoi dispositivi</strong> — le chiavi sono custodite nel Portachiavi del Mac e
       protette dal Keystore di Android su un telefono Android; non vengono mai salvate nel cloud.
       Su iPhone sono custodite nel Portachiavi, legate a quel dispositivo: non passano nel
       Portachiavi iCloud e non possono essere ripristinate su un altro dispositivo.</li>
@@ -229,27 +229,27 @@ Android, due su iPhone; ecco esattamente cosa vede ciascuno.</p>
   <li><strong>Internet e stato della rete</strong> — per raggiungere il relay e sapere se il telefono
       è offline.</li>
   <li><strong>Notifiche</strong> — per mostrare gli avvisi del Mac. Android la chiede una volta,
-      subito dopo l'abbinamento; puoi rifiutarla.</li>
+      subito dopo l'abbinamento; può rifiutarla.</li>
   <li><strong>Ricezione dei messaggi Firebase</strong> — aggiunta dalla libreria di Google, per
       ricevere gli avvisi ad app chiusa.</li>
   <li><strong>Funzionamento in background</strong> — finché l'app resta aperta dietro un'altra app o a schermo bloccato, Android mostra una notifica e mantiene il collegamento con il Mac; chiudere l'app lo interrompe.</li>
 </ul>
-<p>Puoi revocare queste autorizzazioni in qualsiasi momento nelle impostazioni di Android.</p>
+<p>Può revocare queste autorizzazioni in qualsiasi momento nelle impostazioni di Android.</p>
 <p><strong>Su iPhone:</strong></p>
 <ul>
   <li><strong>Fotocamera</strong> — per scansionare il codice QR mostrato dal Mac. iOS la chiede
       alla prima scansione; l'immagine resta sul telefono.</li>
   <li><strong>Notifiche</strong> — per mostrare gli avvisi del Mac. iOS la chiede una volta, subito
-      dopo l'abbinamento; puoi rifiutarla.</li>
+      dopo l'abbinamento; può rifiutarla.</li>
 </ul>
-<p>Puoi revocarle in qualsiasi momento in <bdi>Impostazioni › Mac Live</bdi> sull'iPhone.</p>
+<p>Può revocarle in qualsiasi momento in <bdi>Impostazioni › Mac Live</bdi> sull'iPhone.</p>
 
-<h2>I tuoi diritti</h2>
-<p>Il Regolamento generale sulla protezione dei dati ti riconosce i diritti di accesso, rettifica,
-cancellazione e opposizione. L'editore non detiene alcun dato che permetta di identificarti: il
+<h2>I suoi diritti</h2>
+<p>Il Regolamento generale sulla protezione dei dati Le riconosce i diritti di accesso, rettifica,
+cancellazione e opposizione. L'editore non detiene alcun dato che permetta di identificarLa: il
 relay conosce solo identificativi casuali. Per cancellare tutto: «Dimentica questo Mac» rimuove dal
 relay il token del telefono, e disinstallando le due app il relay cancella il resto dopo 90 giorni.
-Puoi anche scrivere a <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
+Può anche scrivere a <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a>.</p>
 
 <h2>Minori</h2>
 <p>Questa app non è rivolta specificamente ai minori e non raccoglie consapevolmente dati che li
