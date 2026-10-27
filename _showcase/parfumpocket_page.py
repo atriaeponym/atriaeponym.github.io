@@ -17,9 +17,9 @@ html,body{overflow-x:hidden}
 T = {
  "fr": dict(lang="fr", up="", title="Perfume Price Tracker — comparateur de prix parfum",
   sub="Comparateur de prix parfum : prix livré, prix au ml, alerte quand il baisse.",
-  intro="<bdi>Perfume Price Tracker</bdi> suit le prix de tes parfums dans plusieurs boutiques en ligne et te dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.",
+  intro="<bdi>Perfume Price Tracker</bdi> suit le prix de vos parfums dans plusieurs boutiques en ligne et vous dit où les acheter au meilleur prix, <strong>livraison comprise</strong>.",
   play="Télécharger sur Google Play", ios="Télécharger sur l'App Store", hl="",
-  box="<strong>Gratuit, sans publicité, sans compte.</strong> Tes alertes et ta collection restent sur ton téléphone.",
+  box="<strong>Gratuit, sans publicité, sans compte.</strong> Vos alertes et votre collection restent sur votre téléphone.",
   sections=[("Le bon prix, au bon endroit",[
     "Chaque offre est comparée au prix total livré : prix + livraison la moins chère à domicile.",
     "Prix au millilitre et disponibilité de chaque boutique.",
@@ -28,12 +28,12 @@ T = {
    ("L'évolution des prix",[
     "Une courbe par boutique, sur 30 jours, 90 jours ou depuis le début.",
     "Le prix le plus bas de chaque période ; les jours sans relevé restent visibles."]),
-   ("Tes alertes",[
+   ("Vos alertes",[
     "Prix maximum, baisse minimale en %, nouveau prix le plus bas jamais relevé.",
-    "Ton téléphone vérifie chaque matin, après le relevé des prix, et te prévient une seule fois par offre."]),
-   ("Tes boutiques",[
+    "Votre téléphone vérifie chaque matin, après le relevé des prix, et vous prévient une seule fois par offre."]),
+   ("Vos boutiques",[
     "Suivies aujourd'hui : MyOrigines, Sabina et Parfumdo.",
-    "Colle le lien d'une page de parfum : l'application vérifie tout de suite qu'elle peut être suivie, ou te dit pourquoi.",
+    "Collez le lien d'une page de parfum : l'application vérifie tout de suite qu'elle peut être suivie, ou vous dit pourquoi.",
     "Les boutiques sont des tiers : elles ne dépendent pas d'Atria.Eponym. Une boutique qui refuse la lecture automatique n'est jamais contournée."])],
   info="Informations", privacy="Politique de confidentialité", other="English", other_href="en/",
   langs="Disponible en 28 langues.", alt="Capture d'écran"),
