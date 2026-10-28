@@ -273,7 +273,17 @@
         {
           "url": "dicteednb/privacy/"
         }
-      ]
+      ],
+      "teaser": {
+        "fr": {
+          "video": "teasers/dicteednb.mp4",
+          "poster": "teasers/dicteednb.jpg"
+        },
+        "en": {
+          "video": "teasers/dicteednb.mp4",
+          "poster": "teasers/dicteednb.jpg"
+        }
+      }
     },
     {
       "id": "parfumpocket",
