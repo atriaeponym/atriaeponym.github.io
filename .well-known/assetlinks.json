@@ -39,5 +39,17 @@
         "85:6A:2A:19:AE:6E:94:C7:F7:72:1A:B2:4C:1D:19:6F:D5:FC:74:47:C7:CC:0D:34:02:6C:68:1B:C4:55:D5:E9"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.atriaeponym.impostorshield",
+      "sha256_cert_fingerprints": [
+        "30:62:3E:76:09:06:59:F7:2E:F6:E5:CD:5A:00:85:4A:B4:BB:EC:43:6F:11:52:A0:8B:BB:40:65:02:D4:FC:49"
+      ]
+    }
   }
 ]
