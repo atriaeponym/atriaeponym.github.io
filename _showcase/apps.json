@@ -264,6 +264,12 @@
         },
         {
           "platform": "mac",
+          "channel": "appstore",
+          "status": "live",
+          "url": "https://apps.apple.com/app/id6824308790"
+        },
+        {
+          "platform": "mac",
           "channel": "msstore",
           "status": "live",
           "url": "https://apps.microsoft.com/detail/9N30XKR26HKB"
