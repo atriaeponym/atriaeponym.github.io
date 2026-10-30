@@ -48,6 +48,7 @@
       "namespace": "android_app",
       "package_name": "com.atriaeponym.impostorshield",
       "sha256_cert_fingerprints": [
+        "89:05:45:3F:A6:96:1B:C2:0C:6E:ED:BE:8C:2E:36:53:6D:A8:3D:C9:E7:6E:76:DC:E7:20:BA:0E:31:DA:0D:C5",
         "30:62:3E:76:09:06:59:F7:2E:F6:E5:CD:5A:00:85:4A:B4:BB:EC:43:6F:11:52:A0:8B:BB:40:65:02:D4:FC:49"
       ]
     }
