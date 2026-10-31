@@ -47,6 +47,7 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 - Stock prices for Paris, Europe, the US and London, 15-min delayed. Free, no ads, no account.
 - FR : Cours de bourse Paris, Europe, US, Londres, différés 15 min. Gratuit, sans pub, sans compte.
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit
+- Microsoft Store (Windows): https://apps.microsoft.com/detail/9MSVWVC0L4J5
 - Page: https://atriaeponym.com/stockcockpit/
 
 ### SoundCatch
