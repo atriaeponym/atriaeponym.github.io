@@ -370,6 +370,12 @@
           "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit"
         },
         {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9MSVWVC0L4J5"
+        },
+        {
           "platform": "iphone",
           "channel": "appstore",
           "status": "soon"
