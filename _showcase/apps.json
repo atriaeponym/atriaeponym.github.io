@@ -420,6 +420,12 @@
           "url": "https://apps.apple.com/app/id6826256541"
         },
         {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9NPS4KMHB2VB"
+        },
+        {
           "platform": "android",
           "channel": "play",
           "status": "live",
