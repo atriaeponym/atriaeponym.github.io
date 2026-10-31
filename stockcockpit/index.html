@@ -112,16 +112,16 @@ document.querySelectorAll("[data-store]").forEach(function (el) {
   el.replaceWith(a);
 });
 
-// Device redirect, in JavaScript only: link-preview bots (WhatsApp, facebookexternalhit, Twitterbot,
-// TelegramBot, Slackbot, Discordbot, LinkedInBot) do not run it and keep the page with its tags.
-// Never a meta refresh or an HTTP redirect. Runs after the first paint.
+// The store of the visitor's device comes first. No automatic redirect: search engines read the page
+// as a phone, and a redirect would show them the store instead of this page (Romain, 31/10/2026).
 (function () {
   var ua = navigator.userAgent || "";
   var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-  var target = /Android/i.test(ua) && STORES.play.live ? STORES.play.url
-             : ios && STORES.appstore.live ? STORES.appstore.url : null;
-  if (!target) return;
-  requestAnimationFrame(function () { setTimeout(function () { location.replace(target); }, 0); });
+  var url = /Android/i.test(ua) && STORES.play.live ? STORES.play.url
+          : ios && STORES.appstore.live ? STORES.appstore.url : null;
+  if (!url) return;
+  var mine = document.querySelector('a.store[href="' + url + '"]');
+  if (mine && mine.parentNode) mine.parentNode.insertBefore(mine, mine.parentNode.firstElementChild);
 })();
 </script>
 </body>
