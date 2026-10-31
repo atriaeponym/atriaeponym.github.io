@@ -6,11 +6,37 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#141416">
 <title>Cours de bourse Paris et palmarès CAC 40, appli gratuite</title>
-<!-- PROPOSAL (31/10/2026), not deployed. In production, images are files under /stockcockpit/img/ and the icon is /icons/stockcockpit.png. -->
 <meta name="description" content="Appli gratuite de suivi de la Bourse de Paris : cours des actions du CAC 40, d&#x27;Europe et des US, différés de 15 min, palmarès du jour. Sans pub ni compte.">
 <link rel="canonical" href="https://atriaeponym.com/stockcockpit/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/stockcockpit/">
-<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/stockcockpit/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/stockcockpit/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/stockcockpit/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/stockcockpit/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/stockcockpit/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/stockcockpit/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/stockcockpit/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/stockcockpit/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/stockcockpit/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/stockcockpit/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/stockcockpit/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/stockcockpit/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/stockcockpit/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/stockcockpit/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/stockcockpit/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/stockcockpit/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/stockcockpit/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/stockcockpit/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/stockcockpit/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/stockcockpit/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/stockcockpit/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/stockcockpit/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/stockcockpit/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/stockcockpit/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/stockcockpit/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/stockcockpit/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/stockcockpit/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/stockcockpit/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/stockcockpit/en/">
 <link rel="icon" href="/icons/stockcockpit.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Atria.Eponym">
@@ -72,9 +98,21 @@ footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1p
 footer a{color:var(--ink)}
 footer p+p{margin-top:6px}
 @media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+.disclaimer{border-left:0;border-inline-start:3px solid var(--accent);border-radius:0;border-start-end-radius:12px;border-end-end-radius:12px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stock Cockpit","url":"https://atriaeponym.com/stockcockpit/","description":"Appli gratuite de suivi de la Bourse de Paris : cours des actions du CAC 40, d'Europe et des US, différés de 15 min, palmarès du jour. Sans pub ni compte.","inLanguage":"fr","applicationCategory":"FinanceApplication","operatingSystem":"Android 8+, Windows 10+","image":"https://atriaeponym.com/icons/stockcockpit.png","screenshot":["https://atriaeponym.com/stockcockpit/img/sc-1-marches.jpg","https://atriaeponym.com/stockcockpit/img/sc-2-detail-lvmh.jpg","https://atriaeponym.com/stockcockpit/img/sc-4-palmares.jpg","https://atriaeponym.com/stockcockpit/img/sc-5-recherche.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit","https://apps.microsoft.com/detail/9MSVWVC0L4J5"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Stock Cockpit est-elle gratuite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Stock Cockpit est gratuite, sans publicité et sans compte. Sur Android, un don est possible depuis l'écran À propos ; il ne débloque aucune fonction."}},{"@type":"Question","name":"Les cours sont-ils différés ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les cours sont différés d'au moins 15 minutes et relevés chaque minute. L'heure du cours et sa source sont toujours affichées à côté du prix."}},{"@type":"Question","name":"Quelles bourses sont couvertes ?","acceptedAnswer":{"@type":"Answer","text":"Euronext Paris, y compris Euronext Growth et Euronext Access, Euronext Amsterdam, Bruxelles, Lisbonne et Milan, ainsi que les actions américaines, britanniques et d'autres pays d'Europe cotées en euros sur Tradegate."}},{"@type":"Question","name":"Peut-on voir le palmarès du CAC 40 ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'onglet Palmarès montre les 5 plus fortes hausses et les 5 plus fortes baisses de la dernière séance pour le CAC 40, le Dow Jones, le Nasdaq 100, le DAX, l'Euro Stoxx 50 et le FTSE 100."}},{"@type":"Question","name":"Stock Cockpit donne-t-elle des conseils d'investissement ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les données sont fournies à titre d'information et ne constituent pas un conseil en investissement. Vérifiez toujours un cours auprès de votre intermédiaire avant de passer un ordre."}},{"@type":"Question","name":"Comment partager une liste d'actions ?","acceptedAnswer":{"@type":"Answer","text":"Ouvrez le menu de la liste et partagez-la : l'appli crée un lien qui contient le nom de la liste et les codes des actions, sans aucun cours ni rien sur vous. La personne qui l'ouvre ajoute la liste en un geste. Sur PC Windows, le lien est copié dans le presse-papiers ; pour ajouter une liste reçue, collez son lien dans « Importer une liste »."}},{"@type":"Question","name":"Sur quels appareils fonctionne Stock Cockpit ?","acceptedAnswer":{"@type":"Answer","text":"Sur Android 8 ou plus récent, par Google Play, et sur PC avec Windows 10 (version 1809) ou Windows 11, par le Microsoft Store."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stock Cockpit","url":"https://atriaeponym.com/stockcockpit/","description":"Appli gratuite de suivi de la Bourse de Paris : cours des actions du CAC 40, d'Europe et des US, différés de 15 min, palmarès du jour. Sans pub ni compte.","inLanguage":"fr","applicationCategory":"FinanceApplication","operatingSystem":"Android 8+, Windows 10+","image":"https://atriaeponym.com/icons/stockcockpit.png","screenshot":["https://atriaeponym.com/stockcockpit/img/016194d9df.jpg","https://atriaeponym.com/stockcockpit/img/45fbc2d9e5.jpg","https://atriaeponym.com/stockcockpit/img/7a83948caa.jpg","https://atriaeponym.com/stockcockpit/img/ccc4f36543.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit","https://apps.microsoft.com/detail/9MSVWVC0L4J5"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Stock Cockpit est-elle gratuite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Stock Cockpit est gratuite, sans publicité et sans compte. Sur Android, un don est possible depuis l'écran À propos ; il ne débloque aucune fonction."}},{"@type":"Question","name":"Les cours sont-ils différés ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les cours sont différés d'au moins 15 minutes et relevés chaque minute. L'heure du cours et sa source sont toujours affichées à côté du prix."}},{"@type":"Question","name":"Quelles bourses sont couvertes ?","acceptedAnswer":{"@type":"Answer","text":"Euronext Paris, y compris Euronext Growth et Euronext Access, Euronext Amsterdam, Bruxelles, Lisbonne et Milan, ainsi que les actions américaines, britanniques et d'autres pays d'Europe cotées en euros sur Tradegate."}},{"@type":"Question","name":"Peut-on voir le palmarès du CAC 40 ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'onglet Palmarès montre les 5 plus fortes hausses et les 5 plus fortes baisses de la dernière séance pour le CAC 40, le Dow Jones, le Nasdaq 100, le DAX, l'Euro Stoxx 50 et le FTSE 100."}},{"@type":"Question","name":"Stock Cockpit donne-t-elle des conseils d'investissement ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les données sont fournies à titre d'information et ne constituent pas un conseil en investissement. Vérifiez toujours un cours auprès de votre intermédiaire avant de passer un ordre."}},{"@type":"Question","name":"Comment partager une liste d'actions ?","acceptedAnswer":{"@type":"Answer","text":"Ouvrez le menu de la liste et partagez-la : l'appli crée un lien qui contient le nom de la liste et les codes des actions, sans aucun cours ni rien sur vous. La personne qui l'ouvre ajoute la liste en un geste. Sur PC Windows, le lien est copié dans le presse-papiers ; pour ajouter une liste reçue, collez son lien dans « Importer une liste »."}},{"@type":"Question","name":"Sur quels appareils fonctionne Stock Cockpit ?","acceptedAnswer":{"@type":"Answer","text":"Sur Android 8 ou plus récent, par Google Play, et sur PC avec Windows 10 (version 1809) ou Windows 11, par le Microsoft Store."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/fr/"},{"@type":"ListItem","position":2,"name":"Stock Cockpit","item":"https://atriaeponym.com/stockcockpit/"}]}</script>
 </head>
 <body>
@@ -90,7 +128,7 @@ footer p+p{margin-top:6px}
 <a class="store" data-os="windows" href="https://apps.microsoft.com/detail/9MSVWVC0L4J5" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><small>Disponible sur</small><b>Microsoft Store</b><i>PC Windows 10 ou 11</i></span></a>
 </div>
 </div>
-<div class="shots" role="list" aria-label="Captures d'écran">
+<div class="shots" role="list" aria-label="Captures d&#x27;écran">
 <figure><img src="/stockcockpit/img/016194d9df.jpg" alt="Écran Marchés de Stock Cockpit sur Android : tendance du jour du CAC 40, du Dow Jones et du S&amp;P 500, puis une liste d&#x27;actions de la Bourse de Paris avec leur cours en euros et leur variation du jour" width="360" height="720" loading="lazy" decoding="async"></figure>
 <figure><img src="/stockcockpit/img/45fbc2d9e5.jpg" alt="Fiche d&#x27;une action dans Stock Cockpit : cours de LVMH sur Euronext Paris, variation du jour, mention « différé 15 min » avec l&#x27;heure du cours, et graphique de la séance avec son plus haut et son plus bas" width="360" height="720" loading="lazy" decoding="async"></figure>
 <figure><img src="/stockcockpit/img/7a83948caa.jpg" alt="Palmarès du CAC 40 dans Stock Cockpit : les 5 plus fortes hausses et les 5 plus fortes baisses de la séance, avec cours et variation en pourcentage" width="360" height="720" loading="lazy" decoding="async"></figure>
