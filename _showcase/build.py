@@ -48,7 +48,7 @@ PLATFORMS = ("android", "iphone", "mac")
 TEXT = {
     "fr": {
         "kicker": "Éditeur d'applications",
-        "lead": "Des applications simples et soignées pour Android, iPhone, Mac et PC. Sans publicité, sans compte obligatoire, avec le moins de données possible.",
+        "lead": "Des applications simples et soignées pour Android, iPhone, Mac et PC. Sans publicité, sans compte obligatoire.",
         "apps": "applications", "platforms_n": "plateformes", "languages": "langues", "upto": "jusqu’à ", "ads": "publicité",
         "all": "Toutes",
         "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
@@ -63,7 +63,7 @@ TEXT = {
     },
     "en": {
         "kicker": "App publisher",
-        "lead": "Simple, carefully made apps for Android, iPhone, Mac and PC. No ads, no mandatory account, as little data as possible.",
+        "lead": "Simple, carefully made apps for Android, iPhone, Mac and PC. No ads, no mandatory account.",
         "apps": "apps", "platforms_n": "platforms", "languages": "languages", "upto": "up to ", "ads": "ads",
         "all": "All",
         "android": "Android", "iphone": "iPhone", "mac": "Mac/PC",
