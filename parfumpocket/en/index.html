@@ -3,107 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index">
-<title>Perfume Price Tracker — compare perfume prices</title>
-<meta name="description" content="Compare perfume and fragrance prices across shops: price per ml, drop alerts.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141416">
+<title>Perfume price comparison: delivered price and drop alerts</title>
+<meta name="description" content="Perfume price comparison app: delivered price across shops, price history and an alert when the price drops. Free, no ads, no account.">
+<link rel="canonical" href="https://atriaeponym.com/parfumpocket/en/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/parfumpocket/">
 <link rel="alternate" hreflang="en" href="https://atriaeponym.com/parfumpocket/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/parfumpocket/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/parfumpocket/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/parfumpocket/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/parfumpocket/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/parfumpocket/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/parfumpocket/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/parfumpocket/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/parfumpocket/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/parfumpocket/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/parfumpocket/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/parfumpocket/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/parfumpocket/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/parfumpocket/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/parfumpocket/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/parfumpocket/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/parfumpocket/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/parfumpocket/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/parfumpocket/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/parfumpocket/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/parfumpocket/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/parfumpocket/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/parfumpocket/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/parfumpocket/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/parfumpocket/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/parfumpocket/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/parfumpocket/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/parfumpocket/en/">
+<link rel="icon" href="/icons/parfumpocket.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://atriaeponym.com/parfumpocket/en/">
+<meta property="og:title" content="Perfume price comparison: delivered price and drop alerts">
+<meta property="og:description" content="Perfume price comparison app: delivered price across shops, price history and an alert when the price drops. Free, no ads, no account.">
+<meta property="og:image" content="https://atriaeponym.com/icons/parfumpocket.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--page:#F6F7F9;--card:#FFFFFF;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--accent:#1E3A33;--soft:#F3EDD6;--ok:#059669}
-@media (prefers-color-scheme:dark){:root{--page:#0B0F19;--card:#141A2A;--ink:#E8ECF4;--muted:#A3AEC2;--line:#253047;--accent:#D4B24A;--soft:#373017;--ok:#34D399}}
-body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
-     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
-     max-width:780px;margin:0 auto;font-size:16px}
-h1{font-size:26px;margin-bottom:6px;font-weight:700}
-.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
-h2{font-size:18px;margin:34px 0 10px;font-weight:700}
-p{margin-bottom:14px;color:var(--muted)}
-b,strong{color:var(--ink)}
-ul,ol{margin:0 0 16px 22px}
-[dir=rtl] ul,[dir=rtl] ol{margin:0 22px 16px 0}
-li{margin-bottom:9px;color:var(--muted)}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#d9b85c;--accent2:#b8962e;--on:#1a1306;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
 a{color:var(--accent)}
-bdi{white-space:nowrap}
-.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
-     border-radius:12px;padding:16px 18px;margin:20px 0}
-.box p:last-child{margin-bottom:0}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
-     padding:14px 22px;border-radius:14px;margin:8px 0 18px}
-.code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:4px 10px;border-radius:8px;word-break:break-all}
-.only-android,.only-ios,.only-desktop{display:none}
-.is-android .only-android,.is-ios .only-ios,.is-desktop .only-desktop{display:block}
-.no-code .needs-code{display:none}
-.lang{margin-bottom:24px}
-.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
-     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
-.all{margin-top:30px;font-size:13px;line-height:2;color:var(--muted)}
-.all a{color:var(--muted);margin-inline-end:10px;white-space:nowrap}
-footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-.hero{display:flex;gap:16px;align-items:center;margin-bottom:10px}
-.hero img{width:72px;height:72px;border-radius:18px}
-.stores{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
-.stores .btn{margin:0}
-@media (prefers-color-scheme:dark){.btn{color:#0B0F19}}
-html,body{overflow-x:hidden}
-.soon{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--muted);
-      font-weight:600;padding:12px 18px;border-radius:14px;font-size:15px}
-.soon b{color:var(--ink)}
-.shots{display:flex;gap:12px;overflow-x:auto;margin:18px 0 6px;padding-bottom:6px}
-.shots img{width:200px;height:auto;flex:0 0 auto;border-radius:16px;border:1px solid var(--line)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+.lang{position:absolute;top:14px;right:16px;font-size:13.5px}
+.lang a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
+.lang a:hover{color:var(--ink)}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+/* i18n: language menu; logical sides for right-to-left pages; no letter-spacing on joined or complex scripts */
+.lang{right:auto;inset-inline-end:16px;z-index:2}
+.lang .cur{display:inline-block;cursor:pointer;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
+.lang .cur::after{content:" ▾";font-size:11px}
+.lang:hover .cur,.lang:focus-within .cur{color:var(--ink)}
+.lang ul{display:none}
+.lang:hover ul,.lang:focus-within ul{display:block}
+.lang ul{position:absolute;inset-inline-end:0;top:calc(100% + 6px);list-style:none;margin:0;padding:6px;width:210px;max-height:70vh;overflow-y:auto;
+         background:#1d1d20;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.lang li{margin:0}
+.lang ul a{display:block;border:0;background:none;border-radius:8px;padding:5px 10px;color:var(--ink)}
+.lang ul a:hover,.lang ul a:focus-visible{background:var(--card);color:var(--accent)}
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+.disclaimer{border-left:0;border-inline-start:3px solid var(--accent);border-radius:0;border-start-end-radius:12px;border-end-end-radius:12px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+.lang li a:lang(ur),.lang li a:lang(ar),.lang li a:lang(fa),.lang li a:lang(he){font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic',sans-serif;line-height:1.6}
 </style>
-<link rel="canonical" href="https://atriaeponym.com/parfumpocket/en/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Perfume Price Tracker","description":"Compare your perfume prices across shops, delivery included, and get an alert when they drop. No ads, no account.","applicationCategory":"ShoppingApplication","image":"https://atriaeponym.com/icons/parfumpocket.png","operatingSystem":"Android, iOS","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket","https://apps.apple.com/app/id6824535728"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Perfume Price Tracker","url":"https://atriaeponym.com/parfumpocket/en/","description":"Perfume price comparison app: delivered price across shops, price history and an alert when the price drops. Free, no ads, no account.","inLanguage":"en","applicationCategory":"ShoppingApplication","operatingSystem":"Android 8+, iOS 17+","image":"https://atriaeponym.com/icons/parfumpocket.png","screenshot":["https://atriaeponym.com/parfumpocket/img/05f8fee7e9.jpg","https://atriaeponym.com/parfumpocket/img/06e6d5a0ac.jpg","https://atriaeponym.com/parfumpocket/img/079cb6b2d1.jpg","https://atriaeponym.com/parfumpocket/img/738b5f6e10.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket","https://apps.apple.com/app/id6824535728"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is Perfume Price Tracker free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The app is free and has no ads, on Android as on iPhone. On Android, an optional PRO subscription, monthly or yearly and cancellable at any time, adds features; price comparison and alerts stay free."}},{"@type":"Question","name":"Which shops are compared?","acceptedAnswer":{"@type":"Answer","text":"Today MyOrigines, Parfumdo and Sabina, read every day. You can add others by pasting the link of a perfume page, if the shop allows that page to be read automatically and publishes its price. A shop that blocks it is shown as “source unavailable”."}},{"@type":"Question","name":"Does the compared price include delivery?","acceptedAnswer":{"@type":"Answer","text":"Yes. Offers are ranked by total delivered price: the price plus the cheapest home delivery, for one item. If a shop does not publish its delivery costs, the app says so instead of making up a total."}},{"@type":"Question","name":"How does the price drop alert work?","acceptedAnswer":{"@type":"Answer","text":"You choose a maximum price, a minimum drop in % or a new low. Every morning, after the prices are read, your phone compares the day's prices with your thresholds and tells you only once per offer as long as its price does not change."}},{"@type":"Question","name":"Are the prices shown up to date?","acceptedAnswer":{"@type":"Answer","text":"Every price shows its shop, its exact size and the date it was read. Prices are read once a day; a price that is too old is greyed out and never shown as current."}},{"@type":"Question","name":"Are promo codes taken into account?","acceptedAnswer":{"@type":"Answer","text":"No. The app compares public prices only, the ones every visitor sees in the shop: no promo codes, no members-only prices."}},{"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No. The app asks for neither a name nor an email address. Your collection and your alerts stay on your phone; uninstalling the app erases them."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/"},{"@type":"ListItem","position":2,"name":"Perfume Price Tracker","item":"https://atriaeponym.com/parfumpocket/en/"}]}</script>
 </head>
 <body>
-<div class="sub"><a href="../">Français</a></div>
-<div class="hero"><img src="../../icons/parfumpocket.png" alt="" width="72" height="72">
-<div><h1><bdi>Perfume Price Tracker</bdi></h1><div class="sub" style="margin:0">Compare perfume and fragrance prices across shops: price per ml, drop alerts.</div></div></div>
-
-<p><bdi>Perfume Price Tracker</bdi> follows the price of your perfumes in several online shops and tells you where to buy them at the best price, <strong>delivery included</strong>.</p>
-
-<div class="stores"><a class="btn" href="https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket&hl=en">Get it on Google Play</a><a class="btn" href="https://apps.apple.com/app/id6824535728">Download on the App Store</a></div>
-
-<div class="shots">
-  <img src="../img/en-1.jpg" alt="Screenshot 1" width="540" height="1173" loading="lazy">
-  <img src="../img/en-2.jpg" alt="Screenshot 2" width="540" height="1173" loading="lazy">
-  <img src="../img/en-3.jpg" alt="Screenshot 3" width="540" height="1173" loading="lazy">
+<nav class="lang" aria-label="Language"><span class="cur" tabindex="0">English</span><ul><li><a href="/parfumpocket/" hreflang="fr" lang="fr">Français</a></li><li><a href="/parfumpocket/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/parfumpocket/es/" hreflang="es" lang="es">Español</a></li><li><a href="/parfumpocket/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="/parfumpocket/pt/" hreflang="pt-PT" lang="pt-PT">Português</a></li><li><a href="/parfumpocket/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/parfumpocket/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/parfumpocket/sv/" hreflang="sv" lang="sv">Svenska</a></li><li><a href="/parfumpocket/nb/" hreflang="nb" lang="nb">Norsk bokmål</a></li><li><a href="/parfumpocket/fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="/parfumpocket/pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/parfumpocket/el/" hreflang="el" lang="el">Ελληνικά</a></li><li><a href="/parfumpocket/tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="/parfumpocket/ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/parfumpocket/uk/" hreflang="uk" lang="uk">Українська</a></li><li><a href="/parfumpocket/ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="/parfumpocket/he/" hreflang="he" lang="he">עברית</a></li><li><a href="/parfumpocket/fa/" hreflang="fa" lang="fa">فارسی</a></li><li><a href="/parfumpocket/ur/" hreflang="ur" lang="ur">اردو</a></li><li><a href="/parfumpocket/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/parfumpocket/bn/" hreflang="bn" lang="bn">বাংলা</a></li><li><a href="/parfumpocket/th/" hreflang="th" lang="th">ไทย</a></li><li><a href="/parfumpocket/vi/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/parfumpocket/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="/parfumpocket/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/parfumpocket/ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/parfumpocket/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></nav>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/parfumpocket.png" width="128" height="128" alt="Perfume Price Tracker icon: an amber perfume bottle with a golden cap, on a dark background">
+<h1>Perfume Price Tracker<span class="sub">perfume price comparison</span></h1>
+<div class="kicker">DELIVERED PRICE · HISTORY · ALERTS</div>
+<p class="lead">Finding cheap perfume starts with knowing where it costs least, delivery included. Perfume Price Tracker is a perfume price comparison app for Android and iPhone: it compares the price of your eau de parfum or eau de toilette across several online shops, follows how that price moves day after day and sends you an alert when it drops. The deal comes to you, with no comparing by hand.</p>
+<p class="promise">Free · no ads · no account</p>
+<div class="stores">
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.2-9.4-9.2-9.4zm10.4 8.2 2.7-2.8L6.1 1.6c-.4-.2-.8-.3-1.1-.2l9.6 9.4zm0 2.4L5 22.6c.3.1.7 0 1.1-.2l11.2-6.4-2.7-2.8zm3.9-4.5-3.1 3.3 3.1 3.2 3.4-1.9c1-.6 1-1.5 0-2.1l-3.4-2.5z"/></svg><span><small>Get it on</small><b>Google Play</b><i>Android 8 or later</i></span></a>
+<a class="store" data-os="ios" href="https://apps.apple.com/app/id6824535728" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>Download on the</small><b>App Store</b><i>iPhone, iOS 17 or later</i></span></a>
 </div>
-
-<div class="box"><p><strong>Free, no ads, no account.</strong> Your alerts and your collection stay on your phone.</p></div>
-
-<h2>The right price, in the right place</h2>
+</div>
+<div class="shots" role="list" aria-label="Screenshots">
+<figure><img src="/parfumpocket/img/05f8fee7e9.jpg" alt="My collection screen of Perfume Price Tracker on Android: the cheapest offer right now, its total delivered price, its price per ml and the time it was read, then the perfumes you follow" width="360" height="720" loading="lazy" decoding="async"></figure>
+<figure><img src="/parfumpocket/img/06e6d5a0ac.jpg" alt="A perfume&#x27;s page in Perfume Price Tracker: choice of size (60, 100 or 200 ml) and shop offers ranked by total delivered price" width="360" height="720" loading="lazy" decoding="async"></figure>
+<figure><img src="/parfumpocket/img/079cb6b2d1.jpg" alt="Price history of a perfume in Perfume Price Tracker: one line per shop over 30 days, 90 days or since the start, and the price alert that is set" width="360" height="720" loading="lazy" decoding="async"></figure>
+<figure><img src="/parfumpocket/img/738b5f6e10.jpg" alt="Alerts screen of Perfume Price Tracker: an active price alert, a budget alert and the notifications sent when the price dropped" width="360" height="720" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>Compare a perfume's price across shops, delivery included</h2>
+<p>The price on display is not the price you pay. Perfume Price Tracker ranks every offer by <b>total delivered price</b>:
+the price of the bottle plus the cheapest home delivery, for one item. When a shop does not publish
+its delivery costs, the app says so instead of guessing.</p>
 <ul>
-  <li>Every offer is compared on its total delivered price: price + cheapest home delivery.</li>
-  <li>Price per millilitre and availability in each shop.</li>
-  <li>Every price shows its shop, its exact size and when it was read; an old price is greyed out, never shown as current.</li>
-  <li>Public prices only: no promo codes, no members-only prices.</li>
+<li><b>The exact size</b>: 30, 50, 100 ml… each size is compared with itself, never a 50 ml against a 100 ml.</li>
+<li><b>The price per ml</b>, to see which size works out cheaper.</li>
+<li><b>Availability</b> in each shop: in stock, out of stock or unknown.</li>
+<li><b>The date of the reading</b> under every price; a price that is too old is greyed out and never shown as current.</li>
+<li><b>Public prices only</b>: no promo codes, no members-only prices.</li>
 </ul>
-<h2>How prices move</h2>
+<p>Shops followed today: MyOrigines, Parfumdo and Sabina, whose prices are read every day.</p>
+</section>
+<section>
+<h2>Follow how a perfume's price moves</h2>
+<p>On a perfume's page, one line per shop shows how the price has moved over 30 days, 90 days or since tracking began,
+with the lowest price of each period. Days without a reading stay visible: nothing is made up to fill a gap.
+You can see whether today's price is a real deal or just the usual price.</p>
+</section>
+<section>
+<h2>Get an alert when the price drops</h2>
+<p>Set an alert on a perfume and a size:</p>
 <ul>
-  <li>One line per shop, over 30 days, 90 days or since the start.</li>
-  <li>The lowest price of each period; days without a reading stay visible.</li>
+<li>a <b>maximum price</b>: you are told as soon as an offer goes below it;</li>
+<li>a <b>minimum drop in %</b>;</li>
+<li>a <b>new low</b>, never read before.</li>
 </ul>
-<h2>Your alerts</h2>
+<p>Every morning, after the prices are read, your phone compares the day's prices with your thresholds and shows
+the notification itself, only once per offer as long as its price does not change.</p>
+</section>
+<section>
+<h2>Your collection and your shops</h2>
 <ul>
-  <li>Maximum price, minimum drop in %, new lowest price ever read.</li>
-  <li>Your phone checks every morning, after the prices are read, and tells you once per offer.</li>
+<li><b>My collection</b>: the perfumes you follow and the ones you own, sorted by price, recent drop, price per ml or how close they are to your threshold.</li>
+<li><b>Add a shop</b>: paste the link of a perfume page. The app checks at once that the shop allows this page
+to be read (robots.txt file) and that it publishes the price; if not, it tells you why.</li>
+<li>A shop that blocks automatic reading is shown as “source unavailable”: it is never worked around.</li>
 </ul>
-<h2>Your shops</h2>
+<p>Shops are third parties: they do not depend on Atria.Eponym and may change their pages or block access to them.</p>
+</section>
+<section>
+<h2>On Android and on iPhone</h2>
+<p>The app is available on Android (Google Play) and on iPhone (App Store), in 28 languages.</p>
 <ul>
-  <li>Followed today: MyOrigines, Sabina and Parfumdo.</li>
-  <li>Paste the link of a perfume page: the app checks at once whether it can be followed, or tells you why.</li>
-  <li>Shops are third parties: they do not depend on Atria.Eponym. A shop that refuses automatic reading is never worked around.</li>
+<li><b>On Android</b>: the latest version, with search in the catalogue of the shops followed and the PRO option.</li>
+<li><b>On iPhone</b>: price comparison, history, alerts and the collection. On the App Store, the app is still listed
+under its former name, “Parfum Pocket – perfume prices”. Shop search and the PRO option are for now
+available only in the Android version.</li>
 </ul>
-
-<p>Available in 28 languages.</p>
-
-<h2>Information</h2>
+</section>
+<section>
+<h2>PRO: an optional subscription</h2>
+<p>The free version is enough to compare prices and get alerts. On Android, an optional PRO subscription adds a savings
+counter, unlimited alerts and history, an adviser that compares sizes by price per ml, a budget alert
+and unlimited shops added by link (free version: 3 active alerts, 90 days of history, 3 shops added by link).</p>
 <ul>
-  <li><a href="../privacy/en/">Privacy policy</a></li>
-  <li><a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></li>
+<li>Monthly or yearly subscription, never a one-time purchase: your commitment ends with the period paid for.</li>
+<li>Cancel at any time in your Google Play subscriptions; access stays open until the end of the period already paid for.</li>
+<li>The price is shown in the app and on Google Play before any purchase.</li>
+<li>Prices come from third-party shops that do not depend on Atria.Eponym: the list of shops may change.</li>
 </ul>
-
-<footer>Perfume Price Tracker — Atria.Eponym · France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
+<p>The details are in the <a href="/parfumpocket/terms/en/">terms of sale</a>.</p>
+</section>
+<section>
+<h2>Your data stays on your phone</h2>
+<ul>
+<li>No account, no advertising, no audience measurement tools.</li>
+<li>Your collection, your alert thresholds and your notifications are stored only on your phone.</li>
+<li>Alerts are worked out by the phone itself: your thresholds are sent to no server.</li>
+</ul>
+<p>The details are in the <a href="/parfumpocket/privacy/en/">privacy policy</a>.</p>
+</section>
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<details><summary>Is Perfume Price Tracker free?</summary><p>Yes. The app is free and has no ads, on Android as on iPhone. On Android, an optional PRO subscription, monthly or yearly and cancellable at any time, adds features; price comparison and alerts stay free.</p></details>
+<details><summary>Which shops are compared?</summary><p>Today MyOrigines, Parfumdo and Sabina, read every day. You can add others by pasting the link of a perfume page, if the shop allows that page to be read automatically and publishes its price. A shop that blocks it is shown as “source unavailable”.</p></details>
+<details><summary>Does the compared price include delivery?</summary><p>Yes. Offers are ranked by total delivered price: the price plus the cheapest home delivery, for one item. If a shop does not publish its delivery costs, the app says so instead of making up a total.</p></details>
+<details><summary>How does the price drop alert work?</summary><p>You choose a maximum price, a minimum drop in % or a new low. Every morning, after the prices are read, your phone compares the day&#x27;s prices with your thresholds and tells you only once per offer as long as its price does not change.</p></details>
+<details><summary>Are the prices shown up to date?</summary><p>Every price shows its shop, its exact size and the date it was read. Prices are read once a day; a price that is too old is greyed out and never shown as current.</p></details>
+<details><summary>Are promo codes taken into account?</summary><p>No. The app compares public prices only, the ones every visitor sees in the shop: no promo codes, no members-only prices.</p></details>
+<details><summary>Do I need to create an account?</summary><p>No. The app asks for neither a name nor an email address. Your collection and your alerts stay on your phone; uninstalling the app erases them.</p></details>
+</section>
+<p class="disclaimer">Independent app: it is not affiliated with any shop or perfume brand. Perfume names visible in the screenshots belong to their owners; the prices in the screenshots are real readings from 27 October 2026, not current prices.</p>
+</main>
+<footer>
+<p><a href="/">All Atria.Eponym apps</a> · <a href="/parfumpocket/privacy/en/">Privacy</a> · <a href="/parfumpocket/terms/en/">Terms of sale</a></p>
+<p>Atria.Eponym, independent developer based in France · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+</footer>
+<script>
+// Highlights the store of the visitor's device. No redirect: search engines and visitors see the same page.
+(function () {
+  var ua = navigator.userAgent || "", os =
+    /Android/i.test(ua) ? "android" :
+    /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios" :
+    /Macintosh/.test(ua) ? "mac" : /Windows NT/i.test(ua) ? "windows" : "";
+  var el = document.querySelector('.store[data-os="' + os + '"]') || document.querySelector(".store");
+  if (el) { el.classList.add("mine"); el.parentNode.insertBefore(el, el.parentNode.firstChild); }
+})();
+</script>
 </body>
 </html>

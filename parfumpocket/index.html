@@ -6,11 +6,36 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#141416">
 <title>Comparateur de prix parfum : prix livré et alerte de baisse</title>
-<!-- PROPOSAL (31/10/2026), not deployed. In production, images are files under /parfumpocket/img/ and the icon is /icons/parfumpocket.png. -->
 <meta name="description" content="Comparateur de prix parfum : prix livré entre boutiques, évolution du prix et alerte quand il baisse. Gratuit, sans pub, sans compte.">
 <link rel="canonical" href="https://atriaeponym.com/parfumpocket/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/parfumpocket/">
 <link rel="alternate" hreflang="en" href="https://atriaeponym.com/parfumpocket/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/parfumpocket/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/parfumpocket/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/parfumpocket/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/parfumpocket/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/parfumpocket/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/parfumpocket/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/parfumpocket/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/parfumpocket/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/parfumpocket/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/parfumpocket/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/parfumpocket/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/parfumpocket/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/parfumpocket/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/parfumpocket/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/parfumpocket/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/parfumpocket/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/parfumpocket/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/parfumpocket/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/parfumpocket/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/parfumpocket/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/parfumpocket/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/parfumpocket/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/parfumpocket/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/parfumpocket/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/parfumpocket/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/parfumpocket/zh/">
 <link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/parfumpocket/en/">
 <link rel="icon" href="/icons/parfumpocket.png">
 <meta property="og:type" content="website">
@@ -76,13 +101,37 @@ footer p+p{margin-top:6px}
 .lang a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
 .lang a:hover{color:var(--ink)}
 @media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+/* i18n: language menu; logical sides for right-to-left pages; no letter-spacing on joined or complex scripts */
+.lang{right:auto;inset-inline-end:16px;z-index:2}
+.lang .cur{display:inline-block;cursor:pointer;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--card)}
+.lang .cur::after{content:" ▾";font-size:11px}
+.lang:hover .cur,.lang:focus-within .cur{color:var(--ink)}
+.lang ul{display:none}
+.lang:hover ul,.lang:focus-within ul{display:block}
+.lang ul{position:absolute;inset-inline-end:0;top:calc(100% + 6px);list-style:none;margin:0;padding:6px;width:210px;max-height:70vh;overflow-y:auto;
+         background:#1d1d20;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.lang li{margin:0}
+.lang ul a{display:block;border:0;background:none;border-radius:8px;padding:5px 10px;color:var(--ink)}
+.lang ul a:hover,.lang ul a:focus-visible{background:var(--card);color:var(--accent)}
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+.disclaimer{border-left:0;border-inline-start:3px solid var(--accent);border-radius:0;border-start-end-radius:12px;border-end-end-radius:12px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+.lang li a:lang(ur),.lang li a:lang(ar),.lang li a:lang(fa),.lang li a:lang(he){font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic',sans-serif;line-height:1.6}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Perfume Price Tracker","url":"https://atriaeponym.com/parfumpocket/","description":"Comparateur de prix parfum : prix livré entre boutiques, évolution du prix et alerte quand il baisse. Gratuit, sans pub, sans compte.","inLanguage":"fr","applicationCategory":"ShoppingApplication","operatingSystem":"Android 8+, iOS 17+","image":"https://atriaeponym.com/icons/parfumpocket.png","screenshot":["https://atriaeponym.com/parfumpocket/img/pp-1-collection.jpg","https://atriaeponym.com/parfumpocket/img/pp-2-offres.jpg","https://atriaeponym.com/parfumpocket/img/pp-3-historique.jpg","https://atriaeponym.com/parfumpocket/img/pp-4-alertes.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket","https://apps.apple.com/app/id6824535728"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Perfume Price Tracker est-il gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'appli est gratuite et sans publicité, sur Android comme sur iPhone. Sur Android, un abonnement PRO facultatif, mensuel ou annuel et résiliable à tout moment, ajoute des fonctions ; la comparaison et les alertes restent gratuites."}},{"@type":"Question","name":"Quelles boutiques sont comparées ?","acceptedAnswer":{"@type":"Answer","text":"Aujourd'hui MyOrigines, Parfumdo et Sabina, relevées chaque jour. Vous pouvez en ajouter d'autres en collant le lien d'une page de parfum, si la boutique autorise la lecture automatique de cette page et publie son prix. Une boutique qui la bloque s'affiche « source indisponible »."}},{"@type":"Question","name":"Le prix comparé comprend-il la livraison ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les offres sont classées par prix total livré : le prix plus la livraison à domicile la moins chère, pour un article. Si une boutique ne publie pas ses frais de livraison, l'appli l'indique au lieu d'inventer un total."}},{"@type":"Question","name":"Comment fonctionne l'alerte de baisse de prix ?","acceptedAnswer":{"@type":"Answer","text":"Vous choisissez un prix maximum, une baisse minimale en % ou un nouveau plus bas. Chaque matin, après le relevé des prix, votre téléphone compare les prix du jour à vos seuils et vous prévient une seule fois par offre tant que son prix ne change pas."}},{"@type":"Question","name":"Les prix affichés sont-ils à jour ?","acceptedAnswer":{"@type":"Answer","text":"Chaque prix indique sa boutique, sa taille exacte et la date de son relevé. Les prix sont relevés une fois par jour ; un prix trop ancien est grisé et n'est jamais présenté comme actuel."}},{"@type":"Question","name":"Les codes promo sont-ils pris en compte ?","acceptedAnswer":{"@type":"Answer","text":"Non. L'appli compare uniquement les prix publics, ceux que tout visiteur voit sur la boutique : ni code promo, ni prix réservé aux membres."}},{"@type":"Question","name":"Faut-il créer un compte ?","acceptedAnswer":{"@type":"Answer","text":"Non. L'appli ne demande ni nom, ni adresse e-mail. Votre collection et vos alertes restent sur votre téléphone ; désinstaller l'appli les efface."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Perfume Price Tracker","url":"https://atriaeponym.com/parfumpocket/","description":"Comparateur de prix parfum : prix livré entre boutiques, évolution du prix et alerte quand il baisse. Gratuit, sans pub, sans compte.","inLanguage":"fr","applicationCategory":"ShoppingApplication","operatingSystem":"Android 8+, iOS 17+","image":"https://atriaeponym.com/icons/parfumpocket.png","screenshot":["https://atriaeponym.com/parfumpocket/img/05f8fee7e9.jpg","https://atriaeponym.com/parfumpocket/img/06e6d5a0ac.jpg","https://atriaeponym.com/parfumpocket/img/079cb6b2d1.jpg","https://atriaeponym.com/parfumpocket/img/738b5f6e10.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket","https://apps.apple.com/app/id6824535728"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Perfume Price Tracker est-il gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui. L'appli est gratuite et sans publicité, sur Android comme sur iPhone. Sur Android, un abonnement PRO facultatif, mensuel ou annuel et résiliable à tout moment, ajoute des fonctions ; la comparaison et les alertes restent gratuites."}},{"@type":"Question","name":"Quelles boutiques sont comparées ?","acceptedAnswer":{"@type":"Answer","text":"Aujourd'hui MyOrigines, Parfumdo et Sabina, relevées chaque jour. Vous pouvez en ajouter d'autres en collant le lien d'une page de parfum, si la boutique autorise la lecture automatique de cette page et publie son prix. Une boutique qui la bloque s'affiche « source indisponible »."}},{"@type":"Question","name":"Le prix comparé comprend-il la livraison ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Les offres sont classées par prix total livré : le prix plus la livraison à domicile la moins chère, pour un article. Si une boutique ne publie pas ses frais de livraison, l'appli l'indique au lieu d'inventer un total."}},{"@type":"Question","name":"Comment fonctionne l'alerte de baisse de prix ?","acceptedAnswer":{"@type":"Answer","text":"Vous choisissez un prix maximum, une baisse minimale en % ou un nouveau plus bas. Chaque matin, après le relevé des prix, votre téléphone compare les prix du jour à vos seuils et vous prévient une seule fois par offre tant que son prix ne change pas."}},{"@type":"Question","name":"Les prix affichés sont-ils à jour ?","acceptedAnswer":{"@type":"Answer","text":"Chaque prix indique sa boutique, sa taille exacte et la date de son relevé. Les prix sont relevés une fois par jour ; un prix trop ancien est grisé et n'est jamais présenté comme actuel."}},{"@type":"Question","name":"Les codes promo sont-ils pris en compte ?","acceptedAnswer":{"@type":"Answer","text":"Non. L'appli compare uniquement les prix publics, ceux que tout visiteur voit sur la boutique : ni code promo, ni prix réservé aux membres."}},{"@type":"Question","name":"Faut-il créer un compte ?","acceptedAnswer":{"@type":"Answer","text":"Non. L'appli ne demande ni nom, ni adresse e-mail. Votre collection et vos alertes restent sur votre téléphone ; désinstaller l'appli les efface."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/fr/"},{"@type":"ListItem","position":2,"name":"Perfume Price Tracker","item":"https://atriaeponym.com/parfumpocket/"}]}</script>
 </head>
 <body>
-<nav class="lang" aria-label="Langue"><a href="en/" hreflang="en" lang="en">English</a></nav>
+<nav class="lang" aria-label="Langue"><span class="cur" tabindex="0">Français</span><ul><li><a href="/parfumpocket/en/" hreflang="en" lang="en">English</a></li><li><a href="/parfumpocket/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/parfumpocket/es/" hreflang="es" lang="es">Español</a></li><li><a href="/parfumpocket/it/" hreflang="it" lang="it">Italiano</a></li><li><a href="/parfumpocket/pt/" hreflang="pt-PT" lang="pt-PT">Português</a></li><li><a href="/parfumpocket/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/parfumpocket/nl/" hreflang="nl" lang="nl">Nederlands</a></li><li><a href="/parfumpocket/sv/" hreflang="sv" lang="sv">Svenska</a></li><li><a href="/parfumpocket/nb/" hreflang="nb" lang="nb">Norsk bokmål</a></li><li><a href="/parfumpocket/fi/" hreflang="fi" lang="fi">Suomi</a></li><li><a href="/parfumpocket/pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="/parfumpocket/el/" hreflang="el" lang="el">Ελληνικά</a></li><li><a href="/parfumpocket/tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="/parfumpocket/ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="/parfumpocket/uk/" hreflang="uk" lang="uk">Українська</a></li><li><a href="/parfumpocket/ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="/parfumpocket/he/" hreflang="he" lang="he">עברית</a></li><li><a href="/parfumpocket/fa/" hreflang="fa" lang="fa">فارسی</a></li><li><a href="/parfumpocket/ur/" hreflang="ur" lang="ur">اردو</a></li><li><a href="/parfumpocket/hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="/parfumpocket/bn/" hreflang="bn" lang="bn">বাংলা</a></li><li><a href="/parfumpocket/th/" hreflang="th" lang="th">ไทย</a></li><li><a href="/parfumpocket/vi/" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="/parfumpocket/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="/parfumpocket/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/parfumpocket/ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="/parfumpocket/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></nav>
 <main>
 <div class="hero">
 <img class="icon" src="/icons/parfumpocket.png" width="128" height="128" alt="Icône de Perfume Price Tracker : un flacon de parfum ambré au bouchon doré, sur fond sombre">
@@ -95,7 +144,7 @@ footer p+p{margin-top:6px}
 <a class="store" data-os="ios" href="https://apps.apple.com/app/id6824535728" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>Télécharger dans l’</small><b>App Store</b><i>iPhone, iOS 17 ou plus récent</i></span></a>
 </div>
 </div>
-<div class="shots" role="list" aria-label="Captures d'écran">
+<div class="shots" role="list" aria-label="Captures d&#x27;écran">
 <figure><img src="/parfumpocket/img/05f8fee7e9.jpg" alt="Écran Ma collection de Perfume Price Tracker sur Android : l&#x27;offre la moins chère du moment, son prix total livré, son prix au ml et l&#x27;heure du relevé, puis les parfums suivis" width="360" height="720" loading="lazy" decoding="async"></figure>
 <figure><img src="/parfumpocket/img/06e6d5a0ac.jpg" alt="Fiche d&#x27;un parfum dans Perfume Price Tracker : choix de la taille (60, 100 ou 200 ml) et offres des boutiques classées par prix total livré" width="360" height="720" loading="lazy" decoding="async"></figure>
 <figure><img src="/parfumpocket/img/079cb6b2d1.jpg" alt="Évolution du prix d&#x27;un parfum dans Perfume Price Tracker : une courbe par boutique sur 30 jours, 90 jours ou depuis le début, et l&#x27;alerte de prix réglée" width="360" height="720" loading="lazy" decoding="async"></figure>
