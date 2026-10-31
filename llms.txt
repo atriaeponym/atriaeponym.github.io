@@ -53,6 +53,7 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 ### SoundCatch
 - Audio recorder: record the sound of an app or open a file, cut out what you do not need, export one clean file. No ads, no account.
 - FR : Enregistreur audio : enregistre le son d'une appli ou ouvre un fichier, coupe les passages inutiles, exporte un fichier propre. Sans pub, sans compte.
+- Microsoft Store (Windows): https://apps.microsoft.com/detail/9NPS4KMHB2VB
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.soundcatch
 - Page: https://atriaeponym.com/soundcatch/
 
