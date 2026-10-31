@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="google-site-verification" content="CL3SyiPgogjvtsvhgCQwPVAE8Ygbbc3NrSV3D8TyKaI">
-<title>MyLilBudget — Taschengeld, klar und im Griff</title>
-<link rel="alternate" hreflang="en" href="https://atriaeponym.com/familypocket/en/">
+<meta name="theme-color" content="#141416">
+<title>Taschengeld-App für Jugendliche, kostenlos – MyLilBudget</title>
+<meta name="description" content="Taschengeld- und Budget-App für Jugendliche, allein oder mit der Familie: Ausgaben, Sparen, Taschengeld pro Kind. Kostenlos, ohne Werbung, ohne Bank.">
+<link rel="canonical" href="https://atriaeponym.com/familypocket/de/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/familypocket/">
-<link rel="alternate" hreflang="es" href="https://atriaeponym.com/familypocket/es/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/familypocket/en/">
 <link rel="alternate" hreflang="de" href="https://atriaeponym.com/familypocket/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/familypocket/es/">
 <link rel="alternate" hreflang="it" href="https://atriaeponym.com/familypocket/it/">
-<link rel="alternate" hreflang="pt" href="https://atriaeponym.com/familypocket/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/familypocket/pt/">
 <link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/familypocket/pt-br/">
 <link rel="alternate" hreflang="nl" href="https://atriaeponym.com/familypocket/nl/">
-<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/familypocket/pl/">
 <link rel="alternate" hreflang="sv" href="https://atriaeponym.com/familypocket/sv/">
 <link rel="alternate" hreflang="nb" href="https://atriaeponym.com/familypocket/nb/">
 <link rel="alternate" hreflang="fi" href="https://atriaeponym.com/familypocket/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/familypocket/pl/">
 <link rel="alternate" hreflang="el" href="https://atriaeponym.com/familypocket/el/">
 <link rel="alternate" hreflang="tr" href="https://atriaeponym.com/familypocket/tr/">
 <link rel="alternate" hreflang="ru" href="https://atriaeponym.com/familypocket/ru/">
@@ -34,125 +37,214 @@
 <link rel="alternate" hreflang="ja" href="https://atriaeponym.com/familypocket/ja/">
 <link rel="alternate" hreflang="ko" href="https://atriaeponym.com/familypocket/ko/">
 <link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/familypocket/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/familypocket/en/">
+<link rel="icon" href="/icons/familypocket.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://atriaeponym.com/familypocket/de/">
+<meta property="og:title" content="Taschengeld-App für Jugendliche, kostenlos – MyLilBudget">
+<meta property="og:description" content="Taschengeld- und Budget-App für Jugendliche, allein oder mit der Familie: Ausgaben, Sparen, Taschengeld pro Kind. Kostenlos, ohne Werbung, ohne Bank.">
+<meta property="og:image" content="https://atriaeponym.com/teasers/familypocket-en.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--page:#F6F7F9;--card:#FFFFFF;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--accent:#4F46E5;--soft:#E0E7FF;--ok:#059669}
-@media (prefers-color-scheme:dark){:root{--page:#0B0F19;--card:#141A2A;--ink:#E8ECF4;--muted:#A3AEC2;--line:#253047;--accent:#818CF8;--soft:#25265A;--ok:#34D399}}
-body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
-     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
-     max-width:780px;margin:0 auto;font-size:16px}
-h1{font-size:26px;margin-bottom:6px;font-weight:700}
-.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
-h2{font-size:18px;margin:34px 0 10px;font-weight:700}
-p{margin-bottom:14px;color:var(--muted)}
-b,strong{color:var(--ink)}
-ul,ol{margin:0 0 16px 22px}
-[dir=rtl] ul,[dir=rtl] ol{margin:0 22px 16px 0}
-li{margin-bottom:9px;color:var(--muted)}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#78b0ee;--accent2:#5b9be4;--on:#0b1626;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
 a{color:var(--accent)}
-bdi{white-space:nowrap}
-.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
-     border-radius:12px;padding:16px 18px;margin:20px 0}
-.box p:last-child{margin-bottom:0}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
-     padding:14px 22px;border-radius:14px;margin:8px 0 18px}
-.code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:4px 10px;border-radius:8px;word-break:break-all}
-.only-android,.only-ios,.only-desktop{display:none}
-.is-android .only-android,.is-ios .only-ios,.is-desktop .only-desktop{display:block}
-.no-code .needs-code{display:none}
-.lang{margin-bottom:24px}
-.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
-     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
-.all{margin-top:30px;font-size:13px;line-height:2;color:var(--muted)}
-.all a{color:var(--muted);margin-inline-end:10px;white-space:nowrap}
-footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.langbar{position:sticky;top:0;z-index:5;width:100%;max-width:640px;margin:-32px auto 24px;display:flex;align-items:center;gap:10px;
+         padding:9px 12px 9px 16px;border-radius:12px;background:rgba(29,29,32,.86);border:1px solid var(--line);
+         -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:14px;color:var(--muted)}
+.langbar[hidden]{display:none}
+.langbar span{flex:1;min-width:0}
+.langbar a{font-weight:650;text-decoration:none;white-space:nowrap}
+.langbar button{flex:none;background:none;border:0;color:var(--muted);font-size:20px;line-height:1;padding:2px 6px;cursor:pointer}
+.langs{margin-top:10px;font-size:12.5px;line-height:2}
+.langs a{color:var(--muted);text-decoration:none;margin:0 5px;white-space:nowrap}
+.faq summary{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.faq summary::after{float:none;flex:none}
+@media (max-width:380px){.langbar{margin-top:-20px}}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+html[dir=rtl] .langbar{padding:9px 16px 9px 12px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
 </style>
-<link rel="canonical" href="https://atriaeponym.com/familypocket/de/">
-<meta name="description" content="MyLilBudget ist ein Notizbuch für Taschengeld und Budget, für Jugendliche, junge Erwachsene und ihre Familien. Du trägst deine Ausgaben und Einnahmen ein,…">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyLilBudget","description":"Wohin geht mein Geld? Taschengeld und Budget für Teens, allein oder mit Familie.","applicationCategory":"FinanceApplication","image":"https://atriaeponym.com/icons/familypocket.png","operatingSystem":"Android, iOS, Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket","https://apps.apple.com/app/id6822458545","https://apps.microsoft.com/detail/9PMVV9S1H489"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyLilBudget","alternateName":["MonPtitBudget","Family Pocket"],"url":"https://atriaeponym.com/familypocket/de/","description":"Taschengeld- und Budget-App für Jugendliche, allein oder mit der Familie: Ausgaben, Sparen, Taschengeld pro Kind. Kostenlos, ohne Werbung, ohne Bank.","inLanguage":"de","applicationCategory":"FinanceApplication","operatingSystem":"Android 8+, iOS 17+, macOS 12+ (Apple silicon), Windows 10, Windows 11","image":"https://atriaeponym.com/icons/familypocket.png","screenshot":["https://atriaeponym.com/familypocket/img/9a0362d6d7.jpg","https://atriaeponym.com/familypocket/img/d87c663539.jpg","https://atriaeponym.com/familypocket/img/87a6a5c0bf.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket","https://apps.apple.com/app/id6822458545","https://apps.microsoft.com/detail/9PMVV9S1H489"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"de","mainEntity":[{"@type":"Question","name":"Ist MyLilBudget kostenlos?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die App ist kostenlos, ohne Werbung und ohne Abo. Eine freiwillige Spende ist in der App möglich; sie schaltet keine Funktion frei."}},{"@type":"Question","name":"Muss ein Bankkonto verbunden werden?","acceptedAnswer":{"@type":"Answer","text":"Nein. MyLilBudget ist ein Notizbuch zum Mitverfolgen: Keine Bank wird verbunden, und es fließt kein echtes Geld. Wenn Sie möchten, können Sie einen bei Ihrer Bank heruntergeladenen Kontoauszug als CSV, OFX oder QIF importieren und prüfen jede Zeile, bevor sie hinzugefügt wird."}},{"@type":"Question","name":"Wie wird das Taschengeld jedes Kindes festgelegt?","acceptedAnswer":{"@type":"Answer","text":"Im Familienmodus wählt der Elternteil für jedes Kind ein regelmäßiges Taschengeld, jede Woche oder jeden Monat, das automatisch ins Notizbuch eingetragen wird, oder ein einmaliges, über die Schaltfläche „Auszahlen“. Er kann den Bereich für ein Kind auch deaktivieren."}},{"@type":"Question","name":"Sehen Eltern alle Ausgaben ihres Teenagers?","acceptedAnswer":{"@type":"Answer","text":"Das entscheidet der Teenager beim Beitritt zur Familie: Seine Eltern sehen seinen gesamten Verlauf oder nur seine Buchungen ab diesem Tag. Er kann diese Wahl später in den Einstellungen ändern."}},{"@type":"Question","name":"Muss ein Konto erstellt werden?","acceptedAnswer":{"@type":"Answer","text":"Nicht bei alleiniger Nutzung: Alles bleibt auf Ihrem Telefon. In der Familie meldet sich nur der Elternteil an, mit seinem Google- oder Apple-Konto; der Teenager und die Verwandten treten der Familie ohne E-Mail und ohne Passwort bei."}},{"@type":"Question","name":"Wie geht der Verlauf nicht verloren?","acceptedAnswer":{"@type":"Answer","text":"Das Telefon sichert das Notizbuch in Ihrem eigenen Google- oder iCloud-Konto, verschlüsselt auf dem iPhone und ab Android 9. Sie können außerdem eine passwortgeschützte Sicherungsdatei erstellen, mit der Sie auch von einem Android-Telefon auf ein iPhone wechseln können."}},{"@type":"Question","name":"Auf welchen Geräten läuft MyLilBudget?","acceptedAnswer":{"@type":"Answer","text":"Auf Android 8 oder neuer, auf dem iPhone mit iOS 17 oder neuer, auf dem Mac mit Apple Chip ab macOS 12 und auf dem PC mit Windows 10 oder 11."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/de/"},{"@type":"ListItem","position":2,"name":"MyLilBudget","item":"https://atriaeponym.com/familypocket/de/"}]}</script>
 </head>
 <body>
-
-<div class="lang">
-  <select aria-label="Language" onchange="location.href=this.value + location.search.replace(/([?&])lang=[^&#]*&?/, '$1').replace(/[?&]$/, '')">
-    <option value="../en/">English</option>
-    <option value="../?lang=fr">Français</option>
-    <option value="../es/">Español</option>
-    <option value="../de/" selected>Deutsch</option>
-    <option value="../it/">Italiano</option>
-    <option value="../pt/">Português</option>
-    <option value="../pt-br/">Português (BR)</option>
-    <option value="../nl/">Nederlands</option>
-    <option value="../pl/">Polski</option>
-    <option value="../sv/">Svenska</option>
-    <option value="../nb/">Norsk</option>
-    <option value="../fi/">Suomi</option>
-    <option value="../el/">Ελληνικά</option>
-    <option value="../tr/">Türkçe</option>
-    <option value="../ru/">Русский</option>
-    <option value="../uk/">Українська</option>
-    <option value="../ar/">العربية</option>
-    <option value="../he/">עברית</option>
-    <option value="../fa/">فارسی</option>
-    <option value="../ur/">اردو</option>
-    <option value="../hi/">हिन्दी</option>
-    <option value="../bn/">বাংলা</option>
-    <option value="../th/">ไทย</option>
-    <option value="../vi/">Tiếng Việt</option>
-    <option value="../id/">Indonesia</option>
-    <option value="../ja/">日本語</option>
-    <option value="../ko/">한국어</option>
-    <option value="../zh/">中文</option>
-  </select>
+<div class="langbar" id="langbar" hidden><span>Diese Seite gibt es auch auf <a id="langlink" href="/familypocket/en/" lang="en">English</a></span><button type="button" id="langclose" aria-label="Schließen">×</button></div>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/familypocket.png" width="128" height="128" alt="Symbol von MyLilBudget: ein weißes Sparschwein auf nachtblauem Hintergrund">
+<h1>MyLilBudget<span class="sub">die Taschengeld- und Budget-App für Jugendliche</span></h1>
+<div class="kicker">TASCHENGELD · BUDGET · SPAREN</div>
+<p class="lead">MyLilBudget ist eine kostenlose Taschengeld-App für Jugendliche und ihre Eltern. Sie hilft, Taschengeld und Budget im Griff zu behalten: jede Ausgabe und jede Einnahme in wenigen Sekunden eingetragen, Sparziele und der Überblick, wohin das Geld geht, Monat für Monat. Nutzen Sie sie allein, ohne Konto, oder mit der Familie: Ein Elternteil legt das Taschengeld jedes Kindes fest. Es ist ein Notizbuch zum Mitverfolgen, eine Budget-App ohne verbundene Bank: Es fließt kein echtes Geld.</p>
+<p class="promise">Kostenlos · ohne Werbung · kein Bankkonto verbunden</p>
+<div class="stores">
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.2-9.4-9.2-9.4zm10.4 8.2 2.7-2.8L6.1 1.6c-.4-.2-.8-.3-1.1-.2l9.6 9.4zm0 2.4L5 22.6c.3.1.7 0 1.1-.2l11.2-6.4-2.7-2.8zm3.9-4.5-3.1 3.3 3.1 3.2 3.4-1.9c1-.6 1-1.5 0-2.1l-3.4-2.5z"/></svg><span><small>Jetzt bei</small><b>Google Play</b><i>Android 8 oder neuer</i></span></a>
+<a class="store" data-os="ios mac" href="https://apps.apple.com/app/id6822458545" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>Laden im</small><b>App Store</b><i>iPhone (iOS 17) · Mac mit Apple Chip (macOS 12)</i></span></a>
+<a class="store" data-os="windows" href="https://apps.microsoft.com/detail/9PMVV9S1H489" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><small>Vom</small><b>Microsoft Store</b><small>herunterladen</small><i>Windows-PC mit Windows 10 oder 11</i></span></a>
 </div>
-
-<h1><bdi>MyLilBudget</bdi></h1>
-<div class="sub">(<bdi>ehemals Family Pocket</bdi>)</div>
-<div class="sub">Dein Geld, klar und im Griff. Allein oder mit deiner Familie.</div>
-
-<p><bdi>MyLilBudget</bdi> ist ein Notizbuch für Taschengeld und Budget, für Jugendliche, junge Erwachsene und ihre Familien. Du trägst deine Ausgaben und Einnahmen ein, verfolgst deine Sparziele und siehst, wohin dein Geld geht. <strong>Zwischen Familienmitgliedern fließt kein echtes Geld</strong>: Die App ist mit keinem Bankkonto verbunden. Mit einer freiwilligen Spende kannst du ihren Entwickler unterstützen.</p>
-
-<a class="btn" href="https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket">Bei Google Play herunterladen</a>
-
-<div class="box">
-  <p><strong>Kostenlos, ohne Werbung, ohne Konto.</strong> Allein bleibt alles auf deinem Telefon. In der Familie sehen nur deine Familienmitglieder, was jeder teilen möchte.</p>
 </div>
-
-<h2>Allein, ab der ersten Minute</h2>
+<div class="shots" role="list" aria-label="Screenshots">
+<figure><img src="/familypocket/img/9a0362d6d7.jpg" alt="Startseite von MyLilBudget auf dem iPhone: Monatssaldo von 105 €, Einnahmen und Ausgaben, Sparziel Fahrrad und die letzten Taschengeld-Buchungen" width="360" height="782" loading="lazy" decoding="async"></figure>
+<figure><img src="/familypocket/img/d87c663539.jpg" alt="Eintragen einer Ausgabe von 2 € in MyLilBudget mit Auswahl der Kategorie: Essen, Ausgehen, Videospiele, Kleidung, Beauty, Technik" width="360" height="782" loading="lazy" decoding="async"></figure>
+<figure><img src="/familypocket/img/87a6a5c0bf.jpg" alt="Liste der Buchungen des Monats in MyLilBudget: Taschengeld-Zahlungen und Ausgaben, nach Kategorie gefiltert" width="360" height="782" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>Das eigene Taschengeld verwalten, allein und ohne Konto</h2>
+<p>Installieren Sie die App, wählen Sie Ihre Währung, und schon geht es los: keine Registrierung, keine E-Mail. Bei alleiniger Nutzung bleibt Ihr Notizbuch auf Ihrem Telefon.</p>
 <ul>
-  <li>Trag eine Ausgabe oder Einnahme in wenigen Sekunden ein, mit Kategorie und Notiz.</li>
-  <li>Verfolge deine Sparziele und das Datum, an dem du sie erreichst.</li>
-  <li>Sieh deine Ausgaben nach Kategorie und wie deine Ersparnisse wachsen, Monat für Monat.</li>
-  <li>Erstelle so viele Kategorien, wie du willst, mit eigenem Symbol und eigener Farbe.</li>
+<li><b>Eine Ausgabe oder Einnahme in wenigen Sekunden</b>, mit Kategorie, Datum und Notiz.</li>
+<li><b>18 fertige Kategorien</b> (Essen, Ausgehen, Videospiele, Kleidung, Transport, Taschengeld, Nebenjobs …) und so viele eigene Kategorien, wie Sie möchten, mit Symbol und Farbe.</li>
+<li><b>Sparziele</b>: wie viel noch zurückzulegen ist und bis wann Sie das Ziel voraussichtlich erreichen.</li>
+<li><b>Wohin Ihr Geld geht</b>: Ausgaben nach Kategorie, Einnahmen und Ausgaben Monat für Monat und der Vergleich mit dem Vormonat.</li>
+<li><b>Abzeichen</b> für gute Gewohnheiten, etwa 7 Tage in Folge Buchungen eintragen oder 3 Monate hintereinander das Budget einhalten.</li>
 </ul>
-
-<h2>In der Familie, ganz unkompliziert</h2>
+</section>
+<section>
+<h2>Das Taschengeld der Kinder, in der Familie geregelt</h2>
+<p>Der Familienmodus ist freiwillig. Sie können ihn jederzeit hinzufügen, auch nach Monaten alleiniger Nutzung.</p>
+<ol>
+<li>Ein Elternteil erstellt die Familie mit einem Tippen über sein Google-Konto (oder Apple auf dem iPhone), ohne Passwort, und zeigt einen QR-Code an.</li>
+<li>Der Teenager installiert die App und scannt den Code: kein Konto, keine E-Mail. Die Einladung des Elternteils genügt.</li>
+<li>Für jedes Kind wählt der Elternteil das Taschengeld: <b>regelmäßig</b> (jede Woche oder jeden Monat, automatisch eingetragen), <b>einmalig</b> (Schaltfläche „Auszahlen“, wann immer er möchte) oder deaktiviert.</li>
+</ol>
 <ul>
-  <li>Ein Elternteil erstellt die Familie mit einem Tippen über sein Google-Konto und zeigt einen QR-Code.</li>
-  <li>Der Teenager installiert die App und scannt den Code: kein Konto, keine E-Mail.</li>
-  <li>Regelmäßiges Taschengeld (jede Woche oder jeden Monat) oder einmalig, für jedes Kind einzeln eingestellt.</li>
-  <li>Ein Verwandter in der Ferne tritt der Familie über einen einfachen Link bei und kann zu den Zielen beitragen.</li>
-  <li>Beim Beitritt zur Familie wählt der Teenager selbst, welchen Verlauf seine Eltern sehen dürfen.</li>
+<li>Beim Beitritt zur Familie entscheidet der Teenager selbst, was seine Eltern sehen: seinen gesamten Verlauf oder nur ab diesem Tag.</li>
+<li>Verwandte in der Ferne, Großeltern oder Paten, treten der Familie über einen per SMS oder WhatsApp gesendeten Link bei und tragen zu den Zielen der Kinder bei.</li>
 </ul>
-
-<h2>Deine Daten, bei dir</h2>
+</section>
+<section>
+<h2>Eine Budget-App ohne verbundene Bank</h2>
+<p>MyLilBudget ist ein Notizbuch: keine Karte, kein verbundenes Bankkonto, keine Zahlungen zwischen Familienmitgliedern. Taschengeld-Zahlungen werden eingetragen, nicht überwiesen.</p>
 <ul>
-  <li>Import von Kontoauszügen (CSV, OFX, QIF), mit Erkennung von Duplikaten.</li>
-  <li>Export als Excel, CSV, PDF und Bilder; Beträge sind in sozialen Netzwerken standardmäßig ausgeblendet.</li>
-  <li>Automatische Sicherung des Telefons und passwortgeschützte Sicherungsdatei.</li>
-  <li>Verfügbar in 28 Sprachen.</li>
+<li><b>Import von Kontoauszügen</b> (CSV, OFX, QIF), die Sie bei Ihrer Bank heruntergeladen haben: Die App merkt sich die Spalten jeder Bank, erkennt bereits vorhandene Buchungen, und Sie prüfen jede Zeile, bevor sie hinzugefügt wird.</li>
+<li><b>Export</b> als Excel, CSV und PDF-Bericht sowie Bilder zum Teilen. In den Bildern für soziale Netzwerke sind die Beträge standardmäßig ausgeblendet.</li>
 </ul>
-
-<h2>Informationen</h2>
+</section>
+<section>
+<h2>Auf dem Telefon und auf dem Computer</h2>
+<p>MyLilBudget gibt es für Android, iPhone, Mac und Windows-PC, in 28 Sprachen. Auf dem Computer lässt sich die App allein nutzen oder per QR-Code mit Ihrem Telefon verbinden; die Familie wird auf einem Telefon erstellt. Bei alleiniger Nutzung ist die Verbindung zwischen Telefon und Computer Ende-zu-Ende-verschlüsselt.</p>
+</section>
+<section>
+<h2>Ihre Daten</h2>
 <ul>
-  <li><a href="/familypocket/privacy/?lang=de">Datenschutzerklärung</a></li>
-  <li><a href="/familypocket/terms/?lang=de">Nutzungsbedingungen</a></li>
-  <li><a href="/familypocket/delete/?lang=de">Ein Familienkonto löschen</a></li>
+<li>Keine Werbung, keine Tools zur Reichweitenmessung, keine verkauften Daten.</li>
+<li>Allein: Alles bleibt auf Ihrem Telefon, nichts wird an den Herausgeber gesendet.</li>
+<li>In der Familie: Die geteilten Daten werden in der Europäischen Union gespeichert, und nur die Mitglieder Ihrer Familie haben Zugriff darauf.</li>
+<li>Automatische Sicherung in Ihrem eigenen Google- oder iCloud-Konto und eine passwortgeschützte Sicherungsdatei.</li>
 </ul>
-
-<footer>MyLilBudget — Atria.Eponym · Frankreich · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
-
-<div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../he/" hreflang="he">עברית</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../zh/" hreflang="zh-Hans">中文</a></div>
-
+<p>Einzelheiten finden Sie in der <a href="/familypocket/privacy/de/">Datenschutzerklärung</a>. Siehe auch die <a href="/familypocket/terms/de/">Nutzungsbedingungen</a> und die Seite, um <a href="/familypocket/delete/de/">ein Familienkonto zu löschen</a>.</p>
+</section>
+<section class="faq">
+<h2>Häufige Fragen</h2>
+<details><summary>Ist MyLilBudget kostenlos?</summary><p>Ja. Die App ist kostenlos, ohne Werbung und ohne Abo. Eine freiwillige Spende ist in der App möglich; sie schaltet keine Funktion frei.</p></details>
+<details><summary>Muss ein Bankkonto verbunden werden?</summary><p>Nein. MyLilBudget ist ein Notizbuch zum Mitverfolgen: Keine Bank wird verbunden, und es fließt kein echtes Geld. Wenn Sie möchten, können Sie einen bei Ihrer Bank heruntergeladenen Kontoauszug als CSV, OFX oder QIF importieren und prüfen jede Zeile, bevor sie hinzugefügt wird.</p></details>
+<details><summary>Wie wird das Taschengeld jedes Kindes festgelegt?</summary><p>Im Familienmodus wählt der Elternteil für jedes Kind ein regelmäßiges Taschengeld, jede Woche oder jeden Monat, das automatisch ins Notizbuch eingetragen wird, oder ein einmaliges, über die Schaltfläche „Auszahlen“. Er kann den Bereich für ein Kind auch deaktivieren.</p></details>
+<details><summary>Sehen Eltern alle Ausgaben ihres Teenagers?</summary><p>Das entscheidet der Teenager beim Beitritt zur Familie: Seine Eltern sehen seinen gesamten Verlauf oder nur seine Buchungen ab diesem Tag. Er kann diese Wahl später in den Einstellungen ändern.</p></details>
+<details><summary>Muss ein Konto erstellt werden?</summary><p>Nicht bei alleiniger Nutzung: Alles bleibt auf Ihrem Telefon. In der Familie meldet sich nur der Elternteil an, mit seinem Google- oder Apple-Konto; der Teenager und die Verwandten treten der Familie ohne E-Mail und ohne Passwort bei.</p></details>
+<details><summary>Wie geht der Verlauf nicht verloren?</summary><p>Das Telefon sichert das Notizbuch in Ihrem eigenen Google- oder iCloud-Konto, verschlüsselt auf dem iPhone und ab Android 9. Sie können außerdem eine passwortgeschützte Sicherungsdatei erstellen, mit der Sie auch von einem Android-Telefon auf ein iPhone wechseln können.</p></details>
+<details><summary>Auf welchen Geräten läuft MyLilBudget?</summary><p>Auf Android 8 oder neuer, auf dem iPhone mit iOS 17 oder neuer, auf dem Mac mit Apple Chip ab macOS 12 und auf dem PC mit Windows 10 oder 11.</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/de/">Alle Apps von Atria.Eponym</a> · <a href="/familypocket/privacy/de/">Datenschutz</a> · <a href="/familypocket/terms/de/">Nutzungsbedingungen</a></p>
+<p>MyLilBudget, früher Family Pocket · auf Französisch MonPtitBudget</p>
+<p>Atria.Eponym, unabhängiger Entwickler mit Sitz in Frankreich · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+<p class="langs"><a href="/familypocket/" hreflang="fr" lang="fr">Français</a> <a href="/familypocket/en/" hreflang="en" lang="en">English</a> <a href="/familypocket/es/" hreflang="es" lang="es">Español</a> <a href="/familypocket/it/" hreflang="it" lang="it">Italiano</a> <a href="/familypocket/pt/" hreflang="pt-PT" lang="pt-PT">Português</a> <a href="/familypocket/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> <a href="/familypocket/nl/" hreflang="nl" lang="nl">Nederlands</a> <a href="/familypocket/pl/" hreflang="pl" lang="pl">Polski</a> <a href="/familypocket/sv/" hreflang="sv" lang="sv">Svenska</a> <a href="/familypocket/nb/" hreflang="nb" lang="nb">Norsk</a> <a href="/familypocket/fi/" hreflang="fi" lang="fi">Suomi</a> <a href="/familypocket/el/" hreflang="el" lang="el">Ελληνικά</a> <a href="/familypocket/tr/" hreflang="tr" lang="tr">Türkçe</a> <a href="/familypocket/ru/" hreflang="ru" lang="ru">Русский</a> <a href="/familypocket/uk/" hreflang="uk" lang="uk">Українська</a> <a href="/familypocket/ar/" hreflang="ar" lang="ar">العربية</a> <a href="/familypocket/he/" hreflang="he" lang="he">עברית</a> <a href="/familypocket/fa/" hreflang="fa" lang="fa">فارسی</a> <a href="/familypocket/ur/" hreflang="ur" lang="ur">اردو</a> <a href="/familypocket/hi/" hreflang="hi" lang="hi">हिन्दी</a> <a href="/familypocket/bn/" hreflang="bn" lang="bn">বাংলা</a> <a href="/familypocket/th/" hreflang="th" lang="th">ไทย</a> <a href="/familypocket/vi/" hreflang="vi" lang="vi">Tiếng Việt</a> <a href="/familypocket/id/" hreflang="id" lang="id">Indonesia</a> <a href="/familypocket/ja/" hreflang="ja" lang="ja">日本語</a> <a href="/familypocket/ko/" hreflang="ko" lang="ko">한국어</a> <a href="/familypocket/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></p>
+</footer>
+<script>
+// Highlights the store of the visitor's device. No redirect: search engines and visitors see the same page.
+(function () {
+  var ua = navigator.userAgent || "", os =
+    /Android/i.test(ua) ? "android" :
+    /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios" :
+    /Macintosh/.test(ua) ? "mac" : /Windows NT/i.test(ua) ? "windows" : "";
+  var el = document.querySelector('.store[data-os~="' + os + '"]') || document.querySelector(".store");
+  if (el) { el.classList.add("mine"); el.parentNode.insertBefore(el, el.parentNode.firstChild); }
+})();
+// Offers the visitor's language version in a banner. Never redirects (the old script sent Googlebot to /en/).
+(function () {
+  var have = {"fr": ["/familypocket/", "Français"], "en": ["/familypocket/en/", "English"], "es": ["/familypocket/es/", "Español"], "it": ["/familypocket/it/", "Italiano"], "pt": ["/familypocket/pt/", "Português"], "pt-br": ["/familypocket/pt-br/", "Português (BR)"], "nl": ["/familypocket/nl/", "Nederlands"], "pl": ["/familypocket/pl/", "Polski"], "sv": ["/familypocket/sv/", "Svenska"], "nb": ["/familypocket/nb/", "Norsk"], "fi": ["/familypocket/fi/", "Suomi"], "el": ["/familypocket/el/", "Ελληνικά"], "tr": ["/familypocket/tr/", "Türkçe"], "ru": ["/familypocket/ru/", "Русский"], "uk": ["/familypocket/uk/", "Українська"], "ar": ["/familypocket/ar/", "العربية"], "he": ["/familypocket/he/", "עברית"], "fa": ["/familypocket/fa/", "فارسی"], "ur": ["/familypocket/ur/", "اردو"], "hi": ["/familypocket/hi/", "हिन्दी"], "bn": ["/familypocket/bn/", "বাংলা"], "th": ["/familypocket/th/", "ไทย"], "vi": ["/familypocket/vi/", "Tiếng Việt"], "id": ["/familypocket/id/", "Indonesia"], "ja": ["/familypocket/ja/", "日本語"], "ko": ["/familypocket/ko/", "한국어"], "zh": ["/familypocket/zh/", "中文"]};
+  function norm(t) {
+    t = String(t || "").toLowerCase().replace("_", "-");
+    if (t.indexOf("pt-br") === 0) return "pt-br";
+    var l = t.split("-")[0];
+    return { "in": "id", "iw": "he", "no": "nb", "nn": "nb" }[l] || l;
+  }
+  var list = navigator.languages || [navigator.language || ""], want = "";
+  for (var i = 0; i < list.length && !want; i++) {
+    var l = norm(list[i]);
+    if (l === "de") return;
+    if (have[l]) want = l;
+  }
+  try { if (sessionStorage.getItem("fp-langbar") === "closed") return; } catch (e) {}
+  if (!want) return;
+  var bar = document.getElementById("langbar"), a = document.getElementById("langlink");
+  a.href = have[want][0]; a.textContent = have[want][1]; a.lang = want; bar.hidden = false;
+  document.getElementById("langclose").onclick = function () {
+    bar.hidden = true;
+    try { sessionStorage.setItem("fp-langbar", "closed"); } catch (e) {}
+  };
+})();
+</script>
 </body>
 </html>

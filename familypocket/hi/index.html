@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="google-site-verification" content="CL3SyiPgogjvtsvhgCQwPVAE8Ygbbc3NrSV3D8TyKaI">
-<title>MyLilBudget — जेब खर्च, साफ़ और नियंत्रण में</title>
-<link rel="alternate" hreflang="en" href="https://atriaeponym.com/familypocket/en/">
+<meta name="theme-color" content="#141416">
+<title>जेब खर्च और बजट का मुफ़्त ऐप, किशोरों के लिए – MyLilBudget</title>
+<meta name="description" content="किशोरों के लिए जेब खर्च और बजट ऐप, अकेले या परिवार के साथ: खर्च, बचत, हर बच्चे का जेब खर्च। मुफ़्त, बिना विज्ञापन, बिना बैंक।">
+<link rel="canonical" href="https://atriaeponym.com/familypocket/hi/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/familypocket/">
-<link rel="alternate" hreflang="es" href="https://atriaeponym.com/familypocket/es/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/familypocket/en/">
 <link rel="alternate" hreflang="de" href="https://atriaeponym.com/familypocket/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/familypocket/es/">
 <link rel="alternate" hreflang="it" href="https://atriaeponym.com/familypocket/it/">
-<link rel="alternate" hreflang="pt" href="https://atriaeponym.com/familypocket/pt/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/familypocket/pt/">
 <link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/familypocket/pt-br/">
 <link rel="alternate" hreflang="nl" href="https://atriaeponym.com/familypocket/nl/">
-<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/familypocket/pl/">
 <link rel="alternate" hreflang="sv" href="https://atriaeponym.com/familypocket/sv/">
 <link rel="alternate" hreflang="nb" href="https://atriaeponym.com/familypocket/nb/">
 <link rel="alternate" hreflang="fi" href="https://atriaeponym.com/familypocket/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/familypocket/pl/">
 <link rel="alternate" hreflang="el" href="https://atriaeponym.com/familypocket/el/">
 <link rel="alternate" hreflang="tr" href="https://atriaeponym.com/familypocket/tr/">
 <link rel="alternate" hreflang="ru" href="https://atriaeponym.com/familypocket/ru/">
@@ -34,129 +37,214 @@
 <link rel="alternate" hreflang="ja" href="https://atriaeponym.com/familypocket/ja/">
 <link rel="alternate" hreflang="ko" href="https://atriaeponym.com/familypocket/ko/">
 <link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/familypocket/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/familypocket/en/">
+<link rel="icon" href="/icons/familypocket.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:url" content="https://atriaeponym.com/familypocket/hi/">
+<meta property="og:title" content="जेब खर्च और बजट का मुफ़्त ऐप, किशोरों के लिए – MyLilBudget">
+<meta property="og:description" content="किशोरों के लिए जेब खर्च और बजट ऐप, अकेले या परिवार के साथ: खर्च, बचत, हर बच्चे का जेब खर्च। मुफ़्त, बिना विज्ञापन, बिना बैंक।">
+<meta property="og:image" content="https://atriaeponym.com/teasers/familypocket-en.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--page:#F6F7F9;--card:#FFFFFF;--ink:#0F172A;--muted:#475569;--line:#E2E8F0;--accent:#4F46E5;--soft:#E0E7FF;--ok:#059669}
-@media (prefers-color-scheme:dark){:root{--page:#0B0F19;--card:#141A2A;--ink:#E8ECF4;--muted:#A3AEC2;--line:#253047;--accent:#818CF8;--soft:#25265A;--ok:#34D399}}
-body{background:var(--page);color:var(--ink);line-height:1.7;padding:24px 16px 90px;
-     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
-     max-width:780px;margin:0 auto;font-size:16px}
-h1{font-size:26px;margin-bottom:6px;font-weight:700}
-.sub{font-size:14px;color:var(--muted);margin-bottom:14px}
-h2{font-size:18px;margin:34px 0 10px;font-weight:700}
-p{margin-bottom:14px;color:var(--muted)}
-b,strong{color:var(--ink)}
-ul,ol{margin:0 0 16px 22px}
-[dir=rtl] ul,[dir=rtl] ol{margin:0 22px 16px 0}
-li{margin-bottom:9px;color:var(--muted)}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#78b0ee;--accent2:#5b9be4;--on:#0b1626;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
 a{color:var(--accent)}
-bdi{white-space:nowrap}
-.box{background:var(--card);border:1px solid var(--line);border-inline-start:3px solid var(--ok);
-     border-radius:12px;padding:16px 18px;margin:20px 0}
-.box p:last-child{margin-bottom:0}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
-     padding:14px 22px;border-radius:14px;margin:8px 0 18px}
-.code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);padding:4px 10px;border-radius:8px;word-break:break-all}
-.only-android,.only-ios,.only-desktop{display:none}
-.is-android .only-android,.is-ios .only-ios,.is-desktop .only-desktop{display:block}
-.no-code .needs-code{display:none}
-.lang{margin-bottom:24px}
-.lang select{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 12px;
-     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
-.all{margin-top:30px;font-size:13px;line-height:2;color:var(--muted)}
-.all a{color:var(--muted);margin-inline-end:10px;white-space:nowrap}
-footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.langbar{position:sticky;top:0;z-index:5;width:100%;max-width:640px;margin:-32px auto 24px;display:flex;align-items:center;gap:10px;
+         padding:9px 12px 9px 16px;border-radius:12px;background:rgba(29,29,32,.86);border:1px solid var(--line);
+         -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:14px;color:var(--muted)}
+.langbar[hidden]{display:none}
+.langbar span{flex:1;min-width:0}
+.langbar a{font-weight:650;text-decoration:none;white-space:nowrap}
+.langbar button{flex:none;background:none;border:0;color:var(--muted);font-size:20px;line-height:1;padding:2px 6px;cursor:pointer}
+.langs{margin-top:10px;font-size:12.5px;line-height:2}
+.langs a{color:var(--muted);text-decoration:none;margin:0 5px;white-space:nowrap}
+.faq summary{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.faq summary::after{float:none;flex:none}
+@media (max-width:380px){.langbar{margin-top:-20px}}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+html[dir=rtl] .langbar{padding:9px 16px 9px 12px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
 </style>
-<link rel="canonical" href="https://atriaeponym.com/familypocket/hi/">
-<meta name="description" content="MyLilBudget जेब खर्च और बजट पर नज़र रखने की एक कॉपी है, किशोरों, युवा वयस्कों और उनके परिवारों के लिए। इसमें तुम अपने खर्च और कमाई लिखते हो, अपने बचत…">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyLilBudget","description":"मेरा पैसा कहाँ जाता है? किशोरों का जेब खर्च और बजट, अकेले या परिवार के साथ।","applicationCategory":"FinanceApplication","image":"https://atriaeponym.com/icons/familypocket.png","operatingSystem":"Android, iOS, Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket","https://apps.apple.com/app/id6822458545","https://apps.microsoft.com/detail/9PMVV9S1H489"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyLilBudget","alternateName":["MonPtitBudget","Family Pocket"],"url":"https://atriaeponym.com/familypocket/hi/","description":"किशोरों के लिए जेब खर्च और बजट ऐप, अकेले या परिवार के साथ: खर्च, बचत, हर बच्चे का जेब खर्च। मुफ़्त, बिना विज्ञापन, बिना बैंक।","inLanguage":"hi","applicationCategory":"FinanceApplication","operatingSystem":"Android 8+, iOS 17+, macOS 12+ (Apple silicon), Windows 10, Windows 11","image":"https://atriaeponym.com/icons/familypocket.png","screenshot":["https://atriaeponym.com/familypocket/img/9a0362d6d7.jpg","https://atriaeponym.com/familypocket/img/d87c663539.jpg","https://atriaeponym.com/familypocket/img/87a6a5c0bf.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket","https://apps.apple.com/app/id6822458545","https://apps.microsoft.com/detail/9PMVV9S1H489"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"hi","mainEntity":[{"@type":"Question","name":"क्या MyLilBudget मुफ़्त है?","acceptedAnswer":{"@type":"Answer","text":"हाँ। ऐप मुफ़्त है, बिना विज्ञापन और बिना सब्सक्रिप्शन। ऐप में अपनी इच्छा से दान दिया जा सकता है; इससे कोई फ़ीचर अनलॉक नहीं होता।"}},{"@type":"Question","name":"क्या बैंक खाता जोड़ना ज़रूरी है?","acceptedAnswer":{"@type":"Answer","text":"नहीं। MyLilBudget हिसाब रखने की एक कॉपी है: कोई बैंक नहीं जोड़ा जाता और कोई असली पैसा इधर-उधर नहीं होता। अगर आप चाहें, तो अपने बैंक से डाउनलोड किया CSV, OFX या QIF स्टेटमेंट इम्पोर्ट कर सकते हैं, और हर पंक्ति जोड़ने से पहले जाँचते हैं।"}},{"@type":"Question","name":"हर बच्चे का जेब खर्च कैसे तय करें?","acceptedAnswer":{"@type":"Answer","text":"फ़ैमिली मोड में माता-पिता हर बच्चे के लिए नियमित जेब खर्च चुनते हैं, हर हफ़्ते या हर महीने, जो अपने-आप कॉपी में दर्ज होता है, या एक बार का, «दें» बटन से। वे किसी बच्चे के लिए यह सेक्शन बंद भी कर सकते हैं।"}},{"@type":"Question","name":"क्या माता-पिता किशोर के सारे खर्च देखते हैं?","acceptedAnswer":{"@type":"Answer","text":"यह किशोर खुद चुनता है, परिवार से जुड़ते समय: माता-पिता उसकी पूरी हिस्ट्री देखते हैं या सिर्फ़ उसी दिन से आगे के लेन-देन। वह यह चुनाव बाद में सेटिंग्स में बदल सकता है।"}},{"@type":"Question","name":"क्या अकाउंट बनाना ज़रूरी है?","acceptedAnswer":{"@type":"Answer","text":"अकेले इस्तेमाल के लिए नहीं: सब कुछ आपके फ़ोन पर रहता है। परिवार में सिर्फ़ माता-पिता अपने Google या Apple अकाउंट से साइन इन करते हैं; किशोर और रिश्तेदार बिना ईमेल और बिना पासवर्ड के परिवार से जुड़ते हैं।"}},{"@type":"Question","name":"हिस्ट्री खोने से कैसे बचें?","acceptedAnswer":{"@type":"Answer","text":"फ़ोन कॉपी का बैकअप आपके अपने Google या iCloud अकाउंट में लेता है, iPhone पर और Android 9 या नए पर एन्क्रिप्टेड। आप पासवर्ड से सुरक्षित बैकअप फ़ाइल भी बना सकते हैं, जो Android फ़ोन से iPhone पर जाने के काम भी आती है।"}},{"@type":"Question","name":"MyLilBudget किन डिवाइस पर चलता है?","acceptedAnswer":{"@type":"Answer","text":"Android 8 या नए पर, iOS 17 या नए वाले iPhone पर, macOS 12 या नए वाले Apple चिप Mac पर, और Windows 10 या 11 वाले PC पर।"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/hi/"},{"@type":"ListItem","position":2,"name":"MyLilBudget","item":"https://atriaeponym.com/familypocket/hi/"}]}</script>
 </head>
 <body>
-
-<div class="lang">
-  <select aria-label="Language" onchange="location.href=this.value + location.search.replace(/([?&])lang=[^&#]*&?/, '$1').replace(/[?&]$/, '')">
-    <option value="../en/">English</option>
-    <option value="../?lang=fr">Français</option>
-    <option value="../es/">Español</option>
-    <option value="../de/">Deutsch</option>
-    <option value="../it/">Italiano</option>
-    <option value="../pt/">Português</option>
-    <option value="../pt-br/">Português (BR)</option>
-    <option value="../nl/">Nederlands</option>
-    <option value="../pl/">Polski</option>
-    <option value="../sv/">Svenska</option>
-    <option value="../nb/">Norsk</option>
-    <option value="../fi/">Suomi</option>
-    <option value="../el/">Ελληνικά</option>
-    <option value="../tr/">Türkçe</option>
-    <option value="../ru/">Русский</option>
-    <option value="../uk/">Українська</option>
-    <option value="../ar/">العربية</option>
-    <option value="../he/">עברית</option>
-    <option value="../fa/">فارسی</option>
-    <option value="../ur/">اردو</option>
-    <option value="../hi/" selected>हिन्दी</option>
-    <option value="../bn/">বাংলা</option>
-    <option value="../th/">ไทย</option>
-    <option value="../vi/">Tiếng Việt</option>
-    <option value="../id/">Indonesia</option>
-    <option value="../ja/">日本語</option>
-    <option value="../ko/">한국어</option>
-    <option value="../zh/">中文</option>
-  </select>
+<div class="langbar" id="langbar" hidden><span>यह पेज इस भाषा में भी उपलब्ध है: <a id="langlink" href="/familypocket/en/" lang="en">English</a></span><button type="button" id="langclose" aria-label="बंद करें">×</button></div>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/familypocket.png" width="128" height="128" alt="MyLilBudget का आइकन: गहरे नीले बैकग्राउंड पर सफ़ेद सुअर वाली गुल्लक">
+<h1>MyLilBudget<span class="sub">किशोरों के जेब खर्च और बजट का ऐप</span></h1>
+<div class="kicker">जेब खर्च · बजट · बचत</div>
+<p class="lead">MyLilBudget किशोरों और उनके माता-पिता के लिए जेब खर्च का एक मुफ़्त ऐप है। यह जेब खर्च और बजट संभालने में मदद करता है: हर खर्च और हर आमदनी कुछ सेकंड में दर्ज, बचत के लक्ष्य, और महीने-दर-महीने पैसा कहाँ जाता है। आप इसे अकेले, बिना अकाउंट के, या परिवार के साथ इस्तेमाल करें: माता-पिता हर बच्चे का जेब खर्च तय करते हैं। यह हिसाब रखने की एक कॉपी है, बिना जुड़े बैंक वाला बजट ऐप: कोई असली पैसा इधर-उधर नहीं होता।</p>
+<p class="promise">मुफ़्त · बिना विज्ञापन · कोई बैंक खाता जुड़ा नहीं</p>
+<div class="stores">
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.2-9.4-9.2-9.4zm10.4 8.2 2.7-2.8L6.1 1.6c-.4-.2-.8-.3-1.1-.2l9.6 9.4zm0 2.4L5 22.6c.3.1.7 0 1.1-.2l11.2-6.4-2.7-2.8zm3.9-4.5-3.1 3.3 3.1 3.2 3.4-1.9c1-.6 1-1.5 0-2.1l-3.4-2.5z"/></svg><span><small>इसे</small><b>Google Play</b><small>पर पाएं</small><i>Android 8 या नया</i></span></a>
+<a class="store" data-os="ios mac" href="https://apps.apple.com/app/id6822458545" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><b>App Store</b><small>से डाउनलोड करें</small><i>iPhone (iOS 17) · Apple चिप वाला Mac (macOS 12)</i></span></a>
+<a class="store" data-os="windows" href="https://apps.microsoft.com/detail/9PMVV9S1H489" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><b>Microsoft Store</b><small>से डाउनलोड करें</small><i>Windows 10 या 11 वाला PC</i></span></a>
 </div>
-
-<h1><bdi>MyLilBudget</bdi></h1>
-<div class="sub">(<bdi>पहले Family Pocket</bdi>)</div>
-<div class="sub">तुम्हारा पैसा, साफ़ और नियंत्रण में। अकेले या परिवार के साथ।</div>
-
-<p><bdi>MyLilBudget</bdi> जेब खर्च और बजट पर नज़र रखने की एक कॉपी है, किशोरों, युवा वयस्कों और
-उनके परिवारों के लिए। इसमें तुम अपने खर्च और कमाई लिखते हो, अपने बचत लक्ष्यों पर नज़र रखते हो और
-देखते हो कि तुम्हारा पैसा कहाँ जाता है। <strong>परिवार के सदस्यों के बीच कोई असली पैसा नहीं चलता</strong>:
-ऐप किसी बैंक खाते से जुड़ा नहीं है। एक वैकल्पिक दान से तुम इसके डेवलपर का साथ दे सकते हो।</p>
-
-<a class="btn" href="https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket">Google Play से डाउनलोड करें</a>
-
-<div class="box">
-  <p><strong>मुफ़्त, बिना विज्ञापन, बिना खाते के।</strong> अकेले इस्तेमाल करने पर सब कुछ तुम्हारे फ़ोन पर रहता है।
-  परिवार में, सिर्फ़ तुम्हारे परिवार के सदस्य वही देखते हैं जो हर किसी ने शेयर करना चुना है।</p>
 </div>
-
-<h2>अकेले, पहले ही मिनट से</h2>
+<div class="shots" role="list" aria-label="स्क्रीनशॉट">
+<figure><img src="/familypocket/img/9a0362d6d7.jpg" alt="iPhone पर MyLilBudget की होम स्क्रीन: महीने का बैलेंस 105 €, आमदनी और खर्च, बचत लक्ष्य साइकिल और जेब खर्च के ताज़ा लेन-देन" width="360" height="782" loading="lazy" decoding="async"></figure>
+<figure><img src="/familypocket/img/d87c663539.jpg" alt="MyLilBudget में 2 € का खर्च जोड़ना और कैटेगरी चुनना: खाना, बाहर घूमना, वीडियो गेम, कपड़े, सौंदर्य, टेक" width="360" height="782" loading="lazy" decoding="async"></figure>
+<figure><img src="/familypocket/img/87a6a5c0bf.jpg" alt="MyLilBudget में महीने के लेन-देन की सूची: जेब खर्च के भुगतान और खर्च, कैटेगरी के अनुसार फ़िल्टर किए हुए" width="360" height="782" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>अपना जेब खर्च संभालें, अकेले और बिना अकाउंट के</h2>
+<p>ऐप इंस्टॉल करें, अपनी मुद्रा चुनें और शुरू करें: न रजिस्ट्रेशन, न ईमेल। अकेले इस्तेमाल में आपकी कॉपी आपके फ़ोन पर ही रहती है।</p>
 <ul>
-  <li>कुछ ही सेकंड में कोई खर्च या कमाई लिखो, श्रेणी और नोट के साथ।</li>
-  <li>अपने बचत लक्ष्यों पर नज़र रखो और देखो कि तुम उन्हें किस तारीख तक पा लोगे।</li>
-  <li>श्रेणी के हिसाब से अपने खर्च और महीने-दर-महीने अपनी बचत की प्रगति देखो।</li>
-  <li>जितनी चाहो उतनी श्रेणियाँ बनाओ, उनके आइकन और रंग के साथ।</li>
+<li><b>कुछ सेकंड में एक खर्च या आमदनी</b>, कैटेगरी, तारीख और नोट के साथ।</li>
+<li><b>18 तैयार कैटेगरी</b> (खाना, बाहर घूमना, वीडियो गेम, कपड़े, आना-जाना, जेब खर्च, छोटे काम…) और जितनी चाहें उतनी कैटेगरी, अपने आइकन और रंग के साथ।</li>
+<li><b>बचत के लक्ष्य</b>: अभी कितना बचाना बाकी है और लगभग किस तारीख तक आप लक्ष्य तक पहुँचेंगे।</li>
+<li><b>आपका पैसा कहाँ जाता है</b>: कैटेगरी के अनुसार खर्च, महीने-दर-महीने आमदनी और खर्च, और पिछले महीने से तुलना।</li>
+<li><b>बैज</b> अच्छी आदतों के लिए, जैसे लगातार 7 दिन लेन-देन दर्ज करना या लगातार 3 महीने बजट में रहना।</li>
 </ul>
-
-<h2>परिवार के साथ, बिना झंझट के</h2>
+</section>
+<section>
+<h2>बच्चों का जेब खर्च, परिवार में तय</h2>
+<p>फ़ैमिली मोड वैकल्पिक है। आप इसे जब चाहें जोड़ सकते हैं, महीनों अकेले इस्तेमाल के बाद भी।</p>
+<ol>
+<li>माता-पिता अपने Google अकाउंट (या iPhone पर Apple) से एक टैप में, बिना पासवर्ड के, परिवार बनाते हैं और एक QR कोड दिखाते हैं।</li>
+<li>किशोर ऐप इंस्टॉल करके कोड स्कैन करता है: न अकाउंट, न ईमेल। माता-पिता का निमंत्रण काफ़ी है।</li>
+<li>हर बच्चे के लिए माता-पिता जेब खर्च चुनते हैं: <b>नियमित</b> (हर हफ़्ते या हर महीने, अपने-आप दर्ज), <b>एक बार</b> (जब चाहें «दें» बटन से) या बंद।</li>
+</ol>
 <ul>
-  <li>माता-पिता अपने Google खाते से एक टैप में परिवार बनाते हैं और QR कोड दिखाते हैं।</li>
-  <li>किशोर ऐप इंस्टॉल करके कोड स्कैन करता है: न खाता, न ई-मेल।</li>
-  <li>नियमित जेब खर्च (हर हफ़्ते या हर महीने) या एक बार का, हर बच्चे के लिए अलग से तय।</li>
-  <li>दूर रहने वाले रिश्तेदार एक आसान लिंक से परिवार से जुड़ते हैं और लक्ष्यों में योगदान दे सकते हैं।</li>
-  <li>परिवार से जुड़ते समय किशोर ख़ुद चुनता है कि उसके माता-पिता कौन-सा पुराना हिसाब देख सकते हैं।</li>
+<li>परिवार से जुड़ते समय किशोर खुद चुनता है कि माता-पिता क्या देखें: उसकी पूरी हिस्ट्री या सिर्फ़ उसी दिन से आगे की।</li>
+<li>दूर रहने वाला कोई रिश्तेदार, दादा-दादी, नाना-नानी या गॉडपेरेंट, SMS या WhatsApp से भेजे गए लिंक से परिवार से जुड़ता है और बच्चों के लक्ष्यों में योगदान देता है।</li>
 </ul>
-
-<h2>तुम्हारा डेटा, तुम्हारे पास</h2>
+</section>
+<section>
+<h2>बिना जुड़े बैंक वाला बजट ऐप</h2>
+<p>MyLilBudget एक कॉपी है: न कोई कार्ड, न कोई जुड़ा बैंक खाता, न परिवार के सदस्यों के बीच कोई भुगतान। जेब खर्च के भुगतान दर्ज किए जाते हैं, भेजे नहीं जाते।</p>
 <ul>
-  <li>बैंक स्टेटमेंट इम्पोर्ट (CSV, OFX, QIF), डुप्लिकेट की पहचान के साथ।</li>
-  <li>Excel, CSV, PDF और इमेज में एक्सपोर्ट; सोशल मीडिया पर राशियाँ डिफ़ॉल्ट रूप से छिपी रहती हैं।</li>
-  <li>फ़ोन का ऑटोमैटिक बैकअप और पासवर्ड से सुरक्षित बैकअप फ़ाइल।</li>
-  <li>28 भाषाओं में उपलब्ध।</li>
+<li>अपने बैंक से डाउनलोड किए <b>बैंक स्टेटमेंट का इम्पोर्ट</b> (CSV, OFX, QIF): ऐप हर बैंक के कॉलम याद रखता है, पहले से मौजूद लेन-देन पहचानता है, और आप हर पंक्ति जोड़ने से पहले जाँचते हैं।</li>
+<li>Excel, CSV और PDF रिपोर्ट में <b>एक्सपोर्ट</b>, और शेयर करने के लिए इमेज। सोशल नेटवर्क वाली इमेज में रकम डिफ़ॉल्ट रूप से छिपी रहती है।</li>
 </ul>
-
-<h2>जानकारी</h2>
+</section>
+<section>
+<h2>फ़ोन पर और कंप्यूटर पर</h2>
+<p>MyLilBudget Android, iPhone, Mac और Windows PC पर, 28 भाषाओं में उपलब्ध है। कंप्यूटर पर ऐप अकेले चलता है या QR कोड से आपके फ़ोन से जुड़ जाता है; परिवार फ़ोन से बनाया जाता है। अकेले इस्तेमाल में आपके फ़ोन और कंप्यूटर के बीच का कनेक्शन एंड-टू-एंड एन्क्रिप्टेड होता है।</p>
+</section>
+<section>
+<h2>आपका डेटा</h2>
 <ul>
-  <li><a href="/familypocket/privacy/?lang=hi">गोपनीयता नीति</a></li>
-  <li><a href="/familypocket/terms/?lang=hi">उपयोग की शर्तें</a></li>
-  <li><a href="/familypocket/delete/?lang=hi">परिवार खाता हटाएँ</a></li>
+<li>न विज्ञापन, न दर्शक मापने के टूल, न डेटा की बिक्री।</li>
+<li>अकेले: सब कुछ आपके फ़ोन पर रहता है, प्रकाशक को कुछ नहीं भेजा जाता।</li>
+<li>परिवार में: साझा डेटा यूरोपीय संघ में होस्ट किया जाता है, और सिर्फ़ आपके परिवार के सदस्य ही उस तक पहुँच सकते हैं।</li>
+<li>आपके अपने Google या iCloud अकाउंट में अपने-आप बैकअप, और पासवर्ड से सुरक्षित बैकअप फ़ाइल।</li>
 </ul>
-
-<footer>MyLilBudget — Atria.Eponym · फ़्रांस · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></footer>
-
-<div class="all"><a href="../en/" hreflang="en">English</a> <a href="../?lang=fr" hreflang="fr">Français</a> <a href="../es/" hreflang="es">Español</a> <a href="../de/" hreflang="de">Deutsch</a> <a href="../it/" hreflang="it">Italiano</a> <a href="../pt/" hreflang="pt">Português</a> <a href="../pt-br/" hreflang="pt-BR">Português (BR)</a> <a href="../nl/" hreflang="nl">Nederlands</a> <a href="../pl/" hreflang="pl">Polski</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../nb/" hreflang="nb">Norsk</a> <a href="../fi/" hreflang="fi">Suomi</a> <a href="../el/" hreflang="el">Ελληνικά</a> <a href="../tr/" hreflang="tr">Türkçe</a> <a href="../ru/" hreflang="ru">Русский</a> <a href="../uk/" hreflang="uk">Українська</a> <a href="../ar/" hreflang="ar">العربية</a> <a href="../he/" hreflang="he">עברית</a> <a href="../fa/" hreflang="fa">فارسی</a> <a href="../ur/" hreflang="ur">اردو</a> <a href="../hi/" hreflang="hi">हिन्दी</a> <a href="../bn/" hreflang="bn">বাংলা</a> <a href="../th/" hreflang="th">ไทย</a> <a href="../vi/" hreflang="vi">Tiếng Việt</a> <a href="../id/" hreflang="id">Indonesia</a> <a href="../ja/" hreflang="ja">日本語</a> <a href="../ko/" hreflang="ko">한국어</a> <a href="../zh/" hreflang="zh-Hans">中文</a></div>
-
+<p>विवरण <a href="/familypocket/privacy/hi/">गोपनीयता नीति</a> में है। <a href="/familypocket/terms/hi/">उपयोग की शर्तें</a> और <a href="/familypocket/delete/hi/">फ़ैमिली अकाउंट हटाने</a> का पेज भी देखें।</p>
+</section>
+<section class="faq">
+<h2>अक्सर पूछे जाने वाले सवाल</h2>
+<details><summary>क्या MyLilBudget मुफ़्त है?</summary><p>हाँ। ऐप मुफ़्त है, बिना विज्ञापन और बिना सब्सक्रिप्शन। ऐप में अपनी इच्छा से दान दिया जा सकता है; इससे कोई फ़ीचर अनलॉक नहीं होता।</p></details>
+<details><summary>क्या बैंक खाता जोड़ना ज़रूरी है?</summary><p>नहीं। MyLilBudget हिसाब रखने की एक कॉपी है: कोई बैंक नहीं जोड़ा जाता और कोई असली पैसा इधर-उधर नहीं होता। अगर आप चाहें, तो अपने बैंक से डाउनलोड किया CSV, OFX या QIF स्टेटमेंट इम्पोर्ट कर सकते हैं, और हर पंक्ति जोड़ने से पहले जाँचते हैं।</p></details>
+<details><summary>हर बच्चे का जेब खर्च कैसे तय करें?</summary><p>फ़ैमिली मोड में माता-पिता हर बच्चे के लिए नियमित जेब खर्च चुनते हैं, हर हफ़्ते या हर महीने, जो अपने-आप कॉपी में दर्ज होता है, या एक बार का, «दें» बटन से। वे किसी बच्चे के लिए यह सेक्शन बंद भी कर सकते हैं।</p></details>
+<details><summary>क्या माता-पिता किशोर के सारे खर्च देखते हैं?</summary><p>यह किशोर खुद चुनता है, परिवार से जुड़ते समय: माता-पिता उसकी पूरी हिस्ट्री देखते हैं या सिर्फ़ उसी दिन से आगे के लेन-देन। वह यह चुनाव बाद में सेटिंग्स में बदल सकता है।</p></details>
+<details><summary>क्या अकाउंट बनाना ज़रूरी है?</summary><p>अकेले इस्तेमाल के लिए नहीं: सब कुछ आपके फ़ोन पर रहता है। परिवार में सिर्फ़ माता-पिता अपने Google या Apple अकाउंट से साइन इन करते हैं; किशोर और रिश्तेदार बिना ईमेल और बिना पासवर्ड के परिवार से जुड़ते हैं।</p></details>
+<details><summary>हिस्ट्री खोने से कैसे बचें?</summary><p>फ़ोन कॉपी का बैकअप आपके अपने Google या iCloud अकाउंट में लेता है, iPhone पर और Android 9 या नए पर एन्क्रिप्टेड। आप पासवर्ड से सुरक्षित बैकअप फ़ाइल भी बना सकते हैं, जो Android फ़ोन से iPhone पर जाने के काम भी आती है।</p></details>
+<details><summary>MyLilBudget किन डिवाइस पर चलता है?</summary><p>Android 8 या नए पर, iOS 17 या नए वाले iPhone पर, macOS 12 या नए वाले Apple चिप Mac पर, और Windows 10 या 11 वाले PC पर।</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/hi/">Atria.Eponym के सभी ऐप</a> · <a href="/familypocket/privacy/hi/">गोपनीयता</a> · <a href="/familypocket/terms/hi/">उपयोग की शर्तें</a></p>
+<p>MyLilBudget, पहले Family Pocket · फ़्रेंच में MonPtitBudget</p>
+<p>Atria.Eponym, फ़्रांस में स्थित एक स्वतंत्र डेवलपर · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+<p class="langs"><a href="/familypocket/" hreflang="fr" lang="fr">Français</a> <a href="/familypocket/en/" hreflang="en" lang="en">English</a> <a href="/familypocket/es/" hreflang="es" lang="es">Español</a> <a href="/familypocket/de/" hreflang="de" lang="de">Deutsch</a> <a href="/familypocket/it/" hreflang="it" lang="it">Italiano</a> <a href="/familypocket/pt/" hreflang="pt-PT" lang="pt-PT">Português</a> <a href="/familypocket/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (BR)</a> <a href="/familypocket/nl/" hreflang="nl" lang="nl">Nederlands</a> <a href="/familypocket/pl/" hreflang="pl" lang="pl">Polski</a> <a href="/familypocket/sv/" hreflang="sv" lang="sv">Svenska</a> <a href="/familypocket/nb/" hreflang="nb" lang="nb">Norsk</a> <a href="/familypocket/fi/" hreflang="fi" lang="fi">Suomi</a> <a href="/familypocket/el/" hreflang="el" lang="el">Ελληνικά</a> <a href="/familypocket/tr/" hreflang="tr" lang="tr">Türkçe</a> <a href="/familypocket/ru/" hreflang="ru" lang="ru">Русский</a> <a href="/familypocket/uk/" hreflang="uk" lang="uk">Українська</a> <a href="/familypocket/ar/" hreflang="ar" lang="ar">العربية</a> <a href="/familypocket/he/" hreflang="he" lang="he">עברית</a> <a href="/familypocket/fa/" hreflang="fa" lang="fa">فارسی</a> <a href="/familypocket/ur/" hreflang="ur" lang="ur">اردو</a> <a href="/familypocket/bn/" hreflang="bn" lang="bn">বাংলা</a> <a href="/familypocket/th/" hreflang="th" lang="th">ไทย</a> <a href="/familypocket/vi/" hreflang="vi" lang="vi">Tiếng Việt</a> <a href="/familypocket/id/" hreflang="id" lang="id">Indonesia</a> <a href="/familypocket/ja/" hreflang="ja" lang="ja">日本語</a> <a href="/familypocket/ko/" hreflang="ko" lang="ko">한국어</a> <a href="/familypocket/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></p>
+</footer>
+<script>
+// Highlights the store of the visitor's device. No redirect: search engines and visitors see the same page.
+(function () {
+  var ua = navigator.userAgent || "", os =
+    /Android/i.test(ua) ? "android" :
+    /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios" :
+    /Macintosh/.test(ua) ? "mac" : /Windows NT/i.test(ua) ? "windows" : "";
+  var el = document.querySelector('.store[data-os~="' + os + '"]') || document.querySelector(".store");
+  if (el) { el.classList.add("mine"); el.parentNode.insertBefore(el, el.parentNode.firstChild); }
+})();
+// Offers the visitor's language version in a banner. Never redirects (the old script sent Googlebot to /en/).
+(function () {
+  var have = {"fr": ["/familypocket/", "Français"], "en": ["/familypocket/en/", "English"], "es": ["/familypocket/es/", "Español"], "de": ["/familypocket/de/", "Deutsch"], "it": ["/familypocket/it/", "Italiano"], "pt": ["/familypocket/pt/", "Português"], "pt-br": ["/familypocket/pt-br/", "Português (BR)"], "nl": ["/familypocket/nl/", "Nederlands"], "pl": ["/familypocket/pl/", "Polski"], "sv": ["/familypocket/sv/", "Svenska"], "nb": ["/familypocket/nb/", "Norsk"], "fi": ["/familypocket/fi/", "Suomi"], "el": ["/familypocket/el/", "Ελληνικά"], "tr": ["/familypocket/tr/", "Türkçe"], "ru": ["/familypocket/ru/", "Русский"], "uk": ["/familypocket/uk/", "Українська"], "ar": ["/familypocket/ar/", "العربية"], "he": ["/familypocket/he/", "עברית"], "fa": ["/familypocket/fa/", "فارسی"], "ur": ["/familypocket/ur/", "اردو"], "bn": ["/familypocket/bn/", "বাংলা"], "th": ["/familypocket/th/", "ไทย"], "vi": ["/familypocket/vi/", "Tiếng Việt"], "id": ["/familypocket/id/", "Indonesia"], "ja": ["/familypocket/ja/", "日本語"], "ko": ["/familypocket/ko/", "한국어"], "zh": ["/familypocket/zh/", "中文"]};
+  function norm(t) {
+    t = String(t || "").toLowerCase().replace("_", "-");
+    if (t.indexOf("pt-br") === 0) return "pt-br";
+    var l = t.split("-")[0];
+    return { "in": "id", "iw": "he", "no": "nb", "nn": "nb" }[l] || l;
+  }
+  var list = navigator.languages || [navigator.language || ""], want = "";
+  for (var i = 0; i < list.length && !want; i++) {
+    var l = norm(list[i]);
+    if (l === "hi") return;
+    if (have[l]) want = l;
+  }
+  try { if (sessionStorage.getItem("fp-langbar") === "closed") return; } catch (e) {}
+  if (!want) return;
+  var bar = document.getElementById("langbar"), a = document.getElementById("langlink");
+  a.href = have[want][0]; a.textContent = have[want][1]; a.lang = want; bar.hidden = false;
+  document.getElementById("langclose").onclick = function () {
+    bar.hidden = true;
+    try { sessionStorage.setItem("fp-langbar", "closed"); } catch (e) {}
+  };
+})();
+</script>
 </body>
 </html>
