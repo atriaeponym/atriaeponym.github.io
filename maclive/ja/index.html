@@ -3,180 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mac Live と Computer Live：Mac をスマートフォンでライブ表示</title>
-<link rel="alternate" hreflang="en" href="https://atriaeponym.github.io/maclive/en/">
-<link rel="alternate" hreflang="fr" href="https://atriaeponym.github.io/maclive/">
-<link rel="alternate" hreflang="es" href="https://atriaeponym.github.io/maclive/es/">
-<link rel="alternate" hreflang="de" href="https://atriaeponym.github.io/maclive/de/">
-<link rel="alternate" hreflang="it" href="https://atriaeponym.github.io/maclive/it/">
-<link rel="alternate" hreflang="pt" href="https://atriaeponym.github.io/maclive/pt/">
-<link rel="alternate" hreflang="ar" href="https://atriaeponym.github.io/maclive/ar/">
-<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.github.io/maclive/zh/">
-<link rel="alternate" hreflang="ja" href="https://atriaeponym.github.io/maclive/ja/">
-<link rel="alternate" hreflang="hi" href="https://atriaeponym.github.io/maclive/hi/">
-<link rel="alternate" hreflang="nb" href="https://atriaeponym.github.io/maclive/nb/">
-<link rel="alternate" hreflang="sv" href="https://atriaeponym.github.io/maclive/sv/">
-<link rel="alternate" hreflang="fi" href="https://atriaeponym.github.io/maclive/fi/">
-<link rel="alternate" hreflang="ru" href="https://atriaeponym.github.io/maclive/ru/">
-<link rel="alternate" hreflang="id" href="https://atriaeponym.github.io/maclive/id/">
-<link rel="alternate" hreflang="vi" href="https://atriaeponym.github.io/maclive/vi/">
-<link rel="alternate" hreflang="ko" href="https://atriaeponym.github.io/maclive/ko/">
-<link rel="alternate" hreflang="tr" href="https://atriaeponym.github.io/maclive/tr/">
-<link rel="alternate" hreflang="pl" href="https://atriaeponym.github.io/maclive/pl/">
-<link rel="alternate" hreflang="nl" href="https://atriaeponym.github.io/maclive/nl/">
-<link rel="alternate" hreflang="uk" href="https://atriaeponym.github.io/maclive/uk/">
-<link rel="alternate" hreflang="bn" href="https://atriaeponym.github.io/maclive/bn/">
-<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.github.io/maclive/pt-br/">
-<link rel="alternate" hreflang="ur" href="https://atriaeponym.github.io/maclive/ur/">
-<link rel="alternate" hreflang="fa" href="https://atriaeponym.github.io/maclive/fa/">
-<link rel="alternate" hreflang="th" href="https://atriaeponym.github.io/maclive/th/">
-<link rel="alternate" hreflang="el" href="https://atriaeponym.github.io/maclive/el/">
-<link rel="alternate" hreflang="he" href="https://atriaeponym.github.io/maclive/he/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141416">
+<title>Mac 温度モニター：スマホで確認・アラート｜Mac Live</title>
+<meta name="description" content="Mac の温度・プロセッサ・バッテリーをスマホで確認。アプリを閉じていても過熱をアラートでお知らせします。無料、アカウント不要。">
+<link rel="canonical" href="https://atriaeponym.com/maclive/ja/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/maclive/en/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/maclive/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/maclive/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/maclive/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/maclive/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/maclive/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/maclive/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/maclive/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/maclive/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/maclive/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/maclive/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/maclive/pl/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/maclive/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/maclive/uk/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/maclive/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/maclive/tr/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/maclive/ar/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/maclive/fa/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/maclive/he/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/maclive/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/maclive/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/maclive/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/maclive/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/maclive/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/maclive/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/maclive/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/maclive/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/maclive/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/maclive/en/">
+<link rel="icon" href="/icons/maclive.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://atriaeponym.com/maclive/ja/">
+<meta property="og:title" content="Mac 温度モニター：スマホで確認・アラート｜Mac Live">
+<meta property="og:description" content="Mac の温度・プロセッサ・バッテリーをスマホで確認。アプリを閉じていても過熱をアラートでお知らせします。無料、アカウント不要。">
+<meta property="og:image" content="https://atriaeponym.com/teasers/maclive.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0A0E15;color:#C9D2E0;line-height:1.7;padding:24px 16px 90px;
-     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Arabic','Noto Sans Hebrew',Tahoma,Helvetica,sans-serif;
-     max-width:780px;margin:0 auto;font-size:16px}
-h1{font-size:26px;color:#38D5F0;margin-bottom:6px;font-weight:600}
-.sub{font-size:14px;color:#7D8594;margin-bottom:14px}
-h2{font-size:18px;color:#E8EDF5;margin:34px 0 10px;font-weight:600}
-p{margin-bottom:14px;color:#B8C1D1}
-b,strong{color:#E8EDF5}
-ul{margin:0 0 16px 22px}
-[dir=rtl] ul{margin:0 22px 16px 0}
-li{margin-bottom:9px;color:#B8C1D1}
-a{color:#38D5F0}
-bdi{white-space:nowrap}
-.box{background:#111A26;border:1px solid #1E2A3A;border-inline-start:3px solid #5CD6A8;
-     border-radius:10px;padding:16px 18px;margin:20px 0}
-.box.warn{border-inline-start-color:#38D5F0}
-.box p:last-child{margin-bottom:0}
-.lang{margin-bottom:24px}
-.lang select{background:#141E2C;border:1px solid #2C3A52;color:#C9D2E0;padding:8px 12px;
-     border-radius:20px;font-size:14px;font-family:inherit;max-width:100%}
-.all{margin-top:30px;font-size:13px;line-height:2;color:#5F6B85}
-.all a{color:#8A93A6;margin-inline-end:10px;white-space:nowrap}
-footer{margin-top:44px;padding-top:18px;border-top:1px solid #1C2636;font-size:13px;color:#5F6B85}
-.hero{display:flex;gap:18px;align-items:center;margin-bottom:10px}
-.logo{width:68px;height:68px;border-radius:16px;flex:none;background:linear-gradient(160deg,#1d3550,#0e1724);
-      border:1px solid #2C3A52;display:grid;place-items:center}
-h1{font-size:28px}
-.tag{color:#B8C1D1;font-size:16px}
-.cta{display:inline-flex;align-items:center;gap:10px;margin:26px 0 8px;background:#38D5F0;color:#06131a;
-     font-weight:700;font-size:17px;padding:14px 26px;border-radius:30px;text-decoration:none}
-.meta{font-size:13.5px;color:#7D8594}
-.steps{display:grid;gap:12px}
-.step{display:flex;gap:14px;background:#111A26;border:1px solid #1E2A3A;border-radius:12px;padding:14px 16px}
-.n{flex:none;width:30px;height:30px;border-radius:50%;background:#14303a;color:#38D5F0;font-weight:700;
-   display:grid;place-items:center}
-.step b{color:#E8EDF5}
-.step p{font-size:14.5px;margin:2px 0 0}
-.play{display:inline-flex;gap:8px;align-items:center;border:1px solid #2C3A52;border-radius:10px;padding:9px 14px;
-      color:#E8EDF5;text-decoration:none;font-size:14px}
-.play.soon{color:#7D8594;border-style:dashed}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-.step .cta{display:inline-block;max-width:100%;margin:14px 0 6px;font-size:16px;padding:12px 22px;line-height:1.35}
-.btns .play{display:inline-block;max-width:100%}
-.lead{font-size:17px}
-.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;background:#111A26;
-     border:1px solid #1E2A3A;border-radius:16px;padding:18px;margin-top:18px}
-.part{text-align:center}
-.part svg{display:block;margin:0 auto 8px}
-.who{color:#E8EDF5;font-weight:700}
-.names{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 6px}
-.nm{display:inline-flex;flex-direction:column;align-items:center;background:#14303a;border:1px solid #2a5866;
-    border-radius:12px;padding:6px 12px;min-width:120px}
-.nm b{color:#fff;font-size:17px}
-.nm small{color:#38D5F0;font-size:11.5px;letter-spacing:.04em}
-.what{font-size:13.5px;color:#7D8594}
-.arrow{color:#38D5F0;font-size:13px;text-align:center;line-height:1.3}
-.arrow span{display:block;font-size:26px}
-.note{font-size:14px;color:#7D8594;margin:10px 2px 0}
-@media(max-width:560px){.duo{grid-template-columns:1fr}}
-footer a{color:#8A93A6}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#38d5f0;--accent2:#3b82f6;--on:#06131a;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.langbar{display:flex;align-items:center;gap:10px;margin:-28px auto 26px;max-width:520px;padding:9px 12px 9px 16px;
+         border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.045);font-size:14px}
+.langbar[hidden]{display:none}
+.langbar a{flex:1;color:var(--ink);text-decoration:none}
+.langbar a span{color:var(--accent)}
+.langbar button{flex:none;background:none;border:0;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:2px 6px}
+.store.soon{cursor:default;border-style:dashed;box-shadow:none;background:transparent}
+.store.soon:hover{transform:none}
+.store.soon b{font-size:15px}
+ol{padding-left:22px}
+ol li::marker{color:var(--accent);font-weight:700}
+.langs{margin-top:10px;font-size:12.5px;line-height:2}
+.langs a{color:var(--muted);margin:0 5px;white-space:nowrap}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+.langbar{padding:9px 16px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+:lang(ja) .store b,:lang(ko) .store b,:lang(zh-Hans) .store b{font-size:15.5px}
+.langs a{display:inline-block}
 </style>
-<link rel="canonical" href="https://atriaeponym.com/maclive/ja/">
-<meta name="description" content="Mac の温度、プロセッサ、メモリ、ディスク、バッテリーを、どこにいてもスマートフォンで確認できます。そのために 2 つのソフト（どちらも無料） が必要です：">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mac Live · Computer Live","description":"Mac の状態をスマートフォンでライブ表示：温度、プロセッサ、バッテリー、アラート。","applicationCategory":"UtilitiesApplication","image":"https://atriaeponym.com/icons/maclive.png","operatingSystem":"macOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mac Live","alternateName":["Computer Live","Computer Live Remote Monitor"],"url":"https://atriaeponym.com/maclive/ja/","description":"Mac の温度・プロセッサ・バッテリーをスマホで確認。アプリを閉じていても過熱をアラートでお知らせします。無料、アカウント不要。","inLanguage":"ja","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 10+、Mac 用コンパニオン macOS 14+（Apple シリコン搭載 Mac）","image":"https://atriaeponym.com/icons/maclive.png","screenshot":["https://atriaeponym.com/maclive/img/103228e57e.jpg","https://atriaeponym.com/maclive/img/fc2bd479b9.jpg","https://atriaeponym.com/maclive/img/3066e270aa.jpg","https://atriaeponym.com/maclive/img/b60a5d7452.jpg","https://atriaeponym.com/maclive/img/ae3398af47.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.maclive"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"Mac Live は無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。スマートフォンのアプリも Mac 用コンパニオンの Computer Live も無料で、広告もアカウントも不要です。寄付もできますが、寄付者だけの機能はありません。"}},{"@type":"Question","name":"スマートフォンと Mac は同じ Wi-Fi に接続する必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。測定値はインターネット上のリレーを経由するため、オフィスや外出先、別の部屋からでも Mac を確認できます。Mac とスマートフォンがインターネットに接続されていれば十分です。"}},{"@type":"Question","name":"対応している Mac は？","acceptedAnswer":{"@type":"Answer","text":"Apple シリコン（M1 以降）を搭載し、macOS 14 以降を実行している Mac です：MacBook Air、MacBook Pro、iMac、Mac mini、Mac Studio。Intel プロセッサ搭載の Mac には対応していません。"}},{"@type":"Question","name":"Mac Live はどんなときにアラートを送りますか？","acceptedAnswer":{"@type":"Answer","text":"プロセッサが 1 分間 95 °C 以上のとき、ディスクの使用率が 90 % に達したとき、Mac がバッテリー駆動に切り替わったときや残量が 15 % を下回ったとき、Time Machine のバックアップが 30 日間ないとき、そして Mac が応答しなくなったときとオンラインに復帰したときです。アラートはアプリを閉じていても届きます。"}},{"@type":"Question","name":"Mac Live で Mac を操作できますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。Mac Live は Mac の状態を表示してお知らせするだけです。Mac を操作することも、画面を見ることも、ファイルを開くこともありません。"}},{"@type":"Question","name":"Mac の測定値を読めるのは誰ですか？","acceptedAnswer":{"@type":"Answer","text":"お使いのスマートフォンだけです。測定値は QR コードで交換した鍵によりエンドツーエンドで暗号化されており（AES-256-GCM）、中継するリレーは内容を読めません。"}},{"@type":"Question","name":"Mac Live は iPhone でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Computer Live Remote Monitor という名前で、iOS 17 以降に対応しています。App Store ではまだご利用いただけません。それまでは Android 版の Mac Live を Google Play でご利用いただけます。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/ja/"},{"@type":"ListItem","position":2,"name":"Mac Live","item":"https://atriaeponym.com/maclive/ja/"}]}</script>
 </head>
 <body>
-
-<div class="lang">
-  <select aria-label="Language" onchange="location.href=this.value">
-    <option value="../en/" data-hl="en">English</option>
-    <option value="../?lang=fr" data-hl="fr">Français</option>
-    <option value="../es/" data-hl="es">Español</option>
-    <option value="../de/" data-hl="de">Deutsch</option>
-    <option value="../it/" data-hl="it">Italiano</option>
-    <option value="../pt/" data-hl="pt">Português</option>
-    <option value="../ar/" data-hl="ar">العربية</option>
-    <option value="../zh/" data-hl="zh-Hans">中文</option>
-    <option value="../ja/" data-hl="ja" selected>日本語</option>
-    <option value="../hi/" data-hl="hi">हिन्दी</option>
-    <option value="../nb/" data-hl="nb">Norsk</option>
-    <option value="../sv/" data-hl="sv">Svenska</option>
-    <option value="../fi/" data-hl="fi">Suomi</option>
-    <option value="../ru/" data-hl="ru">Русский</option>
-    <option value="../id/" data-hl="id">Indonesia</option>
-    <option value="../vi/" data-hl="vi">Tiếng Việt</option>
-    <option value="../ko/" data-hl="ko">한국어</option>
-    <option value="../tr/" data-hl="tr">Türkçe</option>
-    <option value="../pl/" data-hl="pl">Polski</option>
-    <option value="../nl/" data-hl="nl">Nederlands</option>
-    <option value="../uk/" data-hl="uk">Українська</option>
-    <option value="../bn/" data-hl="bn">বাংলা</option>
-    <option value="../pt-br/" data-hl="pt-BR">Português (BR)</option>
-    <option value="../ur/" data-hl="ur">اردو</option>
-    <option value="../fa/" data-hl="fa">فارسی</option>
-    <option value="../th/" data-hl="th">ไทย</option>
-    <option value="../el/" data-hl="el">Ελληνικά</option>
-    <option value="../he/" data-hl="he">עברית</option>
-  </select>
+<main>
+<p class="langbar" id="langbar" hidden><a href="#"></a><button type="button" aria-label="閉じる">×</button></p>
+<div class="hero">
+<img class="icon" src="/icons/maclive.png" width="128" height="128" alt="Mac Live のアイコン：並んだコンピューターとスマートフォン">
+<h1>Mac Live<span class="sub">お使いの Mac をスマートフォンでライブ表示</span></h1>
+<div class="kicker">温度 · バッテリー · アラート</div>
+<p class="lead">Mac Live は、外出先でもお使いの Mac の温度をスマートフォンで確認できるモニタリングアプリです。プロセッサ（CPU）とグラフィックスチップの温度、プロセッサ、メモリ、ディスク、バッテリーの状態と健全性を表示します。ポケットに入る Mac のシステムモニターとして、MacBook や Apple シリコン搭載のあらゆる Mac をリモートで見守れます。アプリを閉じていても、Mac の過熱、ディスクの空き不足、バッテリー駆動への切り替え、バッテリー残量低下、Mac に接続できない状態をお知らせします。</p>
+<p class="promise">無料 · 広告なし · アカウント不要 · エンドツーエンド暗号化</p>
+<div class="stores">
+<a class="store" data-os="android" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.2-9.4-9.2-9.4zm10.4 8.2 2.7-2.8L6.1 1.6c-.4-.2-.8-.3-1.1-.2l9.6 9.4zm0 2.4L5 22.6c.3.1.7 0 1.1-.2l11.2-6.4-2.7-2.8zm3.9-4.5-3.1 3.3 3.1 3.2 3.4-1.9c1-.6 1-1.5 0-2.1l-3.4-2.5z"/></svg><span><b>Google Play</b><small>で手に入れよう</small><i>Mac Live · Android&nbsp;10 以降</i></span></a>
+<a class="store" data-os="mac" href="https://atriaeponym.com/maclive/ComputerLive-1.0.3.dmg" download><svg viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.6"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M1 20h22"/></svg><span><small>Mac 用の無料コンパニオン</small><b>Computer Live を入手</b><i>.dmg · 2.2 MB · Apple シリコン、macOS&nbsp;14+</i></span></a>
+<div class="store soon" data-os="ios"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>iPhone · App Store で近日公開</small><b>Computer Live Remote Monitor</b><i>iOS&nbsp;17 以降 · まだご利用いただけません</i></span></div>
 </div>
-
-<h1>Mac を、スマートフォンでライブ表示</h1>
-<p class="lead">Mac の温度、プロセッサ、メモリ、ディスク、バッテリーを、どこにいてもスマートフォンで確認できます。そのために<b>2 つのソフト（どちらも無料）</b>が必要です：</p>
-
-<div class="duo">
-  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M1 20h22"/></svg><div class="who">Mac 側</div>
-    <div class="names"><span class="nm"><b>Computer Live</b><small>Mac 用 · コンパニオン</small></span></div>
-    <div class="what">計測して送信します。画面はありません。</div></div>
-  <div class="arrow"><span>⇄</span>エンドツーエンド暗号化</div>
-  <div class="part"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#38D5F0" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 19h3"/></svg><div class="who">スマートフォン側</div>
-    <div class="names"><span class="nm"><b>Mac Live</b><small>Android</small></span><span class="nm"><b>Computer Live</b><small>iPhone</small></span></div>
-    <div class="what">実際に見るアプリです。</div></div>
 </div>
-<p class="note">Mac 用 <bdi>Computer Live</bdi> はスマートフォンアプリのコンパニオンです。これがないとアプリには何も表示されず、これだけでは Mac 上に何も表示されません。</p>
-
-<h2>3 ステップでインストール</h2>
-<div class="steps">
-  <div class="step"><div class="n">1</div><div><b>スマートフォンにアプリをインストール</b>
-    <div class="btns"><a class="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.maclive">▶ Android 用 <bdi>Mac Live</bdi>（Google Play）</a><span class="play soon">iPhone 用 <bdi>Computer Live</bdi>（App Store）— 近日公開</span></div></div></div>
-  <div class="step"><div class="n">2</div><div><b>Mac にコンパニオン <bdi>Computer Live</bdi> をインストール</b><p>「ダウンロード」フォルダの <bdi>ComputerLive-1.0.3.dmg</bdi> をダブルクリックします。</p><p><bdi>Computer Live</bdi> を <bdi>Applications</bdi> にドラッグ。そのあと開くと、画面上部のメニューバーにアイコンが表示されます。</p>
-    <a class="cta" href="../ComputerLive-1.0.3.dmg" download>⬇ コンパニオン <bdi>Computer Live</bdi> 1.0.3 をダウンロード</a>
-    <div class="meta">.dmg ファイル · 2.2 MB · 無料 · Apple による公証済み</div>
-<div class="meta">Apple シリコン搭載 Mac（M1 以降）· macOS 14 以降</div></div></div>
-  <div class="step"><div class="n">3</div><div><b>2 つをつなぐ</b><p>Mac の <bdi>Computer Live</bdi> メニューで「スマートフォンを追加…」を選び、スマートフォンのアプリで QR コードを読み取ります。これで完了です。</p></div></div>
+<div class="shots" role="list" aria-label="スクリーンショット">
+<figure><img src="/maclive/img/103228e57e.jpg" alt="Android 版 Mac Live のホーム画面：CPU 温度 48 °C、プロセッサ 15 %、メモリ 76 %、ディスク 54 %、バッテリー 80 %、MacBook Air 15 インチ M2 の応答時間" width="360" height="640" loading="lazy" decoding="async"></figure>
+<figure><img src="/maclive/img/fc2bd479b9.jpg" alt="Android 版 Mac Live の履歴：直近 5 分間の Mac のプロセッサ温度と使用率のグラフ" width="360" height="640" loading="lazy" decoding="async"></figure>
+<figure><img src="/maclive/img/3066e270aa.jpg" alt="Android 版 Mac Live のエネルギー画面：電源接続中の Mac のバッテリー 80 %、最大容量 90 %、充放電回数 195 回（上限 1,000 回）、消費電力" width="360" height="640" loading="lazy" decoding="async"></figure>
+<figure><img src="/maclive/img/b60a5d7452.jpg" alt="iPhone 版 Computer Live Remote Monitor：Mac の CPU 温度、プロセッサ、メモリ、ディスク、バッテリーを表示するホーム画面" width="360" height="782" loading="lazy" decoding="async"></figure>
+<figure><img src="/maclive/img/ae3398af47.jpg" alt="iPhone 版 Computer Live Remote Monitor のシステム画面：Mac の CPU と GPU の温度、高効率コアと高性能コアの周波数、メモリとディスク" width="360" height="782" loading="lazy" decoding="async"></figure>
 </div>
-
-<h2>知っておきたいこと</h2>
+<section>
+<h2>Mac の温度をスマートフォンで確認</h2>
+<p>アプリを開くと Mac の状態が表示され、約 2 秒ごとに更新されます。</p>
 <ul>
-  <li>アカウント作成不要、広告なし。</li>
-  <li>計測データはエンドツーエンドで暗号化されて届きます。読めるのはあなたのスマートフォンだけです。</li>
-  <li><bdi>Computer Live</bdi> は自動でアップデートされます。</li>
+<li>プロセッサとグラフィックスチップの<b>温度</b>。</li>
+<li><b>プロセッサ</b>：使用率、高効率コアと高性能コアの周波数、負荷。</li>
+<li><b>メモリとディスク</b>：使用中のメモリ、ディスクに移されたメモリ、空き容量。</li>
+<li><b>バッテリー</b>：残量、状態、充放電回数、電源接続、消費電力。</li>
+<li><b>Time Machine</b>：最後のバックアップの日付。</li>
+<li><b>接続</b>：接続中の USB デバイス、Bluetooth デバイス、ディスプレイ。最も負荷の高いプロセス。</li>
 </ul>
-
-<footer><bdi>Computer Live</bdi> — Atria.Eponym · France · <a href="../privacy/ja/">プライバシーポリシー</a></footer>
-
+<p>履歴では、直近 5 分、1 時間、24 時間のグラフを確認できます。
+プロセッサ温度、プロセッサ使用率、消費電力です。Mac は直近 24 時間分を
+1 分に 1 点ずつ保持し、アプリを開いたときに送信します。</p>
+</section>
+<section>
+<h2>Mac が過熱したらアラート、アプリを閉じていても</h2>
+<p>長い計算やビデオの書き出し、バックアップを始めて部屋を離れても、Mac Live が
+スマートフォンにお知らせします。</p>
+<ul>
+<li>プロセッサが 1 分間 95 °C 以上（過熱）</li>
+<li>ディスクの使用率が 90 %</li>
+<li>Mac がバッテリー駆動に切り替わり、その後バッテリー残量が 15 % 未満</li>
+<li>Time Machine のバックアップが 30 日間ない</li>
+<li>Mac に接続できなくなり、その後オンラインに復帰</li>
+</ul>
+</section>
+<section>
+<h2>無料の 2 つの構成：スマートフォンのアプリと Mac 用コンパニオン</h2>
+<p>スマートフォンが表示し、Mac が計測します。Mac では、無料の小さなプログラム <b>Computer Live</b> がセンサーを読み取り、
+暗号化した測定値を送信します。ウインドウはなく、メニューバーにアイコンがあるだけです。</p>
+<ol>
+<li><b>スマートフォンのアプリをインストール</b>：Google Play の Mac Live（Android）。</li>
+<li><b>Mac にコンパニオンをインストール</b>：<a href="https://atriaeponym.com/maclive/ComputerLive-1.0.3.dmg" download>Computer Live をダウンロード</a>し、
+.dmg ファイルを開いて Computer Live を「アプリケーション」にドラッグしてから、起動します。</li>
+<li><b>両方をつなぐ</b>：Computer Live のメニューで「スマートフォンを追加…」を選び、
+スマートフォンのアプリで QR コードをスキャンします。</li>
+</ol>
+<p class="note">Mac 用コンパニオン：2.2 MB の .dmg ファイル。Apple による署名と公証済みで、
+自動でアップデートされます。Apple シリコン搭載 Mac（M1 以降）、macOS 14 以降。</p>
+</section>
+<section>
+<h2>Android と iPhone に対応</h2>
+<p>Android 版のアプリ名は <b>Mac Live</b> です（Android 10 以降、Google Play）。iPhone 版のアプリ名は
+<b>Computer Live Remote Monitor</b> です（iOS 17 以降）。App Store ではまだご利用いただけません。
+どちらも同じ測定値を表示し、同じアラートを送信します。Mac 側のコンパニオンは同じ Computer Live です。</p>
+</section>
+<section>
+<h2>測定値は暗号化されたまま</h2>
+<ul>
+<li>アカウント不要、登録不要。</li>
+<li>広告なし、利用統計なし。</li>
+<li>エンドツーエンド暗号化（AES-256-GCM）：測定値を中継するリレーはその内容を読めません。</li>
+<li>鍵は QR コードでのみ交換され、お使いの Mac とスマートフォンから外に出ません。</li>
+</ul>
+<p>詳しくは<a href="/maclive/privacy/ja/">プライバシーポリシー</a>をご覧ください。</p>
+</section>
+<section class="faq">
+<h2>よくある質問</h2>
+<details><summary>Mac Live は無料ですか？</summary><p>はい。スマートフォンのアプリも Mac 用コンパニオンの Computer Live も無料で、広告もアカウントも不要です。寄付もできますが、寄付者だけの機能はありません。</p></details>
+<details><summary>スマートフォンと Mac は同じ Wi-Fi に接続する必要がありますか？</summary><p>いいえ。測定値はインターネット上のリレーを経由するため、オフィスや外出先、別の部屋からでも Mac を確認できます。Mac とスマートフォンがインターネットに接続されていれば十分です。</p></details>
+<details><summary>対応している Mac は？</summary><p>Apple シリコン（M1 以降）を搭載し、macOS 14 以降を実行している Mac です：MacBook Air、MacBook Pro、iMac、Mac mini、Mac Studio。Intel プロセッサ搭載の Mac には対応していません。</p></details>
+<details><summary>Mac Live はどんなときにアラートを送りますか？</summary><p>プロセッサが 1 分間 95 °C 以上のとき、ディスクの使用率が 90 % に達したとき、Mac がバッテリー駆動に切り替わったときや残量が 15 % を下回ったとき、Time Machine のバックアップが 30 日間ないとき、そして Mac が応答しなくなったときとオンラインに復帰したときです。アラートはアプリを閉じていても届きます。</p></details>
+<details><summary>Mac Live で Mac を操作できますか？</summary><p>いいえ。Mac Live は Mac の状態を表示してお知らせするだけです。Mac を操作することも、画面を見ることも、ファイルを開くこともありません。</p></details>
+<details><summary>Mac の測定値を読めるのは誰ですか？</summary><p>お使いのスマートフォンだけです。測定値は QR コードで交換した鍵によりエンドツーエンドで暗号化されており（AES-256-GCM）、中継するリレーは内容を読めません。</p></details>
+<details><summary>Mac Live は iPhone でも使えますか？</summary><p>はい。Computer Live Remote Monitor という名前で、iOS 17 以降に対応しています。App Store ではまだご利用いただけません。それまでは Android 版の Mac Live を Google Play でご利用いただけます。</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/ja/">Atria.Eponym のすべてのアプリ</a> · <a href="/maclive/privacy/ja/">プライバシーポリシー</a></p>
+<p>Atria.Eponym（フランスを拠点とする個人開発者） · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+<p class="langs"><a href="/maclive/en/" hreflang="en" lang="en">English</a> <a href="/maclive/" hreflang="fr" lang="fr">Français</a> <a href="/maclive/de/" hreflang="de" lang="de">Deutsch</a> <a href="/maclive/es/" hreflang="es" lang="es">Español</a> <a href="/maclive/it/" hreflang="it" lang="it">Italiano</a> <a href="/maclive/pt/" hreflang="pt-PT" lang="pt-PT">Português</a> <a href="/maclive/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> <a href="/maclive/nl/" hreflang="nl" lang="nl">Nederlands</a> <a href="/maclive/sv/" hreflang="sv" lang="sv">Svenska</a> <a href="/maclive/nb/" hreflang="nb" lang="nb">Norsk bokmål</a> <a href="/maclive/fi/" hreflang="fi" lang="fi">Suomi</a> <a href="/maclive/pl/" hreflang="pl" lang="pl">Polski</a> <a href="/maclive/ru/" hreflang="ru" lang="ru">Русский</a> <a href="/maclive/uk/" hreflang="uk" lang="uk">Українська</a> <a href="/maclive/el/" hreflang="el" lang="el">Ελληνικά</a> <a href="/maclive/tr/" hreflang="tr" lang="tr">Türkçe</a> <a href="/maclive/ar/" hreflang="ar" lang="ar">العربية</a> <a href="/maclive/fa/" hreflang="fa" lang="fa">فارسی</a> <a href="/maclive/he/" hreflang="he" lang="he">עברית</a> <a href="/maclive/ur/" hreflang="ur" lang="ur">اردو</a> <a href="/maclive/hi/" hreflang="hi" lang="hi">हिन्दी</a> <a href="/maclive/bn/" hreflang="bn" lang="bn">বাংলা</a> <a href="/maclive/th/" hreflang="th" lang="th">ไทย</a> <a href="/maclive/vi/" hreflang="vi" lang="vi">Tiếng Việt</a> <a href="/maclive/id/" hreflang="id" lang="id">Bahasa Indonesia</a> <a href="/maclive/ko/" hreflang="ko" lang="ko">한국어</a> <a href="/maclive/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></p>
+</footer>
 <script>
-(function(){
-  try {
-    var names = new Intl.DisplayNames([navigator.language], {type: 'language'});
-    document.querySelectorAll('.lang option').forEach(function(o){
-      var n = names.of(o.dataset.hl);
-      if (n && n.toLowerCase() !== o.textContent.toLowerCase()) o.textContent += ' (' + n + ')';
-    });
-  } catch (e) {}
+// Highlights the download for the visitor's device. No redirect: search engines and visitors see the same page.
+(function () {
+  var ua = navigator.userAgent || "", os =
+    /Android/i.test(ua) ? "android" :
+    /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios" :
+    /Macintosh/.test(ua) ? "mac" : "";
+  var el = document.querySelector('.store[data-os="' + os + '"]');
+  if (el) { if (os !== "ios") el.classList.add("mine"); el.parentNode.insertBefore(el, el.parentNode.firstChild); }
+  else { el = document.querySelector(".store"); if (el) el.classList.add("mine"); }
+})();
+// Language: no redirect any more. If the browser prefers another language of the site, a discreet banner links to it.
+(function () {
+  var CUR = "ja";
+  var L = {"en": ["This page is available in English", "English", false, "/maclive/en/", "en"], "fr": ["Cette page est disponible en français", "Français", false, "/maclive/", "fr"], "de": ["Diese Seite gibt es auch auf Deutsch", "Deutsch", false, "/maclive/de/", "de"], "es": ["Esta página está disponible en español", "Español", false, "/maclive/es/", "es"], "it": ["Questa pagina è disponibile in italiano", "Italiano", false, "/maclive/it/", "it"], "pt": ["Esta página está disponível em português", "Português", false, "/maclive/pt/", "pt-PT"], "pt-br": ["Esta página está disponível em português", "Português (Brasil)", false, "/maclive/pt-br/", "pt-BR"], "nl": ["Deze pagina is beschikbaar in het Nederlands", "Nederlands", false, "/maclive/nl/", "nl"], "sv": ["Den här sidan finns på svenska", "Svenska", false, "/maclive/sv/", "sv"], "nb": ["Denne siden finnes på norsk", "Norsk bokmål", false, "/maclive/nb/", "nb"], "fi": ["Tämä sivu on saatavilla suomeksi", "Suomi", false, "/maclive/fi/", "fi"], "pl": ["Ta strona jest dostępna po polsku", "Polski", false, "/maclive/pl/", "pl"], "ru": ["Эта страница есть на русском языке", "Русский", false, "/maclive/ru/", "ru"], "uk": ["Ця сторінка є українською мовою", "Українська", false, "/maclive/uk/", "uk"], "el": ["Αυτή η σελίδα υπάρχει στα ελληνικά", "Ελληνικά", false, "/maclive/el/", "el"], "tr": ["Bu sayfa Türkçe olarak da mevcut", "Türkçe", false, "/maclive/tr/", "tr"], "ar": ["هذه الصفحة متوفرة باللغة العربية", "العربية", true, "/maclive/ar/", "ar"], "fa": ["این صفحه به فارسی هم موجود است", "فارسی", true, "/maclive/fa/", "fa"], "he": ["הדף הזה זמין גם בעברית", "עברית", true, "/maclive/he/", "he"], "ur": ["یہ صفحہ اردو میں بھی دستیاب ہے", "اردو", true, "/maclive/ur/", "ur"], "hi": ["यह पेज हिन्दी में भी उपलब्ध है", "हिन्दी", false, "/maclive/hi/", "hi"], "bn": ["এই পাতাটি বাংলাতেও আছে", "বাংলা", false, "/maclive/bn/", "bn"], "th": ["หน้านี้มีภาษาไทยด้วย", "ไทย", false, "/maclive/th/", "th"], "vi": ["Trang này có bản tiếng Việt", "Tiếng Việt", false, "/maclive/vi/", "vi"], "id": ["Halaman ini tersedia dalam bahasa Indonesia", "Bahasa Indonesia", false, "/maclive/id/", "id"], "ja": ["このページは日本語でもご覧いただけます", "日本語", false, "/maclive/ja/", "ja"], "ko": ["이 페이지는 한국어로도 볼 수 있습니다", "한국어", false, "/maclive/ko/", "ko"], "zh": ["此页面有简体中文版", "简体中文", false, "/maclive/zh/", "zh-Hans"]};
+  var bar = document.getElementById("langbar"), pick = "";
+  try { if (localStorage.getItem("maclive-langbar") === "off") return; } catch (e) {}
+  var navs = navigator.languages || [navigator.language || ""];
+  for (var i = 0; i < navs.length && !pick; i++) {
+    var n = String(navs[i]).toLowerCase().replace("_", "-"), b = n.split("-")[0], c = b;
+    if (n === "pt-br") c = "pt-br";
+    else if (b === "no" || b === "nn") c = "nb";
+    else if (b === "iw") c = "he";
+    else if (b === "in") c = "id";
+    if (c === CUR) return;                        // the visitor's first language of the site: this page is the right one
+    if (L[c]) pick = c;
+  }
+  if (!pick) return;
+  var a = bar.querySelector("a");
+  a.href = L[pick][3];
+  a.lang = L[pick][4]; a.dir = L[pick][2] ? "rtl" : "ltr";
+  a.textContent = "🌐 " + L[pick][0] + " ";
+  var s = document.createElement("span"); s.textContent = L[pick][2] ? "←" : "→"; a.appendChild(s);
+  bar.hidden = false;
+  bar.querySelector("button").onclick = function () {
+    bar.hidden = true;
+    try { localStorage.setItem("maclive-langbar", "off"); } catch (e) {}
+  };
 })();
 </script>
 </body>
