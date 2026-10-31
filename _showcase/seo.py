@@ -90,7 +90,8 @@ def run(root, site, langs, apps, texts, category, name):
         # schema.org written by an earlier run of this pass is rewritten, so a fix here reaches every page
         mine = re.compile(r'<script type="application/ld\+json">\{"@context":"https://schema.org","@type":"SoftwareApplication"'
                           r'[^<]*"author":\{"@type":"Organization","@id":"' + re.escape(site) + r'/#publisher"[^<]*</script>\n?')
-        if folder in by_id and mine.search(head):
+        # pages written by hand for search engines (they carry a FAQ) keep their own schema.org
+        if folder in by_id and "FAQPage" not in head and mine.search(head):
             head = mine.sub("", head)
         if "application/ld+json" not in head and folder in by_id:
             m = re.search(r'<html[^>]*\blang="([^"]+)"', page)
