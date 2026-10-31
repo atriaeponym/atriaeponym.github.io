@@ -191,7 +191,8 @@ def page(lang: str) -> str:
 """
 
 
-for lang, out in (("fr", "diapo/index.html"), ("en", "diapo/en/index.html")):
+# The French page diapo/index.html is now written by hand for search engines (31/10/2026): only English here.
+for lang, out in (("en", "diapo/en/index.html"),):
     p = site / out
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(page(lang), encoding="utf-8")

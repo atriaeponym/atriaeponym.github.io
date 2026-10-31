@@ -12,8 +12,8 @@ import json
 import re
 
 LEGAL = {"privacy", "terms", "delete", "join"}
-# Listed in the sitemap but never edited here (Romain, 31/10/2026: Diapo is left untouched for now)
-FROZEN = {"diapo"}
+# Listed in the sitemap but never edited here
+FROZEN = set()
 
 
 def os_name(p: dict) -> str:

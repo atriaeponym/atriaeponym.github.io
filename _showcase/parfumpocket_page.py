@@ -105,6 +105,8 @@ for key, t in T.items():
 </body>
 </html>
 """
+    if key == "fr":
+        continue  # parfumpocket/index.html is now written by hand for search engines (31/10/2026)
     out = site / "parfumpocket" / ("index.html" if key == "fr" else "en/index.html")
     out.write_text(html)
     print(out, len(html))
