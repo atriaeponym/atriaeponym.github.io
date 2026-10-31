@@ -1,0 +1,62 @@
+# Atria.Eponym
+
+> Atria.Eponym is an independent developer based in France. Simple, polished apps for Android, iPhone, Mac and PC: no ads, no mandatory account, as little data as possible. Apps are translated into 28 languages.
+
+Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.com/ (English), https://atriaeponym.com/fr/ (French).
+
+## Apps
+
+### MyLilBudget (French: MonPtitBudget)
+- Pocket money and budget for teens, alone or with family. No ads, no account.
+- FR : Argent de poche et budget des ados, seul ou en famille. Sans pub, sans compte.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.familypocket
+- App Store (iPhone): https://apps.apple.com/app/id6822458545
+- Microsoft Store (Windows): https://apps.microsoft.com/detail/9PMVV9S1H489
+- Page: https://atriaeponym.com/familypocket/
+
+### Speed GPS
+- GPS speedometer, sky map and trips, and much more. Offline, no ads.
+- FR : Compteur de vitesse GPS, carte du ciel et trajets, et bien plus encore. Hors ligne, sans pub.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps
+- App Store (iPhone): https://apps.apple.com/app/id6823107885
+
+### Mac Live · Computer Live
+- Your Mac live on your phone: temperatures, processor, battery and alerts, even with the app closed.
+- FR : Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.maclive
+- Page: https://atriaeponym.com/maclive/
+
+### Brevet DNB Ortho & Grammaire
+- All the spelling the French brevet dictation tests: every trap found in past papers since 2011 and every point of the year-9 curriculum, in dictations read aloud, corrected and marked as on exam day. No ads, no account.
+- FR : Toute l'orthographe que la dictée du brevet évalue : les pièges relevés dans les annales depuis 2011 et les notions du programme de 3ᵉ, en dictées lues à voix haute, corrigées et notées comme à l'examen. Sans pub, sans compte.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.dicteednb
+- App Store (iPhone): https://apps.apple.com/app/id6824308790
+- App Store (Mac): https://apps.apple.com/app/id6824308790
+- Microsoft Store (Windows): https://apps.microsoft.com/detail/9N30XKR26HKB
+- Page: https://atriaeponym.com/dicteednb/
+
+### Perfume Price Tracker
+- Compare your perfume prices across shops, delivery included, and get an alert when they drop. No ads, no account.
+- FR : Comparez le prix de vos parfums entre boutiques, livraison comprise, et recevez une alerte quand il baisse. Sans pub, sans compte.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.parfumpocket
+- App Store (iPhone): https://apps.apple.com/app/id6824535728
+- Page: https://atriaeponym.com/parfumpocket/
+
+### Stock Cockpit
+- Stock prices for Paris, Europe, the US and London, 15-min delayed. Free, no ads, no account.
+- FR : Cours de bourse Paris, Europe, US, Londres, différés 15 min. Gratuit, sans pub, sans compte.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.stockcockpit
+- Page: https://atriaeponym.com/stockcockpit/
+
+### SoundCatch
+- Audio recorder: record the sound of an app or open a file, cut out what you do not need, export one clean file. No ads, no account.
+- FR : Enregistreur audio : enregistre le son d'une appli ou ouvre un fichier, coupe les passages inutiles, exporte un fichier propre. Sans pub, sans compte.
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.soundcatch
+- Page: https://atriaeponym.com/soundcatch/
+
+### Diapo
+- Your photos, big, from a folder or a whole disk. They are never modified.
+- FR : Vos photos en grand, d'un dossier ou d'un disque entier. Elles ne sont jamais modifiées.
+- Microsoft Store (Windows): https://apps.microsoft.com/detail/9P6MPV8Q9ZP1
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.diapo
+- Page: https://atriaeponym.com/diapo/

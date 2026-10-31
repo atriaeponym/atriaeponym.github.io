@@ -37,6 +37,7 @@ jobs:
           echo atriaeponym.com > mirror/CNAME
           date -u +%Y-%m > mirror/.keepalive
       - name: Commit (the push rebuilds the site)
+        id: commit
         run: |
           cd mirror
           git add -A
@@ -45,3 +46,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -qm "sync: atriaeponym.github.io $(git -C ../source rev-parse --short HEAD)"
           git push -q
+          echo "pushed=1" >> "$GITHUB_OUTPUT"
+      - name: Tell search engines the pages changed (IndexNow, read by Bing and others)
+        if: steps.commit.outputs.pushed == '1'
+        # The key is public by design: IndexNow checks it at https://atriaeponym.com/<key>.txt
+        env:
+          KEY: 06ca0b3de0c154d5e2872c928abc9a7f
+        run: |
+          cd mirror
+          urls=$(grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//' | jq -R . | jq -sc .)
+          body=$(jq -nc --arg k "$KEY" --argjson u "$urls" \
+            '{host:"atriaeponym.com",key:$k,keyLocation:("https://atriaeponym.com/"+$k+".txt"),urlList:$u}')
+          code=$(curl -sS -o /dev/null -w '%{http_code}' -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$body" https://api.indexnow.org/indexnow || echo 000)
+          echo "IndexNow: HTTP $code for $(echo "$urls" | jq length) URLs"

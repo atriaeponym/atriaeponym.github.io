@@ -11,7 +11,7 @@ One page per language: English at the root (also the default for search engines)
 /<lang>/. Texts in French and English live here and in apps.json; the other languages in
 _showcase/i18n/<lang>.json (interface and feature chips) and _showcase/i18n/_store_taglines.json (the
 short description of the app's own store listing, when it exists in that language). The script also
-writes sitemap.xml and robots.txt.
+writes sitemap.xml, robots.txt and llms.txt, and completes the app pages for search engines (seo.py).
 
     python3 _showcase/build.py              # writes index.html, <lang>/index.html, sitemap.xml, robots.txt
     python3 _showcase/build.py --standalone out.html [lang]   # one page with icons inlined (mockups)
@@ -585,10 +585,12 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
 """
 
 
-def sitemap() -> str:
+def sitemap(pages=()) -> str:
+    """The home pages with their language alternates, then every indexable app page (seo.py)."""
     alternates = "".join(f'<xhtml:link rel="alternate" hreflang="{LANGS[l][1]}" href="{url(l)}"/>' for l in LANGS)
     alternates += f'<xhtml:link rel="alternate" hreflang="x-default" href="{url("en")}"/>'
     urls = "".join(f"<url><loc>{url(l)}</loc>{alternates}</url>\n" for l in LANGS)
+    urls += "".join(f"<url><loc>{u}</loc></url>\n" for u in pages)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             f'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n{urls}</urlset>\n')
 
@@ -606,9 +608,14 @@ def main() -> None:
         out = ROOT / "index.html" if lang == "en" else ROOT / lang / "index.html"
         out.parent.mkdir(exist_ok=True)
         out.write_text(page(apps, lang, texts, False), encoding="utf-8")
-    (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8")
+    sys.path.insert(0, str(ROOT / "_showcase"))
+    import seo
+    pages, changed = seo.run(ROOT, SITE, LANGS, apps, texts, CATEGORY, name)
+    (ROOT / "llms.txt").write_text(seo.llms_txt(SITE, apps, texts, name, pages), encoding="utf-8")
+    (ROOT / "sitemap.xml").write_text(sitemap(pages), encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
-    print(f"index.html + {len(LANGS) - 1} language pages, sitemap.xml, robots.txt: {len(apps)} apps")
+    print(f"index.html + {len(LANGS) - 1} language pages, sitemap.xml ({len(LANGS) + len(pages)} pages), "
+          f"robots.txt, llms.txt: {len(apps)} apps; {changed} app pages completed")
 
 
 if __name__ == "__main__":
