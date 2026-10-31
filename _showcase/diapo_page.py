@@ -192,7 +192,9 @@ def page(lang: str) -> str:
 
 
 # The French page diapo/index.html is now written by hand for search engines (31/10/2026): only English here.
-for lang, out in (("en", "diapo/en/index.html"),):
+# Every landing page of Diapo (/diapo/ and /diapo/<lang>/) is now written for search engines, in the 28 languages
+# (hub/seo-site-2026-10-31/diapo-i18n). This script no longer writes any page.
+for lang, out in ():
     p = site / out
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(page(lang), encoding="utf-8")
