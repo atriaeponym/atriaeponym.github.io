@@ -106,6 +106,8 @@ svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;line-height:1;letter-spacing:.02em}
 .brand img{width:30px;height:30px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1.5px var(--accent),0 0 14px rgba(245,166,35,.5)}
 .brand .nm span{color:var(--accent)}
+.langbox{display:flex;align-items:center;gap:10px}
+.langhint{color:#9AA0AA;opacity:.5;font-size:13px;font-weight:500}
 .lang{position:relative}
 .lang summary{list-style:none;display:flex;align-items:center;gap:7px;font-weight:650;font-size:13px;line-height:1;color:#1A1206;background:var(--accent);border-radius:999px;padding:8px 12px;cursor:pointer}
 .lang summary::-webkit-details-marker{display:none}
@@ -299,6 +301,25 @@ ROOT_REDIRECT = """<script>
     }
   }
   if (pick && pick !== 'en' && langs.indexOf(pick) >= 0) location.replace('/' + pick + '/' + location.hash);
+})();
+</script>"""
+
+
+# Next to the language menu, the word "Language" in the visitor's own system language (dimmed), so
+# someone landing on a page in a language they cannot read still finds the menu.
+LANG_HINT = """<script>
+(function(){
+  var words = %s, navs = navigator.languages || [navigator.language || 'en'], w = null;
+  for (var i = 0; i < navs.length && !w; i++) {
+    var n = navs[i].toLowerCase(), k = n.split('-')[0];
+    if (n === 'pt-br') k = 'pt-br';
+    else if (k === 'no' || k === 'nn') k = 'nb';
+    else if (k === 'iw') k = 'he';
+    else if (k === 'zh') k = 'zh';
+    w = words[k] || null;
+  }
+  var el = document.getElementById('langhint');
+  if (el) el.textContent = w || words.en;
 })();
 </script>"""
 
@@ -542,7 +563,7 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
 <body>
 <div class="sky" aria-hidden="true"><i style="left:14%;top:18%;animation-delay:-0s;animation-duration:4s"></i><i style="left:38%;top:9%;animation-delay:-1.3s;animation-duration:5s"></i><i style="left:63%;top:26%;animation-delay:-2.1s;animation-duration:3.6s"></i><i style="left:82%;top:58%;animation-delay:-0.7s;animation-duration:4.4s"></i><i style="left:24%;top:72%;animation-delay:-2.8s;animation-duration:5.2s"></i><i style="left:51%;top:44%;animation-delay:-1.9s;animation-duration:3.8s"></i><i style="left:91%;top:12%;animation-delay:-3.1s;animation-duration:4.6s"></i><i style="left:7%;top:47%;animation-delay:-0.4s;animation-duration:4.1s"></i><i style="left:72%;top:84%;animation-delay:-2.4s;animation-duration:5s"></i><b style="--x:78%;--y:6%;--t:11s;--d:2s"></b><b style="--x:96%;--y:30%;--t:17s;--d:9s"></b></div>
 <div class="w">
-<div class="bar"><div class="brand"><img src="{gecko}" alt=""><span class="nm">Atria<span>.</span>Eponym</span></div><details class="lang"><summary aria-label="{html.escape(T["language"])}">{ICON["globe"]}{html.escape(native)}</summary><ul>{menu}</ul></details></div>
+<div class="bar"><div class="brand"><img src="{gecko}" alt=""><span class="nm">Atria<span>.</span>Eponym</span></div><div class="langbox"><span class="langhint" id="langhint"></span><details class="lang"><summary aria-label="{html.escape(T["language"])}">{ICON["globe"]}{html.escape(native)}</summary><ul>{menu}</ul></details></div></div>
 <div class="hero">
 <svg class="orbit" viewBox="0 0 520 520" aria-hidden="true"><defs><linearGradient id="og" x1="0" x2="1"><stop offset="0" stop-color="#F5A623" stop-opacity="0"/><stop offset=".5" stop-color="#F5A623" stop-opacity=".8"/><stop offset="1" stop-color="#F5A623" stop-opacity="0"/></linearGradient></defs><g transform="rotate(-18 260 260)"><path id="o1" d="M-15,260 a275,138 0 1,1 550,0 a275,138 0 1,1 -550,0"/><path id="o2" d="M50,260 a210,96 0 1,1 420,0 a210,96 0 1,1 -420,0"/><g class="moving"><circle r="4" opacity="1" class="glow"><animateMotion dur="84s" begin="-3.60s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="3.2" opacity="0.55"><animateMotion dur="84s" begin="-2.88s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="2.6" opacity="0.32"><animateMotion dur="84s" begin="-2.16s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="2" opacity="0.18"><animateMotion dur="84s" begin="-1.44s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="1.6" opacity="0.09"><animateMotion dur="84s" begin="-0.72s" repeatCount="indefinite" rotate="auto"><mpath href="#o1"/></animateMotion></circle><circle r="3" opacity="1" class="glow"><animateMotion dur="36s" begin="-17.60s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="2.4" opacity="0.55"><animateMotion dur="36s" begin="-17.28s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.95" opacity="0.32"><animateMotion dur="36s" begin="-16.96s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.5" opacity="0.18"><animateMotion dur="36s" begin="-16.64s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle><circle r="1.2" opacity="0.09"><animateMotion dur="36s" begin="-16.32s" repeatCount="indefinite" rotate="auto"><mpath href="#o2"/></animateMotion></circle></g></g></svg>
 <div><p class="kicker">{html.escape(T["kicker"])}</p>
@@ -558,6 +579,7 @@ def page(apps: list, lang: str, texts: dict, standalone: bool) -> str:
 <footer><p class="by">{html.escape(T["developed_by"])}</p><img class="gecko" src="{gecko}" alt="" width="84" height="84"><p class="sig">Atria<span>.</span>Eponym</p><p>{html.escape(T["publisher"])} · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a><br>© 2026 Atria.Eponym</p>{counter(T, standalone)}</footer>
 </div>
 {SCRIPT}
+{LANG_HINT % json.dumps({l: texts[l]["language"] for l in LANGS}, ensure_ascii=False)}
 </body>
 </html>
 """
