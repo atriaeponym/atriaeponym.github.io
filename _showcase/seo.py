@@ -16,6 +16,13 @@ LEGAL = {"privacy", "terms", "delete", "join"}
 FROZEN = {"diapo"}
 
 
+def os_name(p: dict) -> str:
+    """Operating system of one live platform: the "mac" row means Windows on the Microsoft Store, macOS otherwise."""
+    if p["platform"] == "mac":
+        return "Windows" if p["channel"] == "msstore" else "macOS"
+    return {"android": "Android", "iphone": "iOS"}[p["platform"]]
+
+
 def app_pages(root, langs):
     """(path relative to root, app folder, language folder or None) of every indexable app landing page."""
     out = []
@@ -49,13 +56,12 @@ def description(page):
 
 def app_data(a, lang, texts, site, category, name):
     """schema.org SoftwareApplication of one app, in the page's language, from the showcase data."""
-    systems = {"android": "Android", "iphone": "iOS", "mac": "macOS, Windows"}
     live = [p for p in a["platforms"] if p["status"] == "live"]
     T = texts.get(lang) or texts["en"]
     app = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": name(a, lang),
            "description": T["_apps"][a["id"]]["tagline"], "applicationCategory": category[a["id"]],
            "image": f"{site}/{a['icon']}",
-           "operatingSystem": ", ".join(dict.fromkeys(systems[p["platform"]] for p in live)) or None,
+           "operatingSystem": ", ".join(dict.fromkeys(os_name(p) for p in live)) or None,
            "offers": None if a.get("paid") else {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
            "author": {"@type": "Organization", "@id": f"{site}/#publisher", "name": "Atria.Eponym", "url": f"{site}/"},
            "sameAs": [p["url"] for p in live if p["url"].startswith("http")] or None}
@@ -81,14 +87,20 @@ def run(root, site, langs, apps, texts, category, name):
             d = description(page)
             if d:
                 add.append(f'<meta name="description" content="{html.escape(d)}">')
+        # schema.org written by an earlier run of this pass is rewritten, so a fix here reaches every page
+        mine = re.compile(r'<script type="application/ld\+json">\{"@context":"https://schema.org","@type":"SoftwareApplication"'
+                          r'[^<]*"author":\{"@type":"Organization","@id":"' + re.escape(site) + r'/#publisher"[^<]*</script>\n?')
+        if folder in by_id and mine.search(head):
+            head = mine.sub("", head)
         if "application/ld+json" not in head and folder in by_id:
             m = re.search(r'<html[^>]*\blang="([^"]+)"', page)
             page_lang = lang or (m.group(1).lower() if m else "fr")
             page_lang = {"pt-pt": "pt", "zh-hans": "zh"}.get(page_lang, page_lang)
             add.append('<script type="application/ld+json">'
                        + app_data(by_id[folder], page_lang, texts, site, category, name) + "</script>")
-        if add:
-            f.write_text(head + "\n".join(add) + "\n</head>" + rest, encoding="utf-8")
+        new_page = head + "\n".join(add) + ("\n" if add else "") + "</head>" + rest
+        if new_page != page:
+            f.write_text(new_page, encoding="utf-8")
             changed += 1
     return urls, changed
 
