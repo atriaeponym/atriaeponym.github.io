@@ -19,6 +19,7 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 - FR : Compteur de vitesse GPS, carte du ciel et trajets, et bien plus encore. Hors ligne, sans pub.
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps
 - App Store (iPhone): https://apps.apple.com/app/id6823107885
+- Page: https://atriaeponym.com/speedgps/
 
 ### Mac Live · Computer Live
 - Your Mac live on your phone: temperatures, processor, battery and alerts, even with the app closed.
