@@ -324,6 +324,13 @@ LANG_HINT = """<script>
 </script>"""
 
 
+def os_name(p: dict) -> str:
+    """Operating system of one live platform: the "mac" row means Windows on the Microsoft Store, macOS otherwise."""
+    if p["platform"] == "mac":
+        return "Windows" if p["channel"] == "msstore" else "macOS"
+    return {"android": "Android", "iphone": "iOS"}[p["platform"]]
+
+
 def load_texts() -> dict:
     """Interface texts per language, with the per-app texts under "_apps"."""
     apps = json.loads((ROOT / "_showcase" / "apps.json").read_text(encoding="utf-8"))["apps"]
@@ -459,13 +466,12 @@ def check(apps: list) -> None:
 
 def structured(apps: list, lang: str, T: dict) -> str:
     """schema.org data: the publisher and each app, with only what the page itself shows."""
-    systems = {"android": "Android", "iphone": "iOS", "mac": "macOS, Windows"}
     items = []
     for i, a in enumerate(apps, 1):
         live = [p for p in a["platforms"] if p["status"] == "live"]
         app = {"@type": "SoftwareApplication", "name": name(a, lang), "description": T["_apps"][a["id"]]["tagline"],
                "applicationCategory": CATEGORY[a["id"]], "image": f"{SITE}/{a['icon']}",
-               "operatingSystem": ", ".join(dict.fromkeys(systems[p["platform"]] for p in live)) or None,
+               "operatingSystem": ", ".join(dict.fromkeys(os_name(p) for p in live)) or None,
                # a paid app (free trial, then a purchase) claims no free offer
                "offers": None if a.get("paid") else {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
                "author": {"@id": f"{SITE}/#publisher"},
