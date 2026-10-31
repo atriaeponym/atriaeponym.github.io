@@ -6,11 +6,37 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#141416">
 <title>Compteur de vitesse GPS gratuit et hors ligne – Speed GPS</title>
-<!-- PROPOSAL (31/10/2026), not deployed. In production, images are files under /speedgps/img/ and the icon is /icons/speedgps.png. -->
 <meta name="description" content="Application compteur de vitesse GPS pour Android et iPhone : vitesse en km/h, altimètre, trajets exportés en GPX. Gratuite, sans pub, sans compte.">
 <link rel="canonical" href="https://atriaeponym.com/speedgps/">
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/speedgps/">
-<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/speedgps/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/speedgps/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/speedgps/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/speedgps/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/speedgps/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/speedgps/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/speedgps/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/speedgps/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/speedgps/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/speedgps/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/speedgps/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/speedgps/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/speedgps/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/speedgps/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/speedgps/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/speedgps/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/speedgps/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/speedgps/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/speedgps/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/speedgps/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/speedgps/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/speedgps/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/speedgps/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/speedgps/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/speedgps/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/speedgps/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/speedgps/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/speedgps/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/speedgps/en/">
 <link rel="icon" href="/icons/speedgps.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Atria.Eponym">
@@ -72,9 +98,20 @@ footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1p
 footer a{color:var(--ink)}
 footer p+p{margin-top:6px}
 @media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Speed GPS","url":"https://atriaeponym.com/speedgps/","description":"Application compteur de vitesse GPS pour Android et iPhone : vitesse en km/h, altimètre, trajets exportés en GPX. Gratuite, sans pub, sans compte.","inLanguage":"fr","applicationCategory":"TravelApplication","operatingSystem":"Android 8+, iOS 17+","image":"https://atriaeponym.com/icons/speedgps.png","screenshot":["https://atriaeponym.com/speedgps/img/sg-1-tableau-de-bord.jpg","https://atriaeponym.com/speedgps/img/sg-5-parcours.jpg","https://atriaeponym.com/speedgps/img/sg-2-carte-du-ciel.jpg","https://atriaeponym.com/speedgps/img/sg-ios-1.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps","https://apps.apple.com/app/id6823107885"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Speed GPS est-elle gratuite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Speed GPS est gratuite et sans publicité, sur Android comme sur iPhone. Sur Android, un don facultatif est possible ; il ne débloque aucune fonction."}},{"@type":"Question","name":"Faut-il une connexion internet ?","acceptedAnswer":{"@type":"Answer","text":"Non. La vitesse, la position, l'altitude et l'enregistrement des trajets fonctionnent sans réseau, car le GPS capte directement les satellites. Seul le fond de carte du trajet demande une connexion."}},{"@type":"Question","name":"Peut-on s'en servir comme compteur de vitesse à vélo ou à moto ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Speed GPS affiche la vitesse GPS en km/h ou en mph, la vitesse moyenne et maximale et la distance parcourue. Elle donne les mesures du GPS en l'état et ne remplace pas un compteur homologué."}},{"@type":"Question","name":"Comment exporter un trajet en GPX ?","acceptedAnswer":{"@type":"Answer","text":"Enregistrez votre trajet, puis ouvrez-le dans la liste de vos trajets et touchez Exporter GPX. Le fichier s'ouvre dans la plupart des applications de randonnée, de vélo et de cartographie."}},{"@type":"Question","name":"Speed GPS a-t-elle une boussole ?","acceptedAnswer":{"@type":"Answer","text":"Oui sur iPhone, avec le nord vrai ou magnétique. La version Android n'a pas de boussole ; elle montre en revanche la carte du ciel des satellites, un globe 3D et les réseaux Wi-Fi et Bluetooth."}},{"@type":"Question","name":"La vitesse affichée est-elle fiable ?","acceptedAnswer":{"@type":"Answer","text":"Elle vient directement du GPS de votre téléphone. L'appli affiche la précision de la position en mètres : plus ce chiffre est petit, plus la mesure est sûre. En intérieur ou entre de hauts immeubles, le signal se dégrade."}},{"@type":"Question","name":"Sur quels téléphones fonctionne Speed GPS ?","acceptedAnswer":{"@type":"Answer","text":"Sur Android 8 ou plus récent, par Google Play, et sur iPhone avec iOS 17 ou plus récent, par l'App Store."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Speed GPS","url":"https://atriaeponym.com/speedgps/","description":"Application compteur de vitesse GPS pour Android et iPhone : vitesse en km/h, altimètre, trajets exportés en GPX. Gratuite, sans pub, sans compte.","inLanguage":"fr","applicationCategory":"TravelApplication","operatingSystem":"Android 8+, iOS 17+","image":"https://atriaeponym.com/icons/speedgps.png","screenshot":["https://atriaeponym.com/speedgps/img/34ce69dda6.jpg","https://atriaeponym.com/speedgps/img/e6b6cb2bca.jpg","https://atriaeponym.com/speedgps/img/aa8e00c3e8.jpg","https://atriaeponym.com/speedgps/img/f0471ffe49.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","@id":"https://atriaeponym.com/#publisher","name":"Atria.Eponym","url":"https://atriaeponym.com/"},"sameAs":["https://play.google.com/store/apps/details?id=com.atriaeponym.speedgps","https://apps.apple.com/app/id6823107885"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Speed GPS est-elle gratuite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Speed GPS est gratuite et sans publicité, sur Android comme sur iPhone. Sur Android, un don facultatif est possible ; il ne débloque aucune fonction."}},{"@type":"Question","name":"Faut-il une connexion internet ?","acceptedAnswer":{"@type":"Answer","text":"Non. La vitesse, la position, l'altitude et l'enregistrement des trajets fonctionnent sans réseau, car le GPS capte directement les satellites. Seul le fond de carte du trajet demande une connexion."}},{"@type":"Question","name":"Peut-on s'en servir comme compteur de vitesse à vélo ou à moto ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Speed GPS affiche la vitesse GPS en km/h ou en mph, la vitesse moyenne et maximale et la distance parcourue. Elle donne les mesures du GPS en l'état et ne remplace pas un compteur homologué."}},{"@type":"Question","name":"Comment exporter un trajet en GPX ?","acceptedAnswer":{"@type":"Answer","text":"Enregistrez votre trajet, puis ouvrez-le dans la liste de vos trajets et touchez Exporter GPX. Le fichier s'ouvre dans la plupart des applications de randonnée, de vélo et de cartographie."}},{"@type":"Question","name":"Speed GPS a-t-elle une boussole ?","acceptedAnswer":{"@type":"Answer","text":"Oui sur iPhone, avec le nord vrai ou magnétique. La version Android n'a pas de boussole ; elle montre en revanche la carte du ciel des satellites, un globe 3D et les réseaux Wi-Fi et Bluetooth."}},{"@type":"Question","name":"La vitesse affichée est-elle fiable ?","acceptedAnswer":{"@type":"Answer","text":"Elle vient directement du GPS de votre téléphone. L'appli affiche la précision de la position en mètres : plus ce chiffre est petit, plus la mesure est sûre. En intérieur ou entre de hauts immeubles, le signal se dégrade."}},{"@type":"Question","name":"Sur quels téléphones fonctionne Speed GPS ?","acceptedAnswer":{"@type":"Answer","text":"Sur Android 8 ou plus récent, par Google Play, et sur iPhone avec iOS 17 ou plus récent, par l'App Store."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atria.Eponym","item":"https://atriaeponym.com/fr/"},{"@type":"ListItem","position":2,"name":"Speed GPS","item":"https://atriaeponym.com/speedgps/"}]}</script>
 </head>
 <body>
@@ -90,7 +127,7 @@ footer p+p{margin-top:6px}
 <a class="store" data-os="ios" href="https://apps.apple.com/app/id6823107885" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.5-1-2.5-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>Télécharger dans l’</small><b>App Store</b><i>iPhone, iOS 17 ou plus récent</i></span></a>
 </div>
 </div>
-<div class="shots" role="list" aria-label="Captures d'écran">
+<div class="shots" role="list" aria-label="Captures d&#x27;écran">
 <figure><img src="/speedgps/img/34ce69dda6.jpg" alt="Tableau de bord de Speed GPS sur Android : compteur de vitesse GPS à 36 km/h, vitesse maximale, altitude 300 m, 27 satellites utilisés et pression 991 hPa" width="360" height="697" loading="lazy" decoding="async"></figure>
 <figure><img src="/speedgps/img/e6b6cb2bca.jpg" alt="Écran Parcours de Speed GPS sur Android : trajet enregistré tracé sur la carte avec son profil d&#x27;altitude" width="360" height="697" loading="lazy" decoding="async"></figure>
 <figure><img src="/speedgps/img/aa8e00c3e8.jpg" alt="Carte du ciel de Speed GPS sur Android : position de chaque satellite GPS, Galileo, GLONASS et BeiDou capté" width="360" height="697" loading="lazy" decoding="async"></figure>
