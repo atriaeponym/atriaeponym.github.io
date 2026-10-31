@@ -105,8 +105,7 @@ for key, t in T.items():
 </body>
 </html>
 """
-    if key == "fr":
-        continue  # parfumpocket/index.html is now written by hand for search engines (31/10/2026)
+    continue  # every landing page (/parfumpocket/ and /parfumpocket/<lang>/) is now written for search engines in the 28 languages (hub/seo-site-2026-10-31/parfumpocket-i18n)
     out = site / "parfumpocket" / ("index.html" if key == "fr" else "en/index.html")
     out.write_text(html)
     print(out, len(html))
