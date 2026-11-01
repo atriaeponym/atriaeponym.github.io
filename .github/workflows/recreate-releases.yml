@@ -1,0 +1,28 @@
+name: Recreate releases
+
+# One-off: recreates the two SoundCatch releases with the same tags, titles, notes and files,
+# so that they are published by github-actions instead of a personal account.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recreate:
+    runs-on: ubuntu-26.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Recreate (Android first, Mac last so it stays « Latest »)
+        run: |
+          for tag in soundcatch-android-1.0.0 soundcatch-1.0; do
+            mkdir -p "$tag"
+            gh release download "$tag" -D "$tag"
+            title=$(gh release view "$tag" --json name -q .name)
+            gh release view "$tag" --json body -q .body > "$tag.notes"
+            ls -la "$tag"
+            gh release delete "$tag" -y
+            gh release create "$tag" "$tag"/* --title "$title" --notes-file "$tag.notes" --verify-tag
+          done
