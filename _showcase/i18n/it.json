@@ -104,6 +104,15 @@
         "Niente pubblicità, niente tracciamento, nessun account"
       ],
       "tagline": "Le foto di una cartella o di un intero disco, in grande, sottocartelle comprese. Le sue foto non vengono mai modificate."
+    },
+    "impostorshield": {
+      "features": [
+        "Chiamata sospetta",
+        "Un gesto",
+        "Il suo vero telefono",
+        "Nessun account",
+        "28 lingue"
+      ]
     }
   }
 }

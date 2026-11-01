@@ -104,6 +104,15 @@
         "Ei mainoksia, ei seurantaa, ei tiliä"
       ],
       "tagline": "Kansion tai koko levyn kuvat suurina, alikansiot mukaan lukien. Kuvia ei koskaan muokata."
+    },
+    "impostorshield": {
+      "features": [
+        "Epäilyttävä puhelu",
+        "Yksi ele",
+        "Oikea puhelin",
+        "Ei tiliä",
+        "28 kieltä"
+      ]
     }
   }
 }

@@ -104,6 +104,15 @@
         "Ingen reklam, ingen spårning, inget konto"
       ],
       "tagline": "Bilderna i en mapp eller på en hel disk, i stort format, undermappar inräknade. Bilderna ändras aldrig."
+    },
+    "impostorshield": {
+      "features": [
+        "Misstänkt samtal",
+        "En gest",
+        "Den riktiga telefonen",
+        "Inget konto",
+        "28 språk"
+      ]
     }
   }
 }

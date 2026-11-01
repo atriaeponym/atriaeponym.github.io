@@ -104,6 +104,15 @@
         "Bez reklam, bez śledzenia, bez konta"
       ],
       "tagline": "Zdjęcia z folderu lub całego dysku w dużym formacie, razem z podfolderami. Zdjęcia nigdy nie są modyfikowane."
+    },
+    "impostorshield": {
+      "features": [
+        "Podejrzane połączenie",
+        "Jeden gest",
+        "Prawdziwy telefon",
+        "Bez konta",
+        "28 języków"
+      ]
     }
   }
 }

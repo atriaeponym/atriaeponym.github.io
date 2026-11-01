@@ -104,6 +104,15 @@
         "Reklam yok, izleme yok, hesap yok"
       ],
       "tagline": "Bir klasördeki ya da tüm diskteki fotoğraflar, alt klasörler dahil, büyük boyutta. Fotoğraflarınız asla değiştirilmez."
+    },
+    "impostorshield": {
+      "features": [
+        "Şüpheli arama",
+        "Tek dokunuş",
+        "Gerçek telefonu",
+        "Hesap yok",
+        "28 dil"
+      ]
     }
   }
 }

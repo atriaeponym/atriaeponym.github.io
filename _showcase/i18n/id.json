@@ -104,6 +104,15 @@
         "Tanpa iklan, tanpa pelacakan, tanpa akun"
       ],
       "tagline": "Foto dari satu folder atau seluruh disk, tampil besar, termasuk subfolder. Foto Anda tidak pernah diubah."
+    },
+    "impostorshield": {
+      "features": [
+        "Panggilan mencurigakan",
+        "Satu sentuhan",
+        "Ponsel aslinya",
+        "Tanpa akun",
+        "28 bahasa"
+      ]
     }
   }
 }

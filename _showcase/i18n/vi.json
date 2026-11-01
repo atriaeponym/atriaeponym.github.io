@@ -104,6 +104,15 @@
         "Không quảng cáo, không theo dõi, không cần tài khoản"
       ],
       "tagline": "Xem lớn ảnh của một thư mục hoặc cả một ổ đĩa, kể cả thư mục con. Ảnh của quý vị không bao giờ bị thay đổi."
+    },
+    "impostorshield": {
+      "features": [
+        "Cuộc gọi đáng ngờ",
+        "Một chạm",
+        "Điện thoại thật",
+        "Không cần tài khoản",
+        "28 ngôn ngữ"
+      ]
     }
   }
 }

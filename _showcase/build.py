@@ -42,7 +42,7 @@ LANGS = {
 CATEGORY = {"familypocket": "FinanceApplication", "speedgps": "TravelApplication", "maclive": "UtilitiesApplication",
             "dicteednb": "EducationalApplication", "parfumpocket": "ShoppingApplication",
             "stockcockpit": "FinanceApplication", "soundcatch": "MultimediaApplication",
-            "diapo": "MultimediaApplication"}
+            "diapo": "MultimediaApplication", "impostorshield": "SecurityApplication"}
 PLATFORMS = ("android", "iphone", "mac")
 
 TEXT = {

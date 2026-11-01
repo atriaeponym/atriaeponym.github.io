@@ -104,6 +104,15 @@
         "Sin publicidad, sin rastreo, sin cuenta"
       ],
       "tagline": "Las fotos de una carpeta o de un disco entero, en grande, con sus subcarpetas. Sus fotos nunca se modifican."
+    },
+    "impostorshield": {
+      "features": [
+        "Llamada sospechosa",
+        "Un gesto",
+        "Su teléfono real",
+        "Sin cuenta",
+        "28 idiomas"
+      ]
     }
   }
 }

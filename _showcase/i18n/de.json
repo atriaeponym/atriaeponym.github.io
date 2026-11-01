@@ -104,6 +104,15 @@
         "Keine Werbung, kein Tracking, kein Konto"
       ],
       "tagline": "Die Fotos eines Ordners oder einer ganzen Festplatte, in groß, Unterordner inklusive. Ihre Fotos werden nie verändert."
+    },
+    "impostorshield": {
+      "features": [
+        "Verdächtiger Anruf",
+        "Eine Geste",
+        "Sein echtes Telefon",
+        "Kein Konto",
+        "28 Sprachen"
+      ]
     }
   }
 }

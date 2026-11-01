@@ -104,6 +104,15 @@
         "Sem publicidade, sem rastreio, sem conta"
       ],
       "tagline": "As fotos de uma pasta ou de um disco inteiro, em grande, incluindo subpastas. As suas fotos nunca são alteradas."
+    },
+    "impostorshield": {
+      "features": [
+        "Chamada suspeita",
+        "Um gesto",
+        "O verdadeiro telemóvel",
+        "Sem conta",
+        "28 idiomas"
+      ]
     }
   }
 }

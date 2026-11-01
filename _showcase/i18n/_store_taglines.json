@@ -112,6 +112,34 @@
    "ur": "آپ کا Mac فون پر لائیو: درجۂ حرارت، پروسیسر، بیٹری اور الرٹس۔",
    "vi": "Mac của bạn trực tiếp trên điện thoại: nhiệt độ, bộ xử lý, pin và cảnh báo.",
    "zh": "在手机上实时查看你的 Mac：温度、处理器、电池和警报。"
+  },
+  "impostorshield": {
+   "de": "Prüfen Sie mit einem Tippen, ob eine vertraute Stimme echt ist",
+   "es": "Compruebe con un toque si una voz conocida es auténtica",
+   "it": "Verifichi con un tocco se una voce familiare è autentica",
+   "pt": "Verifique com um toque se uma voz familiar é autêntica",
+   "pt-br": "Verifique com um toque se uma voz conhecida é verdadeira",
+   "nl": "Controleer met één tik of een vertrouwde stem echt is",
+   "sv": "Kontrollera med ett tryck att en välkänd röst är äkta",
+   "nb": "Sjekk med ett trykk at en kjent stemme er ekte",
+   "fi": "Varmista yhdellä napautuksella, että tuttu ääni on aito",
+   "pl": "Weryfikacja znajomego głosu jednym dotknięciem",
+   "el": "Επαληθεύστε με ένα άγγιγμα ότι μια γνώριμη φωνή είναι αληθινή",
+   "tr": "Tanıdık bir sesin gerçek olup olmadığını tek dokunuşla doğrulayın",
+   "ru": "Проверьте одним касанием, что знакомый голос настоящий",
+   "uk": "Перевірте одним дотиком, що знайомий голос справжній",
+   "ar": "تحقّقوا بلمسة واحدة من أن الصوت المألوف حقيقي",
+   "he": "בדקו בנגיעה אחת שהקול המוכר הוא אמיתי",
+   "fa": "با یک لمس بررسی کنید که صدای آشنا واقعی است",
+   "ur": "ایک ٹچ سے تصدیق کریں کہ جانی پہچانی آواز اصلی ہے",
+   "hi": "एक टैप में जाँचें कि जानी-पहचानी आवाज़ असली है",
+   "bn": "এক ট্যাপে যাচাই করুন পরিচিত কণ্ঠটি আসল কি না",
+   "th": "ตรวจสอบได้ในแตะเดียวว่าเสียงที่คุ้นเคยเป็นตัวจริงหรือไม่",
+   "vi": "Xác minh giọng nói quen thuộc là thật chỉ với một chạm",
+   "id": "Pastikan suara yang Anda kenal itu asli dengan satu ketukan",
+   "ja": "聞き慣れた声が本人かどうか、ワンタップで確認できます",
+   "ko": "익숙한 목소리가 진짜 본인인지 한 번의 탭으로 확인하세요",
+   "zh": "一键确认熟悉的声音是否真的是本人"
   }
  }
 }

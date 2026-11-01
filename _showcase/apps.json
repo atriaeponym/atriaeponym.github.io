@@ -504,6 +504,48 @@
           "url": "diapo/privacy/"
         }
       ]
+    },
+    {
+      "id": "impostorshield",
+      "name": {
+        "fr": "Bouclier anti-imposteur",
+        "en": "Call Impostor Shield"
+      },
+      "icon": "icons/impostorshield.png",
+      "tagline": {
+        "fr": "Arnaque au faux proche, voix clonée : vérifiez d'un geste que c'est bien lui",
+        "en": "Check in one tap that a familiar voice is really them"
+      },
+      "features": {
+        "fr": [
+          "Appel suspect",
+          "Un geste",
+          "Son vrai téléphone",
+          "Sans compte",
+          "28 langues"
+        ],
+        "en": [
+          "Suspicious call",
+          "One tap",
+          "Their real phone",
+          "No account",
+          "28 languages"
+        ]
+      },
+      "more_features": false,
+      "platforms": [
+        {
+          "platform": "android",
+          "channel": "play",
+          "status": "live",
+          "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.impostorshield"
+        }
+      ],
+      "privacy": [
+        {
+          "url": "cbt/privacy/"
+        }
+      ]
     }
   ]
 }
