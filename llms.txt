@@ -68,3 +68,4 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 - Check in one tap that a familiar voice is really them
 - FR : Arnaque au faux proche, voix clonée : vérifiez d'un geste que c'est bien lui
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.impostorshield
+- Page: https://atriaeponym.com/impostorshield/

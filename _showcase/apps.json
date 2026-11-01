@@ -533,6 +533,7 @@
         ]
       },
       "more_features": false,
+      "more": "impostorshield/",
       "platforms": [
         {
           "platform": "android",
