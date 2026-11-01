@@ -10,16 +10,6 @@
 <link rel="alternate" hreflang="fr" href="https://atriaeponym.com/impostorshield/terms/">
 <link rel="alternate" hreflang="en" href="https://atriaeponym.com/impostorshield/terms/en/">
 <link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/impostorshield/terms/en/">
-<script>
-// The app links every language to this French page: other browser languages go to the English version,
-// unless ?lang=fr asks for French.
-(function(){
-  if (/[?&]lang=fr/.test(location.search)) return;
-  var list = navigator.languages || [navigator.language || ''];
-  for (var i = 0; i < list.length; i++) if (String(list[i]).toLowerCase().indexOf('fr') === 0) return;
-  location.replace('en/' + location.hash);
-})();
-</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--page:#141416;--card:#1c1c20;--ink:#efece6;--muted:#b3aea5;--line:rgba(255,255,255,.07);
