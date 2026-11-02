@@ -45,8 +45,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -qm "sync: atriaeponym.github.io $(git -C ../source rev-parse --short HEAD)"
-          git push -q
-          echo "pushed=1" >> "$GITHUB_OUTPUT"
+          # Both mirrors (this one and the one of the other repository) may push at the same moment.
+          # If the push is refused, compare with what the other copy pushed and stop when it is the same.
+          for attempt in 1 2 3; do
+            if git push -q; then echo "pushed=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+            git fetch -q origin main
+            git reset -q --soft origin/main
+            if git diff --cached --quiet; then echo "Already copied by the other mirror"; exit 0; fi
+            git commit -qm "sync: atriaeponym.github.io $(git -C ../source rev-parse --short HEAD)"
+          done
+          exit 1
       - name: Tell search engines the pages changed (IndexNow, read by Bing and others)
         if: steps.commit.outputs.pushed == '1'
         # The key is public by design: IndexNow checks it at https://atriaeponym.com/<key>.txt
