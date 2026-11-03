@@ -47,6 +47,12 @@
           "channel": "msstore",
           "status": "live",
           "url": "https://apps.microsoft.com/detail/9PMVV9S1H489"
+        },
+        {
+          "platform": "mac",
+          "channel": "appstore",
+          "status": "live",
+          "url": "https://apps.apple.com/app/id6822458545"
         }
       ],
       "more": "familypocket/",
