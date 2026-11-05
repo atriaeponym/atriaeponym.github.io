@@ -1,33 +1,15 @@
 <?xml version="1.0" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>Mac Live</title>
+        <title>Computer Live</title>
         <item>
-            <title>1.0.3</title>
-            <pubDate>Tue, 20 Oct 2026 17:20:34 +0200</pubDate>
-            <sparkle:version>1.0.3</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <title>1.0.4</title>
+            <pubDate>Thu, 05 Nov 2026 19:13:46 +0100</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://atriaeponym.github.io/maclive/ComputerLive-1.0.3.dmg" length="2159257" type="application/octet-stream" sparkle:edSignature="+4U2aC/SnQqT8kWuFYcnY6MSLdJSLBYa1zKN6Smrtua5l2HECT1laxVeEPNMi949FATGiuoh59iBs8IBlYHjCg=="/>
-        </item>
-        <item>
-            <title>1.0.2</title>
-            <pubDate>Fri, 16 Oct 2026 16:01:52 +0200</pubDate>
-            <sparkle:version>1.0.2</sparkle:version>
-            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://atriaeponym.github.io/maclive/MacLive-1.0.2.dmg" length="2157200" type="application/octet-stream" sparkle:edSignature="p1l1pTU641664V1yMympNS6oHgFphelzQrblBgxvYbJ++HnVfpJ7ZABAdGHH6a8tkgULCltRq8Qv45XR6QgRCw=="/>
-        </item>
-        <item>
-            <title>1.0.1</title>
-            <pubDate>Wed, 14 Oct 2026 16:53:27 +0200</pubDate>
-            <sparkle:version>1.0.1</sparkle:version>
-            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://atriaeponym.github.io/maclive/MacLive-1.0.1.dmg" length="2161296" type="application/octet-stream" sparkle:edSignature="te8Gbc6hYeoAQS1kiXAJZVRNCOS4nBaCay80f9ldwH3xkjXZTIOrCg+hHrTruDgAwJZ++TUpWOFrt96kWHDYDQ=="/>
+            <enclosure url="https://atriaeponym.github.io/maclive/ComputerLive-1.0.4.dmg" length="2093722" type="application/octet-stream" sparkle:edSignature="JpuUdVdVahFGDa4Alhht43ub0QqMFWxmjG2BVUx7Hm38R1bcULy9SMgoGUqByH27Ca/3zC92xCnPO3bFwX1BAQ=="/>
         </item>
     </channel>
 </rss>
