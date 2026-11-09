@@ -6,6 +6,8 @@ again: the canonical address on atriaeponym.com (github.io serves the same files
 and schema.org data for an app of the showcase. It never touches legal pages (privacy, terms, delete),
 invitation pages (join) or a page marked noindex. It also lists every indexable app page for the
 sitemap and writes llms.txt, a plain-text summary of the publisher and its apps for AI assistants.
+canonical() gives every other indexable page (legal pages included) its own canonical address, so that
+Google does not pick one of its language versions on its own (Search Console, 09/11/2026).
 """
 import html
 import json
@@ -104,6 +106,40 @@ def run(root, site, langs, apps, texts, category, name):
             f.write_text(new_page, encoding="utf-8")
             changed += 1
     return urls, changed
+
+
+def canonical(root, site):
+    """Adds a canonical link to its own atriaeponym.com address to every indexable page that has none.
+
+    Pages marked noindex and redirect pages are left as they are. Returns the number of pages changed."""
+    changed = 0
+    for f in sorted(root.rglob("index.html")):
+        parts = f.relative_to(root).parts[:-1]
+        if any(p.startswith((".", "_")) for p in parts):
+            continue
+        page = f.read_text(encoding="utf-8")
+        if "</head>" not in page:
+            continue
+        head, rest = page.split("</head>", 1)
+        if 'rel="canonical"' in head or "noindex" in head or 'http-equiv="refresh"' in head.lower():
+            continue
+        path = "/" + "".join(p + "/" for p in parts)
+        f.write_text(head + f'<link rel="canonical" href="{site}{path}">\n</head>' + rest, encoding="utf-8")
+        changed += 1
+    return changed
+
+
+def missing_canonical(root):
+    """Indexable pages without a canonical link (relative paths), for the check."""
+    out = []
+    for f in sorted(root.rglob("index.html")):
+        parts = f.relative_to(root).parts[:-1]
+        if any(p.startswith((".", "_")) for p in parts):
+            continue
+        head = f.read_text(encoding="utf-8").split("</head>", 1)[0]
+        if 'rel="canonical"' not in head and "noindex" not in head and 'http-equiv="refresh"' not in head.lower():
+            out.append(str(f.relative_to(root)))
+    return out
 
 
 def llms_txt(site, apps, texts, name, urls):

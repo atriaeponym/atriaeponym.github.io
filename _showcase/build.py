@@ -617,11 +617,15 @@ def main() -> None:
     sys.path.insert(0, str(ROOT / "_showcase"))
     import seo
     pages, changed = seo.run(ROOT, SITE, LANGS, apps, texts, CATEGORY, name)
+    legal = seo.canonical(ROOT, SITE)
     (ROOT / "llms.txt").write_text(seo.llms_txt(SITE, apps, texts, name, pages), encoding="utf-8")
     (ROOT / "sitemap.xml").write_text(sitemap(pages), encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
     print(f"index.html + {len(LANGS) - 1} language pages, sitemap.xml ({len(LANGS) + len(pages)} pages), "
-          f"robots.txt, llms.txt: {len(apps)} apps; {changed} app pages completed")
+          f"robots.txt, llms.txt: {len(apps)} apps; {changed} app pages completed, {legal} canonical links added")
+    missing = seo.missing_canonical(ROOT)
+    if missing:
+        sys.exit("indexable pages without a canonical link: " + ", ".join(missing))
 
 
 if __name__ == "__main__":
