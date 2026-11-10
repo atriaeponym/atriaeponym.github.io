@@ -135,7 +135,7 @@
     },
     {
       "id": "maclive",
-      "name": "Mac Live · Computer Live",
+      "name": "Computer Live",
       "icon": "icons/maclive.png",
       "tagline": {
         "fr": "Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.",
@@ -204,7 +204,7 @@
           "channel": "play",
           "status": "live",
           "url": "https://play.google.com/store/apps/details?id=com.atriaeponym.maclive",
-          "name": "Mac Live"
+          "name": "Computer Live"
         },
         {
           "platform": "iphone",

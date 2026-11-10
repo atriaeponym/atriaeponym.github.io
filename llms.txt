@@ -22,7 +22,7 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 - App Store (iPhone): https://apps.apple.com/app/id6823107885
 - Page: https://atriaeponym.com/speedgps/
 
-### Mac Live · Computer Live
+### Computer Live
 - Your Mac live on your phone: temperatures, processor, battery and alerts, even with the app closed.
 - FR : Votre Mac en direct sur votre téléphone : températures, processeur, batterie et alertes, même app fermée.
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.maclive
