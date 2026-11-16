@@ -113,6 +113,15 @@
         "Ei tiliä",
         "28 kieltä"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Kaikki levyt yhteen kirjastoon",
+        "Kaksoiskappaleet tunnistetaan sisällöstä",
+        "Lajiteltu vuoden ja kuukauden mukaan",
+        "Todiste, ettei yhtään kuvaa kadonnut",
+        "Alkuperäisiä ei koskaan muuteta"
+      ]
     }
   }
 }

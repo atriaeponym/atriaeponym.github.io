@@ -113,6 +113,15 @@
         "Kein Konto",
         "28 Sprachen"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Alle Ihre Laufwerke vereint",
+        "Duplikate am Inhalt erkannt",
+        "Nach Jahr und Monat sortiert",
+        "Beweis, dass kein Foto fehlt",
+        "Originale werden nie verändert"
+      ]
     }
   }
 }

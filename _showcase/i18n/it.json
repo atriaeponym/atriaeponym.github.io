@@ -113,6 +113,15 @@
         "Nessun account",
         "28 lingue"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Tutti i dischi riuniti",
+        "Duplicati riconosciuti dal contenuto",
+        "Ordinata per anno e mese",
+        "Prova che nessuna foto è andata persa",
+        "Originali mai modificati"
+      ]
     }
   }
 }

@@ -113,6 +113,15 @@
         "Hesap yok",
         "28 dil"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Tüm diskleriniz tek bir arşivde",
+        "Kopyalar içeriklerinden tanınır",
+        "Yıla ve aya göre sıralı",
+        "Hiçbir fotoğrafın kaybolmadığının kanıtı",
+        "Orijinaller asla değiştirilmez"
+      ]
     }
   }
 }

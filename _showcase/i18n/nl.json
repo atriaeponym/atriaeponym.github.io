@@ -113,6 +113,15 @@
         "Geen account",
         "28 talen"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Al uw schijven samengebracht",
+        "Duplicaten herkend aan de inhoud",
+        "Gesorteerd op jaar en maand",
+        "Bewijs dat geen foto verloren ging",
+        "Originelen nooit gewijzigd"
+      ]
     }
   }
 }

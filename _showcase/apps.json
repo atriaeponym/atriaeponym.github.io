@@ -512,6 +512,46 @@
       ]
     },
     {
+      "id": "phototheque",
+      "name": "Photothèque",
+      "icon": "icons/phototheque.png",
+      "tagline": {
+        "fr": "Rassemblez en une seule photothèque, triée par date et sans doublons, les photos dispersées sur vos disques et vos dossiers, puis prouvez qu'aucune n'a été perdue. Vos originaux ne sont jamais modifiés.",
+        "en": "Gather the photos scattered across your drives and folders into a single photo library, sorted by date and free of duplicates, then prove that not one was lost. Your originals are never modified."
+      },
+      "features": {
+        "fr": [
+          "Tous vos disques réunis",
+          "Doublons repérés à leur contenu",
+          "Triée par année et par mois",
+          "Preuve qu'aucune photo n'est perdue",
+          "Originaux jamais modifiés"
+        ],
+        "en": [
+          "All your drives in one library",
+          "Duplicates found by their content",
+          "Sorted by year and month",
+          "Proof that no photo was lost",
+          "Originals never modified"
+        ]
+      },
+      "more_features": true,
+      "paid": true,
+      "platforms": [
+        {
+          "platform": "mac",
+          "channel": "msstore",
+          "status": "live",
+          "url": "https://apps.microsoft.com/detail/9P4J9X4X183Z"
+        }
+      ],
+      "privacy": [
+        {
+          "url": "phototheque/privacy/"
+        }
+      ]
+    },
+    {
       "id": "impostorshield",
       "name": {
         "fr": "Bouclier anti-imposteur",

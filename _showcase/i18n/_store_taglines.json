@@ -140,6 +140,34 @@
    "ja": "聞き慣れた声が本人かどうか、ワンタップで確認できます",
    "ko": "익숙한 목소리가 진짜 본인인지 한 번의 탭으로 확인하세요",
    "zh": "一键确认熟悉的声音是否真的是本人"
+  },
+  "phototheque": {
+   "ar": "اجمعوا الصور المتفرقة على أقراصكم ومجلداتكم في مكتبة صور واحدة، مرتبة حسب التاريخ وخالية من التكرار، ثم أثبتوا أن أيًا منها لم يُفقد. لا تُعدَّل صوركم الأصلية أبدًا.",
+   "bn": "আপনার ডিস্ক ও ফোল্ডারে ছড়িয়ে থাকা ছবিগুলো একটিমাত্র ফটো লাইব্রেরিতে জড়ো করুন, তারিখ অনুযায়ী সাজানো ও ডুপ্লিকেট ছাড়া, তারপর প্রমাণ করুন যে একটিও হারায়নি। আপনার মূল ফাইলগুলো কখনো পরিবর্তন করা হয় না।",
+   "de": "Führen Sie die über Ihre Laufwerke und Ordner verstreuten Fotos in einer einzigen Fotobibliothek zusammen, nach Datum sortiert und ohne Duplikate, und weisen Sie nach, dass keines verloren ging. Ihre Originale werden nie verändert.",
+   "el": "Συγκεντρώστε σε μία ενιαία βιβλιοθήκη φωτογραφιών, ταξινομημένη κατά ημερομηνία και χωρίς διπλότυπα, τις φωτογραφίες που είναι διάσπαρτες στους δίσκους και τους φακέλους σας, και αποδείξτε ότι δεν χάθηκε καμία. Τα πρωτότυπά σας δεν τροποποιούνται ποτέ.",
+   "es": "Reúna en una sola fototeca, ordenada por fecha y sin duplicados, las fotos dispersas en sus discos y carpetas, y compruebe que no se ha perdido ninguna. Sus originales nunca se modifican.",
+   "fa": "عکس‌های پراکنده روی دیسک‌ها و پوشه‌هایتان را در یک کتابخانهٔ عکس واحد، مرتب‌شده بر اساس تاریخ و بدون تکرار، گرد آورید و سپس ثابت کنید که هیچ‌کدام گم نشده است. فایل‌های اصلی شما هرگز تغییر نمی‌کنند.",
+   "fi": "Kokoa levyillesi ja kansioihisi hajallaan olevat kuvat yhteen kuvakirjastoon, päivämäärän mukaan järjestettynä ja ilman kaksoiskappaleita, ja todista sitten, ettei yksikään kadonnut. Alkuperäisiä tiedostoja ei koskaan muuteta.",
+   "he": "אספו לספריית תמונות אחת, ממוינת לפי תאריך וללא כפילויות, את התמונות הפזורות בכוננים ובתיקיות שלכם, ואז הוכיחו שאף אחת לא אבדה. קובצי המקור שלכם לעולם אינם משתנים.",
+   "hi": "अपनी डिस्क और फ़ोल्डरों में बिखरी तस्वीरों को एक ही फ़ोटो लाइब्रेरी में इकट्ठा करें, तारीख़ के अनुसार क्रमबद्ध और डुप्लिकेट के बिना, फिर साबित करें कि एक भी खोई नहीं। आपकी मूल फ़ाइलें कभी बदली नहीं जातीं।",
+   "id": "Kumpulkan foto yang tersebar di berbagai disk dan folder Anda ke dalam satu pustaka foto, diurutkan menurut tanggal dan tanpa duplikat, lalu buktikan bahwa tidak ada satu pun yang hilang. Berkas asli Anda tidak pernah diubah.",
+   "it": "Riunisca in un'unica fototeca, ordinata per data e senza doppioni, le foto sparse sui suoi dischi e nelle sue cartelle, poi dimostri che nessuna è andata persa. I suoi originali non vengono mai modificati.",
+   "ja": "複数のディスクやフォルダーに散らばった写真を、日付順に整理され重複のない一つのフォトライブラリにまとめ、一枚も失われていないことを証明できます。元のファイルが変更されることはありません。",
+   "ko": "여러 디스크와 폴더에 흩어진 사진을 날짜순으로 정리되고 중복 없는 하나의 사진 보관함으로 모은 뒤, 한 장도 잃어버리지 않았음을 증명하세요. 원본은 절대 수정되지 않습니다.",
+   "nb": "Samle bildene som ligger spredt på diskene og i mappene dine i ett enkelt bildebibliotek, sortert etter dato og uten duplikater, og bevis deretter at ikke ett eneste har gått tapt. Originalene dine endres aldri.",
+   "nl": "Breng de foto's die verspreid staan over uw schijven en mappen samen in één fotobibliotheek, gesorteerd op datum en zonder dubbele bestanden, en bewijs daarna dat er niet één verloren is gegaan. Uw originelen worden nooit gewijzigd.",
+   "pl": "Zdjęcia rozproszone po dyskach i folderach można zebrać w jednej bibliotece zdjęć, posortowanej według daty i bez duplikatów, a następnie udowodnić, że żadne nie zaginęło. Oryginały nigdy nie są modyfikowane.",
+   "pt": "Reúna numa única fototeca, ordenada por data e sem duplicados, as fotografias dispersas pelos seus discos e pastas, e prove que nenhuma se perdeu. Os seus originais nunca são alterados.",
+   "pt-br": "Reúna em uma única biblioteca de fotos, organizada por data e sem duplicatas, as fotos espalhadas pelos seus discos e pastas, e comprove que nenhuma foi perdida. Seus originais nunca são alterados.",
+   "ru": "Соберите фотографии, разбросанные по вашим дискам и папкам, в одну фототеку, упорядоченную по дате и без дубликатов, а затем убедитесь, что ни одна не потерялась. Ваши оригиналы никогда не изменяются.",
+   "sv": "Samla bilderna som ligger utspridda på dina diskar och i dina mappar i ett enda fotobibliotek, sorterat efter datum och utan dubbletter, och bevisa sedan att inte en enda har gått förlorad. Dina original ändras aldrig.",
+   "th": "รวบรวมรูปภาพที่กระจัดกระจายอยู่ในดิสก์และโฟลเดอร์ต่าง ๆ ของคุณไว้ในคลังภาพเดียว เรียงตามวันที่และไม่มีรูปซ้ำ แล้วพิสูจน์ได้ว่าไม่มีรูปใดสูญหาย ไฟล์ต้นฉบับของคุณจะไม่ถูกแก้ไขเลย",
+   "tr": "Disklerinize ve klasörlerinize dağılmış fotoğrafları tarihe göre sıralanmış, kopyalardan arındırılmış tek bir fotoğraf arşivinde toplayın ve hiçbirinin kaybolmadığını kanıtlayın. Orijinalleriniz asla değiştirilmez.",
+   "uk": "Зберіть фотографії, розкидані по ваших дисках і папках, в одну фототеку, впорядковану за датою та без дублікатів, а потім переконайтеся, що жодна не загубилася. Ваші оригінали ніколи не змінюються.",
+   "ur": "اپنی ڈسکوں اور فولڈروں میں بکھری تصاویر کو ایک ہی فوٹو لائبریری میں جمع کیجیے، تاریخ کے لحاظ سے ترتیب شدہ اور ڈپلیکیٹس کے بغیر، پھر ثابت کیجیے کہ کوئی بھی ضائع نہیں ہوئی۔ آپ کی اصل فائلیں کبھی تبدیل نہیں کی جاتیں۔",
+   "vi": "Tập hợp ảnh nằm rải rác trên các ổ đĩa và thư mục của quý vị vào một thư viện ảnh duy nhất, sắp xếp theo ngày và không trùng lặp, rồi chứng minh rằng không ảnh nào bị mất. Bản gốc của quý vị không bao giờ bị thay đổi.",
+   "zh": "将分散在各个磁盘和文件夹中的照片汇集到一个按日期排序、没有重复的照片库中，并证明没有任何一张丢失。您的原始文件永远不会被修改。"
   }
  }
 }

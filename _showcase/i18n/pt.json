@@ -113,6 +113,15 @@
         "Sem conta",
         "28 idiomas"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Todos os discos reunidos",
+        "Duplicados detetados pelo conteúdo",
+        "Organizada por ano e mês",
+        "Prova de que nenhuma foto se perdeu",
+        "Originais nunca modificados"
+      ]
     }
   }
 }

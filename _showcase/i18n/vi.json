@@ -113,6 +113,15 @@
         "Không cần tài khoản",
         "28 ngôn ngữ"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Mọi ổ đĩa gom về một thư viện",
+        "Ảnh trùng nhận diện theo nội dung",
+        "Sắp xếp theo năm và tháng",
+        "Bằng chứng không mất ảnh nào",
+        "Không bao giờ sửa bản gốc"
+      ]
     }
   }
 }

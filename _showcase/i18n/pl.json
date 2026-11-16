@@ -113,6 +113,15 @@
         "Bez konta",
         "28 języków"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Wszystkie dyski w jednym miejscu",
+        "Duplikaty rozpoznawane po zawartości",
+        "Posortowane według roku i miesiąca",
+        "Dowód, że żadne zdjęcie nie zginęło",
+        "Oryginały nigdy nie są zmieniane"
+      ]
     }
   }
 }

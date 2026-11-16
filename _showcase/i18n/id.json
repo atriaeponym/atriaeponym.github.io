@@ -113,6 +113,15 @@
         "Tanpa akun",
         "28 bahasa"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Semua disk dalam satu pustaka",
+        "Duplikat dikenali dari isinya",
+        "Diurutkan per tahun dan bulan",
+        "Bukti tidak ada foto yang hilang",
+        "Berkas asli tidak pernah diubah"
+      ]
     }
   }
 }

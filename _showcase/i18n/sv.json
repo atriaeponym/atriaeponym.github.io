@@ -113,6 +113,15 @@
         "Inget konto",
         "28 språk"
       ]
+    },
+    "phototheque": {
+      "features": [
+        "Alla diskar samlade",
+        "Dubbletter känns igen på innehållet",
+        "Sorterat efter år och månad",
+        "Bevis på att inget foto förlorats",
+        "Originalen ändras aldrig"
+      ]
     }
   }
 }
