@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141416">
+<title>Windows 照片整理与去重软件 – Photothèque</title>
+<meta name="description" content="将分散在多个硬盘中的照片汇集成一个按拍摄日期整理、没有重复的照片库，并证明没有丢失任何一张。">
+<link rel="canonical" href="https://atriaeponym.com/phototheque/zh/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/phototheque/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/phototheque/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/phototheque/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/phototheque/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/phototheque/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/phototheque/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/phototheque/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/phototheque/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/phototheque/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/phototheque/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/phototheque/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/phototheque/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/phototheque/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/phototheque/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/phototheque/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/phototheque/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/phototheque/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/phototheque/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/phototheque/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/phototheque/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/phototheque/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/phototheque/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/phototheque/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/phototheque/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/phototheque/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/phototheque/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/phototheque/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/phototheque/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/phototheque/en/">
+<link rel="icon" href="/icons/phototheque.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://atriaeponym.com/phototheque/zh/">
+<meta property="og:title" content="Windows 照片整理与去重软件 – Photothèque">
+<meta property="og:description" content="将分散在多个硬盘中的照片汇集成一个按拍摄日期整理、没有重复的照片库，并证明没有丢失任何一张。">
+<meta property="og:image" content="https://atriaeponym.com/icons/phototheque.png">
+<meta name="twitter:card" content="summary">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#e9c46a;--accent2:#d4a64a;--on:#1a1306;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.store.soon{opacity:.55;box-shadow:none;cursor:default}
+.store.soon:hover{transform:none}
+.shots figure.wide{width:340px}
+.shots figure.wide img{width:340px;border-radius:12px}
+.lang{position:absolute;top:16px;right:16px;font-size:13.5px}
+.lang a{color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+body{position:relative}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+html[dir=rtl] .lang{right:auto;left:16px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+.shots figure.wide,.shots figure.wide img{width:480px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Photothèque", "url": "https://atriaeponym.com/phototheque/zh/", "description": "将分散在多个硬盘中的照片汇集成一个按拍摄日期整理、没有重复的照片库，并证明没有丢失任何一张。", "inLanguage": "zh-Hans", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows 10, Windows 11", "image": "https://atriaeponym.com/icons/phototheque.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Atria.Eponym", "url": "https://atriaeponym.com/"}, "sameAs": ["https://apps.microsoft.com/detail/9P4J9X4X183Z"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hans", "mainEntity": [{"@type": "Question", "name": "如何在 Windows 上按拍摄日期整理照片？", "acceptedAnswer": {"@type": "Answer", "text": "将您的硬盘和文件夹添加到 Photothèque：它会读取每张照片的拍摄日期，并将副本按年和月归档。没有日期的照片放入单独的文件夹，月份绝不凭空推测。"}}, {"@type": "Question", "name": "Photothèque 如何识别重复照片？", "acceptedAnswer": {"@type": "Answer", "text": "根据内容：当两个文件的 SHA-256 哈希值相同时才视为重复，而不是因为名称相同。两个不同的 IMG_0001.jpg 都会保留。"}}, {"@type": "Question", "name": "我的原始照片会被修改或删除吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会。Photothèque 绝不会修改、移动、重命名或删除来源中的任何文件：它将文件复制到新的照片库中，然后重新读取每个副本。"}}, {"@type": "Question", "name": "几乎相同的照片会怎样处理？", "acceptedAnswer": {"@type": "Answer", "text": "重新导出、重新压缩或调整过尺寸的照片会并排显示给您，由您来选择。未经您同意，不会舍弃任何照片。"}}, {"@type": "Question", "name": "Photothèque 多少钱？", "acceptedAnswer": {"@type": "Answer", "text": "安装免费，读取硬盘和查看汇总也免费。经过校验的复制、几乎相同照片的处理、证书和备份副本需要订阅：每月 2.99 € 或每年 24.99 €，无需长期承诺，可随时在您的 Microsoft 账户中取消。"}}, {"@type": "Question", "name": "我的照片会被发送到互联网吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会。一切都在您的电脑上完成：无需账户，没有服务器，不发送任何照片。详情请参阅隐私政策。"}}, {"@type": "Question", "name": "Photothèque 可以在哪些设备上运行？", "acceptedAnswer": {"@type": "Answer", "text": "通过 Microsoft Store，在装有 Windows 10（1809 版）或更高版本的电脑上运行。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Atria.Eponym", "item": "https://atriaeponym.com/zh/"}, {"@type": "ListItem", "position": 2, "name": "Photothèque", "item": "https://atriaeponym.com/phototheque/zh/"}]}</script>
+</head>
+<body>
+<div class="lang"><a href="/phototheque/en/" hreflang="en" lang="en">English</a></div>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/phototheque.png" width="128" height="128" alt="Photothèque 图标：深色背景上，三个硬盘连接到一个金色相框">
+<h1>Photothèque<span class="sub">按日期整理照片，没有重复</span></h1>
+<div class="kicker">硬盘 · 重复 · 按日期整理 · 证明</div>
+<p class="lead">Photothèque 是一款 Windows 照片整理软件。您的照片是否分散在旧电脑、移动硬盘、U 盘和手机备份中？Photothèque 可以汇集多个硬盘和文件夹中的照片，根据内容识别重复文件，然后建立一个完整的照片库，按拍摄日期分类，并向您证明途中没有丢失任何一张照片。您的原始文件永远不会被修改。</p>
+<p class="promise">无广告 · 无需账户 · 不发送任何内容</p>
+<div class="stores">
+<a class="store mine" data-os="windows" href="https://apps.microsoft.com/detail/9P4J9X4X183Z" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><small>获取自</small><b>Microsoft Store</b><i>PC，Windows 10 (1809) 或更高版本</i></span></a>
+</div>
+</div>
+<div class="shots" role="list" aria-label="屏幕截图">
+<figure class="wide"><img src="/phototheque/img/1-sources.jpg" alt="PC 版 Photothèque，第 1 步：两个来源，一台旧电脑和一个移动硬盘，完整读取且不做任何修改" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/2-bilan.jpg" alt="PC 版 Photothèque，汇总：44 个不同的照片和视频，9 个多余的完全相同副本，35 个需优先保存，4 个没有日期" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/4-copie.jpg" alt="PC 版 Photothèque，复制完成：43 个文件已复制并重新校验，按年份整理，并根据文件夹名称生成相册" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/5-preuve.jpg" alt="PC 版 Photothèque，证明：每个来源中的每个文件都有说明，没有缺失" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure><img src="/phototheque/img/5-certificat.jpg" alt="PDF 格式的完整性证书，逐个来源列出" width="600" height="849" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>汇集多个硬盘中的所有照片</h2>
+<p>您可以添加任意数量的硬盘和文件夹：只读取，从不修改。中途拔下硬盘也没关系：读取会从中断处继续。</p>
+<p>随后免费提供<b>汇总</b>：照片和视频有多少，多余的完全相同副本有多少，只存在于一个硬盘上的有多少（需优先保存），没有日期的有多少。</p>
+</section>
+<section>
+<h2>根据内容识别重复</h2>
+<ul>
+<li><b>完全重复</b>：内容相同，通过 SHA-256 哈希值验证，而不是看名称是否相同。两个不同的 IMG_0001.jpg 都会保留。</li>
+<li><b>几乎相同的照片</b>（重新导出、重新压缩、调整尺寸）：并排显示，由您来选择。未经您同意，不会舍弃任何照片。</li>
+</ul>
+</section>
+<section>
+<h2>按拍摄日期整理的照片库</h2>
+<p>每张照片和每个视频只复制一次，根据拍摄日期按年和月归档。月份绝不凭空推测：没有日期的照片放入单独的文件夹。您原来的文件夹名称会以相册的形式保留，不占用额外空间。</p>
+</section>
+<section>
+<h2>证明没有丢失任何照片</h2>
+<ul>
+<li><b>经过校验的复制</b>：每个复制的文件都会被重新读取，并通过 SHA-256 哈希值核对。</li>
+<li><b>完整性证书</b>（PDF）：说明每个来源中的每个文件，是已在照片库中，还是根据您的选择被舍弃。</li>
+<li><b>备份副本</b>保存在另一个硬盘上，以同样的方式校验。</li>
+</ul>
+</section>
+<section>
+<h2>支持格式</h2>
+<p>JPEG、HEIC、PNG、TIFF、WebP、GIF、BMP、AVIF、RAW（Canon CR2/CR3、Nikon NEF、Sony ARW、Fujifilm RAF、Olympus ORF、Panasonic RW2、DNG…）以及视频（MOV、MP4、AVI、MTS、MKV…）。</p>
+</section>
+<section>
+<h2>您的照片保持原样，留在您身边</h2>
+<ul>
+<li>Photothèque 绝不会修改、移动、重命名或删除来源中的任何文件：它只是复制到一个新的照片库中。</li>
+<li>一切都在您的电脑上完成：无需账户，没有服务器，不发送任何照片。</li>
+</ul>
+<p>详情请参阅<a href="/phototheque/privacy/zh-Hans/">隐私政策</a>。</p>
+</section>
+<section>
+<h2>价格：读取免费，复制需订阅</h2>
+<ul>
+<li><b>免费</b>：安装、读取您的硬盘以及查看汇总。</li>
+<li><b>订阅</b>：每月 2.99 € 或每年 24.99 €，可使用经过校验的复制、几乎相同照片的处理、证书和备份副本。</li>
+<li>无需长期承诺，可随时在您的 Microsoft 账户中取消。付款通过 Microsoft Store 进行：Atria.Eponym 不会收到您的银行卡信息或姓名。</li>
+</ul>
+<p class="note">条款：<a href="/phototheque/terms/zh-Hans/">销售条款</a>。</p>
+</section>
+<section class="faq">
+<h2>常见问题</h2>
+<details><summary>如何在 Windows 上按拍摄日期整理照片？</summary><p>将您的硬盘和文件夹添加到 Photothèque：它会读取每张照片的拍摄日期，并将副本按年和月归档。没有日期的照片放入单独的文件夹，月份绝不凭空推测。</p></details>
+<details><summary>Photothèque 如何识别重复照片？</summary><p>根据内容：当两个文件的 SHA-256 哈希值相同时才视为重复，而不是因为名称相同。两个不同的 IMG_0001.jpg 都会保留。</p></details>
+<details><summary>我的原始照片会被修改或删除吗？</summary><p>不会。Photothèque 绝不会修改、移动、重命名或删除来源中的任何文件：它将文件复制到新的照片库中，然后重新读取每个副本。</p></details>
+<details><summary>几乎相同的照片会怎样处理？</summary><p>重新导出、重新压缩或调整过尺寸的照片会并排显示给您，由您来选择。未经您同意，不会舍弃任何照片。</p></details>
+<details><summary>Photothèque 多少钱？</summary><p>安装免费，读取硬盘和查看汇总也免费。经过校验的复制、几乎相同照片的处理、证书和备份副本需要订阅：每月 2.99 € 或每年 24.99 €，无需长期承诺，可随时在您的 Microsoft 账户中取消。</p></details>
+<details><summary>我的照片会被发送到互联网吗？</summary><p>不会。一切都在您的电脑上完成：无需账户，没有服务器，不发送任何照片。详情请参阅隐私政策。</p></details>
+<details><summary>Photothèque 可以在哪些设备上运行？</summary><p>通过 Microsoft Store，在装有 Windows 10（1809 版）或更高版本的电脑上运行。</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/zh/">Atria.Eponym 的所有应用</a> · <a href="/phototheque/privacy/zh-Hans/">隐私政策</a></p>
+<p>Atria.Eponym，位于法国的个人开发者 · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+</footer>
+</body>
+</html>

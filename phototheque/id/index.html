@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141416">
+<title>Pengatur foto tanpa duplikat untuk Windows – Photothèque</title>
+<meta name="description" content="Kumpulkan foto dari berbagai drive ke satu pustaka foto yang diurutkan menurut tanggal pengambilan, tanpa duplikat, dan buktikan tidak ada yang hilang.">
+<link rel="canonical" href="https://atriaeponym.com/phototheque/id/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/phototheque/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/phototheque/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/phototheque/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/phototheque/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/phototheque/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/phototheque/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/phototheque/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/phototheque/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/phototheque/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/phototheque/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/phototheque/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/phototheque/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/phototheque/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/phototheque/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/phototheque/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/phototheque/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/phototheque/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/phototheque/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/phototheque/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/phototheque/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/phototheque/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/phototheque/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/phototheque/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/phototheque/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/phototheque/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/phototheque/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/phototheque/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/phototheque/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/phototheque/en/">
+<link rel="icon" href="/icons/phototheque.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="id_ID">
+<meta property="og:url" content="https://atriaeponym.com/phototheque/id/">
+<meta property="og:title" content="Pengatur foto tanpa duplikat untuk Windows – Photothèque">
+<meta property="og:description" content="Kumpulkan foto dari berbagai drive ke satu pustaka foto yang diurutkan menurut tanggal pengambilan, tanpa duplikat, dan buktikan tidak ada yang hilang.">
+<meta property="og:image" content="https://atriaeponym.com/icons/phototheque.png">
+<meta name="twitter:card" content="summary">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#e9c46a;--accent2:#d4a64a;--on:#1a1306;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.store.soon{opacity:.55;box-shadow:none;cursor:default}
+.store.soon:hover{transform:none}
+.shots figure.wide{width:340px}
+.shots figure.wide img{width:340px;border-radius:12px}
+.lang{position:absolute;top:16px;right:16px;font-size:13.5px}
+.lang a{color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+body{position:relative}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+html[dir=rtl] .lang{right:auto;left:16px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+.shots figure.wide,.shots figure.wide img{width:480px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Photothèque", "url": "https://atriaeponym.com/phototheque/id/", "description": "Kumpulkan foto dari berbagai drive ke satu pustaka foto yang diurutkan menurut tanggal pengambilan, tanpa duplikat, dan buktikan tidak ada yang hilang.", "inLanguage": "id", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows 10, Windows 11", "image": "https://atriaeponym.com/icons/phototheque.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Atria.Eponym", "url": "https://atriaeponym.com/"}, "sameAs": ["https://apps.microsoft.com/detail/9P4J9X4X183Z"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "id", "mainEntity": [{"@type": "Question", "name": "Bagaimana cara mengurutkan foto menurut tanggal pengambilan di Windows?", "acceptedAnswer": {"@type": "Answer", "text": "Tambahkan drive dan folder Anda ke Photothèque: aplikasi ini membaca tanggal pengambilan setiap foto dan menyusun salinannya per tahun dan bulan. Foto tanpa tanggal masuk ke folder tersendiri, bulannya tidak pernah ditebak."}}, {"@type": "Question", "name": "Bagaimana Photothèque mengenali duplikat?", "acceptedAnswer": {"@type": "Answer", "text": "Dari isinya: dua file dianggap duplikat bila sidik SHA-256-nya sama, tidak pernah karena namanya sama. Dua IMG_0001.jpg yang berbeda tetap disimpan keduanya."}}, {"@type": "Question", "name": "Apakah foto asli saya diubah atau dihapus?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak. Photothèque tidak pernah mengubah, memindahkan, mengganti nama, atau menghapus file di sumber Anda: aplikasi ini menyalinnya ke pustaka foto yang baru, lalu membaca ulang setiap salinan."}}, {"@type": "Question", "name": "Bagaimana dengan foto yang hampir sama?", "acceptedAnswer": {"@type": "Answer", "text": "Foto yang diekspor ulang, dikompresi ulang, atau diubah ukurannya ditampilkan berdampingan, dan Anda yang memilih. Tidak ada yang disingkirkan tanpa persetujuan Anda."}}, {"@type": "Question", "name": "Berapa harga Photothèque?", "acceptedAnswer": {"@type": "Answer", "text": "Instalasinya gratis, dan membaca drive serta melihat ringkasan tetap gratis. Salinan terverifikasi, foto yang hampir sama, sertifikat, dan salinan cadangan memerlukan langganan: 2,99 € per bulan atau 24,99 € per tahun, tanpa ikatan, dapat dibatalkan kapan saja di akun Microsoft Anda."}}, {"@type": "Question", "name": "Apakah foto saya dikirim ke Internet?", "acceptedAnswer": {"@type": "Answer", "text": "Tidak. Semuanya berlangsung di PC Anda: tanpa akun, tanpa server, tidak ada foto yang dikirim. Rinciannya ada di kebijakan privasi."}}, {"@type": "Question", "name": "Di perangkat apa Photothèque berjalan?", "acceptedAnswer": {"@type": "Answer", "text": "Di PC dengan Windows 10 (versi 1809) atau lebih baru, melalui Microsoft Store."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Atria.Eponym", "item": "https://atriaeponym.com/id/"}, {"@type": "ListItem", "position": 2, "name": "Photothèque", "item": "https://atriaeponym.com/phototheque/id/"}]}</script>
+</head>
+<body>
+<div class="lang"><a href="/phototheque/en/" hreflang="en" lang="en">English</a></div>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/phototheque.png" width="128" height="128" alt="Ikon Photothèque: tiga drive terhubung ke bingkai foto keemasan, dengan latar belakang gelap">
+<h1>Photothèque<span class="sub">mengurutkan foto menurut tanggal, tanpa duplikat</span></h1>
+<div class="kicker">DRIVE · DUPLIKAT · URUT TANGGAL · BUKTI</div>
+<p class="lead">Photothèque adalah perangkat lunak pengatur foto untuk Windows. Foto Anda tersebar di PC lama, hard disk eksternal, flashdisk, dan cadangan ponsel? Photothèque mengumpulkan foto dari beberapa drive dan folder, mengenali duplikat berdasarkan isinya, lalu menyusun satu pustaka foto yang lengkap, diurutkan menurut tanggal pengambilan, dan membuktikan kepada Anda bahwa tidak ada foto yang hilang di tengah jalan. File asli Anda tidak pernah diubah.</p>
+<p class="promise">Tanpa iklan · tanpa akun · tidak ada yang dikirim</p>
+<div class="stores">
+<a class="store mine" data-os="windows" href="https://apps.microsoft.com/detail/9P4J9X4X183Z" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><small>Tersedia di</small><b>Microsoft Store</b><i>PC, Windows 10 (1809) atau lebih baru</i></span></a>
+</div>
+</div>
+<div class="shots" role="list" aria-label="Tangkapan layar">
+<figure class="wide"><img src="/phototheque/img/1-sources.jpg" alt="Photothèque di PC, langkah 1: dua sumber, PC lama dan hard disk eksternal, dibaca seluruhnya tanpa diubah" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/2-bilan.jpg" alt="Photothèque di PC, ringkasan: 44 foto dan video yang berbeda, 9 salinan identik yang berlebih, 35 yang perlu diselamatkan lebih dulu, 4 tanpa tanggal" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/4-copie.jpg" alt="Photothèque di PC, penyalinan selesai: 43 file disalin dan dibaca ulang, disusun per tahun, dengan album dari nama folder" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/5-preuve.jpg" alt="Photothèque di PC, bukti: setiap file dari setiap sumber dijelaskan, tidak ada yang hilang" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure><img src="/phototheque/img/5-certificat.jpg" alt="Sertifikat kelengkapan dalam PDF, per sumber" width="600" height="849" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>Semua foto Anda terkumpul, dari beberapa drive</h2>
+<p>Tambahkan drive dan folder sebanyak yang Anda inginkan: semuanya hanya dibaca, tidak pernah diubah. Drive boleh dicabut di tengah proses: pembacaan dilanjutkan dari titik terakhir.</p>
+<p>Setelah itu muncul <b>ringkasan</b>, gratis: berapa foto dan video, berapa salinan identik yang berlebih, berapa yang hanya ada di satu drive (perlu diselamatkan lebih dulu), berapa yang tanpa tanggal.</p>
+</section>
+<section>
+<h2>Duplikat dikenali dari isinya</h2>
+<ul>
+<li><b>Duplikat identik</b>: isi yang sama, diverifikasi dengan sidik SHA-256, tidak pernah berdasarkan nama yang sama. Dua IMG_0001.jpg yang berbeda tetap disimpan keduanya.</li>
+<li><b>Foto yang hampir sama</b> (diekspor ulang, dikompresi ulang, diubah ukurannya): ditampilkan berdampingan, dan Anda yang memilih. Tidak ada yang disingkirkan tanpa persetujuan Anda.</li>
+</ul>
+</section>
+<section>
+<h2>Pustaka foto yang diurutkan menurut tanggal pengambilan</h2>
+<p>Setiap foto dan video disalin satu kali saja, disusun per tahun dan bulan berdasarkan tanggal pengambilannya. Bulan tidak pernah ditebak: foto tanpa tanggal masuk ke folder tersendiri. Nama folder lama Anda kembali sebagai album, tanpa memakan ruang tambahan.</p>
+</section>
+<section>
+<h2>Bukti bahwa tidak ada foto yang hilang</h2>
+<ul>
+<li><b>Salinan terverifikasi</b>: setiap file yang disalin dibaca ulang dan diperiksa dengan sidik SHA-256.</li>
+<li><b>Sertifikat kelengkapan</b> (PDF): setiap file dari setiap sumber dijelaskan, ada di pustaka foto atau disingkirkan atas pilihan Anda.</li>
+<li><b>Salinan cadangan</b> di drive lain, diverifikasi dengan cara yang sama.</li>
+</ul>
+</section>
+<section>
+<h2>Format</h2>
+<p>JPEG, HEIC, PNG, TIFF, WebP, GIF, BMP, AVIF, RAW (Canon CR2/CR3, Nikon NEF, Sony ARW, Fujifilm RAF, Olympus ORF, Panasonic RW2, DNG…) dan video (MOV, MP4, AVI, MTS, MKV…).</p>
+</section>
+<section>
+<h2>Foto Anda tetap utuh, dan tetap di perangkat Anda</h2>
+<ul>
+<li>Photothèque tidak pernah mengubah, memindahkan, mengganti nama, atau menghapus file di sumber Anda: aplikasi ini menyalin ke pustaka foto yang baru.</li>
+<li>Semuanya berlangsung di PC Anda: tanpa akun, tanpa server, tidak ada foto yang dikirim.</li>
+</ul>
+<p>Rinciannya ada di <a href="/phototheque/privacy/id/">kebijakan privasi</a>.</p>
+</section>
+<section>
+<h2>Harga: gratis untuk membaca, berlangganan untuk menyalin</h2>
+<ul>
+<li><b>Gratis</b>: instalasi, pembacaan drive Anda, dan ringkasan.</li>
+<li><b>Langganan</b>: 2,99 € per bulan atau 24,99 € per tahun, untuk salinan terverifikasi, foto yang hampir sama, sertifikat, dan salinan cadangan.</li>
+<li>Tanpa ikatan, dapat dibatalkan kapan saja di akun Microsoft Anda. Pembayaran melalui Microsoft Store: Atria.Eponym tidak menerima data kartu maupun nama Anda.</li>
+</ul>
+<p class="note">Ketentuan: <a href="/phototheque/terms/id/">syarat penjualan</a>.</p>
+</section>
+<section class="faq">
+<h2>Pertanyaan umum</h2>
+<details><summary>Bagaimana cara mengurutkan foto menurut tanggal pengambilan di Windows?</summary><p>Tambahkan drive dan folder Anda ke Photothèque: aplikasi ini membaca tanggal pengambilan setiap foto dan menyusun salinannya per tahun dan bulan. Foto tanpa tanggal masuk ke folder tersendiri, bulannya tidak pernah ditebak.</p></details>
+<details><summary>Bagaimana Photothèque mengenali duplikat?</summary><p>Dari isinya: dua file dianggap duplikat bila sidik SHA-256-nya sama, tidak pernah karena namanya sama. Dua IMG_0001.jpg yang berbeda tetap disimpan keduanya.</p></details>
+<details><summary>Apakah foto asli saya diubah atau dihapus?</summary><p>Tidak. Photothèque tidak pernah mengubah, memindahkan, mengganti nama, atau menghapus file di sumber Anda: aplikasi ini menyalinnya ke pustaka foto yang baru, lalu membaca ulang setiap salinan.</p></details>
+<details><summary>Bagaimana dengan foto yang hampir sama?</summary><p>Foto yang diekspor ulang, dikompresi ulang, atau diubah ukurannya ditampilkan berdampingan, dan Anda yang memilih. Tidak ada yang disingkirkan tanpa persetujuan Anda.</p></details>
+<details><summary>Berapa harga Photothèque?</summary><p>Instalasinya gratis, dan membaca drive serta melihat ringkasan tetap gratis. Salinan terverifikasi, foto yang hampir sama, sertifikat, dan salinan cadangan memerlukan langganan: 2,99 € per bulan atau 24,99 € per tahun, tanpa ikatan, dapat dibatalkan kapan saja di akun Microsoft Anda.</p></details>
+<details><summary>Apakah foto saya dikirim ke Internet?</summary><p>Tidak. Semuanya berlangsung di PC Anda: tanpa akun, tanpa server, tidak ada foto yang dikirim. Rinciannya ada di kebijakan privasi.</p></details>
+<details><summary>Di perangkat apa Photothèque berjalan?</summary><p>Di PC dengan Windows 10 (versi 1809) atau lebih baru, melalui Microsoft Store.</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/id/">Semua aplikasi Atria.Eponym</a> · <a href="/phototheque/privacy/id/">Kebijakan privasi</a></p>
+<p>Atria.Eponym, pengembang perorangan yang berbasis di Prancis · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+</footer>
+</body>
+</html>

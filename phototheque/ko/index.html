@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#141416">
+<title>중복 없는 Windows 사진 정리 프로그램 – Photothèque</title>
+<meta name="description" content="여러 드라이브에 흩어진 사진을 촬영 날짜순으로 정리된 중복 없는 하나의 라이브러리로 모으고, 한 장도 잃어버리지 않았음을 증명합니다.">
+<link rel="canonical" href="https://atriaeponym.com/phototheque/ko/">
+<link rel="alternate" hreflang="fr" href="https://atriaeponym.com/phototheque/">
+<link rel="alternate" hreflang="en" href="https://atriaeponym.com/phototheque/en/">
+<link rel="alternate" hreflang="de" href="https://atriaeponym.com/phototheque/de/">
+<link rel="alternate" hreflang="es" href="https://atriaeponym.com/phototheque/es/">
+<link rel="alternate" hreflang="it" href="https://atriaeponym.com/phototheque/it/">
+<link rel="alternate" hreflang="pt-PT" href="https://atriaeponym.com/phototheque/pt/">
+<link rel="alternate" hreflang="pt-BR" href="https://atriaeponym.com/phototheque/pt-br/">
+<link rel="alternate" hreflang="nl" href="https://atriaeponym.com/phototheque/nl/">
+<link rel="alternate" hreflang="sv" href="https://atriaeponym.com/phototheque/sv/">
+<link rel="alternate" hreflang="nb" href="https://atriaeponym.com/phototheque/nb/">
+<link rel="alternate" hreflang="fi" href="https://atriaeponym.com/phototheque/fi/">
+<link rel="alternate" hreflang="pl" href="https://atriaeponym.com/phototheque/pl/">
+<link rel="alternate" hreflang="el" href="https://atriaeponym.com/phototheque/el/">
+<link rel="alternate" hreflang="tr" href="https://atriaeponym.com/phototheque/tr/">
+<link rel="alternate" hreflang="ru" href="https://atriaeponym.com/phototheque/ru/">
+<link rel="alternate" hreflang="uk" href="https://atriaeponym.com/phototheque/uk/">
+<link rel="alternate" hreflang="ar" href="https://atriaeponym.com/phototheque/ar/">
+<link rel="alternate" hreflang="he" href="https://atriaeponym.com/phototheque/he/">
+<link rel="alternate" hreflang="fa" href="https://atriaeponym.com/phototheque/fa/">
+<link rel="alternate" hreflang="ur" href="https://atriaeponym.com/phototheque/ur/">
+<link rel="alternate" hreflang="hi" href="https://atriaeponym.com/phototheque/hi/">
+<link rel="alternate" hreflang="bn" href="https://atriaeponym.com/phototheque/bn/">
+<link rel="alternate" hreflang="th" href="https://atriaeponym.com/phototheque/th/">
+<link rel="alternate" hreflang="vi" href="https://atriaeponym.com/phototheque/vi/">
+<link rel="alternate" hreflang="id" href="https://atriaeponym.com/phototheque/id/">
+<link rel="alternate" hreflang="ja" href="https://atriaeponym.com/phototheque/ja/">
+<link rel="alternate" hreflang="ko" href="https://atriaeponym.com/phototheque/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://atriaeponym.com/phototheque/zh/">
+<link rel="alternate" hreflang="x-default" href="https://atriaeponym.com/phototheque/en/">
+<link rel="icon" href="/icons/phototheque.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atria.Eponym">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://atriaeponym.com/phototheque/ko/">
+<meta property="og:title" content="중복 없는 Windows 사진 정리 프로그램 – Photothèque">
+<meta property="og:description" content="여러 드라이브에 흩어진 사진을 촬영 날짜순으로 정리된 중복 없는 하나의 라이브러리로 모으고, 한 장도 잃어버리지 않았음을 증명합니다.">
+<meta property="og:image" content="https://atriaeponym.com/icons/phototheque.png">
+<meta name="twitter:card" content="summary">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#141416;--ink:#f2efe8;--muted:#a7a29a;--accent:#e9c46a;--accent2:#d4a64a;--on:#1a1306;
+      --line:rgba(255,255,255,.07);--card:rgba(255,255,255,.035)}
+html{background:var(--bg)}
+body{min-height:100vh;color:var(--ink);line-height:1.6;font-size:16px;
+     background:radial-gradient(circle at 92% 0,rgba(233,196,106,.16) 0,rgba(233,196,106,.04) 32%,transparent 60%),var(--bg) fixed;
+     font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans',Helvetica,sans-serif;
+     display:flex;flex-direction:column;align-items:center;padding:48px 16px 32px;overflow-x:hidden}
+main{width:100%;max-width:640px;min-width:0;flex:1}
+.hero{text-align:center;max-width:520px;margin:0 auto}
+.icon{width:128px;height:128px;border-radius:29px;box-shadow:0 16px 40px rgba(0,0,0,.6);display:block;margin:0 auto 22px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.5px;line-height:1.15}
+h1 .sub{display:block;margin-top:8px;font-size:19px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.kicker{margin-top:14px;font-family:Menlo,'SF Mono',Consolas,monospace;font-size:12.5px;font-weight:700;letter-spacing:4px;color:var(--accent)}
+.lead{margin:22px auto 0;font-size:17.5px;max-width:520px}
+.promise{margin-top:10px;color:var(--muted);font-size:15px}
+.stores{display:grid;gap:12px;margin:30px auto 0;max-width:340px}
+.store{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:14px;text-align:start;text-decoration:none;
+       color:var(--ink);background:#1d1d20;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s,box-shadow .15s}
+.store:hover,.store:focus-visible{transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.store.mine{background:linear-gradient(180deg,var(--accent),var(--accent2));border-color:var(--accent);color:var(--on)}
+.store.mine small{color:rgba(0,0,0,.6)}
+.store svg{flex:none;width:28px;height:28px;fill:currentColor}
+.store small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.store b{display:block;font-size:17px;line-height:1.3}
+.store i{display:block;font-style:normal;font-size:12px;opacity:.75}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -16px 0;padding:6px 16px 14px;
+       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 16px),transparent 100%)}
+.shots figure{flex:none;width:200px;scroll-snap-align:center}
+.shots img{width:200px;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5);display:block}
+section{margin-top:44px}
+h2{font-size:22px;line-height:1.3;font-weight:750;margin-bottom:12px}
+h2::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--accent);margin-bottom:12px}
+h3{font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin:20px 0 8px}
+section p+p{margin-top:10px}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+li::marker{color:var(--accent)}
+a{color:var(--accent)}
+.note{color:var(--muted);font-size:14.5px;margin-top:12px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:650;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 14px;color:#d9d5cd}
+.disclaimer{margin-top:36px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 12px 12px 0;font-size:14px;color:var(--muted)}
+footer{width:100%;max-width:640px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:6px}
+@media (max-width:380px){h1{font-size:29px}.kicker{font-size:11px;letter-spacing:2px}body{padding-top:36px}}
+
+.store.soon{opacity:.55;box-shadow:none;cursor:default}
+.store.soon:hover{transform:none}
+.shots figure.wide{width:340px}
+.shots figure.wide img{width:340px;border-radius:12px}
+.lang{position:absolute;top:16px;right:16px;font-size:13.5px}
+.lang a{color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+body{position:relative}
+/* i18n: logical sides for right-to-left pages, no letter-spacing on joined or complex scripts */
+ul,ol{padding-left:0;padding-inline-start:22px}
+.faq summary::after{float:inline-end}
+html[dir=rtl] .lang{right:auto;left:16px}
+html[dir=rtl] .kicker,html[dir=rtl] h3,:lang(hi) .kicker,:lang(hi) h3,:lang(bn) .kicker,:lang(bn) h3,:lang(th) .kicker,:lang(th) h3{letter-spacing:0;font-family:inherit}
+html[dir=rtl] h1,:lang(hi) h1,:lang(bn) h1,:lang(th) h1{letter-spacing:0}
+html[dir=rtl] body{font-family:-apple-system,'Segoe UI',Tahoma,'Noto Sans Arabic','Noto Sans Hebrew',sans-serif}
+:lang(ur) body{font-family:'Noto Nastaliq Urdu','Noto Sans Arabic',-apple-system,'Segoe UI',Tahoma,sans-serif;line-height:1.9}
+:lang(ja) body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic UI','Meiryo','Noto Sans JP',sans-serif}
+:lang(ko) body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;word-break:keep-all}
+:lang(zh-Hans) body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif}
+:lang(ja) .kicker,:lang(ko) .kicker,:lang(zh-Hans) .kicker{font-family:inherit;letter-spacing:2px}
+.shots figure.wide,.shots figure.wide img{width:480px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Photothèque", "url": "https://atriaeponym.com/phototheque/ko/", "description": "여러 드라이브에 흩어진 사진을 촬영 날짜순으로 정리된 중복 없는 하나의 라이브러리로 모으고, 한 장도 잃어버리지 않았음을 증명합니다.", "inLanguage": "ko", "applicationCategory": "MultimediaApplication", "operatingSystem": "Windows 10, Windows 11", "image": "https://atriaeponym.com/icons/phototheque.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Atria.Eponym", "url": "https://atriaeponym.com/"}, "sameAs": ["https://apps.microsoft.com/detail/9P4J9X4X183Z"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ko", "mainEntity": [{"@type": "Question", "name": "Windows에서 사진을 촬영 날짜순으로 정리하려면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "드라이브와 폴더를 Photothèque에 추가하세요. 각 사진의 촬영 날짜를 읽어 복사본을 연도와 월별로 정리합니다. 날짜가 없는 사진은 별도 폴더에 들어가며, 월을 추측해서 정하지 않습니다."}}, {"@type": "Question", "name": "Photothèque는 중복을 어떻게 찾아내나요?", "acceptedAnswer": {"@type": "Answer", "text": "내용으로 찾아냅니다. 두 파일의 SHA-256 해시가 같을 때 중복으로 보며, 이름이 같다는 이유로 판단하지 않습니다. 서로 다른 두 IMG_0001.jpg는 둘 다 보관됩니다."}}, {"@type": "Question", "name": "원본 사진이 변경되거나 삭제되나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. Photothèque는 소스의 파일을 변경, 이동, 이름 변경 또는 삭제하지 않습니다. 새 라이브러리에 복사한 뒤 각 복사본을 다시 읽어 확인합니다."}}, {"@type": "Question", "name": "거의 같은 사진은 어떻게 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "다시 내보내거나, 다시 압축하거나, 크기를 바꾼 사진은 나란히 보여 드리며, 선택은 사용자가 합니다. 사용자의 결정 없이 제외되는 것은 없습니다."}}, {"@type": "Question", "name": "Photothèque의 가격은 얼마인가요?", "acceptedAnswer": {"@type": "Answer", "text": "설치는 무료이며, 드라이브 읽기와 요약 보기도 무료입니다. 검증된 복사, 거의 같은 사진 비교, 인증서, 백업 복사본은 구독이 필요합니다: 월 2.99 € 또는 연 24.99 €, 약정 없이 Microsoft 계정에서 언제든지 해지할 수 있습니다."}}, {"@type": "Question", "name": "사진이 인터넷으로 전송되나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. 모든 작업은 사용자의 PC에서 이루어집니다: 계정 없음, 서버 없음, 사진 전송 없음. 자세한 내용은 개인정보 처리방침에서 확인하세요."}}, {"@type": "Question", "name": "Photothèque는 어떤 기기에서 사용할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "Windows 10(버전 1809) 이상이 설치된 PC에서 Microsoft Store를 통해 사용할 수 있습니다."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Atria.Eponym", "item": "https://atriaeponym.com/ko/"}, {"@type": "ListItem", "position": 2, "name": "Photothèque", "item": "https://atriaeponym.com/phototheque/ko/"}]}</script>
+</head>
+<body>
+<div class="lang"><a href="/phototheque/en/" hreflang="en" lang="en">English</a></div>
+<main>
+<div class="hero">
+<img class="icon" src="/icons/phototheque.png" width="128" height="128" alt="Photothèque 아이콘: 어두운 배경에서 금색 액자에 연결된 세 개의 드라이브">
+<h1>Photothèque<span class="sub">사진을 날짜순으로, 중복 없이 정리</span></h1>
+<div class="kicker">드라이브 · 중복 · 날짜순 정리 · 증명</div>
+<p class="lead">Photothèque는 Windows용 사진 정리 프로그램입니다. 사진이 예전 PC, 외장 드라이브, USB 메모리, 휴대폰 백업에 흩어져 있나요? Photothèque는 여러 드라이브와 폴더의 사진을 모으고, 내용으로 중복을 찾아낸 다음, 촬영 날짜순으로 분류된 완전한 라이브러리 하나를 만들고, 그 과정에서 사진이 한 장도 사라지지 않았음을 증명합니다. 원본은 절대 변경되지 않습니다.</p>
+<p class="promise">광고 없음 · 계정 없음 · 아무것도 전송하지 않음</p>
+<div class="stores">
+<a class="store mine" data-os="windows" href="https://apps.microsoft.com/detail/9P4J9X4X183Z" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h9.5v9.5H2zM12.5 2H22v9.5h-9.5zM2 12.5h9.5V22H2zM12.5 12.5H22V22h-9.5z"/></svg><span><small>다운로드</small><b>Microsoft Store</b><i>PC, Windows 10 (1809) 이상</i></span></a>
+</div>
+</div>
+<div class="shots" role="list" aria-label="스크린샷">
+<figure class="wide"><img src="/phototheque/img/1-sources.jpg" alt="PC용 Photothèque, 1단계: 예전 PC와 외장 드라이브, 두 개의 소스를 변경 없이 모두 읽습니다" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/2-bilan.jpg" alt="PC용 Photothèque, 요약: 서로 다른 사진과 동영상 44개, 불필요한 완전 복사본 9개, 우선 보관할 항목 35개, 날짜 없음 4개" width="800" height="450" loading="eager" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/4-copie.jpg" alt="PC용 Photothèque, 복사 완료: 파일 43개를 복사하고 다시 확인, 연도별로 정리하고 폴더 이름으로 앨범 생성" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure class="wide"><img src="/phototheque/img/5-preuve.jpg" alt="PC용 Photothèque, 증명: 각 소스의 모든 파일에 대한 설명이 있으며, 누락된 파일이 없습니다" width="800" height="450" loading="lazy" decoding="async"></figure>
+<figure><img src="/phototheque/img/5-certificat.jpg" alt="소스별 완전성 인증서(PDF)" width="600" height="849" loading="lazy" decoding="async"></figure>
+</div>
+<section>
+<h2>여러 드라이브의 모든 사진을 한곳에</h2>
+<p>드라이브와 폴더를 원하는 만큼 추가하세요. 읽기만 하고 절대 변경하지 않습니다. 도중에 드라이브를 분리해도 읽기는 멈춘 곳부터 다시 시작됩니다.</p>
+<p>이어서 <b>요약</b>이 무료로 제공됩니다: 사진과 동영상 수, 불필요한 완전 복사본 수, 한 드라이브에만 있는 항목 수(우선 보관 대상), 날짜가 없는 항목 수.</p>
+</section>
+<section>
+<h2>내용으로 찾아내는 중복</h2>
+<ul>
+<li><b>완전 중복</b>: SHA-256 해시로 확인한 동일한 내용이며, 이름이 같다는 이유로 판단하지 않습니다. 서로 다른 두 IMG_0001.jpg는 둘 다 보관됩니다.</li>
+<li><b>거의 같은 사진</b>(다시 내보내거나, 다시 압축하거나, 크기를 바꾼 사진): 나란히 보여 드리며, 선택은 사용자가 합니다. 사용자의 결정 없이 제외되는 것은 없습니다.</li>
+</ul>
+</section>
+<section>
+<h2>촬영 날짜순으로 정리된 라이브러리</h2>
+<p>모든 사진과 동영상은 한 번만 복사되며, 촬영 날짜에 따라 연도와 월별로 정리됩니다. 월을 추측해서 정하지 않습니다. 날짜가 없는 사진은 별도 폴더에 들어갑니다. 예전 폴더 이름은 앨범으로 남으며, 추가 공간을 차지하지 않습니다.</p>
+</section>
+<section>
+<h2>사진을 한 장도 잃지 않았다는 증명</h2>
+<ul>
+<li><b>검증된 복사</b>: 복사한 각 파일을 다시 읽고 SHA-256 해시로 확인합니다.</li>
+<li><b>완전성 인증서</b>(PDF): 각 소스의 모든 파일이 라이브러리에 있는지, 사용자의 선택으로 제외되었는지 설명합니다.</li>
+<li>다른 드라이브에 <b>백업 복사본</b>을 만들고 같은 방식으로 검증합니다.</li>
+</ul>
+</section>
+<section>
+<h2>지원 형식</h2>
+<p>JPEG, HEIC, PNG, TIFF, WebP, GIF, BMP, AVIF, RAW(Canon CR2/CR3, Nikon NEF, Sony ARW, Fujifilm RAF, Olympus ORF, Panasonic RW2, DNG…) 및 동영상(MOV, MP4, AVI, MTS, MKV…).</p>
+</section>
+<section>
+<h2>사진은 그대로, 사용자의 PC에</h2>
+<ul>
+<li>Photothèque는 소스의 파일을 변경, 이동, 이름 변경 또는 삭제하지 않습니다. 새 라이브러리에 복사할 뿐입니다.</li>
+<li>모든 작업은 사용자의 PC에서 이루어집니다: 계정 없음, 서버 없음, 사진 전송 없음.</li>
+</ul>
+<p>자세한 내용은 <a href="/phototheque/privacy/ko/">개인정보 처리방침</a>에서 확인하세요.</p>
+</section>
+<section>
+<h2>가격: 읽기는 무료, 복사는 구독</h2>
+<ul>
+<li><b>무료</b>: 설치, 드라이브 읽기, 요약.</li>
+<li><b>구독</b>: 월 2.99 € 또는 연 24.99 €로 검증된 복사, 거의 같은 사진 비교, 인증서, 백업 복사본을 이용할 수 있습니다.</li>
+<li>약정 없이 Microsoft 계정에서 언제든지 해지할 수 있습니다. 결제는 Microsoft Store를 통해 이루어지며, Atria.Eponym은 카드 정보나 이름을 받지 않습니다.</li>
+</ul>
+<p class="note">조건: <a href="/phototheque/terms/ko/">판매 약관</a>.</p>
+</section>
+<section class="faq">
+<h2>자주 묻는 질문</h2>
+<details><summary>Windows에서 사진을 촬영 날짜순으로 정리하려면 어떻게 하나요?</summary><p>드라이브와 폴더를 Photothèque에 추가하세요. 각 사진의 촬영 날짜를 읽어 복사본을 연도와 월별로 정리합니다. 날짜가 없는 사진은 별도 폴더에 들어가며, 월을 추측해서 정하지 않습니다.</p></details>
+<details><summary>Photothèque는 중복을 어떻게 찾아내나요?</summary><p>내용으로 찾아냅니다. 두 파일의 SHA-256 해시가 같을 때 중복으로 보며, 이름이 같다는 이유로 판단하지 않습니다. 서로 다른 두 IMG_0001.jpg는 둘 다 보관됩니다.</p></details>
+<details><summary>원본 사진이 변경되거나 삭제되나요?</summary><p>아니요. Photothèque는 소스의 파일을 변경, 이동, 이름 변경 또는 삭제하지 않습니다. 새 라이브러리에 복사한 뒤 각 복사본을 다시 읽어 확인합니다.</p></details>
+<details><summary>거의 같은 사진은 어떻게 되나요?</summary><p>다시 내보내거나, 다시 압축하거나, 크기를 바꾼 사진은 나란히 보여 드리며, 선택은 사용자가 합니다. 사용자의 결정 없이 제외되는 것은 없습니다.</p></details>
+<details><summary>Photothèque의 가격은 얼마인가요?</summary><p>설치는 무료이며, 드라이브 읽기와 요약 보기도 무료입니다. 검증된 복사, 거의 같은 사진 비교, 인증서, 백업 복사본은 구독이 필요합니다: 월 2.99 € 또는 연 24.99 €, 약정 없이 Microsoft 계정에서 언제든지 해지할 수 있습니다.</p></details>
+<details><summary>사진이 인터넷으로 전송되나요?</summary><p>아니요. 모든 작업은 사용자의 PC에서 이루어집니다: 계정 없음, 서버 없음, 사진 전송 없음. 자세한 내용은 개인정보 처리방침에서 확인하세요.</p></details>
+<details><summary>Photothèque는 어떤 기기에서 사용할 수 있나요?</summary><p>Windows 10(버전 1809) 이상이 설치된 PC에서 Microsoft Store를 통해 사용할 수 있습니다.</p></details>
+</section>
+</main>
+<footer>
+<p><a href="/ko/">Atria.Eponym의 모든 앱</a> · <a href="/phototheque/privacy/ko/">개인정보 처리방침</a></p>
+<p>Atria.Eponym, 프랑스에 기반을 둔 개인 개발자 · <a href="mailto:atria.eponym@gmail.com">atria.eponym@gmail.com</a></p>
+</footer>
+</body>
+</html>
