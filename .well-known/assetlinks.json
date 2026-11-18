@@ -61,7 +61,9 @@
       "namespace": "android_app",
       "package_name": "com.atriaeponym.courses",
       "sha256_cert_fingerprints": [
-        "85:6A:2A:19:AE:6E:94:C7:F7:72:1A:B2:4C:1D:19:6F:D5:FC:74:47:C7:CC:0D:34:02:6C:68:1B:C4:55:D5:E9"
+        "85:6A:2A:19:AE:6E:94:C7:F7:72:1A:B2:4C:1D:19:6F:D5:FC:74:47:C7:CC:0D:34:02:6C:68:1B:C4:55:D5:E9",
+        "8B:31:27:16:4D:D0:CB:B3:5E:8E:9E:60:39:7E:67:8D:EF:DB:B1:98:EF:42:10:6E:CF:83:34:FF:70:E2:EE:0B",
+        "A4:7A:D3:AC:DB:EE:55:D7:B8:B4:72:2B:38:9A:64:85:12:DB:D9:D1:E3:CC:04:83:85:EF:BD:43:FD:1C:D1:93"
       ]
     }
   }
