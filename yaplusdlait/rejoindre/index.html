@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rejoindre une famille — Y'a plus d'lait !</title>
+<style>
+  :root { --page: #FAFAF8; --ink: #111; --muted: #666; --card: #fff; --line: #e6e6e2; }
+  @media (prefers-color-scheme: dark) { :root { --page: #111; --ink: #F4F4F2; --muted: #9a9a96; --card: #1c1c1c; --line: #2c2c2c; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 440px; margin: 0 auto; padding: 40px 16px; }
+  img { width: 88px; height: 88px; border-radius: 22px; display: block; }
+  h1 { font-size: 26px; margin: 18px 0 6px; }
+  p { color: var(--muted); margin: 0 0 18px; }
+  ol { padding-left: 22px; margin: 0 0 22px; }
+  li { margin-bottom: 10px; }
+  .code { font: 800 30px/1 ui-monospace, Menlo, monospace; letter-spacing: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; text-align: center; margin-bottom: 22px; }
+  .store { display: block; text-align: center; font-weight: 700; color: var(--page); background: var(--ink); border-radius: 16px; padding: 15px; text-decoration: none; margin-bottom: 10px; }
+  .store[hidden] { display: none; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 30px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="../icon.png" alt="">
+  <h1 data-t="title">Rejoindre la liste de votre famille</h1>
+  <p data-t="lead">Quelqu'un de votre famille vous invite sur sa liste de courses partagée.</p>
+  <ol>
+    <li data-t="step1">Installez l'application Y'a plus d'lait !</li>
+    <li data-t="step2">Rouvrez ce lien : l'application s'ouvre sur l'invitation. Ou tapez ce code dans l'onglet Famille :</li>
+  </ol>
+  <div class="code" id="code">—</div>
+  <a class="store" id="play" href="https://play.google.com/store/apps/details?id=com.atriaeponym.courses">Google Play</a>
+  <!-- the App Store number is known once the app is first sent: the link appears then -->
+  <a class="store" id="appstore" hidden>App Store</a>
+  <p data-t="expiry">Le code est valable 10 minutes. Passé ce délai, demandez-en un nouveau.</p>
+  <footer data-t="footer">Aucun compte, aucun e-mail, aucun mot de passe. Atria.Eponym, développeur individuel établi en France.</footer>
+</main>
+<script>
+  // the code travels in ?c=, never sent anywhere by this page
+  const code = (new URLSearchParams(location.search).get("c") || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+  document.getElementById("code").textContent = code ? code.replace(/(.{4})(?=.)/g, "$1 ") : "—";
+  const en = {
+    title: "Join your family's list",
+    lead: "Someone in your family is inviting you to their shared shopping list.",
+    step1: "Install the app Who's finished the milk?",
+    step2: "Open this link again: the app opens on the invitation. Or type this code in the Family tab:",
+    expiry: "The code is valid for 10 minutes. After that, please ask for a new one.",
+    footer: "No account, no e-mail, no password. Atria.Eponym, independent developer based in France.",
+  };
+  if (!(navigator.language || "fr").toLowerCase().startsWith("fr")) {
+    document.documentElement.lang = "en";
+    document.title = "Join a family — Who's finished the milk?";
+    document.querySelectorAll("[data-t]").forEach(e => { e.textContent = en[e.dataset.t]; });
+  }
+</script>
+</body>
+</html>
