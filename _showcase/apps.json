@@ -495,7 +495,8 @@
         {
           "platform": "iphone",
           "channel": "appstore",
-          "status": "soon"
+          "status": "live",
+          "url": "https://apps.apple.com/fr/app/diapo-visionneuse-photos/id6826830204"
         },
         {
           "platform": "android",

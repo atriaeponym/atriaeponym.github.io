@@ -63,6 +63,7 @@ Contact: atria.eponym@gmail.com. Showcase in 28 languages: https://atriaeponym.c
 - Your photos, big, from a folder or a whole disk. They are never modified.
 - FR : Vos photos en grand, d'un dossier ou d'un disque entier. Elles ne sont jamais modifiées.
 - Microsoft Store (Windows): https://apps.microsoft.com/detail/9P6MPV8Q9ZP1
+- App Store (iPhone): https://apps.apple.com/fr/app/diapo-visionneuse-photos/id6826830204
 - Google Play (Android): https://play.google.com/store/apps/details?id=com.atriaeponym.diapo
 - Page: https://atriaeponym.com/diapo/
 
